@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand palette */
+    --navy: #19204A;
+    --navy-light: #2A3470;
+    --coral: #EE4034;
+    --coral-dark: #D93A2F;
+    --coral-subtle: #FEE8E6;
+    --bg: #FAFAF8;
+    --bg-alt: #F5F5F0;
+    --surface: #FFFFFF;
+    --border-custom: #E5E5E0;
+    --text-primary: #1A1A1A;
+    --text-secondary: #6B6B6B;
+    --text-muted: #9CA3AF;
+
+    /* shadcn/ui semantic colors (slate base + navy/coral brand) */
+    --background: 60 17% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 4 85% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 231 49% 19%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 60 20% 95%;
+    --muted-foreground: 218 11% 65%;
+    --accent: 5 92% 95%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 60 9% 89%;
+    --input: 60 9% 89%;
+    --ring: 4 85% 57%;
+    --radius: 0.625rem;
+    --sidebar-background: 60 17% 98%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 231 49% 19%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 60 20% 95%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 60 9% 89%;
+    --sidebar-ring: 4 85% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: #ccc !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 24px !important;
+  border-radius: 4px !important;
+  background: var(--coral) !important;
+}
+
+/* Hide scrollbar for crop icons */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
