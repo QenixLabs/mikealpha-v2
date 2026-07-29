@@ -68,7 +68,7 @@ export default function ProductsSection() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-3xl font-semibold text-center text-gray-800 uppercase tracking-widest mb-12"
         >
-          Our Products
+          OUR PRODUCTS
         </motion.h2>
 
         {/* Carousel */}

@@ -27,7 +27,7 @@ export default function NewsletterSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 uppercase tracking-wider mb-4">
-              Get the very latest from Mike Alpha
+              GET THE VERY LATEST FROM MIKE ALPHA
             </h2>
             <p className="text-base text-gray-600 leading-relaxed">
               The Mike Alpha newsletter keeps you updated on advanced plant nutrition information, and provides the latest news &amp; events you and your crops should know about.

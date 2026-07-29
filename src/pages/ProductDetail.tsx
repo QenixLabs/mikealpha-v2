@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router";
 import { ArrowLeft, Download, Mail, Check, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import { products } from "@/data/products";
 
 type Tab = "description" | "specs" | "application" | "related";
@@ -101,6 +102,7 @@ export default function ProductDetail() {
           </section>
         </main>
         <Footer />
+        <FloatingActions />
       </div>
     );
   }
@@ -322,6 +324,7 @@ export default function ProductDetail() {
       </main>
 
       <Footer />
+      <FloatingActions />
     </div>
   );
 }

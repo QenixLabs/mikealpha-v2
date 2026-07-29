@@ -1,31 +1,31 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-import { Pause, Play, Leaf, FlaskConical, Sprout } from 'lucide-react';
+import { Pause, Play, Zap, Leaf, Sprout } from 'lucide-react';
 
 const stats = [
   {
-    icon: FlaskConical,
-    value: 49,
-    suffix: '+',
-    label: 'Specialized Formulations',
-    description: 'Science-driven fertilizer formulations for every crop stage and application method.',
+    icon: Zap,
+    value: 50,
+    suffix: '%',
+    label: 'Renewable Energy Sources',
+    description: 'Transition to renewable energy across Mike Alpha operations by 2030.',
     link: '#',
   },
   {
     icon: Leaf,
-    value: 8,
-    suffix: '+',
-    label: 'Crop Categories',
-    description: 'Comprehensive nutrition range covering foliar, drip, soil, seed, and micronutrient needs.',
+    value: 20,
+    suffix: '%',
+    label: 'GHG Emissions Reduction',
+    description: 'Cut greenhouse gas emissions through precision manufacturing and logistics.',
     link: '#',
   },
   {
     icon: Sprout,
-    value: 4,
-    suffix: '',
-    label: 'Application Methods',
-    description: 'Flexible delivery through foliar spray, drip fertigation, soil application, and seed treatment.',
+    value: 10,
+    suffix: 'M ton',
+    label: 'Sustainable Agriculture',
+    description: 'Enable 10 million tons of sustainable agricultural output through advanced plant nutrition.',
     link: '#',
   },
 ];

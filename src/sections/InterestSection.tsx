@@ -1,62 +1,167 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ChevronLeft, ChevronRight, CloudRain, Dna, Droplet, Droplets, FlaskConical, Globe, Leaf, Microscope, ShieldCheck, Sparkles, Sprout, Target, TestTube, Zap, type LucideIcon } from 'lucide-react';
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Dna,
+  Droplet,
+  Droplets,
+  FlaskConical,
+  Globe,
+  Leaf,
+  Sparkles,
+  Sprout,
+  Sun,
+  Target,
+  TestTube,
+  Timer,
+  TreePine,
+  Warehouse,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
+import { categories } from '@/data/products';
+import { getCropGuideByName } from '@/data/cropGuides';
 
-type TabId = 'products' | 'application' | 'productLines';
+type TabId = 'crop' | 'growing' | 'products';
 
 const tabs: { id: TabId; label: string }[] = [
+  { id: 'crop', label: 'Crop' },
+  { id: 'growing', label: 'Growing method' },
   { id: 'products', label: 'Products' },
-  { id: 'application', label: 'Application' },
-  { id: 'productLines', label: 'Product Lines' },
 ];
 
-const cropIcons = [
-  { name: 'Foliar Solutions', icon: Leaf, description: 'Direct leaf nutrition for rapid uptake' },
-  { name: 'NPK Fertilizers', icon: FlaskConical, description: 'Complete balanced plant nutrition' },
-  { name: 'Specialty Fertilizers', icon: Target, description: 'Targeted crop nutrition solutions' },
-  { name: 'Biological Fertilizers', icon: Dna, description: 'Bio-enhanced growth solutions' },
-  { name: 'Biostimulant', icon: Zap, description: 'Plant vitality and stress recovery' },
-  { name: 'Straight Fertilizers', icon: ArrowRight, description: 'Single nutrient focus formulas' },
-  { name: 'Micronutrients', icon: Sparkles, description: 'Trace element deficiency correctors' },
-  { name: 'Adjuvants', icon: TestTube, description: 'Application enhancers' },
+const cropItems = [
+  'Tomato',
+  'Pepper',
+  'Cucumber',
+  'Potato',
+  'Strawberry',
+  'Citrus',
+  'Banana',
+  'Olives',
+  'Rice',
+  'Wheat',
+  'Onion',
+  'Apple',
+  'Grapes',
+  'Corn',
+  'Sugar Beet',
+  'Garlic',
+  'Almond',
+  'Soybean',
+  'Turf',
 ];
 
-const growingMethods = [
-  { name: 'Foliar Spray', icon: Droplets, description: 'Direct leaf nutrition for rapid uptake' },
-  { name: 'Drip Fertigation', icon: Droplet, description: 'Precision feeding through irrigation' },
-  { name: 'Soil Application', icon: Globe, description: 'Root zone nutrition for sustained release' },
-  { name: 'Seed Treatment', icon: Sprout, description: 'Early-stage protection and vigor' },
+const cropIconColors = [
+  '#E74C3C',
+  '#C0392B',
+  '#27AE60',
+  '#8E44AD',
+  '#E84393',
+  '#F39C12',
+  '#F1C40F',
+  '#16A085',
+  '#3498DB',
+  '#D4AC0D',
+  '#E67E22',
+  '#95A5A6',
+  '#9B59B6',
+  '#F4D03F',
+  '#ECF0F1',
+  '#BDC3C7',
+  '#D35400',
+  '#2ECC71',
+  '#1ABC9C',
 ];
 
-const productLines: { name: string; tag: string; description: string; accent: string; icon: LucideIcon }[] = [
-  { name: 'Vitagea', tag: '6 PRODUCTS', description: 'Excellence in Plant Nutrition — Gold standard. Enhances crop performance and corrects deficiencies.', accent: '#19204A', icon: Leaf },
-  { name: 'Pluvigea', tag: 'STRESS MGMT', description: 'Efficacy Under Stress — Performs under fungal and abiotic stress. Optimizes in challenging environments.', accent: '#3B8D99', icon: CloudRain },
-  { name: 'Protega', tag: 'CROP SHIELD', description: 'Protection in Adversity — Mitigates pest effects and nourishes crops through protective nutrition.', accent: '#EE4034', icon: ShieldCheck },
-  { name: 'Microgea', tag: '11 PRODUCTS', description: 'Science Meets Innovation — Microorganisms, probiotics, prebiotics — bio protectors and activators.', accent: '#4CAF50', icon: Microscope },
+const growingMethods: { name: string; icon: LucideIcon }[] = [
+  { name: 'Soil Applications', icon: Globe },
+  { name: 'Nurseries', icon: Sprout },
+  { name: 'Open Field', icon: Sun },
+  { name: 'Center Pivot', icon: Droplets },
+  { name: 'Controlled Release Fertilizers', icon: Timer },
+  { name: 'Foliar Feeding', icon: Leaf },
+  { name: 'Nutrigation™', icon: Droplet },
+  { name: 'Fruit Trees Fertilizers', icon: TreePine },
+  { name: 'Greenhouse Agriculture', icon: Warehouse },
 ];
+
+const productCategoryIcons: Record<string, LucideIcon> = {
+  'Foliar Solutions': Leaf,
+  'NPK Fertilizers': FlaskConical,
+  'Specialty Fertilizers': Target,
+  'Biological Fertilizers': Dna,
+  Biostimulant: Zap,
+  'Straight Fertilizers': ArrowRight,
+  Micronutrients: Sparkles,
+  Adjuvants: TestTube,
+};
+
+const interestToCropName: Record<string, string> = {
+  grapes: 'Vineyard/Grape',
+  corn: 'Corn/Maize',
+};
 
 export default function InterestSection() {
-  const [activeTab, setActiveTab] = useState<TabId>('products');
+  const [activeTab, setActiveTab] = useState<TabId>('crop');
 
   const getItems = () => {
     switch (activeTab) {
+      case 'crop':
+        return cropItems;
+      case 'growing':
+        return growingMethods.map((m) => m.name);
       case 'products':
-        return cropIcons;
-      case 'application':
-        return growingMethods;
-      case 'productLines':
-        return productLines;
+        return categories.filter((c) => c !== 'All');
     }
   };
 
   const items = getItems();
 
-  const getItemUrl = (item: (typeof items)[number]) => {
-    if (activeTab === 'products') return `/products?category=${encodeURIComponent(item.name)}`;
-    if (activeTab === 'productLines') return `/products?line=${encodeURIComponent(item.name)}`;
-    return `/products?q=${encodeURIComponent(item.name)}`;
+  const getItemUrl = (name: string) => {
+    if (activeTab === 'crop') {
+      const cropName = interestToCropName[name.toLowerCase()] || name;
+      const guide = getCropGuideByName(cropName);
+      if (guide) return `/${guide.slug}`;
+      return `/products?crop=${encodeURIComponent(name)}`;
+    }
+    if (activeTab === 'growing') return `/products?q=${encodeURIComponent(name)}`;
+    return `/products?category=${encodeURIComponent(name)}`;
+  };
+
+  const renderIcon = (name: string, index: number) => {
+    if (activeTab === 'crop') {
+      const color = cropIconColors[index % cropIconColors.length];
+      return (
+        <div
+          className="w-12 h-12 rounded-full flex items-center justify-center text-white mb-2"
+          style={{ backgroundColor: color }}
+        >
+          <Sprout className="w-6 h-6" />
+        </div>
+      );
+    }
+
+    if (activeTab === 'growing') {
+      const method = growingMethods.find((m) => m.name === name);
+      const Icon = method?.icon ?? Sprout;
+      return (
+        <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary text-white mb-2">
+          <Icon className="w-6 h-6" />
+        </div>
+      );
+    }
+
+    const Icon = productCategoryIcons[name] ?? Leaf;
+    return (
+      <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary text-white mb-2">
+        <Icon className="w-6 h-6" />
+      </div>
+    );
   };
 
   return (
@@ -66,7 +171,7 @@ export default function InterestSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
           className="flex items-center justify-center gap-2 mb-10"
         >
@@ -80,7 +185,7 @@ export default function InterestSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="flex justify-center gap-3 mb-10"
         >
@@ -102,74 +207,32 @@ export default function InterestSection() {
         {/* Content */}
         <div className="relative">
           <AnimatePresence mode="wait">
-            {activeTab === 'productLines' ? (
-              <motion.div
-                key={activeTab}
-                variants={staggerContainer}
-                initial="hidden"
-                animate="visible"
-                exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                className="flex gap-4 overflow-x-auto hide-scrollbar pb-4 justify-start md:justify-center"
-              >
-                {productLines.map((line) => {
-                  const Icon = line.icon;
-                  return (
-                    <Link
-                      key={line.name}
-                      to={getItemUrl(line)}
-                      className="flex-shrink-0 w-[120px] md:w-[140px] group cursor-pointer"
-                    >
-                      <motion.div
-                        variants={fadeUpVariant}
-                        className="w-full aspect-square rounded-xl border border-gray-200 bg-white flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:border-primary group-hover:shadow-card group-hover:-translate-y-1"
-                      >
-                        <div
-                          className="w-16 h-16 rounded-full flex items-center justify-center text-white mb-3"
-                          style={{ backgroundColor: line.accent }}
-                        >
-                          <Icon className="w-8 h-8" />
-                        </div>
-                        <span className="text-xs font-medium text-gray-700 text-center leading-tight">
-                          {line.name}
-                        </span>
-                      </motion.div>
-                    </Link>
-                  );
-                })}
-              </motion.div>
-            ) : (
-              <motion.div
-                key={activeTab}
-                variants={staggerContainer}
-                initial="hidden"
-                animate="visible"
-                exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                className="flex gap-4 overflow-x-auto hide-scrollbar pb-4 justify-start md:justify-center"
-              >
-                {items.map((item) => {
-                  const Icon = item.icon as LucideIcon;
-                  return (
-                    <Link
-                      key={item.name}
-                      to={getItemUrl(item)}
-                      className="flex-shrink-0 w-[120px] md:w-[140px] group cursor-pointer"
-                    >
-                      <motion.div
-                        variants={fadeUpVariant}
-                        className="w-full aspect-square rounded-xl border border-gray-200 bg-white flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:border-primary group-hover:shadow-card group-hover:-translate-y-1"
-                      >
-                        <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary text-white mb-2">
-                          <Icon className="w-6 h-6" />
-                        </div>
-                        <span className="text-xs font-medium text-gray-700 text-center leading-tight">
-                          {item.name}
-                        </span>
-                      </motion.div>
-                    </Link>
-                  );
-                })}
-              </motion.div>
-            )}
+            <motion.div
+              key={activeTab}
+              variants={staggerContainer}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, transition: { duration: 0.2 } }}
+              className="flex gap-4 overflow-x-auto hide-scrollbar pb-4 justify-start md:justify-center"
+            >
+              {items.map((item, index) => (
+                <Link
+                  key={item}
+                  to={getItemUrl(item)}
+                  className="flex-shrink-0 w-[120px] md:w-[140px] group cursor-pointer"
+                >
+                  <motion.div
+                    variants={fadeUpVariant}
+                    className="w-full aspect-square rounded-xl border border-gray-200 bg-white flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:border-primary group-hover:shadow-card group-hover:-translate-y-1"
+                  >
+                    {renderIcon(item, index)}
+                    <span className="text-xs font-medium text-gray-700 text-center leading-tight">
+                      {item}
+                    </span>
+                  </motion.div>
+                </Link>
+              ))}
+            </motion.div>
           </AnimatePresence>
 
           {/* Scroll Arrows - Mobile */}

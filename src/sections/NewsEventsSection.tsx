@@ -4,26 +4,26 @@ import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 
 const events = [
   {
-    day: '22',
-    month: 'Jun',
+    day: '16',
+    month: 'Jul',
     category: 'EVENTS',
-    title: 'Mike Alpha at Kisan Mela 2026',
+    title: 'Mike Alpha at CONFIVA 2026',
     image: '/images/event-1.jpg',
     link: '#',
   },
   {
-    day: '16',
-    month: 'Jun',
+    day: '14',
+    month: 'Jul',
     category: 'NEWS',
-    title: 'CEO Featured in Agriculture Today Magazine',
+    title: 'Maala ESG Index 2026: Mike Alpha Continues to Rise',
     image: '/images/event-2.jpg',
     link: '#',
   },
   {
-    day: '20',
-    month: 'May',
-    category: 'EVENTS',
-    title: 'Mike Alpha at AgriTech Expo 2026',
+    day: '08',
+    month: 'Jul',
+    category: 'NEWS',
+    title: 'Mike Alpha at the IFA Annual Conference 2026: Strengthening Connections Across the Global Fertilizer Industry',
     image: '/images/event-3.jpg',
     link: '#',
   },
@@ -41,7 +41,7 @@ export default function NewsEventsSection() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-3xl font-semibold text-center text-gray-800 uppercase tracking-widest mb-12"
         >
-          News &amp; Events
+          NEWS & EVENTS
         </motion.h2>
 
         {/* Grid */}

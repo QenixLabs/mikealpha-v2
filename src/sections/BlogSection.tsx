@@ -4,19 +4,19 @@ import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 
 const blogPosts = [
   {
-    title: 'Getting the Most from Mike 13-00-45 on Tomatoes and Grapes',
+    title: 'Overcoming Soil Barriers: Effective Fertilization in Calcareous and Alkaline Soils',
     author: 'Mike Alpha Agronomy Team',
     image: '/images/blog-1.jpg',
     link: '#',
   },
   {
-    title: 'Why Foliar Potassium with Mike Whitepot Solution Improves Fruit Quality',
+    title: 'Improving Nitrogen Management and Yield Potential with Croptune™',
     author: 'Mike Alpha Agronomy Team',
     image: '/images/blog-2.jpg',
     link: '#',
   },
   {
-    title: 'Biological Nutrition: How Mike BVM Supports Cotton and Paddy',
+    title: 'Match-Day Snacks, Powered by Plant Nutrition',
     author: 'Mike Alpha Agronomy Team',
     image: '/images/blog-3.jpg',
     link: '#',
@@ -35,7 +35,7 @@ export default function BlogSection() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-3xl font-semibold text-center text-gray-800 uppercase tracking-widest mb-12"
         >
-          Agronomy Blog
+          BLOG
         </motion.h2>
 
         {/* Grid */}

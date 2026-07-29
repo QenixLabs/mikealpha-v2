@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
+import FloatingActions from '@/components/FloatingActions';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 
 const contactDetails = [
@@ -74,7 +75,7 @@ export default function Contact() {
     <div className="min-h-screen bg-brand-background">
       <Navbar />
 
-      <main className="pt-24">
+      <main className="pt-32">
         {/* Hero */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -348,6 +349,7 @@ export default function Contact() {
       </main>
 
       <Footer />
+      <FloatingActions />
     </div>
   );
 }

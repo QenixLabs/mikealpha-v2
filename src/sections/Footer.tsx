@@ -1,15 +1,56 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Facebook, Youtube, Linkedin } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 
 const footerLinks = {
   products: {
     title: 'Products',
-    items: ['Plant Nutrition', 'NPK Fertilizers', 'Specialty Fertilizers', 'Biological Fertilizers', 'Micronutrients', 'Biostimulants', 'Products catalog', 'FAQ'],
+    items: [
+      'Plant Nutrition',
+      'NPK Fertilizers',
+      'Specialty Fertilizers',
+      'Biological Fertilizers',
+      'Micronutrients',
+      'Biostimulants',
+      'Products Catalog',
+      'FAQ',
+    ],
   },
   growingPractice: {
     title: 'Growing Practice',
-    items: ['Fertilization Methods', 'Foliar Feeding', 'Soil Application', 'Drip Fertigation', 'Seed Treatment', 'Growing Methods', 'Crop Guides'],
+    items: [
+      'Fertilization Methods',
+      'Foliar Feeding',
+      'Soil Application',
+      'Drip Fertigation',
+      'Seed Treatment',
+      'Growing Methods',
+      'Crop Guides',
+    ],
+  },
+  myTools: {
+    title: 'My Tools',
+    items: [
+      'NutriNet™',
+      'FertiMatch™',
+      'FoliMatch™',
+      'Conversion Calculator',
+      'Deficiency Pro',
+    ],
+  },
+  aboutUs: {
+    title: 'About us',
+    items: [
+      'About Mike Alpha',
+      'Leadership Team',
+      'R&D Center',
+      'Values',
+      'News & Events',
+      'Worldwide',
+      'Contact us',
+    ],
   },
 };
 
@@ -21,20 +62,81 @@ const XIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [agreed, setAgreed] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email && agreed) {
+      alert('Thank you for subscribing!');
+      setEmail('');
+      setAgreed(false);
+    }
+  };
+
   return (
     <footer className="w-full bg-white text-brand-text-primary">
+      {/* Newsletter Band */}
+      <div className="bg-[#EEF3EE] py-12">
+        <div className="max-w-container mx-auto px-4 lg:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-800 uppercase tracking-wider mb-3">
+                GET THE VERY LATEST FROM MIKE ALPHA
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                The Mike Alpha newsletter keeps you updated on advanced plant nutrition information, and provides the latest news & events you and your crops should know about.
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-medium text-gray-700 uppercase tracking-wider mb-3">
+                Enter your email and get the very latest from Mike Alpha
+              </p>
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="relative">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your email address"
+                    className="w-full h-12 pl-4 pr-24 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-primary bg-white"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-1.5 top-1/2 -translate-y-1/2 h-9 px-5 bg-primary text-white font-semibold text-sm rounded-full hover:bg-primary-dark transition-colors"
+                  >
+                    Send
+                  </button>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Checkbox
+                    id="footer-agree"
+                    checked={agreed}
+                    onCheckedChange={(checked) => setAgreed(checked === true)}
+                    className="mt-0.5 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  />
+                  <label htmlFor="footer-agree" className="text-xs text-gray-600 cursor-pointer">
+                    I agree to receive information via email
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true, margin: '-50px' }}
         className="max-w-container mx-auto px-4 lg:px-6 py-16"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Column 1 - Logo & Description */}
-          <motion.div variants={fadeUpVariant} className="lg:col-span-5">
-            {/* Logo */}
+          <motion.div variants={fadeUpVariant} className="lg:col-span-4">
             <a href="/" className="flex items-center gap-2 mb-6">
               <img src="/images/logo.png" alt="Mike Alpha" className="h-16 w-auto" />
             </a>
@@ -82,8 +184,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          <div className="lg:col-span-7 grid grid-cols-2 gap-8">
-            {/* Column 2 - Products */}
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             <motion.div variants={fadeUpVariant}>
               <h4 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">
                 {footerLinks.products.title}
@@ -102,13 +203,48 @@ export default function Footer() {
               </ul>
             </motion.div>
 
-            {/* Column 3 - Growing Practice */}
             <motion.div variants={fadeUpVariant}>
               <h4 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">
                 {footerLinks.growingPractice.title}
               </h4>
               <ul className="space-y-2.5">
                 {footerLinks.growingPractice.items.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-sm text-brand-text-secondary hover:text-brand-text-primary transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant}>
+              <h4 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">
+                {footerLinks.myTools.title}
+              </h4>
+              <ul className="space-y-2.5">
+                {footerLinks.myTools.items.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-sm text-brand-text-secondary hover:text-brand-text-primary transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div variants={fadeUpVariant}>
+              <h4 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">
+                {footerLinks.aboutUs.title}
+              </h4>
+              <ul className="space-y-2.5">
+                {footerLinks.aboutUs.items.map((item) => (
                   <li key={item}>
                     <a
                       href="#"
@@ -139,6 +275,9 @@ export default function Footer() {
             </a>
             <a href="#" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
               Copyright policy
+            </a>
+            <a href="#" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
+              Concern & Feedback
             </a>
           </div>
         </div>

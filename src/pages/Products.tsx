@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router";
 import { LayoutGrid, List, Search, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import { products, categories, productLines, type Product } from "@/data/products";
 
 type SortOption = "default" | "name-asc" | "name-desc" | "category";
@@ -160,7 +161,7 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-brand-background">
       <Navbar />
-      <main className="pt-24 pb-16">
+      <main className="pt-32 pb-16">
         <section className="max-w-container mx-auto px-4 lg:px-6">
           <div className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-brand-text-primary mb-4">
@@ -295,6 +296,7 @@ export default function Products() {
         </section>
       </main>
       <Footer />
+      <FloatingActions />
     </div>
   );
 }

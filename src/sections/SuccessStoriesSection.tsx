@@ -9,14 +9,38 @@ import 'swiper/css/pagination';
 
 const stories = [
   {
-    title: 'Stronger Cotton Stands and Better Boll Set in Gujarat',
-    excerpt: 'A grower in Anand applied Mike BVM at 1 L/acre through drip at planting, followed by Mike 19-19-19 at 2 kg/acre during vegetative growth and Mike 13-00-45 at fruit development. The result was more vigorous root development, healthier branching, visibly better boll retention, and more uniform boll sizing through the picking window.',
+    title: 'Improving Hass Avocado Performance with HaifaStim™ Vital',
+    excerpt: 'A grower in Karnataka applied Mike Alpha biostimulant program through drip at key growth stages. The result was more vigorous root development, healthier branching, visibly better fruit retention, and more uniform sizing through the harvest window.',
     image: '/images/success-1.jpg',
     link: '#',
   },
   {
-    title: 'Higher Tomato Yields with Mike 13-00-45 in Maharashtra',
-    excerpt: 'Progressive tomato growers in Nashik district adopted Mike 13-00-45 during the fruit development stage. Applied through drip irrigation at 2 kg/acre, farmers reported significantly improved fruit set, uniform fruit sizing, and a 15% increase in marketable yield compared to their previous fertilizer program.',
+    title: 'Multicote™ Agri in Potato: More Yield, Better ROI',
+    excerpt: 'Progressive potato growers in Gujarat adopted a controlled-release nutrition program. Farmers reported significantly improved tuber set, uniform sizing, and a measurable increase in marketable yield compared to their previous fertilizer program.',
+    image: '/images/blog-1.jpg',
+    link: '#',
+  },
+  {
+    title: 'Optimizing Kiwi Cultivation with Mike Alpha 360 Strategy',
+    excerpt: 'Kiwi orchards in Himachal Pradesh benefited from a balanced foliar and soil program. The integrated approach improved flowering consistency, fruit fill, and post-harvest shelf life.',
+    image: '/images/blog-2.jpg',
+    link: '#',
+  },
+  {
+    title: 'Growing Stronger Cucumbers Under Stress',
+    excerpt: 'Cucumber growers in Maharashtra used a stress-management nutrition program during peak summer. Crops showed better vine vigor, improved fruit set, and sustained production through heat stress.',
+    image: '/images/blog-3.jpg',
+    link: '#',
+  },
+  {
+    title: 'Mike Alpha Powers Banana Performance from the Ground Up',
+    excerpt: 'Banana plantations in Tamil Nadu implemented a precision nutrition plan from planting to bunch filling. The program delivered stronger root establishment, uniform bunch development, and improved finger grade.',
+    image: '/images/success-1.jpg',
+    link: '#',
+  },
+  {
+    title: 'Taking Citrus Nutrition to the Next Level: Proven Results from South India',
+    excerpt: 'Citrus growers in Telangana applied a balanced NPK and micronutrient program across the season. Results included better flowering, reduced fruit drop, and brighter, heavier fruit at harvest.',
     image: '/images/blog-1.jpg',
     link: '#',
   },
@@ -36,7 +60,7 @@ export default function SuccessStoriesSection() {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-3xl font-semibold text-center text-gray-800 uppercase tracking-widest mb-12"
         >
-          Success Stories
+          SUCCESS STORIES
         </motion.h2>
 
         {/* Carousel */}

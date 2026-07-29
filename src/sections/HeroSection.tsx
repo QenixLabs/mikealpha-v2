@@ -10,8 +10,13 @@ const slides = [
   },
   {
     image: '/images/hero-bg-2.jpg',
-    title: 'INNOVATE',
-    subtitle: 'Science-Driven Crop Nutrition',
+    title: 'INNOVATION',
+    subtitle: 'Pioneering the Future',
+  },
+  {
+    image: '/images/hero-bg.jpg',
+    title: 'COMPASSion',
+    subtitle: "It's all about Being Human",
   },
 ];
 
@@ -61,7 +66,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/30 z-[1]" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex items-center pt-16 md:pt-20">
         <div className="max-w-container mx-auto px-6 lg:px-10 w-full">
           <AnimatePresence mode="wait">
             <motion.div
@@ -72,6 +77,14 @@ export default function HeroSection() {
               transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="max-w-xl"
             >
+              <motion.span
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.05 }}
+                className="inline-block text-sm md:text-base font-semibold text-white/80 uppercase tracking-[0.2em] mb-3"
+              >
+                Alpha Agro
+              </motion.span>
               <motion.h1
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
