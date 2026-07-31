@@ -14,6 +14,7 @@ import Footer from '@/sections/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import FloatingChat from '@/components/FloatingChat';
 import { getCropGuideBySlug, type CropResource } from '@/data/cropGuides';
+import { toInternalArticleUrl } from '@/lib/utils';
 
 const iconMap = {
   recommendation: Award,
@@ -27,7 +28,8 @@ function ResourceList({ resources }: { resources: CropResource[] }) {
     <div className="space-y-4">
       {resources.map((resource, idx) => {
         const Icon = iconMap[resource.icon];
-        return (
+        const internalUrl = toInternalArticleUrl(resource.href);
+        const content = (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 12 }}
@@ -40,17 +42,28 @@ function ResourceList({ resources }: { resources: CropResource[] }) {
               <Icon className="w-6 h-6 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <a
-                href={resource.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 text-base font-medium text-brand-text-primary hover:text-primary transition-colors"
-              >
+              <span className="group inline-flex items-center gap-2 text-base font-medium text-brand-text-primary hover:text-primary transition-colors">
                 <span className="leading-snug">{resource.text}</span>
                 <ExternalLink className="w-4 h-4 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
-              </a>
+              </span>
             </div>
           </motion.div>
+        );
+
+        return internalUrl ? (
+          <Link key={idx} to={internalUrl} className="block">
+            {content}
+          </Link>
+        ) : (
+          <a
+            key={idx}
+            href={resource.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            {content}
+          </a>
         );
       })}
     </div>
@@ -184,15 +197,26 @@ export default function CropGuide() {
                   <h4 className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
                     Recommendations
                   </h4>
-                  <a
-                    href={guide.recommendationsLink.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-start gap-2 text-sm font-medium text-gray-800 hover:text-primary transition-colors"
-                  >
-                    <Award className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>{guide.recommendationsLink.text}</span>
-                  </a>
+                  {(() => {
+                    const internalUrl = toInternalArticleUrl(guide.recommendationsLink.href);
+                    const content = (
+                      <span className="inline-flex items-start gap-2 text-sm font-medium text-gray-800 hover:text-primary transition-colors">
+                        <Award className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>{guide.recommendationsLink.text}</span>
+                      </span>
+                    );
+                    return internalUrl ? (
+                      <Link to={internalUrl}>{content}</Link>
+                    ) : (
+                      <a
+                        href={guide.recommendationsLink.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {content}
+                      </a>
+                    );
+                  })()}
                 </div>
               )}
 
@@ -203,26 +227,48 @@ export default function CropGuide() {
                   </h4>
                   <div className="space-y-3">
                     {guide.relatedTagsLink && (
-                      <a
-                        href={guide.relatedTagsLink.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-start gap-2 text-sm text-gray-700 hover:text-primary transition-colors"
-                      >
-                        <Tag className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>{guide.relatedTagsLink.text}</span>
-                      </a>
+                      (() => {
+                        const internalUrl = toInternalArticleUrl(guide.relatedTagsLink!.href);
+                        const content = (
+                          <span className="flex items-start gap-2 text-sm text-gray-700 hover:text-primary transition-colors">
+                            <Tag className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>{guide.relatedTagsLink.text}</span>
+                          </span>
+                        );
+                        return internalUrl ? (
+                          <Link to={internalUrl}>{content}</Link>
+                        ) : (
+                          <a
+                            href={guide.relatedTagsLink.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {content}
+                          </a>
+                        );
+                      })()
                     )}
                     {guide.sourceLink && (
-                      <a
-                        href={guide.sourceLink.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-start gap-2 text-sm text-gray-700 hover:text-primary transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>{guide.sourceLink.text}</span>
-                      </a>
+                      (() => {
+                        const internalUrl = toInternalArticleUrl(guide.sourceLink!.href);
+                        const content = (
+                          <span className="flex items-start gap-2 text-sm text-gray-700 hover:text-primary transition-colors">
+                            <ExternalLink className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <span>{guide.sourceLink.text}</span>
+                          </span>
+                        );
+                        return internalUrl ? (
+                          <Link to={internalUrl}>{content}</Link>
+                        ) : (
+                          <a
+                            href={guide.sourceLink.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {content}
+                          </a>
+                        );
+                      })()
                     )}
                   </div>
                 </div>

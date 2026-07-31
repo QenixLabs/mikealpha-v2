@@ -6,6 +6,7 @@ import {
   Search,
   Menu,
   Globe,
+  User,
   X,
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -16,7 +17,7 @@ import { cn } from '@/lib/utils';
 const cropSlugMap = new Map(cropGuides.map((c) => [c.cropName, c.slug]));
 
 const navItemsLeft = ['Crop Guide', 'Products', 'Growing Practice', 'Smart Farming'];
-const navItemsRight = ['COMPASSion', 'Precision IMPACT', 'Corporate', 'Insights'];
+const navItemsRight = ['Careers', 'Precision IMPACT', 'Corporate', 'Insights'];
 
 type DropdownSection = {
   title?: string;
@@ -304,8 +305,8 @@ function getItemUrl(label: string, item: string): string {
       };
       return insightsUrlMap[item] || `/insights`;
     }
-    case 'COMPASSion':
-      return `/compassion`;
+    case 'Careers':
+      return `/careers`;
     default:
       return '#';
   }
@@ -562,7 +563,7 @@ export default function Navbar() {
       )}
     >
       <div className="border-b border-gray-100 relative">
-        <div className="max-w-container mx-auto px-4 lg:px-6 h-14 lg:h-[72px] flex items-center justify-between relative">
+        <div className="max-w-container mx-auto px-4 lg:px-6 h-14 lg:h-[72px] flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] relative">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
               <button
@@ -636,10 +637,10 @@ export default function Navbar() {
 
                 <div className="flex-1 overflow-auto py-2">
                   {[...navItemsLeft, ...navItemsRight].map((label) =>
-                    label === 'COMPASSion' ? (
+                    label === 'Careers' ? (
                       <div key={label} className="border-b border-gray-50">
                         <Link
-                          to="/compassion"
+                          to="/careers"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-primary-light hover:text-primary transition-colors"
                         >
@@ -704,6 +705,16 @@ export default function Navbar() {
                 </div>
 
                 <div className="p-4 border-t">
+                  <button
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      alert('Login coming soon.');
+                    }}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 mb-4 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    <User className="w-4 h-4" />
+                    Login
+                  </button>
                   <p className="text-xs text-gray-400 mb-2">Language</p>
                   <div className="flex gap-2">
                     <button
@@ -751,7 +762,7 @@ export default function Navbar() {
             />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-1 flex-shrink-0 z-50">
+          <nav className="hidden lg:flex items-center justify-end gap-1 z-50">
             {navItemsLeft.map((label) => (
               <NavItem key={label} label={label} isLeft />
             ))}
@@ -759,7 +770,7 @@ export default function Navbar() {
 
           <a
             href="/"
-            className="hidden lg:block absolute left-1/2 -translate-x-1/2 z-40"
+            className="hidden lg:flex items-center justify-center z-40"
           >
             <img
               src="/images/logo.png"
@@ -768,12 +779,12 @@ export default function Navbar() {
             />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-1 flex-shrink-0 z-50">
+          <nav className="hidden lg:flex items-center justify-start gap-1 z-50">
             {navItemsRight.map((label) =>
-              label === 'COMPASSion' ? (
+              label === 'Careers' ? (
                 <Link
                   key={label}
-                  to="/compassion"
+                  to="/careers"
                   className="h-12 flex items-center px-1 text-xs font-medium text-gray-700 border-b-2 border-transparent hover:text-primary hover:border-green-600 transition-colors"
                 >
                   {label}
@@ -928,6 +939,14 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
+
+              <button
+                onClick={() => alert('Login coming soon.')}
+                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                <User className="w-4 h-4" />
+                Login
+              </button>
             </div>
           </nav>
         </div>

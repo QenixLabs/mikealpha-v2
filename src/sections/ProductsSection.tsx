@@ -18,13 +18,6 @@ const products = [
     image: '/products/All Products_19-19-19.png',
   },
   {
-    slug: 'bvm',
-    name: 'Mike BVM',
-    formula: '3-Strain: N-fix + P-sol + K-mob',
-    description: 'Consortium of Rhizobium, Bacillus Megaterium, and Frateuria Aurantia for comprehensive soil fertility.',
-    image: '/products/All Products_BVM.png',
-  },
-  {
     slug: '00-52-34',
     name: 'Mike 00-52-34 (MKP)',
     formula: 'Mono Potassium Phosphate',
@@ -39,18 +32,25 @@ const products = [
     image: '/products/All Products_Blackpot.png',
   },
   {
-    slug: 'whitepot-solution',
-    name: 'Mike Whitepot Solution',
-    formula: 'K2O 30% Liquid Potassium',
-    description: 'Liquid potassium solution with fortifying effect for foliar application and improved fruit quality.',
-    image: '/products/All Products_Whitepot.png',
-  },
-  {
     slug: '13-00-45',
     name: 'Mike 13-00-45',
     formula: 'Potassium Nitrate',
     description: 'Nitrate nitrogen & high potash for excellent fruit setting, uniform size, and healthy high yield.',
     image: '/products/All Products_13-00-45.png',
+  },
+  {
+    slug: 'bvm',
+    name: 'Mike BVM',
+    formula: '3-Strain: N-fix + P-sol + K-mob',
+    description: 'Consortium of Rhizobium, Bacillus Megaterium, and Frateuria Aurantia for comprehensive soil fertility.',
+    image: '/products/All Products_BVM.png',
+  },
+  {
+    slug: 'whitepot-solution',
+    name: 'Mike Whitepot Solution',
+    formula: 'K2O 30% Liquid Potassium',
+    description: 'Liquid potassium solution with fortifying effect for foliar application and improved fruit quality.',
+    image: '/products/All Products_Whitepot.png',
   },
 ];
 

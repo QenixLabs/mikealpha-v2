@@ -13,11 +13,6 @@ const slides = [
     title: 'INNOVATION',
     subtitle: 'Pioneering the Future',
   },
-  {
-    image: '/images/hero-bg.jpg',
-    title: 'COMPASSion',
-    subtitle: "It's all about Being Human",
-  },
 ];
 
 export default function HeroSection() {
@@ -55,7 +50,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          src="/images/hero.mp4"
+          src="/images/haifa-hero.mp4"
           autoPlay
           muted
           loop

@@ -11,10 +11,11 @@ import InsightsDetail from './pages/InsightsDetail'
 import PrecisionImpact from './pages/PrecisionImpact'
 import Corporate from './pages/Corporate'
 import Insights from './pages/Insights'
-import Compassion from './pages/Compassion'
+import Careers from './pages/Careers'
 import ImpactStrategy from './pages/ImpactStrategy'
 import ImpactDetail from './pages/ImpactDetail'
 import CorporateDetail from './pages/CorporateDetail'
+import ArticleDetail from './pages/ArticleDetail'
 
 export default function App() {
   return (
@@ -46,11 +47,12 @@ export default function App() {
       <Route path="/haifa-grows" element={<CorporateDetail />} />
       <Route path="/haifa-worldwide" element={<CorporateDetail />} />
       <Route path="/insights" element={<Insights />} />
+      <Route path="/article/:slug" element={<ArticleDetail />} />
       <Route path="/podcasts" element={<InsightsDetail />} />
       <Route path="/success-stories" element={<InsightsDetail />} />
       <Route path="/faq" element={<InsightsDetail />} />
       <Route path="/haifa-videos" element={<InsightsDetail />} />
-      <Route path="/compassion" element={<Compassion />} />
+      <Route path="/careers" element={<Careers />} />
       <Route path="/crop-guide/*" element={<CropGuide />} />
       <Route path="/:slug" element={<CropGuide />} />
     </Routes>

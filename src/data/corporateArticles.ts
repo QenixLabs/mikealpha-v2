@@ -284,7 +284,7 @@ export const corporateArticles: CorporateArticle[] = [
       {
         title: "It's all about being human",
         content:
-          'At Haifa, we act out of a genuine desire to build a more caring and attentive world. The value of COMPASSion begins with our internal culture—shaping how we communicate, collaborate, and support one another—and extends outward to our customers, suppliers, and growth partners.\n\nOur business ethos is rooted in creating humane, fair, and respectful relationships that foster cooperation and trust. Whether inside the organization or out in the field, we strive to generate positive value and seek Win-Win outcomes in every interaction. This value truly comes to life in our relationship with our ultimate growth partners: the growers. With deep familiarity with their work and the challenges they face, we share our knowledge and expertise to support their success—because when they thrive, we all grow together.',
+          'At Haifa, we act out of a genuine desire to build a more caring and attentive world. Our people-first value begins with our internal culture—shaping how we communicate, collaborate, and support one another—and extends outward to our customers, suppliers, and growth partners.\n\nOur business ethos is rooted in creating humane, fair, and respectful relationships that foster cooperation and trust. Whether inside the organization or out in the field, we strive to generate positive value and seek Win-Win outcomes in every interaction. This value truly comes to life in our relationship with our ultimate growth partners: the growers. With deep familiarity with their work and the challenges they face, we share our knowledge and expertise to support their success—because when they thrive, we all grow together.',
       },
     ],
   },
@@ -317,7 +317,7 @@ export const corporateArticles: CorporateArticle[] = [
       { title: 'Haifa Leadership Forum 2026: From Global Vision to Growth in the Field', image: '/images/blog-3.jpg', link: 'https://www.haifa-group.com/event/haifa-leadership-forum-2026' },
       { title: 'HaifaStim Roadshow 2025: Where Expertise Meets Fun', image: '/images/blog-1.jpg', link: 'https://www.haifa-group.com/event/iberia-haifastim-roadshow-2025' },
       { title: 'Nutri Haitech Conference 2025: Advancing Solutions for the Open Field', image: '/images/blog-2.jpg', link: 'https://www.haifa-group.com/event/nutri-haitech-conference-nov25' },
-      { title: 'Haifa Group Advances Strategic Partnerships and Community Relations in Crete – Driven by Innovation, Impact & COMPASSion', image: '/images/blog-3.jpg', link: 'https://www.haifa-group.com/event/crete-conference-nov25' },
+      { title: 'Haifa Group Advances Strategic Partnerships and Community Relations in Crete – Driven by Innovation, Impact & People', image: '/images/blog-3.jpg', link: 'https://www.haifa-group.com/event/crete-conference-nov25' },
     ],
   },
   {

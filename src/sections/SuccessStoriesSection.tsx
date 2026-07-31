@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
@@ -12,37 +13,37 @@ const stories = [
     title: 'Improving Hass Avocado Performance with HaifaStim™ Vital',
     excerpt: 'A grower in Karnataka applied Mike Alpha biostimulant program through drip at key growth stages. The result was more vigorous root development, healthier branching, visibly better fruit retention, and more uniform sizing through the harvest window.',
     image: '/images/success-1.jpg',
-    link: '#',
+    link: '/success-stories',
   },
   {
     title: 'Multicote™ Agri in Potato: More Yield, Better ROI',
     excerpt: 'Progressive potato growers in Gujarat adopted a controlled-release nutrition program. Farmers reported significantly improved tuber set, uniform sizing, and a measurable increase in marketable yield compared to their previous fertilizer program.',
     image: '/images/blog-1.jpg',
-    link: '#',
+    link: '/success-stories',
   },
   {
     title: 'Optimizing Kiwi Cultivation with Mike Alpha 360 Strategy',
     excerpt: 'Kiwi orchards in Himachal Pradesh benefited from a balanced foliar and soil program. The integrated approach improved flowering consistency, fruit fill, and post-harvest shelf life.',
     image: '/images/blog-2.jpg',
-    link: '#',
+    link: '/success-stories',
   },
   {
     title: 'Growing Stronger Cucumbers Under Stress',
     excerpt: 'Cucumber growers in Maharashtra used a stress-management nutrition program during peak summer. Crops showed better vine vigor, improved fruit set, and sustained production through heat stress.',
     image: '/images/blog-3.jpg',
-    link: '#',
+    link: '/success-stories',
   },
   {
     title: 'Mike Alpha Powers Banana Performance from the Ground Up',
     excerpt: 'Banana plantations in Tamil Nadu implemented a precision nutrition plan from planting to bunch filling. The program delivered stronger root establishment, uniform bunch development, and improved finger grade.',
     image: '/images/success-1.jpg',
-    link: '#',
+    link: '/success-stories',
   },
   {
     title: 'Taking Citrus Nutrition to the Next Level: Proven Results from South India',
     excerpt: 'Citrus growers in Telangana applied a balanced NPK and micronutrient program across the season. Results included better flowering, reduced fruit drop, and brighter, heavier fruit at harvest.',
     image: '/images/blog-1.jpg',
-    link: '#',
+    link: '/success-stories',
   },
 ];
 
@@ -116,12 +117,12 @@ export default function SuccessStoriesSection() {
                     <p className="text-sm text-gray-600 leading-relaxed mb-6">
                       {story.excerpt}
                     </p>
-                    <a
-                      href={story.link}
+                    <Link
+                      to={story.link}
                       className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                     >
                       Read more
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>
@@ -137,12 +138,12 @@ export default function SuccessStoriesSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-10"
         >
-          <a
-            href="#"
+          <Link
+            to="/success-stories"
             className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary-dark transition-all duration-300 hover:scale-[1.02]"
           >
             Read All Success Stories
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

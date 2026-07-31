@@ -34,9 +34,9 @@ export type ImpactArticle = {
 export const impactArticles: ImpactArticle[] = [
   {
     path: '/impact-innovation-compassion',
-    title: 'IMPACT, INNOVATION, COMPASSion',
-    subtitle: 'Leading through IMPACT, INNOVATION, COMPASSion',
-    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'IMPACT, INNOVATION, COMPASSion' }],
+    title: 'IMPACT, INNOVATION, People',
+    subtitle: 'Leading through IMPACT, INNOVATION, People',
+    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'IMPACT, INNOVATION, People' }],
     heroImage: '/images/impact-bg.jpg',
     intro:
       'Environmental, Social, and Governance (ESG) values are at the heart of everything we do. From reducing our carbon footprint to supporting sustainable agriculture and fostering a culture of inclusivity, our commitment is clear: To grow more food responsibly and commit to our plant health and a thriving humanity. We are proud to present our second ESG report for the years 2022-2023.',
@@ -67,7 +67,7 @@ export const impactArticles: ImpactArticle[] = [
       {
         title: 'See How We Make an IMPACT',
         content:
-          'Our work is organized around three pillars: IMPACT – driving sustainability through innovation and measurable change; INNOVATION – creating groundbreaking solutions for a greener tomorrow; and COMPASSion – empowering our people and communities with purpose and care.',
+          'Our work is organized around three pillars: IMPACT – driving sustainability through innovation and measurable change; INNOVATION – creating groundbreaking solutions for a greener tomorrow; and PEOPLE – empowering our teams and communities with purpose and care.',
       },
     ],
   },
@@ -117,7 +117,7 @@ export const impactArticles: ImpactArticle[] = [
   },
   {
     path: '/precision-impact/esg/social',
-    title: 'Social IMPACT: Compassion is Our Organizational Compass',
+    title: 'Social IMPACT: Our People Are Our Compass',
     breadcrumb: [
       { label: 'HOME', to: '/' },
       { label: 'IMPACT', to: '/precision-impact' },
@@ -125,7 +125,7 @@ export const impactArticles: ImpactArticle[] = [
     ],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      'At Mike Alpha, compassion is the foundation of our organizational culture, shaping our actions and interactions at every level. We believe that fostering human relations and practicing fair conduct are key to building a better world. Our social impact strategy addresses three interlocking circles: Mike Alpha Employees, Potential & New Employees, and Our Communities.',
+      'At Mike Alpha, care for people is the foundation of our organizational culture, shaping our actions and interactions at every level. We believe that fostering human relations and practicing fair conduct are key to building a better world. Our social impact strategy addresses three interlocking circles: Mike Alpha Employees, Potential & New Employees, and Our Communities.',
     sections: [
       {
         title: 'Committed to Our Employees',

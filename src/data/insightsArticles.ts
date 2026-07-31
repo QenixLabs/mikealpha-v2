@@ -28,13 +28,22 @@ export type InsightsArticle = {
   faqGroups?: InsightsFaqGroup[];
 };
 
-const baseUrl = 'https://www.haifa-group.com';
+const rewriteAnswer = (html: string): string => {
+  const toArticle = (path: string) => {
+    const slug = path.replace(/\/$/, '').split('/').pop();
+    return slug ? `/article/${slug}` : path;
+  };
 
-function rewriteAnswer(html: string): string {
   return html
-    .replace(/<a\s/g, '<a target="_blank" rel="noopener noreferrer" ')
-    .replace(/href="\//g, `href="${baseUrl}/`);
-}
+    .replace(
+      /href="https?:\/\/[^"]*haifa-group\.com(\/[^"]*)"/g,
+      (_match, path) => `href="${toArticle(path)}"`
+    )
+    .replace(
+      /href="(\/[^"]*)"/g,
+      (_match, path) => `href="${toArticle(path)}"`
+    );
+};
 
 export const insightsArticles: InsightsArticle[] = [
   {

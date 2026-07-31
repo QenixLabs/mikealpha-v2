@@ -4,10 +4,15 @@ import { LayoutGrid, List, Search, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import { products, categories, productLines, type Product } from "@/data/products";
+import { products, categories, type Product } from "@/data/products";
 
-type SortOption = "default" | "name-asc" | "name-desc" | "category";
+type SortOption = "default" | "name-asc" | "name-desc" | "category" | "state";
 type ViewMode = "grid" | "list";
+
+function isLiquidPackaging(packaging: string): boolean {
+  const lower = packaging.toLowerCase();
+  return lower.includes("liquid") || lower.includes("ml") || /\d\s*l\b/.test(lower);
+}
 
 function sortProducts(list: Product[], sort: SortOption) {
   const sorted = [...list];
@@ -20,6 +25,13 @@ function sortProducts(list: Product[], sort: SortOption) {
       break;
     case "category":
       sorted.sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name));
+      break;
+    case "state":
+      sorted.sort((a, b) => {
+        const aLiquid = isLiquidPackaging(a.packaging) ? 1 : 0;
+        const bLiquid = isLiquidPackaging(b.packaging) ? 1 : 0;
+        return aLiquid - bLiquid || a.name.localeCompare(b.name);
+      });
       break;
     default:
       break;
@@ -67,10 +79,7 @@ function ProductCard({ product, view }: { product: Product; view: ViewMode }) {
           />
         </div>
         <div className="p-5 flex flex-col flex-1">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-coral">{product.category}</span>
-            <span className="text-xs text-brand-text-muted">{product.productLine}</span>
-          </div>
+          <span className="text-xs font-semibold uppercase tracking-wider text-coral mb-2">{product.category}</span>
           <h2 className="text-xl font-bold text-brand-text-primary mb-2 group-hover:text-coral transition-colors">
             {title}
           </h2>
@@ -101,10 +110,7 @@ function ProductCard({ product, view }: { product: Product; view: ViewMode }) {
         />
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <div className="flex items-center justify-between gap-2 mb-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-coral">{product.category}</span>
-          <span className="text-xs text-brand-text-muted">{product.productLine}</span>
-        </div>
+        <span className="text-xs font-semibold uppercase tracking-wider text-coral mb-2">{product.category}</span>
         <h2 className="text-lg font-bold text-brand-text-primary mb-2 group-hover:text-coral transition-colors">
           {title}
         </h2>
@@ -118,13 +124,12 @@ function ProductCard({ product, view }: { product: Product; view: ViewMode }) {
 export default function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
   const activeCategory = searchParams.get("category") ?? "All";
-  const activeLine = searchParams.get("line") ?? "All";
   const query = searchParams.get("q") ?? "";
 
-  const [sort, setSort] = useState<SortOption>("name-asc");
+  const [sort, setSort] = useState<SortOption>("state");
   const [view, setView] = useState<ViewMode>("grid");
 
-  const updateParam = (key: "category" | "line" | "q", value: string) => {
+  const updateParam = (key: "category" | "q", value: string) => {
     const next = new URLSearchParams(searchParams);
     if (value && value !== "All") {
       next.set(key, value);
@@ -139,9 +144,6 @@ export default function Products() {
     if (activeCategory !== "All") {
       list = list.filter((p) => p.category === activeCategory);
     }
-    if (activeLine !== "All") {
-      list = list.filter((p) => p.productLine === activeLine);
-    }
     const q = query.trim().toLowerCase();
     if (q) {
       list = list.filter(
@@ -154,7 +156,7 @@ export default function Products() {
       );
     }
     return sortProducts(list, sort);
-  }, [activeCategory, activeLine, query, sort]);
+  }, [activeCategory, query, sort]);
 
   const groups = useMemo(() => groupProducts(filtered), [filtered]);
 
@@ -192,26 +194,6 @@ export default function Products() {
             })}
           </div>
 
-          {/* Product line filter tabs */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            {productLines.map((line) => {
-              const active = activeLine === line;
-              return (
-                <button
-                  key={line}
-                  onClick={() => updateParam("line", line)}
-                  className={`px-4 py-2 text-sm font-medium border transition-colors ${
-                    active
-                      ? "bg-coral text-white border-coral"
-                      : "bg-white text-brand-text-secondary border-brand-border hover:border-coral hover:text-coral"
-                  }`}
-                >
-                  {line === "All" ? "All Lines" : line}
-                </button>
-              );
-            })}
-          </div>
-
           {/* Toolbar */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <p className="text-sm text-brand-text-muted">
@@ -244,6 +226,7 @@ export default function Products() {
                 onChange={(e) => setSort(e.target.value as SortOption)}
                 className="h-10 px-3 text-sm bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy"
               >
+                <option value="state">Solid First</option>
                 <option value="default">Default</option>
                 <option value="name-asc">Name A-Z</option>
                 <option value="name-desc">Name Z-A</option>

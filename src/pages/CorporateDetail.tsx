@@ -8,7 +8,7 @@ import {
   type CorporateSection,
 } from '@/data/corporateArticles';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
-import { cn } from '@/lib/utils';
+import { cn, toInternalArticleUrl } from '@/lib/utils';
 
 function Breadcrumb({ article }: { article: CorporateArticle }) {
   return (
@@ -124,21 +124,36 @@ function SectionBlock({ section, index }: { section: CorporateSection; index: nu
         )}
         {section.links && section.links.length > 0 && (
           <div className="space-y-3 mt-4">
-            {section.links.map((link) => (
-              <a
-                key={link.url}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 bg-white border border-brand-border rounded-lg hover:border-primary hover:shadow-card transition-all group"
-              >
-                <FileText className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-navy font-medium group-hover:text-primary transition-colors">
-                  {link.label}
-                </span>
-                <ExternalLink className="w-4 h-4 text-brand-text-secondary ml-auto" />
-              </a>
-            ))}
+            {section.links.map((link) => {
+              const internalUrl = toInternalArticleUrl(link.url);
+              return internalUrl ? (
+                <Link
+                  key={link.url}
+                  to={internalUrl}
+                  className="flex items-center gap-3 p-4 bg-white border border-brand-border rounded-lg hover:border-primary hover:shadow-card transition-all group"
+                >
+                  <FileText className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-navy font-medium group-hover:text-primary transition-colors">
+                    {link.label}
+                  </span>
+                  <ExternalLink className="w-4 h-4 text-brand-text-secondary ml-auto" />
+                </Link>
+              ) : (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-white border border-brand-border rounded-lg hover:border-primary hover:shadow-card transition-all group"
+                >
+                  <FileText className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-navy font-medium group-hover:text-primary transition-colors">
+                    {link.label}
+                  </span>
+                  <ExternalLink className="w-4 h-4 text-brand-text-secondary ml-auto" />
+                </a>
+              );
+            })}
           </div>
         )}
       </motion.div>
@@ -201,7 +216,10 @@ function LeaderCard({ leader }: { leader: { name: string; role: string; image?: 
   );
 
   if (leader.link) {
-    return (
+    const internalUrl = toInternalArticleUrl(leader.link);
+    return internalUrl ? (
+      <Link to={internalUrl} className="block">{Card}</Link>
+    ) : (
       <a href={leader.link} target="_blank" rel="noopener noreferrer" className="block">
         {Card}
       </a>
@@ -277,14 +295,12 @@ function NewsCards({ cards }: { cards: CorporateArticle['newsCards'] }) {
                 )}
                 <h3 className="text-lg font-bold text-navy mb-3 leading-snug">{card.title}</h3>
                 {card.link ? (
-                  <a
-                    href={card.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={toInternalArticleUrl(card.link) || card.link}
                     className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                   >
                     Read more <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 ) : null}
               </div>
             </motion.div>

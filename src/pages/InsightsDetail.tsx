@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router';
 import { motion } from 'framer-motion';
-import { ChevronRight, ExternalLink, Play } from 'lucide-react';
+import { ChevronRight, Play } from 'lucide-react';
 import ImpactLayout from '@/components/ImpactLayout';
 import {
   getInsightsArticleByPath,
@@ -10,7 +10,7 @@ import {
   type InsightsVideoGroup,
 } from '@/data/insightsArticles';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
-import { cn } from '@/lib/utils';
+import { cn, toInternalArticleUrl } from '@/lib/utils';
 import {
   Accordion,
   AccordionContent,
@@ -143,26 +143,19 @@ function CardGrid({ cards }: { cards: InsightsCard[] }) {
                   )}
                   {card.link && (
                     <span className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-auto">
-                      Explore <ExternalLink className="w-4 h-4" />
+                      Explore
                     </span>
                   )}
                 </div>
               </motion.div>
             );
             if (!card.link) return content;
-            const isExternal = /^https?:\/\//i.test(card.link);
-            return isExternal ? (
-              <a
+            return (
+              <Link
                 key={card.title}
-                href={card.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                to={toInternalArticleUrl(card.link) || card.link}
                 className="block"
               >
-                {content}
-              </a>
-            ) : (
-              <Link key={card.title} to={card.link} className="block">
                 {content}
               </Link>
             );
