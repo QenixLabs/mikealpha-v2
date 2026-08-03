@@ -111,7 +111,7 @@ export default function FloatingChat() {
         className="w-14 h-14 rounded-full bg-primary shadow-floating flex items-center justify-center text-white hover:bg-primary-dark transition-colors"
         aria-label="Toggle chat"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        <MessageCircle className="w-6 h-6" />
       </motion.button>
     </div>
   );

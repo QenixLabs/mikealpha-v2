@@ -94,7 +94,7 @@ export default function SuccessStoriesSection() {
             spaceBetween={24}
             slidesPerView={1}
             pagination={{ clickable: true }}
-            className="px-8"
+            className="px-8 !pb-10"
           >
             {stories.map((story, index) => (
               <SwiperSlide key={index}>

@@ -105,7 +105,7 @@ export default function ProductsSection() {
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 4 },
             }}
-            className="px-8"
+            className="px-8 !pb-10"
           >
             {products.map((product, index) => (
               <SwiperSlide key={index}>

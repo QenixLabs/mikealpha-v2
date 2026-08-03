@@ -573,7 +573,11 @@ export default function Navbar() {
                 <Menu className="w-6 h-6" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[320px] p-0">
+            <SheetContent
+              side="right"
+              className="w-[320px] p-0"
+              onOpenAutoFocus={(e) => e.preventDefault()}
+            >
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
                   <span className="font-bold text-primary">Menu</span>

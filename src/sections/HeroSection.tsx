@@ -62,7 +62,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center pt-16 md:pt-20">
-        <div className="max-w-container mx-auto px-6 lg:px-10 w-full">
+        <div className="max-w-container mx-auto px-12 md:px-10 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -76,7 +76,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="inline-block text-sm md:text-base font-semibold text-white/80 uppercase tracking-[0.2em] mb-3"
+                className="inline-block text-xs md:text-base font-semibold text-white/80 uppercase tracking-[0.2em] mb-3"
               >
                 Alpha Agro
               </motion.span>
@@ -84,7 +84,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-5xl md:text-6xl font-bold text-white tracking-wider mb-4"
+                className="text-3xl md:text-6xl font-bold text-white tracking-wider mb-4"
               >
                 {slides[currentSlide].title}
               </motion.h1>
@@ -92,7 +92,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-xl md:text-2xl font-light text-white/90"
+                className="text-lg md:text-2xl font-light text-white/90"
               >
                 {slides[currentSlide].subtitle}
               </motion.p>
@@ -104,17 +104,17 @@ export default function HeroSection() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border-2 border-white/60 flex items-center justify-center text-white hover:bg-white hover:text-gray-900 transition-all duration-300"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center text-white hover:text-white/80 transition-colors"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-6 h-6 md:w-10 md:h-10" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border-2 border-white/60 flex items-center justify-center text-white hover:bg-white hover:text-gray-900 transition-all duration-300"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center text-white hover:text-white/80 transition-colors"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-6 h-6 md:w-10 md:h-10" />
       </button>
 
       {/* Pause/Play Button */}

@@ -262,7 +262,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-brand-border">
-        <div className="max-w-container mx-auto px-4 lg:px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-container mx-auto px-4 lg:px-6 pt-5 pb-24 md:pb-5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-brand-text-muted">
             &copy; All rights reserved (2026) Mike Alpha Agro Ltd
           </p>

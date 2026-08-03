@@ -23,7 +23,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
-import { categories } from '@/data/products';
+import { categories, products } from '@/data/products';
 import { getCropGuideByName } from '@/data/cropGuides';
 
 type TabId = 'crop' | 'growing' | 'products';
@@ -78,6 +78,28 @@ const cropIconColors = [
   '#1ABC9C',
 ];
 
+const cropIconMap: Record<string, string> = {
+  Tomato: '/crops/icons/Tomato.png',
+  Pepper: '/crops/icons/Pepper.png',
+  Cucumber: '/crops/icons/Cucumber.png',
+  Potato: '/crops/icons/Potato.png',
+  Strawberry: '/crops/icons/Strawberry.png',
+  Citrus: '/crops/icons/Citrus.png',
+  Banana: '/crops/icons/Banana.png',
+  Olives: '/crops/icons/Olives.png',
+  Rice: '/crops/icons/Rice.png',
+  Wheat: '/crops/icons/Wheat.png',
+  Onion: '/crops/icons/Onion.png',
+  Apple: '/crops/icons/Apple.png',
+  Grapes: '/crops/icons/Grapes.png',
+  Corn: '/crops/icons/Corn.png',
+  'Sugar Beet': '/crops/icons/Sugar-Beet.png',
+  Garlic: '/crops/icons/Garlic.png',
+  Almond: '/crops/icons/Almond.png',
+  Soybean: '/crops/icons/Soybean.png',
+  Turf: '/crops/icons/Turf.jpg',
+};
+
 const growingMethods: { name: string; icon: LucideIcon }[] = [
   { name: 'Soil Applications', icon: Globe },
   { name: 'Nurseries', icon: Sprout },
@@ -89,6 +111,18 @@ const growingMethods: { name: string; icon: LucideIcon }[] = [
   { name: 'Fruit Trees Fertilizers', icon: TreePine },
   { name: 'Greenhouse Agriculture', icon: Warehouse },
 ];
+
+const methodIconMap: Record<string, string> = {
+  'Soil Applications': '/growing-icons/Soil-Applications.png',
+  Nurseries: '/growing-icons/Nurseries.png',
+  'Open Field': '/growing-icons/Open-Field.png',
+  'Center Pivot': '/growing-icons/Center-Pivot.png',
+  'Controlled Release Fertilizers': '/growing-icons/Controlled-Release-Fertilizers.png',
+  'Foliar Feeding': '/growing-icons/Foliar-Feeding.png',
+  'Nutrigation™': '/growing-icons/Nutrigation.png',
+  'Fruit Trees Fertilizers': '/growing-icons/Fruit-Trees-Fertilizers.png',
+  'Greenhouse Agriculture': '/growing-icons/Greenhouse-Agriculture.jpg',
+};
 
 const productCategoryIcons: Record<string, LucideIcon> = {
   'Foliar Solutions': Leaf,
@@ -135,6 +169,27 @@ export default function InterestSection() {
 
   const renderIcon = (name: string, index: number) => {
     if (activeTab === 'crop') {
+      const iconSrc = cropIconMap[name];
+      if (iconSrc) {
+        return (
+          <img
+            src={iconSrc}
+            alt={name}
+            className="h-16 w-16 object-contain mb-2"
+          />
+        );
+      }
+      const cropName = interestToCropName[name.toLowerCase()] || name;
+      const guide = getCropGuideByName(cropName);
+      if (guide?.bannerImage) {
+        return (
+          <img
+            src={guide.bannerImage}
+            alt={name}
+            className="w-16 h-16 rounded-full object-cover mb-2"
+          />
+        );
+      }
       const color = cropIconColors[index % cropIconColors.length];
       return (
         <div
@@ -147,12 +202,34 @@ export default function InterestSection() {
     }
 
     if (activeTab === 'growing') {
+      const iconSrc = methodIconMap[name];
+      if (iconSrc) {
+        return (
+          <img
+            src={iconSrc}
+            alt={name}
+            className="h-16 w-16 object-contain mb-2"
+            style={{ filter: 'hue-rotate(-135deg) saturate(1.6) brightness(1.05)' }}
+          />
+        );
+      }
       const method = growingMethods.find((m) => m.name === name);
       const Icon = method?.icon ?? Sprout;
       return (
-        <div className="w-12 h-12 rounded-full flex items-center justify-center bg-primary text-white mb-2">
-          <Icon className="w-6 h-6" />
+        <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/10 text-primary mb-2">
+          <Icon className="w-7 h-7" />
         </div>
+      );
+    }
+
+    const product = products.find((p) => p.category === name);
+    if (product?.image) {
+      return (
+        <img
+          src={product.image}
+          alt={name}
+          className="h-16 w-auto object-contain mb-2"
+        />
       );
     }
 
@@ -193,7 +270,7 @@ export default function InterestSection() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-8 py-3 rounded-full text-sm font-medium transition-all duration-200 ${
+              className={`px-4 py-2 md:px-8 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all duration-200 ${
                 activeTab === tab.id
                   ? 'bg-primary text-white shadow-md'
                   : 'bg-white text-gray-500 border border-gray-300 hover:border-primary hover:text-primary'
