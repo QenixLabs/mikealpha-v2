@@ -23,7 +23,7 @@ export default function FloatingChat() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -31,7 +31,7 @@ export default function FloatingChat() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="mb-4 w-[350px] h-[480px] bg-white rounded-xl shadow-floating overflow-hidden flex flex-col border border-gray-200"
+            className="origin-bottom-right mb-4 w-[calc(100vw-2rem)] max-w-[350px] h-[480px] bg-white rounded-xl shadow-floating overflow-hidden flex flex-col border border-gray-200"
           >
             {/* Header */}
             <div className="bg-primary px-4 py-3 flex items-center justify-between">
@@ -104,15 +104,17 @@ export default function FloatingChat() {
       </AnimatePresence>
 
       {/* Toggle Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="w-14 h-14 rounded-full bg-primary shadow-floating flex items-center justify-center text-white hover:bg-primary-dark transition-colors"
-        aria-label="Toggle chat"
-      >
-        <MessageCircle className="w-6 h-6" />
-      </motion.button>
+      {!isOpen && (
+        <motion.button
+          onClick={() => setIsOpen(true)}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-14 h-14 rounded-full bg-primary shadow-floating flex items-center justify-center text-white hover:bg-primary-dark transition-colors"
+          aria-label="Open chat"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </motion.button>
+      )}
     </div>
   );
 }
