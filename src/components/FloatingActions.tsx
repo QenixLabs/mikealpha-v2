@@ -7,7 +7,7 @@ const whatsappUrl = 'https://wa.me/918799290971';
 
 export default function FloatingActions() {
   return (
-    <aside className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3 p-4 items-end">
+    <aside className="fixed right-0 top-[55%] -translate-y-1/2 z-40 hidden md:flex flex-col gap-3 p-4 items-end">
       {/* Contact us */}
       <motion.a
         href={whatsappUrl}
