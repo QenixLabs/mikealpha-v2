@@ -4,7 +4,6 @@ import { ChevronLeft } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
 import FloatingActions from '@/components/FloatingActions';
-import FloatingChat from '@/components/FloatingChat';
 import { findArticleBySlug } from '@/data/articleLookup';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 
@@ -29,7 +28,6 @@ export default function ArticleDetail() {
         </main>
         <Footer />
         <FloatingActions />
-        <FloatingChat />
       </div>
     );
   }
@@ -98,7 +96,6 @@ export default function ArticleDetail() {
 
       <Footer />
       <FloatingActions />
-      <FloatingChat />
     </div>
   );
 }

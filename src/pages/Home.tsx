@@ -8,7 +8,6 @@ import BlogSection from '@/sections/BlogSection';
 import SuccessStoriesSection from '@/sections/SuccessStoriesSection';
 import NewsEventsSection from '@/sections/NewsEventsSection';
 import Footer from '@/sections/Footer';
-import FloatingChat from '@/components/FloatingChat';
 import FloatingActions from '@/components/FloatingActions';
 
 export default function Home() {
@@ -27,7 +26,6 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingActions />
-      <FloatingChat />
     </div>
   );
 }

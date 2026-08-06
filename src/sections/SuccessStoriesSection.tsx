@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 const stories = [
   {
-    title: 'Improving Hass Avocado Performance with HaifaStim™ Vital',
+    title: 'Improving Hass Avocado Performance with Mike AlphaStim™ Vital',
     excerpt: 'A grower in Karnataka applied Mike Alpha biostimulant program through drip at key growth stages. The result was more vigorous root development, healthier branching, visibly better fruit retention, and more uniform sizing through the harvest window.',
     image: '/images/success-1.jpg',
     link: '/success-stories',

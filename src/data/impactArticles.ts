@@ -145,7 +145,7 @@ export const impactArticles: ImpactArticle[] = [
       {
         title: 'Social Responsibility 2030 Goals',
         content:
-          'Our bold 2030 goals focus on three key social circles: Haifa Employees – achieving 85-90% employee satisfaction across our subsidiaries; Prospective Employees – ensuring 5% of new hires come from underrepresented communities; and Communities – engaging at least 70% of employees in volunteer activities.',
+          'Our bold 2030 goals focus on three key social circles: Mike Alpha Employees – achieving 85-90% employee satisfaction across our subsidiaries; Prospective Employees – ensuring 5% of new hires come from underrepresented communities; and Communities – engaging at least 70% of employees in volunteer activities.',
       },
     ],
   },

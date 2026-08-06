@@ -12,7 +12,6 @@ import {
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
 import FloatingActions from '@/components/FloatingActions';
-import FloatingChat from '@/components/FloatingChat';
 import { getCropGuideBySlug, type CropResource } from '@/data/cropGuides';
 import { toInternalArticleUrl } from '@/lib/utils';
 
@@ -96,7 +95,6 @@ export default function CropGuide() {
         </main>
         <Footer />
         <FloatingActions />
-        <FloatingChat />
       </div>
     );
   }
@@ -280,7 +278,6 @@ export default function CropGuide() {
 
       <Footer />
       <FloatingActions />
-      <FloatingChat />
     </div>
   );
 }

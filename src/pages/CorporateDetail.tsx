@@ -102,16 +102,17 @@ function SectionBlock({ section, index }: { section: CorporateSection; index: nu
       whileInView="visible"
       viewport={{ once: true }}
       className={cn(
-        'grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start',
+        'grid grid-cols-1 gap-8 lg:gap-12 items-start',
+        section.image ? 'lg:grid-cols-2' : 'lg:grid-cols-1',
         index % 2 === 1 && 'lg:flex-row-reverse'
       )}
     >
-      <motion.div variants={fadeUpVariant} className={index % 2 === 1 ? 'lg:order-2' : ''}>
+      <motion.div variants={fadeUpVariant} className={index % 2 === 1 && section.image ? 'lg:order-2' : ''}>
         {section.title && (
           <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">{section.title}</h2>
         )}
         {section.content && (
-          <p className="text-brand-text-secondary leading-relaxed whitespace-pre-line mb-4">
+          <p className="text-brand-text-secondary leading-relaxed whitespace-pre-line mb-4 text-justify">
             {section.content}
           </p>
         )}

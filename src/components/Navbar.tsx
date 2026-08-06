@@ -5,8 +5,6 @@ import {
   ChevronDown,
   Search,
   Menu,
-  Globe,
-  User,
   X,
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -17,7 +15,7 @@ import { cn } from '@/lib/utils';
 const cropSlugMap = new Map(cropGuides.map((c) => [c.cropName, c.slug]));
 
 const navItemsLeft = ['Crop Guide', 'Products', 'Growing Practice', 'Smart Farming'];
-const navItemsRight = ['Careers', 'Precision IMPACT', 'Corporate', 'Insights'];
+const navItemsRight = ['COMPASSion', 'Precision IMPACT', 'Corporate', 'Insights'];
 
 type DropdownSection = {
   title?: string;
@@ -285,12 +283,12 @@ function getItemUrl(label: string, item: string): string {
         'About Us': '/about-us-0',
         'Leadership Team': '/leadership-team',
         'Condition of sales': '/condition-sales',
-        'R&D Innovative Center': '/haifas-rd-center',
-        'Code of Conduct': '/haifas-values',
+        'R&D Innovative Center': '/mike-alpha-rd-center',
+        'Code of Conduct': '/mike-alpha-values',
         'Core Values': '/core-values-1',
         'News & Events': '/news-events',
-        'Mike Alpha Grows': '/haifa-grows',
-        'Mike Alpha Worldwide': '/haifa-worldwide',
+        'Mike Alpha Grows': '/mike-alpha-grows',
+        'Mike Alpha Worldwide': '/mike-alpha-worldwide',
       };
       return corporateUrlMap[item] || `/corporate`;
     }
@@ -301,7 +299,7 @@ function getItemUrl(label: string, item: string): string {
         Podcasts: '/podcasts',
         'Success Stories': '/success-stories',
         FAQ: '/faq',
-        'Mike Alpha Agriculture Videos': '/haifa-videos',
+        'Mike Alpha Agriculture Videos': '/mike-alpha-videos',
       };
       return insightsUrlMap[item] || `/insights`;
     }
@@ -387,11 +385,9 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
     >
       <button
         className={cn(
-          'h-12 flex items-center gap-1 text-xs font-medium border-b-2 transition-colors',
+          'h-full flex items-center gap-1 text-sm font-medium border-b-2 transition-colors px-1',
           isLeft
-            ? activeDropdown === label
-              ? 'text-primary border-primary'
-              : 'text-primary border-transparent hover:border-primary'
+            ? 'text-primary border-transparent hover:border-primary'
             : activeDropdown === label
               ? 'text-primary border-green-600'
               : 'text-gray-700 border-transparent hover:text-primary hover:border-green-600'
@@ -478,7 +474,6 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
 export default function Navbar() {
   const navigate = useNavigate();
   const [isSticky, setIsSticky] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -514,7 +509,6 @@ export default function Navbar() {
   const handleSearchSubmit = () => {
     const q = searchQuery.trim();
     setShowSuggestions(false);
-    setIsSearchOpen(false);
     if (!q) return;
     navigate(`/products?q=${encodeURIComponent(q)}`);
   };
@@ -522,7 +516,6 @@ export default function Navbar() {
   const handleSuggestionClick = (slug: string) => {
     setSearchQuery('');
     setShowSuggestions(false);
-    setIsSearchOpen(false);
     navigate(`/products/${slug}`);
   };
 
@@ -563,7 +556,7 @@ export default function Navbar() {
       )}
     >
       <div className="border-b border-gray-100 relative">
-        <div className="max-w-container mx-auto px-4 lg:px-6 h-14 lg:h-[72px] flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] relative">
+        <div className="px-4 lg:px-8 h-14 lg:h-[90px] flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-4 relative">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
               <button
@@ -641,10 +634,10 @@ export default function Navbar() {
 
                 <div className="flex-1 overflow-auto py-2">
                   {[...navItemsLeft, ...navItemsRight].map((label) =>
-                    label === 'Careers' ? (
+                    label === 'COMPASSion' ? (
                       <div key={label} className="border-b border-gray-50">
                         <Link
-                          to="/careers"
+                          to="/impact-innovation-compassion"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-primary-light hover:text-primary transition-colors"
                         >
@@ -709,16 +702,6 @@ export default function Navbar() {
                 </div>
 
                 <div className="p-4 border-t">
-                  <button
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      alert('Login coming soon.');
-                    }}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 mb-4 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    <User className="w-4 h-4" />
-                    Login
-                  </button>
                   <p className="text-xs text-gray-400 mb-2">Language</p>
                   <div className="flex gap-2">
                     <button
@@ -762,11 +745,11 @@ export default function Navbar() {
             <img
               src="/images/logo.png"
               alt="Mike Alpha"
-              className="h-12 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
           </a>
 
-          <nav className="hidden lg:flex items-center justify-end gap-1 z-50">
+          <nav className="hidden lg:flex items-center justify-start gap-1 z-50">
             {navItemsLeft.map((label) => (
               <NavItem key={label} label={label} isLeft />
             ))}
@@ -779,17 +762,17 @@ export default function Navbar() {
             <img
               src="/images/logo.png"
               alt="Mike Alpha"
-              className="h-16 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
           </a>
 
-          <nav className="hidden lg:flex items-center justify-start gap-1 z-50">
+          <nav className="hidden lg:flex items-center justify-end gap-1 z-50">
             {navItemsRight.map((label) =>
-              label === 'Careers' ? (
+              label === 'COMPASSion' ? (
                 <Link
                   key={label}
-                  to="/careers"
-                  className="h-12 flex items-center px-1 text-xs font-medium text-gray-700 border-b-2 border-transparent hover:text-primary hover:border-green-600 transition-colors"
+                  to="/impact-innovation-compassion"
+                  className="h-full flex items-center px-1 text-sm font-medium text-gray-700 border-b-2 border-transparent hover:text-primary hover:border-green-600 transition-colors"
                 >
                   {label}
                 </Link>
@@ -800,92 +783,57 @@ export default function Navbar() {
 
             <div className="flex items-center gap-1 ml-1">
               <div ref={searchRef} className="relative flex items-center">
-                <AnimatePresence>
-                  {isSearchOpen && (
-                    <motion.div
-                      initial={{ width: 0, opacity: 0 }}
-                      animate={{ width: 200, opacity: 1 }}
-                      exit={{ width: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative"
-                    >
-                      <input
-                        type="text"
-                        value={searchQuery}
-                        onChange={(e) => {
-                          setSearchQuery(e.target.value);
-                          setShowSuggestions(true);
-                        }}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter') {
-                            e.preventDefault();
-                            handleSearchSubmit();
-                          }
-                        }}
-                        onFocus={() => setShowSuggestions(true)}
-                        placeholder="Search..."
-                        className="h-9 w-full pl-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-primary"
-                        autoFocus
-                      />
-                      {searchQuery && (
-                        <button
-                          onClick={() => {
-                            setSearchQuery('');
-                            setShowSuggestions(false);
-                          }}
-                          className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                          aria-label="Clear search"
-                        >
-                          <X className="w-4 h-4" />
-                        </button>
-                      )}
-                      {showSuggestions && suggestions.length > 0 && (
-                        <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-dropdown border border-gray-100 py-2 z-50">
-                          {suggestions.map((p) => (
-                            <button
-                              key={p.id}
-                              onClick={() => handleSuggestionClick(p.slug)}
-                              className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-primary-light hover:text-primary flex items-center gap-3"
-                            >
-                              <img
-                                src={p.image}
-                                alt=""
-                                className="w-8 h-8 object-contain"
-                              />
-                              <span className="flex-1 truncate">{p.name}</span>
-                              <span className="text-xs text-gray-400">
-                                {p.category}
-                              </span>
-                            </button>
-                          ))}
-                          <button
-                            onClick={handleSearchSubmit}
-                            className="w-full text-left px-4 py-2 text-xs font-medium text-primary hover:bg-primary-light border-t border-gray-100"
-                          >
-                            View all results for “{searchQuery}”
-                          </button>
-                        </div>
-                      )}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-                <button
-                  onClick={() => {
-                    setIsSearchOpen(!isSearchOpen);
-                    if (isSearchOpen) {
-                      setSearchQuery('');
-                      setShowSuggestions(false);
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setShowSuggestions(true);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      handleSearchSubmit();
                     }
                   }}
-                  className="p-2 text-gray-500 hover:text-primary transition-colors"
-                  aria-label="Toggle search"
+                  onFocus={() => setShowSuggestions(true)}
+                  placeholder="Search..."
+                  className="h-9 w-[180px] pl-4 pr-10 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-primary"
+                />
+                <button
+                  onClick={handleSearchSubmit}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors"
+                  aria-label="Search"
                 >
-                  {isSearchOpen ? (
-                    <X className="w-5 h-5" />
-                  ) : (
-                    <Search className="w-5 h-5" />
-                  )}
+                  <Search className="w-4 h-4" />
                 </button>
+                {showSuggestions && suggestions.length > 0 && (
+                  <div className="absolute top-full right-0 mt-2 w-72 bg-white rounded-lg shadow-dropdown border border-gray-100 py-2 z-50">
+                    {suggestions.map((p) => (
+                      <button
+                        key={p.id}
+                        onClick={() => handleSuggestionClick(p.slug)}
+                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-primary-light hover:text-primary flex items-center gap-3"
+                      >
+                        <img
+                          src={p.image}
+                          alt=""
+                          className="w-8 h-8 object-contain"
+                        />
+                        <span className="flex-1 truncate">{p.name}</span>
+                        <span className="text-xs text-gray-400">
+                          {p.category}
+                        </span>
+                      </button>
+                    ))}
+                    <button
+                      onClick={handleSearchSubmit}
+                      className="w-full text-left px-4 py-2 text-xs font-medium text-primary hover:bg-primary-light border-t border-gray-100"
+                    >
+                      View all results for "{searchQuery}"
+                    </button>
+                  </div>
+                )}
               </div>
 
               <div ref={langRef} className="relative">
@@ -893,8 +841,7 @@ export default function Navbar() {
                   onClick={() => setLangDropdownOpen(!langDropdownOpen)}
                   className="flex items-center gap-1 px-3 py-2 text-sm text-gray-600 hover:text-primary transition-colors"
                 >
-                  <Globe className="w-4 h-4" />
-                  <span>{language === 'hi' ? 'HI' : 'EN'}</span>
+                  <span>{language === 'hi' ? 'हिन्दी' : 'English'}</span>
                   <ChevronDown
                     className={cn(
                       'w-3.5 h-3.5 transition-transform duration-200',
@@ -943,14 +890,6 @@ export default function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
-
-              <button
-                onClick={() => alert('Login coming soon.')}
-                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                <User className="w-4 h-4" />
-                Login
-              </button>
             </div>
           </nav>
         </div>

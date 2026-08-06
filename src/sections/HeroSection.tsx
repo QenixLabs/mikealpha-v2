@@ -50,7 +50,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          src="/images/haifa-hero.mp4"
+          src="/images/mike-alpha-hero.mp4"
           autoPlay
           muted
           loop
