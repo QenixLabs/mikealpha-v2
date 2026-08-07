@@ -37,6 +37,13 @@ export default function HeroSection() {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+    video.playbackRate = 0.5;
+    video.defaultPlaybackRate = 0.5;
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
     if (isPlaying) {
       video.play();
     } else {
@@ -55,7 +62,6 @@ export default function HeroSection() {
           muted
           loop
           playsInline
-          playbackRate={0.5}
           className="w-full h-full object-cover"
         />
       </div>
