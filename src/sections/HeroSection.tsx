@@ -55,6 +55,7 @@ export default function HeroSection() {
           muted
           loop
           playsInline
+          playbackRate={0.5}
           className="w-full h-full object-cover"
         />
       </div>
