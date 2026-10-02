@@ -6,7 +6,6 @@ import {
   BookOpen,
   Tag,
   ExternalLink,
-  Leaf,
   ChevronRight,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -69,17 +68,6 @@ function ResourceList({ resources }: { resources: CropResource[] }) {
   );
 }
 
-function NutriHaitechBadge() {
-  return (
-    <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-card">
-      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-        <Leaf className="w-4 h-4 text-white" />
-      </div>
-      <span className="text-sm font-bold text-navy tracking-wide">Nutri Haitech</span>
-    </div>
-  );
-}
-
 export default function CropGuide() {
   const { slug, '*': splat } = useParams<{ slug?: string; '*': string }>();
   const pathSlug = slug || (splat ? `crop-guide/${splat}` : undefined);
@@ -115,19 +103,11 @@ export default function CropGuide() {
               style={{ backgroundImage: `url(${guide.bannerImage})` }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
-            <div className="relative z-10 h-full flex flex-col justify-between p-6 md:p-10">
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <NutriHaitechBadge />
-              </motion.div>
-
+            <div className="relative z-10 h-full flex flex-col justify-end p-6 md:p-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.6 }}
                 className="max-w-2xl"
               >
                 <nav className="text-xs text-white/80 mb-3 flex flex-wrap items-center gap-1">

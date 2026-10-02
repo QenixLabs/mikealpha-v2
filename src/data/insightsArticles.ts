@@ -256,14 +256,14 @@ export const insightsArticles: InsightsArticle[] = [
               '<p>Yes. We offer an easy-to-use educator that speeds up dissolution and enhances mixing in the tank. See further <a href="https://www.mike-alpha-group.com/articles/fertilizer-dissolving-tools-preparing-fertilizer-solution-easily" target="_blank">here</a>.</p>',
           },
           {
-            question: 'Where can I buy your fertilizers in my country?',
+            question: 'Where can I buy your fertilizers in India?',
             answer:
-              '<p>Please use the <a href="https://www.mike-alpha-group.com/mike-alpha-worldwide">branches map and list</a> to locate the relevant Mike Alpha office, and for contact details.</p>',
+              '<p>Mike Alpha operates exclusively in India across Gujarat, Madhya Pradesh, and Chhattisgarh. Please visit our <a href="/distributors">Distributors network page</a> to locate the nearest authorized dealer or contact our agronomy team.</p>',
           },
           {
             question: 'Where can I find the MSDS for the fertilizers?',
             answer:
-              '<p>Please use the <a href="https://www.mike-alpha-group.com/mike-alpha-worldwide">branches map and list</a> to locate the relevant Mike Alpha office, and for contact details.</p>',
+              '<p>Please visit our dedicated <a href="/products/sds-request">SDS Request page</a> to access Safety Data Sheets for all registered Mike Alpha products.</p>',
           },
           {
             question: 'How can I achieve good Nutrigation?',
@@ -305,9 +305,9 @@ export const insightsArticles: InsightsArticle[] = [
             answer: '<p>Please ask your Mike Alpha products distributor for the relevant MSDS.</p>',
           },
           {
-            question: 'Where can I buy your controlled release fertilizers in my country?',
+            question: 'Where can I buy your controlled release fertilizers?',
             answer:
-              '<p>To receive complete information about our products distribution, please use the <a href="https://www.mike-alpha-group.com/mike-alpha-worldwide">branches map and list</a> to locate the relevant Mike Alpha office, and for contact details.</p>',
+              '<p>To receive complete information about authorized distributors across Gujarat, Madhya Pradesh, and Chhattisgarh, please check our <a href="/distributors">Distributors page</a>.</p>',
           },
           {
             question: 'What is the best way for fertilization in net houses during the winter?',
@@ -335,9 +335,9 @@ export const insightsArticles: InsightsArticle[] = [
               '<p>Yes. Mike Alpha produces potassium nitrate technical grade that suit the high standards of the glass industry. Read more about our industrial chemicals <a href="https://www.mike-alpha-group.com/Industrial-Uses">here</a>.</p>',
           },
           {
-            question: 'Are your industrial chemicals available worldwide?',
+            question: 'Where are your industrial chemicals available?',
             answer:
-              '<p>Use our <a href="https://www.mike-alpha-group.com/mike-alpha-worldwide">branches map and list</a>, and send an email to Mike Alpha office in your region, asking for contact details of a distributor of Mike Alpha products.</p>',
+              '<p>Mike Alpha supplies industrial grade potassium nitrate across India. Please visit our <a href="/contact">Contact page</a> or consult our technical sales team for distributor information.</p>',
           },
           {
             question: 'Where can I find the MSDS for your industrial chemicals?',

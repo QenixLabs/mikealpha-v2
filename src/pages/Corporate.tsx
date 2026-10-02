@@ -8,7 +8,7 @@ import {
   Heart,
   Calendar,
   Sprout,
-  Globe,
+  MapPin,
   ChevronRight,
   ArrowRight,
 } from 'lucide-react';
@@ -75,11 +75,11 @@ const corporateAreas = [
     image: '/images/blog-1.jpg',
   },
   {
-    icon: Globe,
-    title: 'Mike Alpha Worldwide',
+    icon: MapPin,
+    title: 'Regional Operations (India)',
     description:
-      'With production, distribution, and agronomy teams across continents, we deliver local expertise backed by global resources.',
-    link: '/contact',
+      'Operating exclusively in India across Gujarat, Madhya Pradesh, and Chhattisgarh with dedicated regional distribution, agronomist support, and field advisory services.',
+    link: '/mike-alpha-worldwide',
     image: '/images/event-3.jpg',
   },
 ];
@@ -172,7 +172,7 @@ export default function Corporate() {
                 variants={fadeUpVariant}
                 className="text-white/80 text-lg max-w-2xl mb-8"
               >
-                Learn about our company, leadership, values, global presence, and the commercial
+                Learn about our company, leadership, values, regional operations across Gujarat, Madhya Pradesh, and Chhattisgarh, and the commercial
                 frameworks that support trusted partnerships with growers and distributors.
               </motion.p>
 
@@ -220,7 +220,7 @@ export default function Corporate() {
                 variants={fadeUpVariant}
                 className="text-brand-text-secondary max-w-2xl"
               >
-                From governance and values to global operations, these pages provide a complete
+                From governance and values to regional operations across Gujarat, Madhya Pradesh, and Chhattisgarh, these pages provide a complete
                 picture of Mike Alpha.
               </motion.p>
             </motion.div>

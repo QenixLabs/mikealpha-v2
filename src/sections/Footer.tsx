@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { Facebook, Youtube, Linkedin } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -15,6 +16,7 @@ const footerLinks = {
       'Micronutrients',
       'Biostimulants',
       'Products Catalog',
+      'SDS Request',
       'FAQ',
     ],
   },
@@ -30,16 +32,6 @@ const footerLinks = {
       'Crop Guides',
     ],
   },
-  myTools: {
-    title: 'My Tools',
-    items: [
-      'NutriNet™',
-      'FertiMatch™',
-      'FoliMatch™',
-      'Conversion Calculator',
-      'Deficiency Pro',
-    ],
-  },
   aboutUs: {
     title: 'About us',
     items: [
@@ -48,10 +40,42 @@ const footerLinks = {
       'R&D Center',
       'Values',
       'News & Events',
-      'Worldwide',
+      'Regional Operations (India)',
+      'Find a Distributor',
       'Contact us',
     ],
   },
+};
+
+const footerUrlMap: Record<string, string> = {
+  // Products
+  'Plant Nutrition': '/products',
+  'NPK Fertilizers': '/products?category=NPK+Fertilizers',
+  'Specialty Fertilizers': '/products?category=Specialty+Fertilizers',
+  'Biological Fertilizers': '/products?category=Biological+Fertilizers',
+  'Micronutrients': '/products?category=Micronutrients',
+  'Biostimulants': '/products?category=Biostimulant',
+  'Products Catalog': '/products',
+  'SDS Request': '/products/sds-request',
+  'FAQ': '/faq',
+  // Growing Practice
+  'Fertilization Methods': '/growing-practice#fertilization-methods',
+  'Foliar Feeding': '/growing-practice#fertilization-methods',
+  'Soil Application': '/growing-practice#fertilization-methods',
+  'Drip Fertigation': '/growing-practice#fertilization-methods',
+  'Seed Treatment': '/growing-practice#fertilization-methods',
+  'Growing Methods': '/growing-practice#farming-methods',
+  'Crop Guides': '/crop-guide',
+  // About Us
+  'About Mike Alpha': '/about',
+  'Leadership Team': '/about#leadership',
+  'R&D Center': '/mike-alpha-rd-center',
+  'Values': '/mike-alpha-values',
+  'News & Events': '/news-events',
+  'Regional Operations (India)': '/mike-alpha-worldwide',
+  'Worldwide': '/mike-alpha-worldwide',
+  'Find a Distributor': '/distributors',
+  'Contact us': '/contact',
 };
 
 // X (Twitter) icon component
@@ -184,7 +208,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
             <motion.div variants={fadeUpVariant}>
               <h4 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">
                 {footerLinks.products.title}
@@ -192,12 +216,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {footerLinks.products.items.map((item) => (
                   <li key={item}>
-                    <a
-                      href="#"
+                    <Link
+                      to={footerUrlMap[item] ?? '/products'}
                       className="text-sm text-brand-text-secondary hover:text-brand-text-primary transition-colors"
                     >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -210,34 +234,17 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {footerLinks.growingPractice.items.map((item) => (
                   <li key={item}>
-                    <a
-                      href="#"
+                    <Link
+                      to={footerUrlMap[item] ?? '/growing-practice'}
                       className="text-sm text-brand-text-secondary hover:text-brand-text-primary transition-colors"
                     >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </motion.div>
 
-            <motion.div variants={fadeUpVariant}>
-              <h4 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">
-                {footerLinks.myTools.title}
-              </h4>
-              <ul className="space-y-2.5">
-                {footerLinks.myTools.items.map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-sm text-brand-text-secondary hover:text-brand-text-primary transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
 
             <motion.div variants={fadeUpVariant}>
               <h4 className="text-sm font-semibold text-brand-text-primary uppercase tracking-wider mb-4">
@@ -246,12 +253,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {footerLinks.aboutUs.items.map((item) => (
                   <li key={item}>
-                    <a
-                      href="#"
+                    <Link
+                      to={footerUrlMap[item] ?? '/about'}
                       className="text-sm text-brand-text-secondary hover:text-brand-text-primary transition-colors"
                     >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -264,21 +271,21 @@ export default function Footer() {
       <div className="border-t border-brand-border">
         <div className="max-w-container mx-auto px-4 lg:px-6 pt-5 pb-24 md:pb-5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-brand-text-muted">
-            &copy; All rights reserved (2026) Mike Alpha Agro Ltd
+            &copy; All rights reserved (2026) Mike Alpha Agro Pvt. Ltd.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
+            <Link to="/privacy-policy" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
+            </Link>
+            <Link to="/terms-use" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
               Terms of Use
-            </a>
-            <a href="#" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
+            </Link>
+            <Link to="/copyright-policy" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
               Copyright policy
-            </a>
-            <a href="#" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
+            </Link>
+            <Link to="/concern-feedback" className="text-xs text-brand-text-muted hover:text-brand-text-primary transition-colors">
               Concern & Feedback
-            </a>
+            </Link>
           </div>
         </div>
       </div>

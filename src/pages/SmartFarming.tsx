@@ -18,9 +18,9 @@ import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 const webApps = [
   {
     icon: Beaker,
-    title: 'MyMultifeed™',
+    title: 'MikeMultifeed™',
     description:
-      'Design balanced fertigation recipes tailored to your water analysis, crop stage, and yield target. The calculator recommends compatible fertilizers and rates.',
+      'Design balanced fertigation recipes tailored to your water analysis, crop stage, and yield target. The MikeMultifeed calculator recommends compatible Mike Alpha fertilizers and application rates.',
     tags: ['Recipe design', 'Water analysis', 'Fertigation'],
   },
   {
@@ -32,16 +32,16 @@ const webApps = [
   },
   {
     icon: Cloud,
-    title: 'NutriNet™',
+    title: 'MikeNutri™',
     description:
-      'Plan complete crop nutrition programs online. Compare nutrient demand against available products and generate seasonal schedules.',
+      'Plan complete crop nutrition programs online with MikeNutri. Compare nutrient demand against available Mike Alpha products and generate full seasonal schedules.',
     tags: ['Crop planning', 'Seasonal schedule', 'Nutrition'],
   },
   {
     icon: Leaf,
-    title: 'MultiMatch™',
+    title: 'MikeMatch™',
     description:
-      'Match the right fertilizer blend to your crop, soil, and irrigation system. Simplifies product selection for advisors and growers.',
+      'Match the right Mike Alpha fertilizer blend to your crop, soil, and irrigation system. MikeMatch simplifies product selection for advisors and growers.',
     tags: ['Product selection', 'Compatibility', 'Advisory'],
   },
   {
@@ -55,7 +55,7 @@ const webApps = [
     icon: Beaker,
     title: 'Deficiency Pro',
     description:
-      'Diagnose nutrient deficiency symptoms by crop and growth stage. Get corrective fertilizer recommendations based on visual cues.',
+      'Diagnose nutrient deficiency symptoms by crop and growth stage. Get corrective Mike Alpha fertilizer recommendations based on visual cues.',
     tags: ['Diagnosis', 'Visual symptoms', 'Corrective action'],
   },
 ];
@@ -63,9 +63,9 @@ const webApps = [
 const mobileApps = [
   {
     icon: Smartphone,
-    title: 'FertiMatch™',
+    title: 'AlphaMatch™',
     description:
-      'Mobile fertilizer matching for field use. Scan a crop or symptom and receive product and rate recommendations on the go.',
+      'Mobile fertilizer matching for field use with AlphaMatch. Scan a crop or symptom and receive Mike Alpha product and rate recommendations on the go.',
     tags: ['Mobile', 'Field tool', 'Recommendations'],
   },
   {
@@ -77,9 +77,9 @@ const mobileApps = [
   },
   {
     icon: Tablet,
-    title: 'Croptune',
+    title: 'NitroTune',
     description:
-      'Leaf-based nitrogen monitoring supported by laboratory analysis. Track crop nitrogen status and refine top-dress decisions.',
+      'Leaf-based nitrogen monitoring supported by laboratory analysis. Track crop nitrogen status and refine top-dress decisions with NitroTune.',
     tags: ['Nitrogen monitoring', 'Lab analysis', 'Precision'],
   },
 ];

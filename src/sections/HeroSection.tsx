@@ -5,13 +5,13 @@ import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 const slides = [
   {
     image: '/images/hero-bg.jpg',
-    title: 'IMPACT',
-    subtitle: 'Sustainability Through Precision',
+    title: 'GROW BETTER',
+    subtitle: 'Premium Nutrition for Exceptional Harvests',
   },
   {
     image: '/images/hero-bg-2.jpg',
-    title: 'INNOVATION',
-    subtitle: 'Pioneering the Future',
+    title: 'PRECISION',
+    subtitle: 'Science-Backed Crop Solutions',
   },
 ];
 
@@ -66,6 +66,9 @@ export default function HeroSection() {
         />
       </div>
       <div className="absolute inset-0 bg-black/30 z-[1]" />
+
+      {/* Capsicum burst overlay - coming out of video */}
+      
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center pt-16 md:pt-20">
