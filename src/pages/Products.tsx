@@ -142,7 +142,19 @@ export default function Products() {
   const filtered = useMemo(() => {
     let list = products;
     if (activeCategory !== "All") {
-      list = list.filter((p) => p.category === activeCategory);
+      const lowerCat = activeCategory.toLowerCase();
+      if (lowerCat === "water soluble fertilizers" || lowerCat === "water soluble") {
+        list = list.filter(
+          (p) =>
+            p.category === "Straight Fertilizers" ||
+            p.category === "Specialty Fertilizers" ||
+            p.shortDescription.toLowerCase().includes("water soluble")
+        );
+      } else if (lowerCat === "controlled release fertilizers" || lowerCat === "controlled release") {
+        list = list.filter((p) => p.category === "Controlled Release Fertilizers");
+      } else {
+        list = list.filter((p) => p.category.toLowerCase() === lowerCat);
+      }
     }
     const q = query.trim().toLowerCase();
     if (q) {

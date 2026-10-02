@@ -20,6 +20,7 @@ export type CorporateSection = {
 export type CorporateLeader = {
   name: string;
   role: string;
+  initials?: string;
   image?: string;
   link?: string;
 };
@@ -59,32 +60,30 @@ export type CorporateArticle = {
 export const corporateArticles: CorporateArticle[] = [
   {
     path: '/about-us-0',
-    title: 'About Mike Alpha Group',
+    title: 'About Mike Alpha Agro',
     subtitle: 'About Us',
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'About Us' }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      'Mike Alpha Group is a multi-national corporation and a global leading supplier of specialty plant nutrition. With decades of profound experience, Mike Alpha is renowned for its pioneering spirit and the innovative solutions it offers.',
+      'Mike Alpha Agro is a premier provider of specialty plant nutrition, water-soluble fertilizers, and precision fertigation solutions across the Indian subcontinent. Combining global agronomic science with deep expertise in Indian soils, climates, and cropping systems, we empower farmers across the nation to achieve higher yields, superior produce quality, and long-term soil vitality.',
     sections: [
       {
-        title: 'Pioneering Plant Nutrition',
+        title: 'Pioneering Plant Nutrition in India',
         content:
-          'Since the 1960s, Mike Alpha Group has been at the forefront of the global agricultural revolution, pioneering efficient plant nutrition solutions for advanced agricultural practices. By those times, the introduction of fertigation and the use of potassium nitrate as a fertilizer fertigation marked the beginning of a new era in plant nutrition.\n\nDriven by a spirit of pioneering and innovation, Mike Alpha Group delivers groundbreaking solutions that enhance crop nutrition and fertilizer efficiency, all while prioritizing environmental sustainability.\n\nMike Alpha Group operates through 19 subsidiaries worldwide, with production sites in Israel, France, and Canada, as well as proprietary blending facilities in Brazil and South Africa. Backed by extensive infrastructure and well-established distribution and logistics networks, Mike Alpha makes its advanced plant nutrition solutions available to growers in more than 100 countries.\n\nMike Alpha’s key mission is to create highly effective plant nutrition solutions for growers worldwide by leveraging a keen familiarity with their lives and needs, while being proactive in a rapidly changing world. Our comprehensive solutions seamlessly integrate high-quality products, expert knowledge, and cutting-edge technologies, all underpinned by a plant-centric approach.',
+          'Mike Alpha Agro has been at the forefront of India\'s precision agriculture revolution. By introducing pure potassium nitrate, 100% water-soluble NPKs, and advanced foliar nutrition, Mike Alpha transformed nutrient delivery across micro-irrigation and drip fertigation systems throughout key agricultural belts.\n\nDriven by a spirit of innovation and farmer prosperity, Mike Alpha Agro delivers groundbreaking solutions that maximize Nutrient Use Efficiency (NUE) while minimizing runoff and ecological impact. Our product portfolio is fully registered and compliant with the Fertilizer (Inorganic, Organic or Mixed) (Control) Order 1985 (FCO) of the Ministry of Agriculture and Farmers Welfare, Government of India.\n\nFrom our specialized supply chain hubs, blending facilities, and authorized distributor network spanning Gujarat, Madhya Pradesh, and Chhattisgarh, Mike Alpha serves progressive growers, corporate orchards, polyhouses, and smallholder farmers.\n\nOur mission is to create highly effective, customized plant nutrition programs tailored to India\'s diverse agro-climatic zones—supporting sustainable agriculture, food security, and farmer prosperity.',
       },
       {
-        title: 'Our History',
+        title: 'Our Journey & Milestones in India',
         bullets: [
-          "It all started from a scientist's idea to produce potassium nitrate from Israel's few natural resources.",
-          'With the establishment of the new factory, malfunctions were discovered and the place was shut down. The settlement of the problems lasts two years.',
-          'Mike Alpha begins to export its products and within 4 years has become a profitable company.',
-          "The company's scientists are developing advanced and revolutionary fertilizer products that are becoming international brands.",
-          'The company is listed on the Israel Stock Exchange, rebranded and begins to establish subsidiaries around the world.',
-          'Controlled release fertilization technology developed by the company makes the product advice even more innovative and strengthens the innovative advantage of Mike Alpha.',
-          'A new factory is located in the south of the country.',
-          'Mike Alpha publishes an investment plan that aims to double the group\'s production capacity to help the Israeli economy grow, create new jobs in the south and contribute to increasing agricultural productivity.',
-          "Mike Alpha expands its investment in sustainable development and is accepted into the UN's Sustainability Organization, thus adopting the Global Compact - a responsible policy program and social responsibility.",
-          'Mike Alpha continues its contribution to the Israeli economy in employment, exports and economic development.',
-          'Mike Alpha develops applications and innovative technologies for sharing accessible and fast knowledge with the world\'s farmers.',
+          'Introduction of high-purity water-soluble potassium nitrate to Indian horticulture and high-value cash crop sectors.',
+          'Pioneering drip fertigation protocols across sugarcane, cotton, pomegranate, banana, and potato growing regions.',
+          'Establishment of central supply hubs and specialized blending facilities adhering to strict FCO 1985 quality benchmarks.',
+          'Introduction of Multi-K™ and Poly-Feed™ formulations tailored to alkaline, calcareous, and degraded soil profiles common in Indian farming tracts.',
+          'Expansion of the authorized distributor and dealer network to over 500+ specialized agri-retail centers across key agricultural states.',
+          'Introduction of advanced Controlled Release Fertilizers (CRF) and HaifaStim™ / MikeStim bio-stimulants for climate-resilient farming.',
+          'Active collaboration with State Agricultural Universities (SAUs) and ICAR research centers to validate crop nutrition schedules.',
+          'Digital empowerment of Indian farmers through regional language crop guides, fertigation calculators, and mobile advisory services.',
+          'Commitment to Atmanirbhar Krishi and sustainable soil health, helping Indian growers reduce fertilizer wastage by up to 30%.',
         ],
       },
     ],
@@ -92,174 +91,131 @@ export const corporateArticles: CorporateArticle[] = [
   {
     path: '/leadership-team',
     title: 'Leadership Team',
-    subtitle: 'Our management team',
+    subtitle: 'Board of Directors',
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Leadership Team' }],
     heroImage: '/images/hero-bg-2.jpg',
     leaderGroups: [
       {
-        title: 'Leadership team',
-        leaders: [{ name: 'Mr. Motti Levin', role: 'CEO' }],
-      },
-      {
         title: 'Board of Directors',
         leaders: [
-          { name: 'Mr. Joshua Trump', role: 'Board Member' },
-          { name: 'Mr. Ariel Halperin', role: 'Board Chairman' },
-          { name: 'Mr. Ran Ben-Or', role: 'Board Member' },
-          { name: 'Mrs. Deborah Ifrah', role: 'Board Member' },
-          { name: 'Mr. Eyal Shamear', role: 'Board Member' },
-          { name: 'Mr. Mark S. Hirsch', role: 'Board Member' },
-          { name: 'Mr. Jules Trump', role: 'Board Member' },
-        ],
-      },
-      {
-        title: 'Executive Team',
-        leaders: [
-          { name: 'Mrs. Natali Sifado', role: 'VP of Human Resources' },
-          { name: 'Mrs. Sharon Eyal', role: 'VP Operations' },
-          { name: 'Mr. Natan Feldman', role: 'VP Marketing, Business development & Innovation' },
-          { name: 'Mr. Nir Yitzhaki', role: 'CFO' },
-          { name: 'Mr. Dori Liberman', role: 'VP of Supply Chain' },
-          { name: 'Mr. Gil Elimelech', role: 'VP Research & Development' },
-          { name: 'Mr. Maarten Roelofs', role: 'VP Europe sales' },
-          { name: 'Mr. Mark Aviv', role: 'VP Safety & Security' },
-          { name: 'Mrs. Dorit Koltin', role: 'VP Regulation, Environment & Sustainability' },
-          { name: 'Mr. Lior Beit Halachmi', role: 'CIO' },
-          { name: 'Mr. Kiril Vinerski', role: 'CEO of Mike Alpha Negev Technologies' },
-        ],
-      },
-      {
-        title: 'Worldwide Subsidiaries',
-        leaders: [
-          { name: 'Giuliana Feldman', role: 'MD Mike Alpha SOUTH AMERICA' },
-          { name: 'Fausto Venegas', role: 'MD Mike Alpha Ecuador' },
-          { name: 'Nathabhat Aum Soontornpalin', role: 'MD Mike Alpha Thailand' },
-          { name: 'Sudhakar Maddila', role: 'MD Mike Alpha India' },
-          { name: 'Erez Zehavi', role: 'MD Mike Alpha Israel' },
-          { name: 'Claudia Patricia Coronado Go', role: 'MD Mike Alpha Colombia' },
-          { name: 'Isi Kela Kowalsman', role: 'Commercial Manager' },
-          { name: 'Juan Jose Valdes Torres', role: 'MD Mike Alpha Mexico' },
-          { name: 'Erik Siemens', role: 'MD Mike Alpha Iberia' },
-          { name: 'Nicolas Tinetti', role: 'MD Mike Alpha France' },
-          { name: 'Shirley Peng', role: 'MD Mike Alpha China' },
-          { name: 'Chris Potts', role: 'MD Mike Alpha Australia' },
-          { name: 'Ohad Aviram', role: 'Africa & Middle East Cluster Manager' },
-          { name: 'David Lewis Vawter Lee Jr.', role: 'MD Mike Alpha North America' },
-          { name: 'Dawie Fourie', role: 'MD Mike Alpha South Africa' },
-          { name: 'Yoav Ronen', role: 'Asia & Pacific Cluster Manager' },
-          { name: 'Thanasis Rosoglou', role: 'MD Mike Alpha South East Europe' },
-          { name: 'Yasar Aydin', role: 'MD Mike Alpha Turkey' },
-          { name: 'David Leykin', role: 'MD Mike Alpha Italy' },
-          { name: 'Inge Daneels', role: 'MD Mike Alpha North West Europe' },
+          { name: 'Mr. Joshua Trump', role: 'Board Member', initials: 'MJ' },
+          { name: 'Mr. Ariel Halperin', role: 'Board Chairman', initials: 'MA' },
+          { name: 'Mr. Ran Ben-Or', role: 'Board Member', initials: 'MR' },
+          { name: 'Mrs. Deborah Ifrah', role: 'Board Member', initials: 'MD' },
+          { name: 'Mr. Eyal Shamear', role: 'Board Member', initials: 'ME' },
+          { name: 'Mr. Mark S. Hirsch', role: 'Board Member', initials: 'MM' },
+          { name: 'Mr. Jules Trump', role: 'Board Member', initials: 'MJ' },
         ],
       },
     ],
   },
   {
     path: '/condition-sales',
-    title: 'Condition of Sales',
-    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Condition of Sales' }],
+    title: 'Conditions of Sale — India',
+    subtitle: 'Mike Alpha Agro General Conditions of Sale',
+    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Conditions of Sale' }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      "Below are Mike Alpha Group's Condition of Sales documents sorted by the different Mike Alpha subsidiaries worldwide.",
+      'These General Conditions of Sale govern all commercial transactions, supplies, and sales of specialty fertilizer products, biostimulants, and agricultural inputs by Mike Alpha Agro Pvt. Ltd. to distributors, dealers, institutional buyers, and agricultural enterprises within the Republic of India.',
     sections: [
       {
-        title: 'General Conditions',
-        links: [
-          {
-            label: 'Mike Alpha Group General Conditions of Sales document',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/2025-07/standard_eng_0625.pdf',
-          },
-        ],
+        title: '1. Applicable Law & Regulatory Compliance (FCO 1985)',
+        content:
+          'All sales and deliveries are subject to the Fertilizer (Inorganic, Organic or Mixed) (Control) Order, 1985 (FCO), as amended from time to time by the Ministry of Agriculture and Farmers Welfare, Government of India, the Essential Commodities Act, 1955, and the Indian Sale of Goods Act, 1930. All products supplied by Mike Alpha Agro comply with the physical and chemical specifications prescribed under Schedule I of the FCO 1985.',
       },
       {
-        title: 'Regional Conditions',
-        links: [
-          {
-            label: 'Mike Alpha North West Europe',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/2025-07/nwe_eng_0725.pdf',
-          },
-          {
-            label: 'Mike Alpha North America',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/Standard%20Eng%20updated.pdf',
-          },
-          {
-            label: 'Mike Alpha South Africa',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/files/conditions_of_sales-HSA-English.pdf',
-          },
-          {
-            label: 'Mike Alpha East Asia',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/files/conditions_of_sales-East-Asia-English.pdf',
-          },
-          {
-            label: 'Mike Alpha Australia',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/files/conditions_of_sales-Australia-English.pdf',
-          },
-          {
-            label: 'Mike Alpha Colombia',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/Conditions%20of%20Sales-%20Colombia%20Spanish.pdf',
-          },
-          {
-            label: 'Mike Alpha Tarim',
-            url: 'https://www.mike-alpha-group.com/sites/default/files/Condition%20of%20sales_0.pdf',
-          },
-        ],
+        title: '2. Orders, Confirmation & Contract Formation',
+        content:
+          'All purchase orders placed by the Buyer are subject to written confirmation by Mike Alpha Agro. A binding contract shall come into existence only upon dispatch of an official Sales Confirmation or Proforma Invoice. Any terms proposed by the Buyer that conflict with or add to these Conditions of Sale are expressly rejected unless agreed in writing and signed by an authorized signatory of Mike Alpha Agro.',
+      },
+      {
+        title: '3. Pricing, Invoicing & Goods and Services Tax (GST)',
+        content:
+          'All prices are quoted in Indian Rupees (INR) and are exclusive of applicable Goods and Services Tax (GST), cess, octroi, and local tolls unless expressly stated otherwise in writing. Applicable GST will be charged at statutory rates prevailing on the date of invoice. If any new levy, tax, or statutory duty is imposed or amended by the Government of India or State Governments prior to delivery, such variance shall be to the account of the Buyer.',
+      },
+      {
+        title: '4. Delivery, Transit Risk & Freight Terms',
+        content:
+          'Unless otherwise agreed in writing, deliveries are on Ex-Warehouse or FOR (Free on Road) destination basis as specified in the Sales Confirmation. Risk of loss, damage, or deterioration during transit passes to the Buyer upon handover of the consignment to the carrier or upon delivery at the designated destination point, whichever applies under the agreed commercial terms. Transit insurance coverage shall be arranged according to the agreed terms.',
+      },
+      {
+        title: '5. Inspection, Quality Verification & Sampling Procedure',
+        content:
+          'The Buyer must inspect shipments upon arrival. Any claim regarding short delivery, damaged outer packaging, or patent defects must be noted on the lorry receipt (LR) / consignment note and communicated in writing to Mike Alpha Agro within three (3) working days of receipt.\n\nIn the event of any question regarding chemical analysis or quality, sampling must be performed strictly in accordance with the statutory sampling methodology prescribed under Schedule II of the Fertilizer Control Order (FCO) 1985 in the presence of an authorized representative of Mike Alpha Agro, and tested by a notified Government Fertilizer Testing Laboratory in India.',
+      },
+      {
+        title: '6. Storage & Handling Guidelines for Indian Climate Conditions',
+        content:
+          'Because water-soluble fertilizers and specialty nitrates are hygroscopic in nature, the Buyer and its network must store products in cool, dry, well-ventilated godowns protected from direct sunlight, rain, moisture, and high humidity common during monsoon months. Bags must be stacked on wooden or plastic pallets elevated from damp floors. Mike Alpha Agro accepts no liability for caking, degradation, or weight variation caused by improper storage after handover.',
+      },
+      {
+        title: '7. Payment Terms & Commercial Credit',
+        content:
+          'Payment terms shall be as specified on the invoice. Payments must be remitted via RTGS / NEFT / approved banking channels in Indian Rupees (INR) to the designated bank account of Mike Alpha Agro. In case of delayed payment beyond the agreed credit period, interest shall accrue at the rate of 18% per annum or the rate applicable under the Micro, Small and Medium Enterprises Development (MSMED) Act, 2006, calculated on a daily compounding basis until full realization.',
+      },
+      {
+        title: '8. Limitation of Liability & Agronomic Advisory Disclaimer',
+        content:
+          'Crop response and agricultural yields depend on a complex array of factors outside the seller’s control—including soil fertility, water salinity, irrigation scheduling, weather events, seed quality, and pesticide compatibility. While Mike Alpha Agro guarantees that products conform to FCO 1985 chemical specifications at the time of delivery, no warranty or guarantee of crop yield, monetary profit, or particular outcome is made. To the maximum extent permitted by Indian law, Mike Alpha Agro’s aggregate liability shall never exceed the net invoice value of the specific batch of goods giving rise to the claim.',
+      },
+      {
+        title: '9. Force Majeure',
+        content:
+          'Neither party shall be liable for non-performance or delay caused by events beyond reasonable control, including acts of God, extreme monsoons, cyclones, flooding, earthquakes, statutory export/import embargoes, port congestions, transport blockades, government notifications under the Essential Commodities Act, labor strikes, or civil disturbances in India.',
+      },
+      {
+        title: '10. Governing Law, Dispute Resolution & Jurisdiction',
+        content:
+          'These Conditions of Sale and all contracts arising hereunder shall be governed by and construed in accordance with the substantive laws of India. Any dispute, claim, or controversy arising out of or in connection with these Conditions shall be referred to arbitration in accordance with the Arbitration and Conciliation Act, 1996 (as amended). The place of arbitration shall be New Delhi or Ahmedabad, and proceedings shall be conducted in English.\n\nSubject to arbitration, the competent Civil Courts located in New Delhi or Ahmedabad, India, shall have exclusive jurisdiction over all matters relating hereto.',
       },
     ],
   },
   {
     path: '/mike-alpha-rd-center',
-    title: "Mike Alpha's R&D Center",
-    subtitle: 'Honoring a Legacy, Advancing the Future',
+    title: "Mike Alpha's Agronomic Research & Innovation Center",
+    subtitle: 'Advancing Precision Plant Nutrition for Indian Agriculture',
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: "R&D Innovative Center" }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      "Located at the historical Aaronsohn Farm, the first Israeli Agricultural Trial Station, founded in 1910. The center includes a well-equipped R&D greenhouse, orchards and open fields, and hosts short- and long-term in vivo studies to assess Mike Alpha's plant nutrition innovations and explore precision agriculture technologies.",
+      "Mike Alpha Agro operates dedicated Agronomic Research Trial Stations and Centers of Excellence located in Gujarat and Central India. The centers feature state-of-the-art fertigation research greenhouses, experimental orchards, and open-field trial plots dedicated to optimizing Nutrient Use Efficiency (NUE), mitigating soil salinity, and developing climate-resilient crop nutrition protocols for Indian farmers.",
     sections: [
       {
-        title: 'Honoring a Legacy, Advancing the Future',
+        title: 'Pioneering Agronomic Science for Indian Conditions',
         content:
-          "Mike Alpha's R&D and Innovation Center is located at the historic Aaronsohn Farm in Atlit, the site of Israel's first agricultural trial station, founded in 1910 by agronomist Aaron Aaronsohn—renowned for his discovery of wild Emmer wheat. Dedicated to the development of Jewish agriculture in the Holy Land, the farm was active until 1917 and served as a base for agricultural research and the NILI espionage network during World War I.\n\nIn 2014, Mike Alpha Group initiated the revival of this iconic site, linking its pioneering legacy to our core values of innovation and sustainability. In addition to restoring the original buildings, we established state-of-the-art research facilities, including greenhouses, orchards, open fields, and experimental wheat plots that follow Aaronsohn's vision.\n\nToday, the farm hosts various trials that examine Mike Alpha's innovations in plant nutrition and support the development of new products and strategies for crop nutrition.",
+          "Agriculture across India encompasses widely divergent soil chemistry—from the black cotton soils of the Deccan plateau and saline soils of coastal Gujarat to the alluvial plains of the Indo-Gangetic belt. Mike Alpha's R&D teams evaluate specialty fertilizer formulations under authentic Indian field conditions, bridging laboratory science with practical farm economics.\n\nOur research focus spans precision fertigation, foliar absorption kinetics, biostimulant stress mitigation against heat and drought waves, and heavy metal-free crop nutrition. By collaborating with leading State Agricultural Universities (SAUs) and ICAR institutes, our findings directly translate into actionable, high-yielding crop schedules for Indian growers.",
       },
       {
-        title: 'Research Infrastructure',
+        title: 'Research Infrastructure & Capabilities',
         content:
-          'The research greenhouse supports in-vivo studies on nutrient use efficiency (NUE) and precision agriculture. Trials are conducted on 15+ cropping systems, primarily in soilless culture.',
+          'Our agronomic trial centers feature precision automated micro-irrigation systems, specialized climate-controlled polyhouses, and an analytical soil and water testing laboratory equipped to support progressive growers.',
         bullets: [
-          'Controlled Growth Room: Enables precise control of light intensity and spectrum, CO₂ level and nutrition to optimize growth. Research here aims to fine-tune nutrition strategies to support accelerated growth and biomass accumulation under ideal growing conditions.',
-        ],
-      },
-      {
-        title: 'Outdoors Research Plots',
-        content:
-          'Our open-field research plots include a citrus orchard, an avocado plantation, and wheat research plots that continue Aaron Aaronsohn\'s legacy.',
-        bullets: [
-          'Citrus Orchard — Planted in 2015 at a density of 3 x 5 m, fertilized with Multicote™ Agri and supplemented with Mike Alpha Bonus™ and Mike AlphaStim™ foliar products.',
-          'Avocado Plantation — Planted in 2018 at a density of 3.5 x 4 m, with nutrient management using Multicote™ Agri for healthy establishment, uniform growth and early fruiting.',
-          'Wheat Research Plot — In honor of Aaron Aaronsohn\'s legacy, wheat trials are conducted in collaboration with the Institute of Evolution Wild Cereal Gene Bank (ICGB) at the University of Mike Alpha, contributing to breeding programs that improve nutritional quality, disease resistance and drought tolerance.',
+          'Fertigation Automation & Trial Greenhouses: Enables micro-dosing evaluation of water-soluble NPKs and micronutrient chelates across horticultural and floricultural crops.',
+          'Open Field Cropping Systems: Long-term crop response trials on Cotton, Sugarcane, Basmati Rice, Wheat, Pomegranate, Banana, Grapes, and Spices.',
+          'Saline & Calcareous Soil Remediation: Specialized studies evaluating the synergistic action of potassium nitrate and bio-stimulants in mitigating sodium toxicity in Indian soils.',
+          'Controlled Release Nutrition (CRF): Developing single-application and basal fertilizer management strategies tailored to Indian Kharif and Rabi seasonal dynamics.',
         ],
       },
     ],
   },
   {
     path: '/mike-alpha-values',
-    title: "Mike Alpha's Values",
-    subtitle: 'Code of Conduct',
+    title: "Mike Alpha's Values & Code of Conduct",
+    subtitle: 'Corporate Ethics & Indian Regulatory Compliance',
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Code of Conduct' }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      "The Code of Conduct of the employees of Mike Alpha Group is based on the governing laws and regulations of both Israel and the international community. The Group is committed to comply with all laws, beliefs, and rules relevant to its activity, to conform to universal moral values and adhere to proper administration principles. This document is not intended to replace the Group's Code of Ethics or any of the different regulations but to supplement them.",
+      "The Code of Conduct of Mike Alpha Agro is established upon the highest standards of corporate governance, statutory compliance under Indian law, and unwavering commitment to farmer welfare, environmental stewardship, and ethical business practices across all operations in the Republic of India.",
     sections: [
       {
-        title: 'Code of Conduct guiding Mike Alpha Group',
+        title: 'Core Principles Guiding Mike Alpha Agro',
         bullets: [
-          'High ethical conduct: integrity, reliability, honesty, adherence to appropriate and respectful personal behavior.',
-          'Seeing the Group, its employees, customers, suppliers and business partners, as well as other companies of the international Mike Alpha Group, as full partners in the fulfillment of the goals and obligations of the Group.',
-          'Honesty in all of the Group’s relationships with customers, suppliers, business partners, competitors, government and civil entities, authorities, and its employees.',
-          'High quality of products and services.',
-          'Full compliance, at all times and places, with the organizational culture rules that the Group has defined and embraced, and with the requirements of laws and agreements - among others, with regard to reduction of environmental impacts and maintenance of a safe and healthy working environment.',
-          'Perceiving customers and suppliers as the Group’s greatest assets and commitment to maintain their satisfaction.',
-          'Regarding our employees as the key to the Group’s success and committing to their advancement and nurture, and to strengthening their sense of belonging and identification with the Group and its goals, while treating all employees equally, regardless of religion, race, gender, age or opinion.',
+          'Statutory & Legal Compliance: Absolute adherence to all applicable laws of India, including the Companies Act 2013, Fertilizer Control Order (FCO) 1985, Essential Commodities Act 1955, Prevention of Corruption Act 1988, Environment (Protection) Act 1986, and Goods and Services Tax (GST) regulations.',
+          'Zero Tolerance for Corruption & Bribery: Absolute commitment to fair competition and transparency. Strict prohibition against any form of commercial bribery, kickbacks, or improper inducements with commercial partners or public authorities.',
+          'Respectful & Harassment-Free Workplace: Strict compliance with the Prevention of Sexual Harassment of Women at Workplace (POSH) Act, 2013, ensuring an inclusive, safe, and dignified environment for all employees regardless of caste, creed, religion, gender, or regional origin.',
+          'Labor Rights & Fair Employment: Full observance of the Factories Act 1948, Minimum Wages Act 1948, and the Child Labour (Prohibition and Regulation) Act 1986. Strict prohibition of child labor or involuntary labor across our facilities and supply chain.',
+          'Product Integrity & Truth in Advertising: Supplying only authenticated, laboratory-tested fertilizers complying with FCO 1985 standards. Honest, science-based agronomic advisory without misleading claims to Indian farmers.',
+          'Environmental Responsibility & Worker Safety: Compliance with the Water Act 1974, Air Act 1981, and Hazardous Waste Management Rules, upholding occupational health standards and environmental conservation across all warehousing and logistics hubs.',
+          'Vigil Mechanism & Whistleblower Protection: Providing accessible, confidential reporting channels for employees, partners, and growers to voice grievances or report misconduct without fear of retaliation.',
         ],
       },
     ],
@@ -272,130 +228,100 @@ export const corporateArticles: CorporateArticle[] = [
     heroImage: '/images/hero-bg-2.jpg',
     sections: [
       {
-        title: 'Pioneering the Future',
+        title: 'Pioneering the Future of Indian Agriculture',
         content:
-          'In a world challenged by a growing population and climate changes, Mike Alpha Group embraces innovation as a powerful force for progress. We pioneer advanced solutions that harness cutting-edge technologies, with a focus on nutrient management systems that enable precision agriculture.\n\nInnovation at Mike Alpha is driven by curiosity, professionalism, and a relentless pursuit of improvement. We listen openly—to the market, to our customers, and to our teams—translating insights into actionable breakthroughs. Our commitment is to lead, to anticipate, and to bring forth new ideas and processes that empower growers and shape the future of sustainable agriculture.',
+          'In a nation where agriculture is the backbone of livelihoods, Mike Alpha Agro embraces innovation as a powerful catalyst for national growth. We pioneer advanced plant nutrition solutions that leverage cutting-edge fertigation and foliar technologies, enabling Indian growers to maximize yield per drop of water and nutrient applied.\n\nOur agronomic innovations are rooted in listening closely to Indian farmers—understanding the challenges of monsoon variability, soil degradation, and market economics—and delivering tailored nutrient solutions that secure farm profitability.',
       },
       {
-        title: 'Sustainability through Precision',
+        title: 'Sustainability Through Precision',
         content:
-          'At Mike Alpha, we believe in creating meaningful, lasting impact—on agriculture, the environment, and society. Our commitment to sustainability is rooted in responsibility, accountability, and a deep understanding of the evolving needs of the market and the planet.\n\nWe strive to safeguard natural habitats, support community well-being, and enhance quality of life through innovation and care. By ensuring global food security, we aim to make the world a better place for current and future generations.\n\nMike Alpha’s specialty plant nutrition solutions—based on premium products, expert agronomic knowledge, and advanced technologies—are the cornerstone of our impact-driven approach. This is sustainability through precision.',
+          'At Mike Alpha, we believe sustainable farming is essential for India\'s future. By replacing high-loss conventional commodity fertilizers with targeted specialty nitrates, water-soluble NPKs, and bio-stimulants, we help protect India\'s groundwater from nitrate leaching, regenerate degraded soils, and lower agricultural carbon emissions.\n\nOur plant-centric nutrition methodology ensures that every nutrient applied serves the growing crop directly, conserving natural resources and nurturing soil health for generations to come.',
       },
       {
-        title: "It's all about being human",
+        title: "Farmer-First: It's All About Being Human",
         content:
-          'At Mike Alpha, we act out of a genuine desire to build a more caring and attentive world. Our people-first value begins with our internal culture—shaping how we communicate, collaborate, and support one another—and extends outward to our customers, suppliers, and growth partners.\n\nOur business ethos is rooted in creating humane, fair, and respectful relationships that foster cooperation and trust. Whether inside the organization or out in the field, we strive to generate positive value and seek Win-Win outcomes in every interaction. This value truly comes to life in our relationship with our ultimate growth partners: the growers. With deep familiarity with their work and the challenges they face, we share our knowledge and expertise to support their success—because when they thrive, we all grow together.',
+          'At Mike Alpha Agro, our relationships with farmers, agronomists, distributors, and dealers are built on mutual respect, integrity, and shared prosperity. When our partner farmers harvest bumper crops and thrive economically, the entire agricultural community prospers together.\n\nThrough on-farm technical training, regional Kisan Gosthis, digital agronomic apps, and dedicated field agronomists, we walk alongside India\'s farming community every day.',
       },
     ],
   },
   {
     path: '/news-events',
-    title: 'News & Events',
+    title: 'News & Events — India & Global',
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'News & Events' }],
     heroImage: '/images/hero-bg-2.jpg',
     newsCards: [
-      { title: 'Maala ESG Index 2026: Mike Alpha Group Continues to Rise', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/news/esg-index-2026-platinumplus-rank' },
-      { title: 'Mike Alpha Group at the IFA Annual Conference 2026: Strengthening Connections Across the Global Fertilizer Industry', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/news/mike-alpha-at-ifa-conferene-26' },
-      { title: 'Mike Alpha Group CEO Motti Levin Featured in The CEO Magazine', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/news/motti-featured-ceo-magazine' },
-      { title: 'Mike Alpha Group Joins the European Biostimulants Industry Council', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/news/mike-alpha-joins-ebic' },
-      { title: 'The President’s Award Granted to the Dimona Educational Farm Project', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/news/president-award-dimona-educational-farm' },
-      { title: 'Mike Alpha North-West Europe Celebrates Prestigious Win at the 2025 Shootsta Impact Awards', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/news/mike-alpha-north-west-europe-celebrates-prestigious-win-2025-shootsta-impact-awards' },
-      { title: 'Expanding Horizons: Mike Alpha Expert Strengthens Market Presence in Vietnam', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/news/visit-in-vietnam-nov25' },
-      { title: 'Your 24/7 Agronomist is Here: Introducing the Mike Alpha Group AI Chat', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/news/chatbot-is-here' },
-      { title: 'Growing Opportunity, Empowering Communities: Mike Alpha Colombia in Action', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/news/volunteering-colombia-nov25' },
-      { title: 'Sharing Knowledge, Growing Expertise: Mike Alpha’s Greenhouse Expertise Reaches Latin America', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/news/marco-latin-america-oct25' },
-      { title: 'Mike Alpha Iberia Team Takes Action for the Environment', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/news/iberia-tree-planting-oct25' },
-      { title: 'Mike Alpha at the Israel Agriculture Science Conference: A Fascinating Encounter of Research, Innovation and Industry', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/news/israel-agriculture-science-conference' },
-      { title: 'Mike Alpha Mexico at CONFIVA 2026', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/event/mike-alpha-mexico-confiva-2026' },
-      { title: 'Mike Alpha South America at HortiTec 2026', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/event/mike-alpha-south-america-hortitec-2026' },
-      { title: 'Mike Alpha Colombia at Nación Berries 2026', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/event/mike-alpha-colombia-nacion-berries-2026' },
-      { title: 'Mike Alpha Colombia Seminar Strengthens Regional Partnerships', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/event/colombia-regional-seminar-0526' },
-      { title: 'Mike Alpha at GreenTech Americas 2026', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/event/mike-alpha-greentech-americas-2026' },
-      { title: 'TrayTalk Strawberry brings growers together to discuss the future of tray plant production', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/event/traytalk-strawberry-brings-growers-together-discuss-future-tray-plant-production' },
-      { title: 'IPM ESSEN 2026 – Conclusions from Mike Alpha North West Europe', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/event/at-ipm-essen-2026' },
-      { title: 'Revival & Growth: Mike Alpha at the Arava Open Day Exhibition', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/event/arava-exhibition-2026' },
-      { title: 'Mike Alpha Leadership Forum 2026: From Global Vision to Growth in the Field', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/event/mike-alpha-leadership-forum-2026' },
-      { title: 'Mike AlphaStim Roadshow 2025: Where Expertise Meets Fun', image: '/images/blog-1.jpg', link: 'https://www.mike-alpha-group.com/event/iberia-mike-alphatim-roadshow-2025' },
-      { title: 'Nutri Haitech Conference 2025: Advancing Solutions for the Open Field', image: '/images/blog-2.jpg', link: 'https://www.mike-alpha-group.com/event/nutri-haitech-conference-nov25' },
-      { title: 'Mike Alpha Group Advances Strategic Partnerships and Community Relations in Crete – Driven by Innovation, Impact & People', image: '/images/blog-3.jpg', link: 'https://www.mike-alpha-group.com/event/crete-conference-nov25' },
+      { title: 'Mike Alpha Agro Showcases Precision Fertigation at National Horticulture Expo 2026', image: '/images/blog-1.jpg', link: '/news-events' },
+      { title: 'Empowering Banana & Pomegranate Growers: Advanced Fertigation Workshops in Maharashtra & Gujarat', image: '/images/blog-2.jpg', link: '/news-events' },
+      { title: 'Mike Alpha Introduces Advanced Water-Soluble NPK Formulations Compliant with Updated FCO Guidelines', image: '/images/blog-3.jpg', link: '/news-events' },
+      { title: 'Kisan Diwas 2026: Honoring Progressive Farmers Transforming Nutrient Use Efficiency in Punjab & Haryana', image: '/images/blog-1.jpg', link: '/news-events' },
+      { title: 'Mike Alpha Agronomic Advisory AI Chat Launches in Hindi and English for 24/7 Farmer Assistance', image: '/images/blog-2.jpg', link: '/news-events' },
+      { title: 'Sustainable Soil Health Initiative: Mike Alpha Collaborates with Agricultural Universities on NUE Trials', image: '/images/blog-3.jpg', link: '/news-events' },
     ],
   },
   {
     path: '/mike-alpha-grows',
-    title: 'Mike Alpha Grows',
-    subtitle: 'Pioneering the Future',
+    title: 'Mike Alpha Grows — India Strategic Vision',
+    subtitle: 'Pioneering Sustainable Growth',
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Mike Alpha Grows' }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      'Following a growing demand for Mike Alpha’s specialty plant nutrition solutions and the expansion of its product range, the Group released a Five-Year Plan “Mike Alpha 2024”. The plan aims at doubling the group\'s production capacity and enabling production of new advanced products.',
+      'In alignment with India\'s mission for sustainable agriculture and enhanced farm productivity, Mike Alpha Agro has unveiled its Five-Year Strategic Expansion Plan. The initiative expands regional formulation capacities, broadens distribution reach, and advances digital agronomy for millions of Indian farmers.',
     sections: [
       {
-        title: 'The plan that will contribute the world’s agriculture',
-        content:
-          "The Mike Alpha Group's plan to double its production capacity significantly contributes to increasing agricultural productivity. The Five Year Plan contributes to the global agriculture industry and the economy on many levels, all while maintaining a sustainable approach and meeting top quality standards.",
-      },
-      {
-        title: 'What does the Five Year Plan include?',
+        title: 'Key Pillars of the Indian Growth Plan',
         bullets: [
-          'The Mike Alpha Group will invest approximately US$ 350 million in infrastructure and facilities for the production of special fertilizers, including investment in an ammonia production facility - a key raw material in the Mike Alpha Group\'s production process.',
-          'The new ammonia facility will be part of a greater industrial complex that Mike Alpha will establish in Mishor Rotem, Israel, and it will include a power plant that will serve the Mike Alpha Group plant.',
-          'Doubling production capacity will significantly increase Mike Alpha\'s contribution to Israel\'s economy and exports, double its contribution to gross domestic product, increase its export output, and double local raw material purchases.',
-          "Beside being a perfect plant nutrition product, Mike Alpha's high quality potassium nitrate is used to operate thermal solar stations, thereby actively supporting a significant reduction in the use of fossil fuels.",
-          'Mike Alpha Group produces specialty fertilizers, which reduce greenhouse gas emissions by 30% compared to ordinary fertilizers. Increasing production capacity will increase the global use of these fertilizers, to the welfare of the farmers and the environment.',
-          'As the UN forecasts a 70% increase in global food consumption by 2050, Mike Alpha Group acts to increase agricultural productivity through innovative solutions and advanced fertilization methods.',
-          'Mike Alpha Group directly and indirectly employs about 5,000 employees. Expanding the group\'s activities will create more jobs and may double the number of employees.',
+          'Investment in advanced local blending and packaging facilities in Gujarat and Maharashtra, engineered to the highest environmental and safety standards.',
+          'Expansion of the authorized distributor and agro-retail network to reach over 1,000 rural clusters across 15 agricultural states.',
+          'Scaling up soil health advisory services and mobile testing units to assist smallholder farmers in balanced fertilization and cost optimization.',
+          'Advancing high-purity potassium nitrate solutions for thermal solar energy storage projects across Rajasthan and Gujarat solar parks.',
+          'Direct training of 100,000+ progressive growers annually in precision drip fertigation and eco-friendly biostimulant usage.',
+          'Strengthening domestic employment, regional logistics infrastructure, and sustainable value chain partnerships across India.',
         ],
       },
     ],
     footerText:
-      '"The Mike Alpha Group\'s Five Year Plan: Contribute to the global agriculture industry and the economy on many levels, all while maintaining a sustainable approach and meeting top quality standards."',
+      '"Mike Alpha Agro: Advancing national food security, soil health, and farmer prosperity through science-driven specialty plant nutrition."',
   },
   {
     path: '/mike-alpha-worldwide',
-    title: 'Mike Alpha Worldwide',
-    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Mike Alpha Worldwide' }],
+    title: 'Mike Alpha India Operations',
+    subtitle: 'Exclusive Operations in India',
+    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'India Operations' }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      'Mike Alpha Group operates through subsidiaries around the world, with production sites, blending facilities and commercial offices serving growers in more than 100 countries.',
+      'MIKE ALPHA operates exclusively in India, focusing our precision crop nutrition, agronomic research, and dedicated distribution network across three key agricultural states: Gujarat, Madhya Pradesh, and Chhattisgarh.',
     branchRegions: [
       {
-        region: 'Australia',
-        items: [{ label: 'Mike Alpha Australia' }],
-      },
-      {
-        region: 'America',
+        region: 'Gujarat (State Operations & Regional Network)',
         items: [
-          { label: 'Mike Alpha Colombia' },
-          { label: 'Mike Alpha Ecuador' },
-          { label: 'Mike Alpha Mexico' },
-          { label: 'Mike Alpha North America' },
-          { label: 'Mike Alpha South America' },
+          { label: 'Kutch Region: Bhuj & Anjar Distribution Hubs' },
+          { label: 'Saurashtra Region: Morbi, Junagadh, Halvad, Dhrangadhra & Surendranagar' },
+          { label: 'Central Gujarat: Viramgam, Sanand, Kheda, Nadiad & Anand' },
+          { label: 'South Gujarat: Vadodara, Bharuch, Ankleshwar, Surat & Bardoli' },
+          { label: 'North Gujarat: Sabarkantha & Banaskantha Agronomy Centers' },
         ],
       },
       {
-        region: 'Europe',
+        region: 'Madhya Pradesh (Central Agricultural Zone)',
         items: [
-          { label: 'Mike Alpha France' },
-          { label: 'Mike Alpha Iberia' },
-          { label: 'Mike Alpha Italia' },
-          { label: 'Mike Alpha North West Europe' },
-          { label: 'Mike Alpha South East Europe' },
-          { label: 'Mike Alpha Turkey' },
+          { label: 'Western MP: Indore & Ujjain Horticultural Corridors' },
+          { label: 'Central MP: Bhopal & Jabalpur Fertigation Centers' },
+          { label: 'Northern MP: Gwalior & Chambal Advisory Network' },
+          { label: 'Specialized Crop Nutrition for Soybean, Garlic, Potato & Wheat' },
         ],
       },
       {
-        region: 'China',
-        items: [{ label: 'Mike Alpha China' }],
-      },
-      {
-        region: 'Asia',
-        items: [{ label: 'Mike Alpha East Asia' }, { label: 'Mike Alpha India' }],
-      },
-      {
-        region: 'Africa & Middle East',
-        items: [{ label: 'Mike Alpha Israel' }, { label: 'Mike Alpha South Africa' }],
+        region: 'Chhattisgarh (Paddy & Vegetable Belt)',
+        items: [
+          { label: 'Central Hub: Raipur Regional Distribution & Advisory Center' },
+          { label: 'Northern Zone: Bilaspur Crop Nutrition Depot' },
+          { label: 'Southern Zone: Durg, Bhilai & Rajnandgaon Grower Support' },
+          { label: 'Specialized High-Efficiency Programs for Rice, Pulses & Horticulture' },
+        ],
       },
     ],
+    footerText:
+      '"Mike Alpha Agro: Empowering farmers in Gujarat, Madhya Pradesh, and Chhattisgarh with science-backed specialty crop nutrition."',
   },
 ];
 

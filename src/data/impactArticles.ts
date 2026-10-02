@@ -40,17 +40,7 @@ export const impactArticles: ImpactArticle[] = [
     heroImage: '/images/impact-bg.jpg',
     intro:
       'Environmental, Social, and Governance (ESG) values are at the heart of everything we do. From reducing our carbon footprint to supporting sustainable agriculture and fostering a culture of inclusivity, our commitment is clear: To grow more food responsibly and commit to our plant health and a thriving humanity. We are proud to present our second ESG report for the years 2022-2023.',
-    stats: [
-      { value: '17', label: 'Subsidiaries', sublabel: 'Around the world', color: '#57C168' },
-      { value: '3', label: 'Production Plants', sublabel: 'Main site in India', color: '#F0534E' },
-      { value: '725', label: 'Employees', color: '#FC9E24' },
-      { value: '60', label: 'Years', sublabel: 'Of plant nutrition experience', color: '#48C2C6' },
-      { value: '100+', label: 'Countries', sublabel: "where the company's products are sold", color: '#09AA5D' },
-      { value: '30%', label: 'Market Share', sublabel: 'In global greenhouse', color: '#00854D' },
-      { value: '95%', label: "Mike Alpha's Products", sublabel: 'are exported', color: '#00854D' },
-      { value: '5,500+', label: 'Farmers Worldwide', sublabel: 'received agronomic training from our experts', color: '#F7C900' },
-      { value: '$70M', label: 'Invested', sublabel: 'in environmental projects', color: '#57C168' },
-    ],
+    
     sections: [
       {
         title: 'Growing a Sustainable Future',
@@ -229,12 +219,12 @@ export const impactArticles: ImpactArticle[] = [
       {
         title: 'Social',
         content:
-          'The Group prioritizes a respectful, harassment-free work environment for employees, maintaining global standards exceeding compliance to ensure fair employment practices and uphold workers\' rights worldwide. We value our employees, customers, suppliers, and business partners as our greatest assets. The group firmly rejects all forms of slavery and ensures that all employees worldwide benefit from quality working conditions and welfare standards exceeding market standards.',
+          'The Group prioritizes a respectful, harassment-free work environment for employees, maintaining high standards exceeding compliance to ensure fair employment practices and uphold workers\' rights. We value our employees, customers, suppliers, and business partners as our greatest assets. The group firmly rejects all forms of exploitation and ensures that all employees benefit from quality working conditions and welfare standards exceeding market standards.',
       },
       {
         title: 'Governance',
         content:
-          'Mike Alpha maintains high standards of transparency and governance like those seen in public companies, despite being privately held. We strictly follow local laws, regulations, and global standards, ensuring ethical values and effective management in all our operations worldwide, going beyond compliance. The group prohibits its employees from accepting benefits from any party directly or indirectly related to the group\'s business and strongly opposes corruption in all its forms.',
+          'Mike Alpha maintains high standards of transparency and governance like those seen in public companies, despite being privately held. We strictly follow statutory laws, regulations, and industry standards, ensuring ethical values and effective management across all our operations in India, going beyond compliance. The group prohibits its employees from accepting benefits from any party directly or indirectly related to the group\'s business and strongly opposes corruption in all its forms.',
       },
     ],
     footerText:
@@ -285,7 +275,7 @@ export const impactArticles: ImpactArticle[] = [
       },
     ],
     footerText:
-      "Along with the massive investment in creating a safe work environment, Mike Alpha is prepared for any scenario in order to enable optimal dealing with possible risks. In this framework, a lot of resources are invested in equipment, facilities and joint training with teams of fire and rescue forces, the Israel Police, etc. Safety policy is a key element in Mike Alpha's activities. We will continue to act in light of it and take every possible action to create a safe work environment, for the well-being of our employees and customers.",
+      "Along with our extensive investment in creating a safe work environment, Mike Alpha Agro is prepared for any scenario in order to enable optimal handling of operational and environmental risks. In this framework, substantial resources are invested in safety equipment, advanced storage infrastructure, and regular joint drills with local fire services, disaster management authorities, and state industrial safety directorates in India. Safety policy is a cornerstone of Mike Alpha's activities, ensuring the well-being of our workers, communities, and customer networks.",
   },
   {
     path: '/sustainable-development-goals-1',
@@ -298,11 +288,11 @@ export const impactArticles: ImpactArticle[] = [
     ],
     heroImage: '/images/impact-bg.jpg',
     intro:
-      'Taking care of the environment and much more. Mike Alpha prioritizes the sustainability issue and leads extensive activities to create a sustainable environment, economy and society. As a multinational corporation renowned for its pioneering spirit and innovative solutions for agriculture strengthening, sustainability and environmental concern are an integral part of Mike Alpha\'s DNA.',
+      'Taking care of the environment and much more. Mike Alpha prioritizes the sustainability issue and leads extensive activities to create a sustainable environment, economy and society. As a leading agricultural corporation renowned for its pioneering spirit and innovative solutions for agriculture strengthening, sustainability and environmental concern are an integral part of Mike Alpha\'s DNA.',
     sections: [
       {
         content:
-          'Mike Alpha employs approximately 5,000 workers directly and indirectly and provides livelihoods for residents worldwide through its research & development center and multiple manufacturing facilities. For its deep connection to the environment, Mike Alpha accepted the challenge of being part of the global effort and to act in accordance with the goals of the UN Sustainable Development Program, with the aim to encourage other businesses around the world to embrace responsible social policy.',
+          'Mike Alpha employs workers directly and indirectly and provides livelihoods for rural families across its research & development trial centers and regional operations in India. For its deep connection to the environment, Mike Alpha accepted the challenge of being part of the sustainability effort and to act in accordance with the goals of the UN Sustainable Development Program, with the aim to encourage businesses to embrace responsible social policy.',
       },
     ],
     tabs: [

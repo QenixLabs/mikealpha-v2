@@ -284,6 +284,71 @@ export default function About() {
             </motion.div>
           </div>
         </section>
+        {/* Leadership Team */}
+        <section id="leadership" className="py-20 md:py-28">
+          <div className="max-w-container mx-auto px-4 lg:px-6">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <motion.span
+                variants={fadeUpVariant}
+                className="text-xs font-bold uppercase tracking-widest text-coral mb-3 block"
+              >
+                Leadership
+              </motion.span>
+              <motion.h2
+                variants={fadeUpVariant}
+                className="text-3xl md:text-4xl font-bold text-navy mb-4"
+              >
+                Meet our directors
+              </motion.h2>
+              <motion.p
+                variants={fadeUpVariant}
+                className="text-brand-text-secondary max-w-2xl"
+              >
+                The visionary leaders driving Mike Alpha Agro's mission to transform Indian agriculture through science, innovation, and farmer-first values.
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            >
+              {[
+                { name: 'Milan Sanghani', initials: 'MS', gradient: 'from-[#1B4332] to-[#40916C]' },
+                { name: 'Krunal Shah', initials: 'KS', gradient: 'from-[#1B2A4A] to-[#2D4A8A]' },
+                { name: 'Piyush Upadhya', initials: 'PU', gradient: 'from-[#7B2D00] to-[#E85A3C]' },
+                { name: 'Sahil Malik', initials: 'SM', gradient: 'from-[#3D1A78] to-[#7B5EA7]' },
+              ].map((director) => (
+                <motion.div
+                  key={director.name}
+                  variants={fadeUpVariant}
+                  className="bg-white border border-brand-border rounded-lg p-8 flex flex-col items-center text-center hover:shadow-card transition-shadow group"
+                >
+                  <div
+                    className={`w-20 h-20 rounded-full bg-gradient-to-br ${director.gradient} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300`}
+                  >
+                    <span className="text-xl font-bold text-white tracking-wide">
+                      {director.initials}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-navy mb-1">{director.name}</h3>
+                  <p className="text-sm text-coral font-semibold uppercase tracking-wider">
+                    Director
+                  </p>
+                  <div className="mt-4 w-8 h-0.5 bg-brand-border group-hover:bg-coral transition-colors duration-300 rounded-full" />
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
       </main>
 
       <Footer />

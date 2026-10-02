@@ -28,6 +28,7 @@ export const categories = [
   "Foliar Solutions",
   "NPK Fertilizers",
   "Specialty Fertilizers",
+  "Controlled Release Fertilizers",
   "Biological Fertilizers",
   "Biostimulant",
   "Straight Fertilizers",
@@ -205,7 +206,7 @@ export const products: Product[] = [
     relatedSlugs: ["kaliphos", "supercoctel", "blackpot"],
   },
   {
-    id: 17, slug: "supercoctel", name: "Mike Supercoctel 6-18-18+TE", category: "Specialty Fertilizers", productLine: "Vitagea",
+    id: 17, slug: "supercoctel", name: "Mike Supercoctail 6-18-18+TE", category: "Specialty Fertilizers", productLine: "Vitagea",
     shortDescription: "Multi-activator, biostimulant, and physiological enhancer",
     fullDescription: "Rich in amino acids with essential microelements that support enzyme activity. Triple action with protective, corrective, and nutritional effects. Amino acids enhance transport of macro, meso, and micronutrients throughout the plant.",
     formula: "NPK 6-18-18+TE", badge: "Specialty", badgeColor: "bg-[#E85A3C]",
@@ -238,8 +239,8 @@ export const products: Product[] = [
     relatedSlugs: ["supercoctel", "kualium", "00-52-34"],
   },
   {
-    id: 20, slug: "kualium", name: "Mike Kualium 10-05-30+MgO+TE", category: "Specialty Fertilizers", productLine: "Vitagea",
-    shortDescription: "NPK nutritional biostimulants low in chloride",
+    id: 20, slug: "kualium", name: "Mike Amino Kualium 10-05-30+MgO+TE", category: "Specialty Fertilizers", productLine: "Vitagea",
+    shortDescription: "NPK nutritional biostimulants low in chloride with amino acid complex",
     fullDescription: "WITH FILOAMIN COMPLEX. Comprehensive nutritional support with macro- and microelements. Enhances crop biostimulation with rapid energy supply. Rapid correction of nutritional deficiency symptoms.",
     formula: "NPK 10-05-30+MgO+TE", badge: "Specialty", badgeColor: "bg-[#E85A3C]",
     image: "/products/All Products_Kualium.png", nutrients: { "N": "10%", "P2O5": "5%", "K2O": "30%", "MgO": "2%" },
@@ -571,6 +572,29 @@ export const products: Product[] = [
     benefits: [ "Improved spreading", "Enhanced sticking", "Compatible with all agrochemicals" ],
     application: "Foliar 0.3-0.5 ml/liter; mix with insecticides, fungicides, herbicides and foliar fertilizers", packaging: "1 L, 500ml, 250ml, 100ml",
     relatedSlugs: ["whitepot-solution", "aminovit-22", "silikum"],
+  },
+  // CONTROLLED RELEASE FERTILIZERS (CRF) (2)
+  {
+    id: 50, slug: "mike-cote-pro", name: "Mike Cote Pro 15-09-12+2MgO+TE", category: "Controlled Release Fertilizers", productLine: "Protega",
+    shortDescription: "Polymer-coated controlled release fertilizer (CRF) with 4-month continuous nutrition",
+    fullDescription: "Engineered with proprietary polymer coating technology that releases balanced N-P-K macro- and micronutrients in response to soil temperature. Prevents leaching in high rainfall zones, reduces application frequency to a single base pass, and guarantees uniform crop vigor across fruit orchards, sugarcane, and high-value vegetables in India.",
+    formula: "CRF NPK 15-09-12+2MgO+TE", badge: "CRF (4M)", badgeColor: "bg-amber-600",
+    image: "/products/All Products_Complex.png", nutrients: { "Total Nitrogen (N)": "15%", "Available Phosphate (P2O5)": "9%", "Soluble Potash (K2O)": "12%", "Magnesium (MgO)": "2%", "Trace Elements (B, Fe, Mn, Zn)": "Chelated Mix" },
+    benefits: [ "Continuous 4-month nutrient release", "Zero leaching during monsoon rains", "Single application reduces labor costs by up to 70%" ],
+    application: "Soil application: band placement or root zone incorporation at planting / pruning stage @ 40-60 kg/acre", packaging: "25 kg, 50 kg",
+    dosage: [{ crop: "Fruit Orchards (Mango, Pomegranate, Citrus)", amount: "250-500 gm/tree" }, { crop: "Sugarcane / Cash Crops", amount: "50 kg/acre at planting" }],
+    relatedSlugs: ["19-19-19", "special-one", "mike-cote-nursery"],
+  },
+  {
+    id: 51, slug: "mike-cote-nursery", name: "Mike Cote Nursery 16-08-24+TE", category: "Controlled Release Fertilizers", productLine: "Protega",
+    shortDescription: "High-potassium polymer-coated controlled release fertilizer with 6-month release curve",
+    fullDescription: "Designed specifically for commercial plant nurseries, polyhouse floriculture, containerized horticulture, and protected cultivation. High potassium formulation promotes robust root architectures, sturdy stem thickening, and stress tolerance without risk of root burn or salt toxicity.",
+    formula: "CRF NPK 16-08-24+TE", badge: "CRF (6M)", badgeColor: "bg-amber-600",
+    image: "/products/All Products_Maxima.png", nutrients: { "Total Nitrogen (N)": "16%", "Available Phosphate (P2O5)": "8%", "Soluble Potash (K2O)": "24%", "Trace Elements": "Complete Package" },
+    benefits: [ "Steady 6-month release rate", "Safe for sensitive young root systems", "Eliminates salt buildup in potting media" ],
+    application: "Substrate blending or top-dressing for nursery trays, polybags, and potted plants @ 3-5 kg/m³ of potting mix", packaging: "25 kg",
+    dosage: [{ crop: "Nurseries & Potted Plants", amount: "3-5 g per liter of substrate" }, { crop: "Greenhouse / Polyhouse Crops", amount: "40-50 kg/acre" }],
+    relatedSlugs: ["mike-cote-pro", "00-00-50", "aminocalcium"],
   },
 ]
 

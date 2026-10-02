@@ -60,7 +60,7 @@ export default function ImpactStrategy() {
             <motion.div variants={fadeUpVariant} className="prose prose-lg max-w-none text-brand-text-primary">
               <p>
                 Mike Alpha is at the forefront of precision nutrition for agricultural crops, helping growers
-                worldwide grow more, more sustainably. We are committed to responsible practices in all aspects
+                grow more, more sustainably. We are committed to responsible practices in all aspects
                 of our activities, bringing innovative solutions that emphasize precision agriculture and
                 sustainability, guided by the core values we embrace:<strong> IMPACT, INNOVATION, People.</strong>
               </p>

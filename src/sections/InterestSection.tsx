@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -54,6 +54,9 @@ const cropItems = [
   'Almond',
   'Soybean',
   'Turf',
+  'Cabbage',
+  'Cauliflower',
+  'Watermelon',
 ];
 
 const cropIconColors = [
@@ -98,6 +101,9 @@ const cropIconMap: Record<string, string> = {
   Almond: '/crops/icons/Almond.png',
   Soybean: '/crops/icons/Soybean.png',
   Turf: '/crops/icons/Turf.jpg',
+  Cabbage: '/crops/icons/cabbage.png',
+  Cauliflower: '/crops/icons/cauliflower.png',
+  Watermelon: '/crops/icons/watermelon.png',
 };
 
 const growingMethods: { name: string; icon: LucideIcon }[] = [
@@ -142,6 +148,11 @@ const interestToCropName: Record<string, string> = {
 
 export default function InterestSection() {
   const [activeTab, setActiveTab] = useState<TabId>('crop');
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({ left: dir === 'left' ? -500 : 500, behavior: 'smooth' });
+  };
 
   const getItems = () => {
     switch (activeTab) {
@@ -285,6 +296,7 @@ export default function InterestSection() {
         <div className="relative">
           <AnimatePresence mode="wait">
             <motion.div
+              ref={scrollRef}
               key={activeTab}
               variants={staggerContainer}
               initial="hidden"
@@ -312,11 +324,11 @@ export default function InterestSection() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Scroll Arrows - Mobile */}
-          <button className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary transition-colors md:hidden">
+          {/* Scroll Arrows */}
+          <button onClick={() => scroll('left')} aria-label="Scroll left" className="absolute -left-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-500 hover:border-primary hover:text-primary hover:shadow-md transition-all duration-200">
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <button className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary transition-colors md:hidden">
+          <button onClick={() => scroll('right')} aria-label="Scroll right" className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-500 hover:border-primary hover:text-primary hover:shadow-md transition-all duration-200">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>

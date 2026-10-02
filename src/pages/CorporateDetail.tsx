@@ -189,39 +189,55 @@ function Sections({ sections }: { sections: CorporateSection[] }) {
   );
 }
 
-function Initials({ name }: { name: string }) {
-  const parts = name.split(' ').filter(Boolean);
-  const initials = parts.slice(0, 2).map((p) => p[0]).join('').toUpperCase();
-  return (
-    <div className="w-20 h-20 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xl font-bold mb-4">
-      {initials}
-    </div>
-  );
-}
+function LeaderCard({
+  leader,
+}: {
+  leader: { name: string; role: string; initials?: string; image?: string; link?: string };
+}) {
+  const initials =
+    leader.initials ||
+    leader.name
+      .split(' ')
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((p) => p[0])
+      .join('')
+      .toUpperCase();
 
-function LeaderCard({ leader }: { leader: { name: string; role: string; image?: string; link?: string } }) {
   const Card = (
-    <div className="bg-white border border-brand-border rounded-xl p-6 text-center hover:shadow-card transition-shadow">
-      {leader.image ? (
-        <img
-          src={leader.image}
-          alt={leader.name}
-          className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
-        />
-      ) : (
-        <Initials name={leader.name} />
-      )}
-      <h3 className="text-lg font-bold text-navy">{leader.name}</h3>
-      <p className="text-sm text-brand-text-secondary mt-1">{leader.role}</p>
+    <div className="bg-white border border-gray-100 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-full min-h-[185px]">
+      <div>
+        {leader.image ? (
+          <img
+            src={leader.image}
+            alt={leader.name}
+            className="w-16 h-16 rounded-full object-cover mb-4"
+          />
+        ) : (
+          <div className="text-coral font-bold text-xl tracking-tight">
+            {initials}
+          </div>
+        )}
+      </div>
+      <div className="text-center mt-6">
+        <h3 className="text-base md:text-lg font-bold text-navy leading-snug">
+          {leader.name}
+        </h3>
+        <p className="text-xs md:text-sm text-gray-500 font-normal mt-1">
+          {leader.role}
+        </p>
+      </div>
     </div>
   );
 
   if (leader.link) {
     const internalUrl = toInternalArticleUrl(leader.link);
     return internalUrl ? (
-      <Link to={internalUrl} className="block">{Card}</Link>
+      <Link to={internalUrl} className="block h-full">
+        {Card}
+      </Link>
     ) : (
-      <a href={leader.link} target="_blank" rel="noopener noreferrer" className="block">
+      <a href={leader.link} target="_blank" rel="noopener noreferrer" className="block h-full">
         {Card}
       </a>
     );

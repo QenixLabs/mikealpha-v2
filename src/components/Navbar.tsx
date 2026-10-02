@@ -6,13 +6,26 @@ import {
   Search,
   Menu,
   X,
+  Globe,
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { products } from '@/data/products';
 import { cropGuides } from '@/data/cropGuides';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/context/LanguageContext';
 
 const cropSlugMap = new Map(cropGuides.map((c) => [c.cropName, c.slug]));
+
+const navTranslations: Record<string, string> = {
+  'Crop Guide': 'फसल गाइड',
+  'Products': 'उत्पाद',
+  'Growing Practice': 'कृषि पद्धतियाँ',
+  'Smart Farming': 'स्मार्ट फार्मिंग',
+  'COMPASSion': 'कम्पाशन',
+  'Precision IMPACT': 'प्रिसिजन इम्पैक्ट',
+  'Corporate': 'कॉर्पोरेट',
+  'Insights': 'इनसाइट्स',
+};
 
 const navItemsLeft = ['Crop Guide', 'Products', 'Growing Practice', 'Smart Farming'];
 const navItemsRight = ['COMPASSion', 'Precision IMPACT', 'Corporate', 'Insights'];
@@ -24,16 +37,16 @@ type DropdownSection = {
 
 const productUrlMap: Record<string, string> = {
   'Potassium nitrate fertilizer products': '/products?q=Potassium+nitrate',
-  'Water Soluble Fertilizers': '/products?category=Specialty+Fertilizers',
+  'Water Soluble Fertilizers': '/products?category=Water+Soluble+Fertilizers',
   Biostimulants: '/products?category=Biostimulant',
   Micronutrients: '/products?category=Micronutrients',
-  'Controlled release fertilizers': '/products?category=Specialty+Fertilizers',
+  'Controlled release fertilizers': '/products?category=Controlled+Release+Fertilizers',
   'NPK granular fertilizer products': '/products?category=NPK+Fertilizers',
-  Solar: '#',
-  'Technical KNO3': '#',
+  Solar: '/solar',
+  'Technical KNO3': '/technical-kno3',
   'Products Catalog': '/products',
-  'SDS Request': '#',
-  'Quality Assurance': '#',
+  'SDS Request': '/products/sds-request',
+  'Quality Assurance': '/quality-assurance',
 };
 
 const dropdownData: Record<string, DropdownSection[]> = {
@@ -185,20 +198,12 @@ const dropdownData: Record<string, DropdownSection[]> = {
     {
       title: 'Web Apps',
       items: [
-        'MyMultifeed™',
+        'MikeMultifeed™',
         'Nitric Acid Calculator',
-        'NutriNet™',
-        'MultiMatch™',
+        'MikeNutri™',
+        'MikeMatch™',
         'Conversion Calculator',
         'Deficiency Pro',
-      ],
-    },
-    {
-      title: 'Mobile Apps',
-      items: [
-        'FertiMatch™',
-        'FoliMatch™',
-        'Croptune - Nitrogen leaves laboratory',
       ],
     },
   ],
@@ -227,9 +232,8 @@ const dropdownData: Record<string, DropdownSection[]> = {
         'R&D Innovative Center',
         'Code of Conduct',
         'Core Values',
-        'News & Events',
         'Mike Alpha Grows',
-        'Mike Alpha Worldwide',
+        'Regional Operations (India)',
       ],
     },
   ],
@@ -251,6 +255,49 @@ const dropdownLayout: Record<string, 'columns' | 'accordion'> = {
   'Crop Guide': 'accordion',
 };
 
+function getTopLevelUrl(label: string): string {
+  switch (label) {
+    case 'Crop Guide':
+      return '/crop-guide';
+    case 'Products':
+      return '/products';
+    case 'Growing Practice':
+      return '/growing-practice';
+    case 'Smart Farming':
+      return '/smart-farming';
+    case 'COMPASSion':
+      return '/impact-innovation-compassion';
+    case 'Precision IMPACT':
+      return '/precision-impact';
+    case 'Corporate':
+      return '/corporate';
+    case 'Insights':
+      return '/insights';
+    case 'Careers':
+      return '/careers';
+    default:
+      return '#';
+  }
+}
+
+function getSectionTitleLink(title?: string): string | undefined {
+  if (!title) return undefined;
+  switch (title) {
+    case 'Fertilization Methods':
+      return '/articles/fertilization-methods';
+    case 'Farming Methods':
+      return '/articles/farming-methods';
+    case 'Plant Nutrition':
+      return '/products';
+    case 'Industrial':
+      return '/products';
+    case 'Web Apps':
+      return '/smart-farming';
+    default:
+      return undefined;
+  }
+}
+
 function getItemUrl(label: string, item: string): string {
   switch (label) {
     case 'Products':
@@ -259,8 +306,21 @@ function getItemUrl(label: string, item: string): string {
       const slug = cropSlugMap.get(item);
       return slug ? `/${slug}` : '#';
     }
-    case 'Growing Practice':
-      return `/growing-practice`;
+    case 'Growing Practice': {
+      const practiceMap: Record<string, string> = {
+        'Nutrigation™': '/nutrigation-fertigation',
+        'Center Pivot': '/articles/intro-center-pivot',
+        'Foliar Fertilizer': '/articles/foliar-fertilizer',
+        'Soil Application': '/soil-application',
+        'CRF Application': '/crf-application',
+        Hydroponic: '/hydroponic-fertilizers',
+        'Fruit Trees': '/fruit-trees-fertilizers',
+        Greenhouses: '/greenhouses',
+        Nurseries: '/nurseries',
+        'Open Field': '/open-field',
+      };
+      return practiceMap[item] || '/growing-practice';
+    }
     case 'Smart Farming':
       return `/smart-farming`;
     case 'Precision IMPACT': {
@@ -288,6 +348,7 @@ function getItemUrl(label: string, item: string): string {
         'Core Values': '/core-values-1',
         'News & Events': '/news-events',
         'Mike Alpha Grows': '/mike-alpha-grows',
+        'Regional Operations (India)': '/mike-alpha-worldwide',
         'Mike Alpha Worldwide': '/mike-alpha-worldwide',
       };
       return corporateUrlMap[item] || `/corporate`;
@@ -373,34 +434,38 @@ function AccordionDropdown({
 }
 
 function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
+  const { language } = useLanguage();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const layout = dropdownLayout[label] ?? 'columns';
   const sections = dropdownData[label] ?? [];
+  const displayLabel = language === 'hi' && navTranslations[label] ? navTranslations[label] : label;
 
   return (
     <div
-      className="relative"
+      className="relative h-full flex items-center"
       onMouseEnter={() => setActiveDropdown(label)}
       onMouseLeave={() => setActiveDropdown(null)}
     >
-      <button
+      <Link
+        to={getTopLevelUrl(label)}
+        onClick={() => setActiveDropdown(null)}
         className={cn(
-          'h-full flex items-center gap-1 text-sm font-medium border-b-2 transition-colors px-1',
-          isLeft
-            ? 'text-primary border-transparent hover:border-primary'
-            : activeDropdown === label
-              ? 'text-primary border-green-600'
+          'h-full flex items-center gap-1 text-sm font-medium border-b-2 transition-colors px-2 py-1',
+          activeDropdown === label
+            ? 'text-primary border-primary'
+            : isLeft
+              ? 'text-primary border-transparent hover:border-primary'
               : 'text-gray-700 border-transparent hover:text-primary hover:border-green-600'
         )}
       >
-        {label}
+        {displayLabel}
         <ChevronDown
           className={cn(
             'w-4 h-4 transition-transform duration-200',
             activeDropdown === label && 'rotate-180'
           )}
         />
-      </button>
+      </Link>
 
       <AnimatePresence>
         {activeDropdown === label && layout === 'columns' && (
@@ -410,8 +475,9 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
             className={cn(
-              'absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-dropdown rounded-b-lg border border-gray-100 z-50 py-5 px-6',
-              sections.length > 1 ? 'min-w-[640px]' : 'min-w-[260px]'
+              'absolute top-full bg-white shadow-dropdown rounded-b-lg border border-gray-100 z-50 py-5 px-6',
+              isLeft ? 'left-0' : 'right-0',
+              sections.length > 1 ? 'min-w-[620px]' : 'min-w-[260px]'
             )}
           >
             <div
@@ -424,7 +490,18 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
                 <div key={idx}>
                   {section.title && (
                     <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                      {section.title}
+                      {getSectionTitleLink(section.title) ? (
+                        <Link
+                          to={getSectionTitleLink(section.title)!}
+                          onClick={() => setActiveDropdown(null)}
+                          className="hover:text-primary transition-colors inline-flex items-center gap-1"
+                        >
+                          {section.title}
+                          <span className="text-[10px]">→</span>
+                        </Link>
+                      ) : (
+                        section.title
+                      )}
                     </h4>
                   )}
                   <ul className="space-y-2">
@@ -434,7 +511,7 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
                           to={getItemUrl(label, item)}
                           onClick={() => setActiveDropdown(null)}
                           className={cn(
-                            'text-sm transition-colors block py-1',
+                            'text-sm transition-colors block py-1 font-medium',
                             isLeft
                               ? 'text-primary hover:text-primary/80'
                               : 'text-gray-600 hover:text-primary'
@@ -473,11 +550,11 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const { language, setLanguage } = useLanguage();
   const [isSticky, setIsSticky] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [language, setLanguage] = useState('en');
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const [mobileOpenSections, setMobileOpenSections] = useState<
     Record<string, boolean>
@@ -518,16 +595,6 @@ export default function Navbar() {
     setShowSuggestions(false);
     navigate(`/products/${slug}`);
   };
-
-  useEffect(() => {
-    const saved = localStorage.getItem('language');
-    if (saved) setLanguage(saved);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.lang = language;
-    localStorage.setItem('language', language);
-  }, [language]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -593,7 +660,7 @@ export default function Navbar() {
                           handleSearchSubmit();
                         }
                       }}
-                      placeholder="Search products..."
+                      placeholder={language === 'hi' ? 'उत्पाद खोजें...' : 'Search products...'}
                       className="h-10 w-full pl-9 pr-9 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-primary"
                     />
                     {searchQuery && (
@@ -633,15 +700,16 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex-1 overflow-auto py-2">
-                  {[...navItemsLeft, ...navItemsRight].map((label) =>
-                    label === 'COMPASSion' ? (
+                  {[...navItemsLeft, ...navItemsRight].map((label) => {
+                    const displayLabel = language === 'hi' && navTranslations[label] ? navTranslations[label] : label;
+                    return label === 'COMPASSion' ? (
                       <div key={label} className="border-b border-gray-50">
                         <Link
                           to="/impact-innovation-compassion"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-primary-light hover:text-primary transition-colors"
                         >
-                          {label}
+                          {displayLabel}
                         </Link>
                       </div>
                     ) : (
@@ -650,7 +718,7 @@ export default function Navbar() {
                           onClick={() => toggleMobileSection(label)}
                           className="w-full flex items-center justify-between px-6 py-3 text-sm font-medium text-gray-700 hover:bg-primary-light hover:text-primary transition-colors"
                         >
-                          {label}
+                          {displayLabel}
                           <ChevronDown
                             className={cn(
                               'w-4 h-4 transition-transform duration-200',
@@ -668,12 +736,31 @@ export default function Navbar() {
                               className="overflow-hidden"
                             >
                               <div className="px-6 pb-4 pt-1 space-y-4">
+                                <div className="pb-2 border-b border-gray-100">
+                                  <Link
+                                    to={getTopLevelUrl(label)}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="text-xs font-bold text-primary hover:underline inline-flex items-center gap-1 uppercase tracking-wider"
+                                  >
+                                    View All {label} Overview →
+                                  </Link>
+                                </div>
                                 {dropdownData[label]?.map((section, idx) => (
                                   <div key={idx}>
                                     {section.title && (
-                                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
-                                        {section.title}
-                                      </p>
+                                      getSectionTitleLink(section.title) ? (
+                                        <Link
+                                          to={getSectionTitleLink(section.title)!}
+                                          onClick={() => setMobileMenuOpen(false)}
+                                          className="text-xs font-semibold text-gray-500 hover:text-primary uppercase tracking-wider mb-2 block hover:underline"
+                                        >
+                                          {section.title} →
+                                        </Link>
+                                      ) : (
+                                        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                                          {section.title}
+                                        </p>
+                                      )
                                     )}
                                     <ul className="space-y-1">
                                       {section.items.map((item) => (
@@ -697,12 +784,12 @@ export default function Navbar() {
                           )}
                         </AnimatePresence>
                       </div>
-                    )
-                  )}
+                    );
+                  })}
                 </div>
 
                 <div className="p-4 border-t">
-                  <p className="text-xs text-gray-400 mb-2">Language</p>
+                  <p className="text-xs text-gray-400 mb-2">{language === 'hi' ? 'भाषा (Language)' : 'Language'}</p>
                   <div className="flex gap-2">
                     <button
                       onClick={() => {
@@ -710,13 +797,14 @@ export default function Navbar() {
                         setMobileMenuOpen(false);
                       }}
                       className={cn(
-                        'flex-1 px-3 py-2 text-sm rounded-md border transition-colors',
+                        'flex-1 px-3 py-2 text-sm rounded-md border transition-colors flex items-center justify-center gap-1.5',
                         language === 'en'
                           ? 'border-primary bg-primary-light text-primary font-medium'
                           : 'border-gray-200 text-gray-700 hover:border-primary hover:text-primary'
                       )}
                     >
-                      English
+                      <span>English</span>
+                      {language === 'en' && <span className="text-xs font-bold text-primary">✓</span>}
                     </button>
                     <button
                       onClick={() => {
@@ -724,13 +812,14 @@ export default function Navbar() {
                         setMobileMenuOpen(false);
                       }}
                       className={cn(
-                        'flex-1 px-3 py-2 text-sm rounded-md border transition-colors',
+                        'flex-1 px-3 py-2 text-sm rounded-md border transition-colors flex items-center justify-center gap-1.5',
                         language === 'hi'
                           ? 'border-primary bg-primary-light text-primary font-medium'
                           : 'border-gray-200 text-gray-700 hover:border-primary hover:text-primary'
                       )}
                     >
-                      हिन्दी
+                      <span>हिन्दी (Hindi)</span>
+                      {language === 'hi' && <span className="text-xs font-bold text-primary">✓</span>}
                     </button>
                   </div>
                 </div>
@@ -774,7 +863,7 @@ export default function Navbar() {
                   to="/impact-innovation-compassion"
                   className="h-full flex items-center px-1 text-sm font-medium text-gray-700 border-b-2 border-transparent hover:text-primary hover:border-green-600 transition-colors"
                 >
-                  {label}
+                  {language === 'hi' && navTranslations[label] ? navTranslations[label] : label}
                 </Link>
               ) : (
                 <NavItem key={label} label={label} />
@@ -839,12 +928,14 @@ export default function Navbar() {
               <div ref={langRef} className="relative">
                 <button
                   onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-                  className="flex items-center gap-1 px-3 py-2 text-sm text-gray-600 hover:text-primary transition-colors"
+                  className="flex items-center gap-1.5 px-3 py-2 text-sm text-gray-700 hover:text-primary transition-colors font-medium rounded-full hover:bg-gray-50"
+                  aria-label="Change Language"
                 >
+                  <Globe className="w-4 h-4 text-gray-500" />
                   <span>{language === 'hi' ? 'हिन्दी' : 'English'}</span>
                   <ChevronDown
                     className={cn(
-                      'w-3.5 h-3.5 transition-transform duration-200',
+                      'w-3.5 h-3.5 text-gray-400 transition-transform duration-200',
                       langDropdownOpen && 'rotate-180'
                     )}
                   />
@@ -856,7 +947,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -8 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-dropdown border border-gray-100 py-1 min-w-[120px] z-50"
+                      className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-dropdown border border-gray-100 py-1 min-w-[140px] z-50"
                     >
                       <button
                         onClick={() => {
@@ -864,13 +955,14 @@ export default function Navbar() {
                           setLangDropdownOpen(false);
                         }}
                         className={cn(
-                          'w-full text-left px-4 py-2 text-sm hover:bg-primary-light hover:text-primary transition-colors',
+                          'w-full text-left px-4 py-2 text-sm flex items-center justify-between hover:bg-primary-light hover:text-primary transition-colors',
                           language === 'en'
-                            ? 'text-primary font-medium'
+                            ? 'text-primary font-semibold bg-primary-light/50'
                             : 'text-gray-700'
                         )}
                       >
-                        English
+                        <span>English</span>
+                        {language === 'en' && <span className="text-xs text-primary font-bold">✓</span>}
                       </button>
                       <button
                         onClick={() => {
@@ -878,13 +970,14 @@ export default function Navbar() {
                           setLangDropdownOpen(false);
                         }}
                         className={cn(
-                          'w-full text-left px-4 py-2 text-sm hover:bg-primary-light hover:text-primary transition-colors',
+                          'w-full text-left px-4 py-2 text-sm flex items-center justify-between hover:bg-primary-light hover:text-primary transition-colors',
                           language === 'hi'
-                            ? 'text-primary font-medium'
+                            ? 'text-primary font-semibold bg-primary-light/50'
                             : 'text-gray-700'
                         )}
                       >
-                        हिन्दी
+                        <span>हिन्दी (Hindi)</span>
+                        {language === 'hi' && <span className="text-xs text-primary font-bold">✓</span>}
                       </button>
                     </motion.div>
                   )}
