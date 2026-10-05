@@ -9,15 +9,15 @@ const footerLinks = {
   products: {
     title: 'Products',
     items: [
-      'Plant Nutrition',
-      'NPK Fertilizers',
-      'Specialty Fertilizers',
-      'Biological Fertilizers',
-      'Micronutrients',
-      'Biostimulants',
+      '1. Water Soluble Fertilizer',
+      '2. Biostimulant',
+      '3. Foliar Fertilizer',
+      '4. Micronutrient',
+      '5. Liquid Fertilizer',
+      '6. Biofertilizer nd Biopesticide',
+      '7. Controlled Release Fertilizer',
       'Products Catalog',
       'SDS Request',
-      'FAQ',
     ],
   },
   growingPractice: {
@@ -40,7 +40,7 @@ const footerLinks = {
       'R&D Center',
       'Values',
       'News & Events',
-      'Regional Operations (India)',
+      'Operations',
       'Find a Distributor',
       'Contact us',
     ],
@@ -49,12 +49,21 @@ const footerLinks = {
 
 const footerUrlMap: Record<string, string> = {
   // Products
+  '1. Water Soluble Fertilizer': '/products?category=1.+Water+Soluble+Fertilizer',
+  '2. Biostimulant': '/products?category=2.+Biostimulant',
+  '3. Foliar Fertilizer': '/products?category=3.+Foliar+Fertilizer',
+  '4. Micronutrient': '/products?category=4.+Micronutrient',
+  '5. Liquid Fertilizer': '/products?category=5.+Liquid+Fertilizer',
+  '6. Biofertilizer nd Biopesticide': '/products?category=6.+Biofertilizer+nd+Biopesticide',
+  '7. Controlled Release Fertilizer': '/products?category=7.+Controlled+Release+Fertilizer',
+  'Water Soluble Fertilizer': '/products?category=1.+Water+Soluble+Fertilizer',
+  'Biostimulants': '/products?category=2.+Biostimulant',
+  'Foliar Fertilizer': '/products?category=3.+Foliar+Fertilizer',
+  'Micronutrients': '/products?category=4.+Micronutrient',
+  'Liquid Fertilizer': '/products?category=5.+Liquid+Fertilizer',
+  'Biological Fertilizers': '/products?category=6.+Biofertilizer+nd+Biopesticide',
+  'Controlled release fertilizers': '/products?category=7.+Controlled+Release+Fertilizer',
   'Plant Nutrition': '/products',
-  'NPK Fertilizers': '/products?category=NPK+Fertilizers',
-  'Specialty Fertilizers': '/products?category=Specialty+Fertilizers',
-  'Biological Fertilizers': '/products?category=Biological+Fertilizers',
-  'Micronutrients': '/products?category=Micronutrients',
-  'Biostimulants': '/products?category=Biostimulant',
   'Products Catalog': '/products',
   'SDS Request': '/products/sds-request',
   'FAQ': '/faq',
@@ -72,7 +81,9 @@ const footerUrlMap: Record<string, string> = {
   'R&D Center': '/mike-alpha-rd-center',
   'Values': '/mike-alpha-values',
   'News & Events': '/news-events',
+  'Operations': '/mike-alpha-worldwide',
   'Regional Operations (India)': '/mike-alpha-worldwide',
+  'Regional Operations': '/mike-alpha-worldwide',
   'Worldwide': '/mike-alpha-worldwide',
   'Find a Distributor': '/distributors',
   'Contact us': '/contact',
@@ -168,7 +179,7 @@ export default function Footer() {
             <p className="text-sm font-semibold text-brand-text-primary mb-2">
               Pioneering the Future
             </p>
-            <p className="text-sm text-brand-text-secondary leading-relaxed mb-6 max-w-sm">
+            <p className="text-sm text-brand-text-secondary leading-relaxed mb-4 max-w-sm">
               Mike Alpha Agro is a leading supplier of specialty fertilizers in India, bringing advanced plant nutrition technologies to farmers across the country. We combine global science with deep understanding of Indian farming conditions for stronger yields and healthier crops.
             </p>
 

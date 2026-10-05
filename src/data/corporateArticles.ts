@@ -98,13 +98,10 @@ export const corporateArticles: CorporateArticle[] = [
       {
         title: 'Board of Directors',
         leaders: [
-          { name: 'Mr. Joshua Trump', role: 'Board Member', initials: 'MJ' },
-          { name: 'Mr. Ariel Halperin', role: 'Board Chairman', initials: 'MA' },
-          { name: 'Mr. Ran Ben-Or', role: 'Board Member', initials: 'MR' },
-          { name: 'Mrs. Deborah Ifrah', role: 'Board Member', initials: 'MD' },
-          { name: 'Mr. Eyal Shamear', role: 'Board Member', initials: 'ME' },
-          { name: 'Mr. Mark S. Hirsch', role: 'Board Member', initials: 'MM' },
-          { name: 'Mr. Jules Trump', role: 'Board Member', initials: 'MJ' },
+          { name: 'Milan Sanghani', role: 'Director', initials: 'MS' },
+          { name: 'Krunal Shah', role: 'Director', initials: 'KS' },
+          { name: 'Piyush Upadhyay', role: 'Director', initials: 'PU' },
+          { name: 'Sahil Malik', role: 'Director', initials: 'SM' },
         ],
       },
     ],
@@ -177,8 +174,18 @@ export const corporateArticles: CorporateArticle[] = [
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: "R&D Innovative Center" }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      "Mike Alpha Agro operates dedicated Agronomic Research Trial Stations and Centers of Excellence located in Gujarat and Central India. The centers feature state-of-the-art fertigation research greenhouses, experimental orchards, and open-field trial plots dedicated to optimizing Nutrient Use Efficiency (NUE), mitigating soil salinity, and developing climate-resilient crop nutrition protocols for Indian farmers.",
+      "Mike alpha technology established in 2021 in spain. Mike Alpha Agro operates dedicated Agronomic Research Trial Stations and Centers of Excellence located in Gujarat and Central India. The centers feature state-of-the-art fertigation research greenhouses, experimental orchards, and open-field trial plots dedicated to optimizing Nutrient Use Efficiency (NUE), mitigating soil salinity, and developing climate-resilient crop nutrition protocols for Indian farmers.",
     sections: [
+      {
+        title: 'Global Roots & Technological Foundation',
+        content:
+          "Mike alpha technology established in 2021 in spain, bringing forth cutting-edge European agronomic research, formulation science, and sustainable crop nutrition technologies. Building upon this international foundation, Mike Alpha continues to develop innovative nutrient delivery systems that optimize plant vigor, increase agricultural productivity, and protect soil ecosystems.",
+        bullets: [
+          'Founded in Spain (2021): Pioneering advanced specialty plant nutrition and bio-efficiency solutions.',
+          'European R&D Benchmarks: Precision formulation chemistry, high-purity inputs, and rigorous quality standards.',
+          'Cross-Continental Agronomic Innovation: Adapting global research breakthroughs to regional soil chemistries and diverse climate zones.',
+        ],
+      },
       {
         title: 'Pioneering Agronomic Science for Indian Conditions',
         content:
@@ -284,12 +291,35 @@ export const corporateArticles: CorporateArticle[] = [
   },
   {
     path: '/mike-alpha-worldwide',
-    title: 'Mike Alpha India Operations',
-    subtitle: 'Exclusive Operations in India',
-    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'India Operations' }],
+    title: 'Operations',
+    subtitle: 'Pan-India Operations & Global Export Capability',
+    breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Operations' }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      'MIKE ALPHA operates exclusively in India, focusing our precision crop nutrition, agronomic research, and dedicated distribution network across three key agricultural states: Gujarat, Madhya Pradesh, and Chhattisgarh.',
+      'Mike Alpha is proudly operational Pan-India, delivering advanced crop nutrition solutions, field agronomic trials, and dedicated dealer support across all agricultural regions of the country. With strong operational hubs in Gujarat, Madhya Pradesh, and Chhattisgarh, our nationwide reach supports growers across every major farming belt.\n\nIn addition to our nationwide presence, we export all over the world. Mike Alpha actively exports specialty water-soluble fertilizers, bio-nutrients, and micronutrient formulations to international markets outside India, serving global partners with high-purity inputs and tailored agricultural solutions.',
+    sections: [
+      {
+        title: 'We Export All Over The World — Global Agricultural Solutions',
+        content:
+          'Mike Alpha has established robust international export capabilities, supplying premium agricultural inputs to growers, distributors, and agribusinesses outside India. Leveraging our European technological formulation standards, stringent laboratory quality checks, and strategic access to international shipping ports, we deliver containerized shipments of specialty fertilizers across global markets.\n\nOur export portfolio covers 100% water-soluble NPKs, high-purity potassium and calcium nitrates, concentrated biostimulants, and EDTA-chelated micronutrients customized for diverse international soil chemistries and climatic requirements.',
+        bullets: [
+          'Worldwide Export Footprint: Actively exporting specialty plant nutrition products across international markets.',
+          'Custom Formulations & Packaging: Tailored NPK grades, multilingual export labeling, and customized packaging solutions.',
+          'International Quality Assurance: Certified batch analysis, ISO-standard quality controls, and full regulatory documentation.',
+          'Global Logistics Network: Efficient dispatch via leading Indian ports (Mundra, Nhava Sheva) ensuring prompt worldwide transit.',
+        ],
+      },
+      {
+        title: 'Operational Pan-India — Nationwide Distribution & Advisory',
+        content:
+          'Within India, Mike Alpha maintains extensive Pan-India operations. Our localized teams work directly with regional distributors, retail cooperatives, and farming communities to ensure immediate product availability, seasonal inventory planning, and expert agronomic advice.',
+        bullets: [
+          'Pan-India Supply Chain: Reliable nationwide fulfillment delivering specialty nutrition to farmers across every state.',
+          'Regional Distribution Centers: Dedicated distribution infrastructure across Gujarat, Madhya Pradesh, and Chhattisgarh.',
+          'On-Field Agronomic Support: Multilingual field agronomists conducting on-farm trials, soil testing, and fertigation advisory.',
+        ],
+      },
+    ],
     branchRegions: [
       {
         region: 'Gujarat (State Operations & Regional Network)',
@@ -319,9 +349,17 @@ export const corporateArticles: CorporateArticle[] = [
           { label: 'Specialized High-Efficiency Programs for Rice, Pulses & Horticulture' },
         ],
       },
+      {
+        region: 'Pan-India & International Export Division',
+        items: [
+          { label: 'Pan-India Logistics: Direct dispatches across northern, southern, eastern & western agricultural corridors' },
+          { label: 'Global Export Hub: International container shipping from Mundra & Nhava Sheva ports' },
+          { label: 'Overseas Trade Inquiries: Export documentation, customized private labeling & global distributor partnerships' },
+        ],
+      },
     ],
     footerText:
-      '"Mike Alpha Agro: Empowering farmers in Gujarat, Madhya Pradesh, and Chhattisgarh with science-backed specialty crop nutrition."',
+      '"We export all over the world. Mike Alpha is fully operational Pan-India while supplying advanced, laboratory-tested specialty crop nutrition products to partners and growers across international markets."',
   },
 ];
 

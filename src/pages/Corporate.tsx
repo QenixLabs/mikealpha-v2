@@ -31,7 +31,7 @@ const corporateAreas = [
     title: 'Leadership Team',
     description:
       'Our executives bring together decades of experience in agronomy, manufacturing, sustainability, and global markets to guide the company forward.',
-    link: '/about',
+    link: '/leadership-team',
     image: '/images/success-1.jpg',
   },
   {
@@ -47,7 +47,7 @@ const corporateAreas = [
     title: 'R&D Innovative Center',
     description:
       'From formulation labs to field trials, our R&D centers develop next-generation nutrition solutions tailored to diverse crops and climates.',
-    link: '/products',
+    link: '/mike-alpha-rd-center',
     image: '/images/blog-2.jpg',
   },
   {
@@ -76,9 +76,9 @@ const corporateAreas = [
   },
   {
     icon: MapPin,
-    title: 'Regional Operations (India)',
+    title: 'Operations',
     description:
-      'Operating exclusively in India across Gujarat, Madhya Pradesh, and Chhattisgarh with dedicated regional distribution, agronomist support, and field advisory services.',
+      'Operational pan-India with dedicated regional hubs across Gujarat, Madhya Pradesh, and Chhattisgarh, while exporting specialty crop nutrition worldwide.',
     link: '/mike-alpha-worldwide',
     image: '/images/event-3.jpg',
   },
@@ -172,7 +172,7 @@ export default function Corporate() {
                 variants={fadeUpVariant}
                 className="text-white/80 text-lg max-w-2xl mb-8"
               >
-                Learn about our company, leadership, values, regional operations across Gujarat, Madhya Pradesh, and Chhattisgarh, and the commercial
+                Learn about our company, leadership, values, pan-India regional operations, global exports, and the commercial
                 frameworks that support trusted partnerships with growers and distributors.
               </motion.p>
 
@@ -220,7 +220,7 @@ export default function Corporate() {
                 variants={fadeUpVariant}
                 className="text-brand-text-secondary max-w-2xl"
               >
-                From governance and values to regional operations across Gujarat, Madhya Pradesh, and Chhattisgarh, these pages provide a complete
+                From governance and values to pan-India regional operations and global export capabilities, these pages provide a complete
                 picture of Mike Alpha.
               </motion.p>
             </motion.div>

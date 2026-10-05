@@ -50,9 +50,7 @@
     --sidebar-border: 60 9% 89%;
     --sidebar-ring: 4 85% 57%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
