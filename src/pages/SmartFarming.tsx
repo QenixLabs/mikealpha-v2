@@ -1,11 +1,8 @@
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
-  Calculator,
   Beaker,
   Leaf,
-  Smartphone,
-  Tablet,
   Cloud,
   ChevronRight,
   ArrowRight,
@@ -23,13 +20,7 @@ const webApps = [
       'Design balanced fertigation recipes tailored to your water analysis, crop stage, and yield target. The MikeMultifeed calculator recommends compatible Mike Alpha fertilizers and application rates.',
     tags: ['Recipe design', 'Water analysis', 'Fertigation'],
   },
-  {
-    icon: Calculator,
-    title: 'Nitric Acid Calculator',
-    description:
-      'Calculate safe nitric acid dosing for pH adjustment and nitrogen supply in hydroponic and fertigation systems.',
-    tags: ['pH adjustment', 'Safety', 'Dosing'],
-  },
+  
   {
     icon: Cloud,
     title: 'MikeNutri™',
@@ -44,45 +35,15 @@ const webApps = [
       'Match the right Mike Alpha fertilizer blend to your crop, soil, and irrigation system. MikeMatch simplifies product selection for advisors and growers.',
     tags: ['Product selection', 'Compatibility', 'Advisory'],
   },
-  {
-    icon: Calculator,
-    title: 'Conversion Calculator',
-    description:
-      'Convert between nutrient units, fertilizer weights, and application rates. A practical tool for daily agronomic calculations.',
-    tags: ['Unit conversion', 'Rates', 'Quick tool'],
-  },
-  {
+  { 
     icon: Beaker,
-    title: 'Deficiency Pro',
+    title: 'Nitrotune™',
     description:
       'Diagnose nutrient deficiency symptoms by crop and growth stage. Get corrective Mike Alpha fertilizer recommendations based on visual cues.',
     tags: ['Diagnosis', 'Visual symptoms', 'Corrective action'],
   },
 ];
 
-const mobileApps = [
-  {
-    icon: Smartphone,
-    title: 'AlphaMatch™',
-    description:
-      'Mobile fertilizer matching for field use with AlphaMatch. Scan a crop or symptom and receive Mike Alpha product and rate recommendations on the go.',
-    tags: ['Mobile', 'Field tool', 'Recommendations'],
-  },
-  {
-    icon: Leaf,
-    title: 'FoliMatch™',
-    description:
-      'Plan foliar spray programs from your phone. Select crop, target nutrient, and growth stage to generate spray recipes.',
-    tags: ['Foliar sprays', 'Mobile', 'Recipe builder'],
-  },
-  {
-    icon: Tablet,
-    title: 'NitroTune',
-    description:
-      'Leaf-based nitrogen monitoring supported by laboratory analysis. Track crop nitrogen status and refine top-dress decisions with NitroTune.',
-    tags: ['Nitrogen monitoring', 'Lab analysis', 'Precision'],
-  },
-];
 
 function AppCard({ app }: { app: (typeof webApps)[0] }) {
   const Icon = app.icon;
@@ -164,7 +125,7 @@ export default function SmartFarming() {
                 variants={fadeUpVariant}
                 className="text-white/80 text-lg max-w-2xl mb-8"
               >
-                Use calculators, planners, and mobile apps to make informed nutrition decisions,
+                Use digital planners and diagnostic tools to make informed nutrition decisions,
                 diagnose deficiencies, and fine-tune every application.
               </motion.p>
 
@@ -175,12 +136,12 @@ export default function SmartFarming() {
                 >
                   Explore Web Apps
                 </a>
-                <a
-                  href="#mobile-apps"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 border border-white/40 text-white text-sm font-medium hover:bg-white/10 transition-colors rounded"
                 >
-                  Mobile Apps
-                </a>
+                  Contact Agronomist
+                </Link>
               </motion.div>
             </motion.div>
           </div>
@@ -231,55 +192,15 @@ export default function SmartFarming() {
           </div>
         </section>
 
-        {/* Mobile Apps */}
-        <section id="mobile-apps" className="py-20 md:py-28 bg-white">
+        {/* Contact CTA */}
+        <section className="pb-20 md:pb-28">
           <div className="max-w-container mx-auto px-4 lg:px-6">
             <motion.div
               variants={staggerContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="mb-12"
-            >
-              <motion.span
-                variants={fadeUpVariant}
-                className="text-xs font-bold uppercase tracking-widest text-coral mb-3 block"
-              >
-                Mobile Apps
-              </motion.span>
-              <motion.h2
-                variants={fadeUpVariant}
-                className="text-3xl md:text-4xl font-bold text-navy mb-4"
-              >
-                Agronomy in your pocket
-              </motion.h2>
-              <motion.p
-                variants={fadeUpVariant}
-                className="text-brand-text-secondary max-w-2xl"
-              >
-                Take fertilizer recommendations, spray recipes, and nitrogen monitoring into the
-                field with mobile-first tools designed for quick decisions on the go.
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {mobileApps.map((app) => (
-                <AppCard key={app.title} app={app} />
-              ))}
-            </motion.div>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mt-14 bg-brand-background border border-brand-border rounded-lg p-8 md:p-10"
+              className="bg-white border border-brand-border rounded-xl p-8 md:p-10 shadow-card"
             >
               <motion.div
                 variants={fadeUpVariant}

@@ -324,7 +324,7 @@ export default function About() {
               {[
                 { name: 'Milan Sanghani', initials: 'MS', gradient: 'from-[#1B4332] to-[#40916C]' },
                 { name: 'Krunal Shah', initials: 'KS', gradient: 'from-[#1B2A4A] to-[#2D4A8A]' },
-                { name: 'Piyush Upadhya', initials: 'PU', gradient: 'from-[#7B2D00] to-[#E85A3C]' },
+                { name: 'Piyush Upadhyay', initials: 'PU', gradient: 'from-[#7B2D00] to-[#E85A3C]' },
                 { name: 'Sahil Malik', initials: 'SM', gradient: 'from-[#3D1A78] to-[#7B5EA7]' },
               ].map((director) => (
                 <motion.div

@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router';
 import { motion } from 'framer-motion';
-import { ChevronRight, ExternalLink, FileText, MapPin } from 'lucide-react';
+import { ArrowRight, ChevronRight, ExternalLink, FileText, Globe, MapPin } from 'lucide-react';
 import ImpactLayout from '@/components/ImpactLayout';
 import {
   getCorporateArticleByPath,
@@ -377,18 +377,48 @@ function BranchRegions({ regions }: { regions: CorporateArticle['branchRegions']
 }
 
 function FooterText({ text }: { text: string }) {
+  const isExportHighlight = text.toLowerCase().includes('export all over the world');
+
   return (
     <section className="py-12 md:py-16">
       <div className="max-w-container mx-auto px-4 lg:px-6">
-        <motion.p
-          variants={fadeUpVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-lg italic text-brand-text-secondary leading-relaxed border-l-4 border-primary pl-6"
-        >
-          {text}
-        </motion.p>
+        {isExportHighlight ? (
+          <motion.div
+            variants={fadeUpVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="bg-navy text-white rounded-2xl p-8 md:p-10 shadow-card border border-navy-light flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+          >
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-coral/20 text-coral text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+                <Globe className="w-3.5 h-3.5" /> Pan-India Operations & Global Reach
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white">
+                "We export all over the world"
+              </h3>
+              <p className="text-white/85 max-w-3xl leading-relaxed text-base md:text-lg">
+                Mike Alpha is fully operational Pan-India while actively exporting advanced, laboratory-tested specialty crop nutrition products, high-purity water-soluble fertilizers, and bio-nutrients to commercial growers and distributors across international markets outside India.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="px-6 py-3.5 bg-coral hover:bg-coral-dark text-white font-semibold text-sm rounded-lg transition-colors whitespace-nowrap shrink-0 inline-flex items-center gap-2 shadow-sm"
+            >
+              Export Inquiries & Contact <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        ) : (
+          <motion.p
+            variants={fadeUpVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-lg italic text-brand-text-secondary leading-relaxed border-l-4 border-primary pl-6"
+          >
+            {text}
+          </motion.p>
+        )}
       </div>
     </section>
   );

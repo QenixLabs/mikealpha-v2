@@ -36,12 +36,94 @@ type DropdownSection = {
 };
 
 const productUrlMap: Record<string, string> = {
-  'Potassium nitrate fertilizer products': '/products?q=Potassium+nitrate',
-  'Water Soluble Fertilizers': '/products?category=Water+Soluble+Fertilizers',
-  Biostimulants: '/products?category=Biostimulant',
-  Micronutrients: '/products?category=Micronutrients',
-  'Controlled release fertilizers': '/products?category=Controlled+Release+Fertilizers',
-  'NPK granular fertilizer products': '/products?category=NPK+Fertilizers',
+  // Categories (numbered)
+  '1. Water Soluble Fertilizer': '/products?category=1.+Water+Soluble+Fertilizer',
+  '2. Biostimulant': '/products?category=2.+Biostimulant',
+  '3. Foliar Fertilizer': '/products?category=3.+Foliar+Fertilizer',
+  '4. Micronutrient': '/products?category=4.+Micronutrient',
+  '5. Liquid Fertilizer': '/products?category=5.+Liquid+Fertilizer',
+  '6. Biofertilizer nd Biopesticide': '/products?category=6.+Biofertilizer+nd+Biopesticide',
+  '7. Controlled Release Fertilizer': '/products?category=7.+Controlled+Release+Fertilizer',
+
+  // 1. Water Soluble Fertilizer
+  'Mike Kaliphos': '/products/kaliphos',
+  'Mike Specialone Complex': '/products/special-one',
+  'Mike 19:19:19': '/products/19-19-19',
+  '0:52:34': '/products/00-52-34',
+  '00:52:34': '/products/00-52-34',
+  '13:40:13': '/products/13-40-13',
+  '0:0:50': '/products/00-00-50',
+  '00:00:50': '/products/00-00-50',
+  '12:61:0': '/products/12-61-00',
+  '12:61:00': '/products/12-61-00',
+  'Mike CN': '/products/cn-calcium-nitrate',
+  'mike CN': '/products/cn-calcium-nitrate',
+  'Mike Mag': '/products/mag',
+  'MIKE Mag': '/products/mag',
+
+  // 2. Biostimulant
+  'Mike Biamic': '/products/biamic',
+  'Mike biamic': '/products/biamic',
+  'Mike Humus': '/products/humus',
+  'Mike humus': '/products/humus',
+  'Aminovit22': '/products/aminovit-22',
+  'Aminovit 22': '/products/aminovit-22',
+
+  // 3. Foliar Fertilizer
+  'Mike Phoszinc': '/products/phoszinc',
+  'Mike phoszinc': '/products/phoszinc',
+  'Aminonitro': '/products/aminonitro',
+  'Blackpot': '/products/blackpot',
+  'Supercoctail': '/products/supercoctel',
+  'Amino Kualium': '/products/kualium',
+  'Amino kualium': '/products/kualium',
+
+  // 4. Micronutrient
+  'Mike Chelated Zinc': '/products/edta-zinc-12',
+  'Mike chelated zinc': '/products/edta-zinc-12',
+  'Chelated Fe': '/products/edta-ferrous-12',
+  'Chelated Micronutrient': '/products/edta-micronutrient',
+  'Chelated micronutrient': '/products/edta-micronutrient',
+  'Chelated CA': '/products/ca-chelated-calcium',
+  'Chelated Ca': '/products/ca-chelated-calcium',
+  'Mike Boron': '/products/boron-20',
+  'Mike boron': '/products/boron-20',
+  'Mike Stick': '/products/stick',
+  'Mike stick': '/products/stick',
+
+  // 5. Liquid Fertilizer
+  'Vitagea B': '/products/vitagea-b',
+  'Vitagea b': '/products/vitagea-b',
+  'Silikum': '/products/silikum',
+  'Whitepot': '/products/whitepot-solution',
+  'Aminocalcium': '/products/aminocalcium',
+
+  // 6. Biofertilizer nd Biopesticide
+  'Mike Vex': '/products/vex',
+  'Mike vex': '/products/vex',
+  'Monas': '/products/monas',
+  'Nema': '/products/nema',
+  'BVM': '/products/bvm',
+  'NPK': '/products/npk-consortium',
+  'Npk': '/products/npk-consortium',
+  'PSB': '/products/psb',
+  'Psb': '/products/psb',
+  'ZSB': '/products/zsb',
+  'Zsb': '/products/zsb',
+  'KSB': '/products/ksb',
+  'Ksb': '/products/ksb',
+  'Sulpho': '/products/sulpho',
+  'Rootx 4kg': '/products/root-x-4kg',
+  'Root x 100gm': '/products/root-x-100gm',
+  'Rootx 100gm': '/products/root-x-100gm',
+
+  // 7. Controlled Release Fertilizer
+  'Mike Fuerza Maxima with all grades': '/products/maxima-15-5-5',
+  'Mike fuerza maxima with all grades': '/products/maxima-15-5-5',
+  'Mike Fuerza Maxima (All Grades)': '/products/maxima-15-5-5',
+  'Mike Fuerza Maxima': '/products/maxima-15-5-5',
+
+  // General & Legacy
   Solar: '/solar',
   'Technical KNO3': '/technical-kno3',
   'Products Catalog': '/products',
@@ -156,19 +238,15 @@ const dropdownData: Record<string, DropdownSection[]> = {
   ],
   'Products': [
     {
-      title: 'Plant Nutrition',
       items: [
-        'Potassium nitrate fertilizer products',
-        'Water Soluble Fertilizers',
-        'Biostimulants',
-        'Micronutrients',
-        'Controlled release fertilizers',
-        'NPK granular fertilizer products',
+        '1. Water Soluble Fertilizer',
+        '2. Biostimulant',
+        '3. Foliar Fertilizer',
+        '4. Micronutrient',
+        '5. Liquid Fertilizer',
+        '6. Biofertilizer nd Biopesticide',
+        '7. Controlled Release Fertilizer',
       ],
-    },
-    {
-      title: 'Industrial',
-      items: ['Solar', 'Technical KNO3', 'Products Catalog', 'SDS Request', 'Quality Assurance'],
     },
   ],
   'Growing Practice': [
@@ -199,11 +277,9 @@ const dropdownData: Record<string, DropdownSection[]> = {
       title: 'Web Apps',
       items: [
         'MikeMultifeed™',
-        'Nitric Acid Calculator',
         'MikeNutri™',
         'MikeMatch™',
-        'Conversion Calculator',
-        'Deficiency Pro',
+        'Nitrotune',
       ],
     },
   ],
@@ -233,7 +309,7 @@ const dropdownData: Record<string, DropdownSection[]> = {
         'Code of Conduct',
         'Core Values',
         'Mike Alpha Grows',
-        'Regional Operations (India)',
+        'Operations',
       ],
     },
   ],
@@ -282,6 +358,9 @@ function getTopLevelUrl(label: string): string {
 
 function getSectionTitleLink(title?: string): string | undefined {
   if (!title) return undefined;
+  if (/^\d+\./.test(title)) {
+    return `/products?category=${encodeURIComponent(title)}`;
+  }
   switch (title) {
     case 'Fertilization Methods':
       return '/articles/fertilization-methods';
@@ -348,7 +427,9 @@ function getItemUrl(label: string, item: string): string {
         'Core Values': '/core-values-1',
         'News & Events': '/news-events',
         'Mike Alpha Grows': '/mike-alpha-grows',
+        'Operations': '/mike-alpha-worldwide',
         'Regional Operations (India)': '/mike-alpha-worldwide',
+        'Regional Operations': '/mike-alpha-worldwide',
         'Mike Alpha Worldwide': '/mike-alpha-worldwide',
       };
       return corporateUrlMap[item] || `/corporate`;
@@ -475,14 +556,18 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
             className={cn(
-              'absolute top-full bg-white shadow-dropdown rounded-b-lg border border-gray-100 z-50 py-5 px-6',
+              'absolute top-full bg-white shadow-dropdown rounded-b-lg border border-gray-100 z-50 py-5 px-6 max-h-[85vh] overflow-y-auto',
               isLeft ? 'left-0' : 'right-0',
-              sections.length > 1 ? 'min-w-[620px]' : 'min-w-[260px]'
+              label === 'Products'
+                ? 'min-w-[320px]'
+                : sections.length > 1
+                  ? 'min-w-[620px]'
+                  : 'min-w-[260px]'
             )}
           >
             <div
               className={cn(
-                'grid gap-8',
+                'grid gap-6',
                 sections.length > 1 ? 'grid-cols-2' : 'grid-cols-1'
               )}
             >
@@ -510,12 +595,7 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
                         <Link
                           to={getItemUrl(label, item)}
                           onClick={() => setActiveDropdown(null)}
-                          className={cn(
-                            'text-sm transition-colors block py-1 font-medium',
-                            isLeft
-                              ? 'text-primary hover:text-primary/80'
-                              : 'text-gray-600 hover:text-primary'
-                          )}
+                          className="text-sm text-gray-700 hover:text-primary transition-all block py-1.5 font-medium hover:translate-x-1 duration-150"
                         >
                           {item}
                         </Link>
