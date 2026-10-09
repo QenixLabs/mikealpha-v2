@@ -29,27 +29,17 @@ type SdsDocument = {
 const popularSds: SdsDocument[] = [
   {
     id: 'sds-1',
-    name: 'Multi-K™ Classic (Potassium Nitrate)',
-    category: 'Potassium Nitrate',
-    npk: '13-0-45',
-    formula: 'KNO₃',
-    ghsClass: 'Oxidizing Solid Cat. 3',
-    casNo: '7757-79-1',
+    name: 'Mike SOP (Potassium Sulfate)',
+    category: 'Water Soluble Potassium',
+    npk: '00-00-50 + 17.5% S',
+    formula: 'K₂SO₄',
+    ghsClass: 'Non-Hazardous Fertilizer',
+    casNo: '7778-80-5',
     pdfUrl: '#',
   },
   {
     id: 'sds-2',
-    name: 'Poly-Feed™ Standard All-Round',
-    category: 'Water Soluble NPK',
-    npk: '19-19-19 + ME',
-    formula: 'NPK + Trace Elements',
-    ghsClass: 'Non-Hazardous Fertilizer Mixture',
-    casNo: 'Mixture',
-    pdfUrl: '#',
-  },
-  {
-    id: 'sds-3',
-    name: 'Multi-MKP™ (Mono Potassium Phosphate)',
+    name: 'Mike MKP (Mono Potassium Phosphate)',
     category: 'Water Soluble Phosphate',
     npk: '00-52-34',
     formula: 'KH₂PO₄',
@@ -58,8 +48,8 @@ const popularSds: SdsDocument[] = [
     pdfUrl: '#',
   },
   {
-    id: 'sds-4',
-    name: 'Multi-MAP™ (Mono Ammonium Phosphate)',
+    id: 'sds-3',
+    name: 'Mike MAP (Mono Ammonium Phosphate)',
     category: 'Water Soluble Starter',
     npk: '12-61-00',
     formula: 'NH₄H₂PO₄',
@@ -68,42 +58,42 @@ const popularSds: SdsDocument[] = [
     pdfUrl: '#',
   },
   {
-    id: 'sds-5',
-    name: 'Haifa Cal™ Prime (Calcium Nitrate)',
+    id: 'sds-4',
+    name: 'Mike CN (Calcium Nitrate)',
     category: 'Water Soluble Calcium',
-    npk: '15.5-0-0 + 19% Ca',
+    npk: '15.5-0-0 + 18.5% Ca',
     formula: '5Ca(NO₃)₂·NH₄NO₃·10H₂O',
     ghsClass: 'Acute Toxicity Cat. 4, Eye Damage Cat. 1',
     casNo: '15245-12-2',
     pdfUrl: '#',
   },
   {
+    id: 'sds-5',
+    name: 'Mike MAG (Magnesium Sulphate)',
+    category: 'Secondary Nutrient',
+    npk: '9.5% Mg + 12% S',
+    formula: 'MgSO₄·7H₂O',
+    ghsClass: 'Non-Hazardous Fertilizer',
+    casNo: '7487-88-9',
+    pdfUrl: '#',
+  },
+  {
     id: 'sds-6',
-    name: 'Magnisal™ (Magnesium Nitrate Flakes)',
-    category: 'Specialty Nitrate',
-    npk: '11-0-0 + 16% MgO',
-    formula: 'Mg(NO₃)₂·6H₂O',
-    ghsClass: 'Non-Hazardous in Dilution',
-    casNo: '13446-18-9',
+    name: 'Mike Micronutrient (Chelated Multi-Mix)',
+    category: 'Micronutrient',
+    npk: 'Zn 6%, Fe 4%, Mn 1%, Cu 0.5%, B 0.5%',
+    formula: 'Multi-Micronutrient EDTA Mix',
+    ghsClass: 'Non-Hazardous Micronutrient Blend',
+    casNo: 'Mixture',
     pdfUrl: '#',
   },
   {
     id: 'sds-7',
-    name: 'HaifaStim™ Mar (Seaweed Ascophyllum Nodosum)',
-    category: 'Biostimulants',
-    npk: 'Organic Bio-stimulant',
-    formula: 'Ascophyllum Nodosum Bioactive Extract',
-    ghsClass: 'Non-Hazardous Botanical Extract',
-    casNo: '84775-78-0',
-    pdfUrl: '#',
-  },
-  {
-    id: 'sds-8',
-    name: 'Haifa Turbo-K™ Complex Granular',
-    category: 'Granular NPK',
-    npk: '14-14-17 + 2MgO + TE',
-    formula: 'KNO₃ Based Granular Complex',
-    ghsClass: 'Non-Hazardous Granular Fertilizer',
+    name: 'Mike Fuerza Maxima (Controlled Release)',
+    category: 'Controlled Release Fertilizer',
+    npk: 'Multi-Grade NPK Range',
+    formula: 'Polymer-Coated Controlled Release Complex',
+    ghsClass: 'Non-Hazardous Controlled Release Fertilizer',
     casNo: 'Mixture',
     pdfUrl: '#',
   },
@@ -411,17 +401,13 @@ export default function SdsRequest() {
                       required
                     >
                       <option value="">-- Choose Brand Name --</option>
-                      <option value="Multi-K™ (Potassium Nitrate)">Multi-K™ (Potassium Nitrate 13-0-45)</option>
-                      <option value="Poly-Feed™ (Water Soluble NPKs)">Poly-Feed™ (Water Soluble NPK Blends)</option>
-                      <option value="Multi-MKP™ (00-52-34)">Multi-MKP™ (Mono Potassium Phosphate)</option>
-                      <option value="Multi-MAP™ (12-61-00)">Multi-MAP™ (Mono Ammonium Phosphate)</option>
-                      <option value="Haifa Cal™ Prime (Calcium Nitrate)">Haifa Cal™ Prime (Calcium Nitrate)</option>
-                      <option value="Magnisal™ (Magnesium Nitrate)">Magnisal™ (Magnesium Nitrate)</option>
-                      <option value="HaifaStim™ (Bio-stimulants)">HaifaStim™ (Bio-stimulants Range)</option>
-                      <option value="Haifa Micro™ (Chelated Micronutrients)">Haifa Micro™ (Chelated Micronutrients)</option>
-                      <option value="Haifa Turbo-K™ (Complex NPK)">Haifa Turbo-K™ (Complex NPK)</option>
-                      <option value="Multicote™ (Controlled Release)">Multicote™ (Controlled Release Fertilizer)</option>
-                      <option value="Other Specialty Formulation">Other Specialty Formulation</option>
+                      <option value="Mike SOP">Mike SOP (00-00-50 Potassium Sulfate)</option>
+                      <option value="Mike MKP">Mike MKP (00-52-34 Mono Potassium Phosphate)</option>
+                      <option value="Mike MAP">Mike MAP (12-61-00 Mono Ammonium Phosphate)</option>
+                      <option value="Mike CN">Mike CN (Calcium Nitrate)</option>
+                      <option value="Mike MAG">Mike MAG (Magnesium Sulphate)</option>
+                      <option value="Mike Micronutrient">Mike Micronutrient (Chelated Micronutrients)</option>
+                      <option value="Mike Fuerza Maxima">Mike Fuerza Maxima (Controlled Release Fertilizer)</option>
                     </select>
                   </div>
 

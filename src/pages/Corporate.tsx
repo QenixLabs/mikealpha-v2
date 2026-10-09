@@ -78,7 +78,7 @@ const corporateAreas = [
     icon: MapPin,
     title: 'Operations',
     description:
-      'Operational pan-India with dedicated regional hubs across Gujarat, Madhya Pradesh, and Chhattisgarh, while exporting specialty crop nutrition worldwide.',
+      'Operational pan-India with dedicated regional hubs across Gujarat, Rajasthan, Punjab, Himachal Pradesh, Madhya Pradesh, and Chhattisgarh, while exporting specialty crop nutrition worldwide.',
     link: '/mike-alpha-worldwide',
     image: '/images/event-3.jpg',
   },

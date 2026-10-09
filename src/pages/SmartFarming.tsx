@@ -14,6 +14,7 @@ import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 
 const webApps = [
   {
+    id: 'mikemultifeed',
     icon: Beaker,
     title: 'MikeMultifeed™',
     description:
@@ -22,6 +23,7 @@ const webApps = [
   },
   
   {
+    id: 'mikenutri',
     icon: Cloud,
     title: 'MikeNutri™',
     description:
@@ -29,6 +31,7 @@ const webApps = [
     tags: ['Crop planning', 'Seasonal schedule', 'Nutrition'],
   },
   {
+    id: 'mikematch',
     icon: Leaf,
     title: 'MikeMatch™',
     description:
@@ -36,6 +39,7 @@ const webApps = [
     tags: ['Product selection', 'Compatibility', 'Advisory'],
   },
   { 
+    id: 'nitrotune',
     icon: Beaker,
     title: 'Nitrotune™',
     description:
@@ -49,8 +53,9 @@ function AppCard({ app }: { app: (typeof webApps)[0] }) {
   const Icon = app.icon;
   return (
     <motion.div
+      id={app.id}
       variants={fadeUpVariant}
-      className="bg-white border border-brand-border rounded-lg p-6 md:p-8 hover:shadow-card transition-shadow h-full flex flex-col"
+      className="bg-white border border-brand-border rounded-lg p-6 md:p-8 hover:shadow-card transition-shadow h-full flex flex-col scroll-mt-36"
     >
       <div className="w-12 h-12 bg-primary-light rounded-lg flex items-center justify-center mb-5">
         <Icon className="w-6 h-6 text-primary" />

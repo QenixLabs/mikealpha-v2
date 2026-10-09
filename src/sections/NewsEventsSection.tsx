@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
@@ -9,7 +10,7 @@ const events = [
     category: 'EVENTS',
     title: 'Mike Alpha at CONFIVA 2026',
     image: '/images/event-1.jpg',
-    link: '#',
+    link: '/news-events',
   },
   {
     day: '14',
@@ -17,7 +18,7 @@ const events = [
     category: 'NEWS',
     title: 'Maala ESG Index 2026: Mike Alpha Continues to Rise',
     image: '/images/event-2.jpg',
-    link: '#',
+    link: '/news-events',
   },
   {
     day: '08',
@@ -25,7 +26,7 @@ const events = [
     category: 'NEWS',
     title: 'Mike Alpha at the IFA Annual Conference 2026: Strengthening Connections Across the Global Fertilizer Industry',
     image: '/images/event-3.jpg',
-    link: '#',
+    link: '/news-events',
   },
 ];
 
@@ -53,48 +54,51 @@ export default function NewsEventsSection() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10"
         >
           {events.map((event, index) => (
-            <motion.a
+            <motion.div
               key={index}
-              href={event.link}
               variants={fadeUpVariant}
-              className="group bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
             >
-              {/* Header with date and category */}
-              <div className="flex items-start gap-4 p-4 pb-2">
-                {/* Date */}
-                <div className="flex flex-col items-center min-w-[50px]">
-                  <span className="text-[10px] font-medium text-gray-500 uppercase">
-                    {event.month}
-                  </span>
-                  <span className="text-3xl font-bold text-primary">
-                    {event.day}
-                  </span>
+              <Link
+                to={event.link}
+                className="group block bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover h-full flex flex-col"
+              >
+                {/* Header with date and category */}
+                <div className="flex items-start gap-4 p-4 pb-2">
+                  {/* Date */}
+                  <div className="flex flex-col items-center min-w-[50px]">
+                    <span className="text-[10px] font-medium text-gray-500 uppercase">
+                      {event.month}
+                    </span>
+                    <span className="text-3xl font-bold text-primary">
+                      {event.day}
+                    </span>
+                  </div>
+
+                  {/* Category and Title */}
+                  <div>
+                    <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider">
+                      {event.category}
+                    </span>
+                    <h3 className="text-base font-semibold text-gray-800 leading-snug group-hover:text-primary transition-colors mt-1">
+                      {event.title}
+                    </h3>
+                  </div>
                 </div>
 
-                {/* Category and Title */}
-                <div>
-                  <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider">
-                    {event.category}
-                  </span>
-                  <h3 className="text-base font-semibold text-gray-800 leading-snug group-hover:text-primary transition-colors mt-1">
-                    {event.title}
-                  </h3>
+                {/* Image */}
+                <div className="relative overflow-hidden mt-2 flex-1">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-gray-600 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
                 </div>
-              </div>
-
-              {/* Image */}
-              <div className="relative overflow-hidden mt-2">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-gray-600 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <ArrowRight className="w-5 h-5" />
-                </div>
-              </div>
-            </motion.a>
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -106,12 +110,12 @@ export default function NewsEventsSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <a
-            href="#"
+          <Link
+            to="/news-events"
             className="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
           >
             Read All News &amp; Events
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

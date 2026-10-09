@@ -344,12 +344,12 @@ export default function PrecisionImpact() {
                     Get detailed performance data, case studies, and verified sustainability metrics.
                   </p>
                 </div>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-coral text-white text-sm font-medium hover:bg-coral-dark transition-colors rounded shrink-0"
                 >
                   Request Report <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
           </div>

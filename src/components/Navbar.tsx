@@ -351,6 +351,14 @@ function getTopLevelUrl(label: string): string {
       return '/insights';
     case 'Careers':
       return '/careers';
+    case 'Distributors':
+      return '/distributors';
+    case 'About':
+    case 'About Us':
+      return '/about';
+    case 'Contact':
+    case 'Contact Us':
+      return '/contact';
     default:
       return '#';
   }
@@ -362,6 +370,15 @@ function getSectionTitleLink(title?: string): string | undefined {
     return `/products?category=${encodeURIComponent(title)}`;
   }
   switch (title) {
+    case 'Vegetables':
+    case 'Fruit Trees':
+    case 'Soft Fruit':
+    case 'Field Crops':
+    case 'Herbs':
+    case 'Ornamentals':
+    case 'Forestry':
+    case 'Turf':
+      return `/crop-guide?category=${encodeURIComponent(title)}`;
     case 'Fertilization Methods':
       return '/articles/fertilization-methods';
     case 'Farming Methods':
@@ -371,7 +388,7 @@ function getSectionTitleLink(title?: string): string | undefined {
     case 'Industrial':
       return '/products';
     case 'Web Apps':
-      return '/smart-farming';
+      return '/smart-farming#web-apps';
     default:
       return undefined;
   }
@@ -382,8 +399,8 @@ function getItemUrl(label: string, item: string): string {
     case 'Products':
       return productUrlMap[item] || `/products?line=${encodeURIComponent(item)}`;
     case 'Crop Guide': {
-      const slug = cropSlugMap.get(item);
-      return slug ? `/${slug}` : '#';
+      const slug = cropSlugMap.get(item) || cropSlugMap.get(item.trim());
+      return slug ? `/${slug}` : '/crop-guide';
     }
     case 'Growing Practice': {
       const practiceMap: Record<string, string> = {
@@ -400,8 +417,16 @@ function getItemUrl(label: string, item: string): string {
       };
       return practiceMap[item] || '/growing-practice';
     }
-    case 'Smart Farming':
-      return `/smart-farming`;
+    case 'Smart Farming': {
+      const smartMap: Record<string, string> = {
+        'MikeMultifeed™': '/smart-farming#mikemultifeed',
+        'MikeNutri™': '/smart-farming#mikenutri',
+        'MikeMatch™': '/smart-farming#mikematch',
+        'Nitrotune': '/smart-farming#nitrotune',
+        'Nitrotune™': '/smart-farming#nitrotune',
+      };
+      return smartMap[item] || '/smart-farming';
+    }
     case 'Precision IMPACT': {
       const impactUrlMap: Record<string, string> = {
         'ESG REPORT 2022-2023': '/impact-innovation-compassion',
@@ -533,10 +558,8 @@ function NavItem({ label, isLeft }: { label: string; isLeft?: boolean }) {
         className={cn(
           'h-full flex items-center gap-1 text-sm font-medium border-b-2 transition-colors px-2 py-1',
           activeDropdown === label
-            ? 'text-primary border-primary'
-            : isLeft
-              ? 'text-primary border-transparent hover:border-primary'
-              : 'text-gray-700 border-transparent hover:text-primary hover:border-green-600'
+            ? 'text-navy border-navy'
+            : 'text-navy border-transparent hover:border-navy'
         )}
       >
         {displayLabel}
@@ -787,7 +810,7 @@ export default function Navbar() {
                         <Link
                           to="/impact-innovation-compassion"
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-primary-light hover:text-primary transition-colors"
+                          className="block px-6 py-3 text-sm font-medium text-navy hover:bg-gray-50 hover:text-navy transition-colors"
                         >
                           {displayLabel}
                         </Link>
@@ -796,7 +819,7 @@ export default function Navbar() {
                       <div key={label} className="border-b border-gray-50">
                         <button
                           onClick={() => toggleMobileSection(label)}
-                          className="w-full flex items-center justify-between px-6 py-3 text-sm font-medium text-gray-700 hover:bg-primary-light hover:text-primary transition-colors"
+                          className="w-full flex items-center justify-between px-6 py-3 text-sm font-medium text-navy hover:bg-gray-50 hover:text-navy transition-colors"
                         >
                           {displayLabel}
                           <ChevronDown
@@ -941,7 +964,7 @@ export default function Navbar() {
                 <Link
                   key={label}
                   to="/impact-innovation-compassion"
-                  className="h-full flex items-center px-1 text-sm font-medium text-gray-700 border-b-2 border-transparent hover:text-primary hover:border-green-600 transition-colors"
+                  className="h-full flex items-center px-2 py-1 text-sm font-medium text-navy border-b-2 border-transparent hover:border-navy transition-colors"
                 >
                   {language === 'hi' && navTranslations[label] ? navTranslations[label] : label}
                 </Link>

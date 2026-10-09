@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
@@ -7,19 +8,19 @@ const blogPosts = [
     title: 'Overcoming Soil Barriers: Effective Fertilization in Calcareous and Alkaline Soils',
     author: 'Mike Alpha Agronomy Team',
     image: '/images/blog-1.jpg',
-    link: '#',
+    link: '/soil-application',
   },
   {
-    title: 'Improving Nitrogen Management and Yield Potential with Croptune™',
+    title: 'Improving Nitrogen Management and Yield Potential with nitrotune™',
     author: 'Mike Alpha Agronomy Team',
     image: '/images/blog-2.jpg',
-    link: '#',
+    link: '/smart-farming#nitrotune',
   },
   {
     title: 'Match-Day Snacks, Powered by Plant Nutrition',
     author: 'Mike Alpha Agronomy Team',
     image: '/images/blog-3.jpg',
-    link: '#',
+    link: '/crop-guide',
   },
 ];
 
@@ -47,42 +48,45 @@ export default function BlogSection() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10"
         >
           {blogPosts.map((post, index) => (
-            <motion.a
+            <motion.div
               key={index}
-              href={post.link}
               variants={fadeUpVariant}
-              className="group bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
             >
-              {/* Author */}
-              <div className="flex items-center gap-3 p-4 pb-2">
-                <div className="w-10 h-10 rounded-full bg-primary-light flex items-center justify-center">
-                  <span className="text-primary font-bold text-sm">
-                    {post.author.split(' ').map(n => n[0]).join('')}
-                  </span>
+              <Link
+                to={post.link}
+                className="group block bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover h-full flex flex-col"
+              >
+                {/* Author */}
+                <div className="flex items-center gap-3 p-4 pb-2">
+                  <div className="w-10 h-10 rounded-full bg-primary-light flex items-center justify-center">
+                    <span className="text-primary font-bold text-sm">
+                      {post.author.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">{post.author}</span>
                 </div>
-                <span className="text-sm font-medium text-gray-700">{post.author}</span>
-              </div>
 
-              {/* Image */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-gray-600 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <ArrowRight className="w-5 h-5" />
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-gray-600 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
                 </div>
-              </div>
 
-              {/* Title */}
-              <div className="p-4">
-                <h3 className="text-base font-semibold text-gray-800 leading-snug group-hover:text-primary transition-colors">
-                  {post.title}
-                </h3>
-              </div>
-            </motion.a>
+                {/* Title */}
+                <div className="p-4 flex-1">
+                  <h3 className="text-base font-semibold text-gray-800 leading-snug group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -94,12 +98,12 @@ export default function BlogSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <a
-            href="#"
+          <Link
+            to="/insights#blog"
             className="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
           >
             Read All Blog
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

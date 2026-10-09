@@ -80,7 +80,7 @@ export const corporateArticles: CorporateArticle[] = [
           'Establishment of central supply hubs and specialized blending facilities adhering to strict FCO 1985 quality benchmarks.',
           'Introduction of Multi-K™ and Poly-Feed™ formulations tailored to alkaline, calcareous, and degraded soil profiles common in Indian farming tracts.',
           'Expansion of the authorized distributor and dealer network to over 500+ specialized agri-retail centers across key agricultural states.',
-          'Introduction of advanced Controlled Release Fertilizers (CRF) and HaifaStim™ / MikeStim bio-stimulants for climate-resilient farming.',
+          'Introduction of advanced Controlled Release Fertilizers (CRF) and bio-stimulants for climate-resilient farming.',
           'Active collaboration with State Agricultural Universities (SAUs) and ICAR research centers to validate crop nutrition schedules.',
           'Digital empowerment of Indian farmers through regional language crop guides, fertigation calculators, and mobile advisory services.',
           'Commitment to Atmanirbhar Krishi and sustainable soil health, helping Indian growers reduce fertilizer wastage by up to 30%.',
@@ -296,7 +296,7 @@ export const corporateArticles: CorporateArticle[] = [
     breadcrumb: [{ label: 'HOME', to: '/' }, { label: 'Operations' }],
     heroImage: '/images/hero-bg-2.jpg',
     intro:
-      'Mike Alpha is proudly operational Pan-India, delivering advanced crop nutrition solutions, field agronomic trials, and dedicated dealer support across all agricultural regions of the country. With strong operational hubs in Gujarat, Madhya Pradesh, and Chhattisgarh, our nationwide reach supports growers across every major farming belt.\n\nIn addition to our nationwide presence, we export all over the world. Mike Alpha actively exports specialty water-soluble fertilizers, bio-nutrients, and micronutrient formulations to international markets outside India, serving global partners with high-purity inputs and tailored agricultural solutions.',
+      'Mike Alpha is proudly operational Pan-India, delivering advanced crop nutrition solutions, field agronomic trials, and dedicated dealer support across all agricultural regions of the country. With strong operational hubs in Gujarat, Rajasthan, Punjab, Himachal Pradesh, Madhya Pradesh, and Chhattisgarh, our nationwide reach supports growers across every major farming belt.\n\nIn addition to our nationwide presence, we export all over the world. Mike Alpha actively exports specialty water-soluble fertilizers, bio-nutrients, and micronutrient formulations to international markets outside India, serving global partners with high-purity inputs and tailored agricultural solutions.',
     sections: [
       {
         title: 'We Export All Over The World — Global Agricultural Solutions',
@@ -315,7 +315,7 @@ export const corporateArticles: CorporateArticle[] = [
           'Within India, Mike Alpha maintains extensive Pan-India operations. Our localized teams work directly with regional distributors, retail cooperatives, and farming communities to ensure immediate product availability, seasonal inventory planning, and expert agronomic advice.',
         bullets: [
           'Pan-India Supply Chain: Reliable nationwide fulfillment delivering specialty nutrition to farmers across every state.',
-          'Regional Distribution Centers: Dedicated distribution infrastructure across Gujarat, Madhya Pradesh, and Chhattisgarh.',
+          'Regional Distribution Centers: Dedicated distribution infrastructure across Gujarat, Rajasthan, Punjab, Himachal Pradesh, Madhya Pradesh, and Chhattisgarh.',
           'On-Field Agronomic Support: Multilingual field agronomists conducting on-farm trials, soil testing, and fertigation advisory.',
         ],
       },
@@ -329,6 +329,34 @@ export const corporateArticles: CorporateArticle[] = [
           { label: 'Central Gujarat: Viramgam, Sanand, Kheda, Nadiad & Anand' },
           { label: 'South Gujarat: Vadodara, Bharuch, Ankleshwar, Surat & Bardoli' },
           { label: 'North Gujarat: Sabarkantha & Banaskantha Agronomy Centers' },
+        ],
+      },
+      {
+        region: 'Rajasthan (North-Western Agricultural Zone)',
+        items: [
+          { label: 'Northern Belt: Sri Ganganagar & Hanumangarh Kinnow, Cotton & Wheat Centers' },
+          { label: 'Hadoti Region: Kota, Baran & Bundi Soybean, Garlic, Mustard & Paddy Hubs' },
+          { label: 'Central & Eastern Zone: Jaipur, Alwar, Bharatpur & Dausa Advisory Centers' },
+          { label: 'Western Belt: Jodhpur, Bikaner, Nagaur & Barmer Cumin, Isabgol & Guar Networks' },
+          { label: 'Specialized Arid & Semi-Arid Precision Fertigation & Foliar Programs' },
+        ],
+      },
+      {
+        region: 'Punjab (Northern High-Yield Agronomic Belt)',
+        items: [
+          { label: 'Malwa Belt: Bathinda, Mansa, Fazilka & Muktsar Cotton & Kinnow Hubs' },
+          { label: 'Majha & Doaba Regions: Jalandhar, Kapurthala, Ludhiana & Amritsar Potato & Grain Corridors' },
+          { label: 'Southern Belt: Patiala, Sangrur & Barnala High-Efficiency Fertigation Networks' },
+          { label: 'Specialized Crop Nutrition for Direct Seeded Rice, Wheat & Seed Potato' },
+        ],
+      },
+      {
+        region: 'Himachal Pradesh (Himalayan Temperate Horticulture Belt)',
+        items: [
+          { label: 'Apple Belt: Shimla, Kotkhai, Rohru & Kinnaur Pome Fruit Nutrition Centers' },
+          { label: 'Kullu Valley: Manali, Bhuntar & Kullu Stone & Pome Fruit Advisory Hubs' },
+          { label: 'Mid-Hills Zone: Solan, Sirmaur, Mandi & Kangra Polyhouse Vegetable Corridors' },
+          { label: 'Specialized High-Altitude Anti-Stress Biostimulant & Fruit Color/Brix Programs' },
         ],
       },
       {

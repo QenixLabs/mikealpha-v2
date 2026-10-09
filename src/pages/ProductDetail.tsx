@@ -4,7 +4,7 @@ import { ArrowLeft, Download, Mail, Check, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import { products } from "@/data/products";
+import { products, getProductBySlug } from "@/data/products";
 
 type Tab = "description" | "specs" | "application" | "related";
 
@@ -13,7 +13,7 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<Tab>("description");
 
-  const product = useMemo(() => products.find((p) => p.slug === slug), [slug]);
+  const product = useMemo(() => getProductBySlug(slug ?? ""), [slug]);
 
   const related = useMemo(
     () =>
@@ -28,6 +28,29 @@ export default function ProductDetail() {
     return products
       .filter((p) => p.groupKey === product.groupKey)
       .sort((a, b) => a.id - b.id);
+  }, [product]);
+
+  const nutrientEntries = useMemo(
+    () => (product ? Object.entries(product.nutrients) : []),
+    [product]
+  );
+
+  const specEntries = useMemo(() => {
+    if (!product) return [];
+    const base: Record<string, string> = {
+      Formula: product.formula,
+      Category: product.category,
+      // "Product Line": product.productLine,
+      Packaging: product.packaging,
+      Application: product.application,
+      ...product.nutrients,
+    };
+    if (product.dosage) {
+      for (const d of product.dosage) {
+        base[d.crop] = d.amount;
+      }
+    }
+    return Object.entries({ ...base, ...(product.specs ?? {}) });
   }, [product]);
 
   if (!product) {
@@ -48,84 +71,6 @@ export default function ProductDetail() {
     );
   }
 
-  const isGroupRoot =
-    product.groupKey && groupMembers.length > 0 && product.id === groupMembers[0].id;
-
-  if (isGroupRoot) {
-    const title = product.groupName ?? product.name;
-    const description = product.groupDescription ?? product.shortDescription;
-
-    return (
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <main className="pt-28 pb-16">
-          <section className="max-w-container mx-auto px-4 lg:px-6">
-            <button
-              onClick={() => navigate("/products")}
-              className="inline-flex items-center gap-2 text-sm text-brand-text-secondary hover:text-coral transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" /> Back to products
-            </button>
-
-            <div className="max-w-3xl mx-auto bg-white border border-brand-border rounded-2xl overflow-hidden">
-              <div className="bg-brand-background rounded-2xl border border-brand-border p-8 lg:p-12 flex items-center justify-center min-h-[420px]">
-                <img
-                  src={product.image}
-                  alt={title}
-                  className="max-h-80 max-w-full object-contain"
-                />
-              </div>
-
-              <div className="p-8 md:p-12">
-                <h1 className="text-3xl md:text-4xl font-bold text-navy mb-3">{title}</h1>
-                <p className="text-brand-text-secondary mb-8">{description}</p>
-
-                <div className="border-t border-brand-border pt-8">
-                  <h3 className="text-[10px] font-bold uppercase tracking-widest text-brand-text-muted mb-4">
-                    Available Grades
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {groupMembers.map((m) => (
-                      <Link
-                        key={m.slug}
-                        to={`/products/${m.slug}`}
-                        className="flex items-center justify-between gap-3 px-4 py-3 bg-brand-background border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded"
-                      >
-                        <span>{m.grade ?? m.name}</span>
-                        <ArrowRight className="w-4 h-4 shrink-0" />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer />
-        <FloatingActions />
-      </div>
-    );
-  }
-
-  const nutrientEntries = Object.entries(product.nutrients);
-
-  const specEntries = useMemo(() => {
-    const base: Record<string, string> = {
-      Formula: product.formula,
-      Category: product.category,
-      "Product Line": product.productLine,
-      Packaging: product.packaging,
-      Application: product.application,
-      ...product.nutrients,
-    };
-    if (product.dosage) {
-      for (const d of product.dosage) {
-        base[d.crop] = d.amount;
-      }
-    }
-    return Object.entries({ ...base, ...(product.specs ?? {}) });
-  }, [product]);
-
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -133,12 +78,19 @@ export default function ProductDetail() {
       <main className="pt-28 pb-16">
         {/* Product hero */}
         <section className="max-w-container mx-auto px-4 lg:px-6">
+          <button
+            onClick={() => navigate("/products")}
+            className="inline-flex items-center gap-2 text-sm text-brand-text-secondary hover:text-coral transition-colors mb-6"
+          >
+            <ArrowLeft className="w-4 h-4" /> Back to products
+          </button>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Image */}
             <div className="bg-brand-background rounded-2xl border border-brand-border p-8 lg:p-12 flex items-center justify-center min-h-[420px]">
               <img
                 src={product.image}
-                alt={product.name}
+                alt={product.groupName ?? product.name}
                 className="max-h-80 max-w-full object-contain"
               />
             </div>
@@ -149,10 +101,61 @@ export default function ProductDetail() {
                 <span className="h-px w-5 bg-coral" />
                 <span className="text-xs font-bold uppercase tracking-widest text-coral">{product.category}</span>
                 <span className="h-px w-5 bg-coral" />
+                {groupMembers.length > 0 && (
+                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-navy/10 text-navy">
+                    {groupMembers.length} Grades Available
+                  </span>
+                )}
               </div>
 
-              <h1 className="text-3xl md:text-4xl font-bold text-navy mb-3">{product.name}</h1>
-              <p className="text-brand-text-secondary mb-8">{product.shortDescription}</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-navy mb-2">
+                {product.groupName ?? product.name}
+              </h1>
+
+              {product.grade && (
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-xs uppercase font-bold tracking-wider text-brand-text-muted">Selected Grade:</span>
+                  <span className="inline-flex items-center px-2.5 py-1 rounded bg-coral/10 text-coral font-bold text-sm border border-coral/20">
+                    {product.grade}
+                  </span>
+                </div>
+              )}
+
+              <p className="text-brand-text-secondary mb-6">{product.shortDescription}</p>
+
+              {groupMembers.length > 0 && (
+                <div className="mb-8 p-4 bg-brand-background rounded-xl border border-brand-border">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xs font-bold uppercase tracking-widest text-navy">
+                      Available Grades ({groupMembers.length})
+                    </h3>
+                    <span className="text-xs text-brand-text-muted">Select grade to view specs</span>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                    {groupMembers.map((m) => {
+                      const isCurrent = m.slug === product.slug;
+                      return (
+                        <Link
+                          key={m.slug}
+                          to={`/products/${m.slug}`}
+                          className={`flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-lg text-xs font-medium transition-all border ${
+                            isCurrent
+                              ? "bg-navy text-white border-navy shadow-sm font-bold"
+                              : "bg-white text-brand-text-primary border-brand-border hover:border-coral hover:text-coral hover:shadow-sm"
+                          }`}
+                        >
+                          <span>{m.grade ?? m.name}</span>
+                          {isCurrent ? (
+                            <Check className="w-3.5 h-3.5 text-coral shrink-0" />
+                          ) : (
+                            <ArrowRight className="w-3.5 h-3.5 opacity-40 shrink-0" />
+                          )}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
               {product.benefits.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
@@ -247,7 +250,7 @@ export default function ProductDetail() {
                   <InfoCard label="Application" value={product.application} />
                   <InfoCard label="Packaging" value={product.packaging} />
                   <InfoCard label="Category" value={product.category} />
-                  <InfoCard label="Product Line" value={product.productLine} />
+                  {/* <InfoCard label="Product Line" value={product.productLine} /> */}
                 </div>
               </div>
             )}

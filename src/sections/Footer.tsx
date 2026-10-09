@@ -188,28 +188,34 @@ export default function Footer() {
               <p className="text-sm font-medium text-brand-text-primary mb-3">Follow us</p>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full border border-brand-border flex items-center justify-center text-brand-text-secondary hover:border-primary hover:text-primary hover:bg-primary/10 transition-all"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-4 h-4" />
                 </a>
-                <a
-                  href="#"
+                <Link
+                  to="/mike-alpha-videos"
                   className="w-9 h-9 rounded-full border border-brand-border flex items-center justify-center text-brand-text-secondary hover:border-primary hover:text-primary hover:bg-primary/10 transition-all"
                   aria-label="YouTube"
                 >
                   <Youtube className="w-4 h-4" />
-                </a>
+                </Link>
                 <a
-                  href="#"
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full border border-brand-border flex items-center justify-center text-brand-text-secondary hover:border-primary hover:text-primary hover:bg-primary/10 transition-all"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full border border-brand-border flex items-center justify-center text-brand-text-secondary hover:border-primary hover:text-primary hover:bg-primary/10 transition-all"
                   aria-label="X"
                 >

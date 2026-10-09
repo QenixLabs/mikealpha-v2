@@ -154,11 +154,10 @@ export default function PrivacyPolicy() {
                         key={s.id}
                         href={`#${s.id}`}
                         onClick={() => setActiveSection(s.id)}
-                        className={`block px-3 py-2 text-sm rounded-lg transition-colors font-medium ${
-                          activeSection === s.id
+                        className={`block px-3 py-2 text-sm rounded-lg transition-colors font-medium ${activeSection === s.id
                             ? 'bg-primary text-white'
                             : 'text-gray-700 hover:bg-emerald-50 hover:text-primary'
-                        }`}
+                          }`}
                       >
                         {s.label}
                       </a>
@@ -194,7 +193,7 @@ export default function PrivacyPolicy() {
                     </p>
                     <ul className="list-disc pl-5 space-y-1.5">
                       <li>Our official website (<a href="https://mikealpha.in" className="text-primary font-medium">https://mikealpha.in</a>) and web applications (including NutriNet™, MultiMatch™, Deficiency Pro, Nitric Acid Calculator, and Conversion Calculator);</li>
-                      <li>Our mobile applications (including CropTune, FoliMatch, and agricultural advisory services);</li>
+                      <li>Our mobile applications (including nitrotune, FoliMatch, and agricultural advisory services);</li>
                       <li>Commercial engagements as distributors, agro-dealers, commercial growers, or suppliers;</li>
                       <li>In-person agronomic field trials, farmer meetings (Kisan Gosthis), exhibitions, and educational workshops across India.</li>
                     </ul>
