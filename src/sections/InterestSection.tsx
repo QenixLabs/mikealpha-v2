@@ -20,91 +20,84 @@ import {
   TreePine,
   Warehouse,
   Zap,
+  MapPin,
+  ShieldCheck,
   type LucideIcon,
 } from 'lucide-react';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 import { categories, products } from '@/data/products';
-import { getCropGuideByName } from '@/data/cropGuides';
 
-type TabId = 'crop' | 'growing' | 'products';
+type TabId = 'importer' | 'growing' | 'products';
 
 const tabs: { id: TabId; label: string }[] = [
-  { id: 'crop', label: 'Crop' },
+  { id: 'importer', label: 'Exclusive Importer of' },
   { id: 'growing', label: 'Growing method' },
   { id: 'products', label: 'Products' },
 ];
 
-const cropItems = [
-  'Tomato',
-  'Pepper',
-  'Cucumber',
-  'Potato',
-  'Strawberry',
-  'Citrus',
-  'Banana',
-  'Olives',
-  'Rice',
-  'Wheat',
-  'Onion',
-  'Apple',
-  'Grapes',
-  'Corn',
-  'Sugar Beet',
-  'Garlic',
-  'Almond',
-  'Soybean',
-  'Turf',
-  'Cabbage',
-  'Cauliflower',
-  'Watermelon',
-];
+interface ImporterPartner {
+  id: string;
+  name: string;
+  country: string;
+  flag: string;
+  location: string;
+  tagline: string;
+  specialty: string;
+  productsUrl: string;
+  accentColor: string;
+  icon: LucideIcon;
+}
 
-const cropIconColors = [
-  '#E74C3C',
-  '#C0392B',
-  '#27AE60',
-  '#8E44AD',
-  '#E84393',
-  '#F39C12',
-  '#F1C40F',
-  '#16A085',
-  '#3498DB',
-  '#D4AC0D',
-  '#E67E22',
-  '#95A5A6',
-  '#9B59B6',
-  '#F4D03F',
-  '#ECF0F1',
-  '#BDC3C7',
-  '#D35400',
-  '#2ECC71',
-  '#1ABC9C',
+const exclusiveImporters: ImporterPartner[] = [
+  {
+    id: 'fertinagro',
+    name: 'Fertinagro Biotech',
+    country: 'Spain',
+    flag: '🇪🇸',
+    location: 'Teruel, Spain',
+    tagline: 'Global pioneer in technological, organo-mineral & sustainable plant nutrition with over 800 certified formulations.',
+    specialty: 'Technological & Sustainable Nutrition',
+    productsUrl: '/products',
+    accentColor: '#059669',
+    icon: Sprout,
+  },
+  {
+    id: 'veganic',
+    name: 'Veganic Bio',
+    country: 'Spain',
+    flag: '🇪🇸',
+    location: 'Valencia, Spain',
+    tagline: '100% Organic, vegan-certified biosolutions derived from plant extracts and exclusive MicroGea® biotechnology.',
+    specialty: 'Certified Organic Vegan Biosolutions',
+    productsUrl: '/products?q=Microgea',
+    accentColor: '#16a34a',
+    icon: Leaf,
+  },
+  {
+    id: 'futureco',
+    name: 'Futureco Bioscience',
+    country: 'Spain',
+    flag: '🇪🇸',
+    location: 'Barcelona, Spain',
+    tagline: 'Renowned agrobiotechnology leader developing high-efficacy biological biostimulants, biofertilizers & crop protection.',
+    specialty: 'Agrobiotechnology & Biostimulants',
+    productsUrl: '/products?category=2.+Biostimulant',
+    accentColor: '#2563eb',
+    icon: FlaskConical,
+  },
+  {
+    id: 'sheffa',
+    name: 'Sheffa',
+    country: 'Israel',
+    flag: '🇮🇱',
+    location: 'Valley of the Springs, Israel',
+    tagline: 'Pioneering Israeli manufacturer specializing in precision fertilization, dynamic crop protocols and custom fertigation.',
+    specialty: 'Precision Fertilization & Dynamic Nutrition',
+    productsUrl: '/products',
+    accentColor: '#1e40af',
+    icon: Droplets,
+  },
 ];
-
-const cropIconMap: Record<string, string> = {
-  Tomato: '/crops/icons/Tomato.png',
-  Pepper: '/crops/icons/Pepper.png',
-  Cucumber: '/crops/icons/Cucumber.png',
-  Potato: '/crops/icons/Potato.png',
-  Strawberry: '/crops/icons/Strawberry.png',
-  Citrus: '/crops/icons/Citrus.png',
-  Banana: '/crops/icons/Banana.png',
-  Olives: '/crops/icons/Olives.png',
-  Rice: '/crops/icons/Rice.png',
-  Wheat: '/crops/icons/Wheat.png',
-  Onion: '/crops/icons/Onion.png',
-  Apple: '/crops/icons/Apple.png',
-  Grapes: '/crops/icons/Grapes.png',
-  Corn: '/crops/icons/Corn.png',
-  'Sugar Beet': '/crops/icons/Sugar-Beet.png',
-  Garlic: '/crops/icons/Garlic.png',
-  Almond: '/crops/icons/Almond.png',
-  Soybean: '/crops/icons/Soybean.png',
-  Turf: '/crops/icons/Turf.jpg',
-  Cabbage: '/crops/icons/cabbage.png',
-  Cauliflower: '/crops/icons/cauliflower.png',
-  Watermelon: '/crops/icons/watermelon.png',
-};
 
 const growingMethods: { name: string; icon: LucideIcon }[] = [
   { name: 'Soil Applications', icon: Globe },
@@ -141,13 +134,8 @@ const productCategoryIcons: Record<string, LucideIcon> = {
   Adjuvants: TestTube,
 };
 
-const interestToCropName: Record<string, string> = {
-  grapes: 'Vineyard/Grape',
-  corn: 'Corn/Maize',
-};
-
 export default function InterestSection() {
-  const [activeTab, setActiveTab] = useState<TabId>('crop');
+  const [activeTab, setActiveTab] = useState<TabId>('importer');
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (dir: 'left' | 'right') => {
@@ -156,8 +144,8 @@ export default function InterestSection() {
 
   const getItems = () => {
     switch (activeTab) {
-      case 'crop':
-        return cropItems;
+      case 'importer':
+        return [];
       case 'growing':
         return growingMethods.map((m) => m.name);
       case 'products':
@@ -168,50 +156,11 @@ export default function InterestSection() {
   const items = getItems();
 
   const getItemUrl = (name: string) => {
-    if (activeTab === 'crop') {
-      const cropName = interestToCropName[name.toLowerCase()] || name;
-      const guide = getCropGuideByName(cropName);
-      if (guide) return `/${guide.slug}`;
-      return `/products?crop=${encodeURIComponent(name)}`;
-    }
     if (activeTab === 'growing') return `/products?q=${encodeURIComponent(name)}`;
     return `/products?category=${encodeURIComponent(name)}`;
   };
 
-  const renderIcon = (name: string, index: number) => {
-    if (activeTab === 'crop') {
-      const iconSrc = cropIconMap[name];
-      if (iconSrc) {
-        return (
-          <img
-            src={iconSrc}
-            alt={name}
-            className="h-16 w-16 object-contain mb-2"
-          />
-        );
-      }
-      const cropName = interestToCropName[name.toLowerCase()] || name;
-      const guide = getCropGuideByName(cropName);
-      if (guide?.bannerImage) {
-        return (
-          <img
-            src={guide.bannerImage}
-            alt={name}
-            className="w-16 h-16 rounded-full object-cover mb-2"
-          />
-        );
-      }
-      const color = cropIconColors[index % cropIconColors.length];
-      return (
-        <div
-          className="w-12 h-12 rounded-full flex items-center justify-center text-white mb-2"
-          style={{ backgroundColor: color }}
-        >
-          <Sprout className="w-6 h-6" />
-        </div>
-      );
-    }
-
+  const renderIcon = (name: string) => {
     if (activeTab === 'growing') {
       const iconSrc = methodIconMap[name];
       if (iconSrc) {
@@ -275,7 +224,7 @@ export default function InterestSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex justify-center gap-3 mb-10"
+          className="flex justify-center gap-2 md:gap-3 flex-wrap mb-10"
         >
           {tabs.map((tab) => (
             <button
@@ -293,45 +242,136 @@ export default function InterestSection() {
         </motion.div>
 
         {/* Content */}
-        <div className="relative">
-          <AnimatePresence mode="wait">
+        {activeTab === 'importer' ? (
+          <div>
+            <div className="text-center mb-8">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-2">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                Trusted Global Partnerships
+              </span>
+              <p className="text-sm text-gray-600 max-w-2xl mx-auto">
+                Mike Alpha Agro is the exclusive importer in India for premier international agricultural biotechnology and crop nutrition leaders.
+              </p>
+            </div>
+
             <motion.div
-              ref={scrollRef}
-              key={activeTab}
               variants={staggerContainer}
               initial="hidden"
               animate="visible"
-              exit={{ opacity: 0, transition: { duration: 0.2 } }}
-              className="flex gap-4 overflow-x-auto hide-scrollbar pb-4 justify-start md:justify-center"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
             >
-              {items.map((item, index) => (
-                <Link
-                  key={item}
-                  to={getItemUrl(item)}
-                  className="flex-shrink-0 w-[120px] md:w-[140px] group cursor-pointer"
-                >
+              {exclusiveImporters.map((partner) => {
+                const IconComponent = partner.icon;
+                return (
                   <motion.div
+                    key={partner.id}
                     variants={fadeUpVariant}
-                    className="w-full aspect-square rounded-xl border border-gray-200 bg-white flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:border-primary group-hover:shadow-card group-hover:-translate-y-1"
+                    className="relative group rounded-2xl border border-gray-200 bg-white p-6 shadow-xs hover:shadow-card hover:border-navy transition-all duration-300 flex flex-col justify-between overflow-hidden"
                   >
-                    {renderIcon(item, index)}
-                    <span className="text-xs font-medium text-gray-700 text-center leading-tight">
-                      {item}
-                    </span>
-                  </motion.div>
-                </Link>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+                    <div
+                      className="absolute top-0 right-0 left-0 h-1.5"
+                      style={{ backgroundColor: partner.accentColor }}
+                    />
 
-          {/* Scroll Arrows */}
-          <button onClick={() => scroll('left')} aria-label="Scroll left" className="absolute -left-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-500 hover:border-primary hover:text-primary hover:shadow-md transition-all duration-200">
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button onClick={() => scroll('right')} aria-label="Scroll right" className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-500 hover:border-primary hover:text-primary hover:shadow-md transition-all duration-200">
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
+                    <div>
+                      {/* Country badge */}
+                      <div className="flex items-center justify-between gap-2 mb-4">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-800 border border-gray-200">
+                          <span className="text-sm">{partner.flag}</span>
+                          <span>{partner.country}</span>
+                        </span>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-primary">
+                          Exclusive Importer
+                        </span>
+                      </div>
+
+                      {/* Icon & Title */}
+                      <div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-white shadow-xs"
+                        style={{ backgroundColor: partner.accentColor }}
+                      >
+                        <IconComponent className="w-6 h-6" />
+                      </div>
+
+                      <h3 className="text-lg font-bold text-navy group-hover:text-primary transition-colors mb-1 leading-snug">
+                        {partner.name}
+                      </h3>
+                      <p className="text-xs text-gray-400 font-medium mb-3 flex items-center gap-1">
+                        <MapPin className="w-3 h-3 text-gray-400" />
+                        {partner.location}
+                      </p>
+
+                      <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                        {partner.tagline}
+                      </p>
+                    </div>
+
+                    <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
+                      <span className="text-[11px] font-medium text-gray-500 truncate max-w-[170px]">
+                        {partner.specialty}
+                      </span>
+                      <Link
+                        to={partner.productsUrl}
+                        className="inline-flex items-center gap-1 text-xs font-bold text-primary group-hover:translate-x-0.5 transition-transform"
+                      >
+                        Explore
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
+        ) : (
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                ref={scrollRef}
+                key={activeTab}
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, transition: { duration: 0.2 } }}
+                className="flex gap-4 overflow-x-auto hide-scrollbar pb-4 justify-start md:justify-center"
+              >
+                {items.map((item) => (
+                  <Link
+                    key={item}
+                    to={getItemUrl(item)}
+                    className="flex-shrink-0 w-[120px] md:w-[140px] group cursor-pointer"
+                  >
+                    <motion.div
+                      variants={fadeUpVariant}
+                      className="w-full aspect-square rounded-xl border border-gray-200 bg-white flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:border-primary group-hover:shadow-card group-hover:-translate-y-1"
+                    >
+                      {renderIcon(item)}
+                      <span className="text-xs font-medium text-gray-700 text-center leading-tight">
+                        {item}
+                      </span>
+                    </motion.div>
+                  </Link>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Scroll Arrows */}
+            <button
+              onClick={() => scroll('left')}
+              aria-label="Scroll left"
+              className="absolute -left-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-500 hover:border-primary hover:text-primary hover:shadow-md transition-all duration-200"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              aria-label="Scroll right"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-gray-500 hover:border-primary hover:text-primary hover:shadow-md transition-all duration-200"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

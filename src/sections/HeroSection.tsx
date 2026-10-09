@@ -57,7 +57,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          src="/images/mike-alpha-hero.mp4"
+          src="/images/Hero_new.mp4"
           autoPlay
           muted
           loop
@@ -88,7 +88,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.05 }}
                 className="inline-block text-xs md:text-base font-semibold text-white/80 uppercase tracking-[0.2em] mb-3"
               >
-                Alpha Agro
+              Mike alpha agro
               </motion.span>
               <motion.h1
                 initial={{ opacity: 0, x: -30 }}

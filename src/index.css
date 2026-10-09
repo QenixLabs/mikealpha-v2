@@ -130,3 +130,104 @@ font[style] {
   background: transparent !important;
 }
 
+/* Recommendation & Article HTML content styling */
+.article-content {
+  color: #2d3748;
+}
+
+.article-content h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #19204A;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #19204A;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #19204A;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #19204A;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.article-content ul {
+  list-style-type: disc;
+}
+
+.article-content ol {
+  list-style-type: decimal;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.article-content th,
+.article-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.article-content th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #19204A;
+}
+
+.article-content tr:nth-child(even) td {
+  background-color: #f8fafc;
+}
+
+.article-content tr:hover td {
+  background-color: #f1f5f9;
+}
+
+.article-content img {
+  border-radius: 0.75rem;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+

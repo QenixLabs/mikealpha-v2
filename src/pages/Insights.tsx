@@ -38,7 +38,7 @@ const insightCategories = [
     description:
       'Listen to conversations with agronomists, researchers, and growers about real-world challenges and innovations in plant nutrition.',
     image: '/images/blog-3.jpg',
-    link: '#podcasts',
+    link: '/podcasts',
   },
   {
     icon: Trophy,
@@ -46,7 +46,7 @@ const insightCategories = [
     description:
       'See how growers around the world are improving yield, quality, and ROI with Mike Alpha products and programs.',
     image: '/images/success-1.jpg',
-    link: '#success-stories',
+    link: '/success-stories',
   },
   {
     icon: HelpCircle,
@@ -54,7 +54,7 @@ const insightCategories = [
     description:
       'Find answers to common questions about products, application methods, compatibility, storage, and agronomic recommendations.',
     image: '/images/event-1.jpg',
-    link: '#faq',
+    link: '/faq',
   },
   {
     icon: Play,
@@ -62,7 +62,7 @@ const insightCategories = [
     description:
       'Watch product demos, application tutorials, grower testimonials, and expert interviews from the field and the lab.',
     image: '/images/event-2.jpg',
-    link: '#videos',
+    link: '/mike-alpha-videos',
   },
 ];
 
@@ -93,14 +93,17 @@ const featuredBlogs = [
   {
     title: 'Overcoming Soil Barriers: Effective Fertilization in Calcareous and Alkaline Soils',
     image: '/images/blog-1.jpg',
+    link: '/soil-application',
   },
   {
-    title: 'Improving Nitrogen Management and Yield Potential with Croptune™',
+    title: 'Improving Nitrogen Management and Yield Potential with nitrotune™',
     image: '/images/blog-2.jpg',
+    link: '/smart-farming#nitrotune',
   },
   {
     title: 'Match-Day Snacks, Powered by Plant Nutrition',
     image: '/images/blog-3.jpg',
+    link: '/crop-guide',
   },
 ];
 
@@ -127,12 +130,21 @@ function InsightCard({ item }: { item: (typeof insightCategories)[0] }) {
         <p className="text-brand-text-secondary leading-relaxed mb-5 flex-1">
           {item.description}
         </p>
-        <a
-          href={item.link}
-          className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-        >
-          Explore <ArrowRight className="w-4 h-4" />
-        </a>
+        {item.link.startsWith('/') ? (
+          <Link
+            to={item.link}
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+          >
+            Explore <ArrowRight className="w-4 h-4" />
+          </Link>
+        ) : (
+          <a
+            href={item.link}
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+          >
+            Explore <ArrowRight className="w-4 h-4" />
+          </a>
+        )}
       </div>
     </motion.div>
   );
@@ -291,25 +303,28 @@ export default function Insights() {
               className="grid grid-cols-1 md:grid-cols-3 gap-6"
             >
               {featuredBlogs.map((post) => (
-                <motion.a
+                <motion.div
                   key={post.title}
                   variants={fadeUpVariant}
-                  href="#"
-                  className="group block bg-brand-background border border-brand-border rounded-lg overflow-hidden hover:shadow-card-hover transition-all"
                 >
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-semibold text-navy leading-snug group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h3>
-                  </div>
-                </motion.a>
+                  <Link
+                    to={post.link}
+                    className="group block bg-brand-background border border-brand-border rounded-lg overflow-hidden hover:shadow-card-hover transition-all h-full flex flex-col"
+                  >
+                    <div className="h-48 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-5 flex-1">
+                      <h3 className="font-semibold text-navy leading-snug group-hover:text-primary transition-colors">
+                        {post.title}
+                      </h3>
+                    </div>
+                  </Link>
+                </motion.div>
               ))}
             </motion.div>
           </div>

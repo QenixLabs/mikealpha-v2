@@ -1,6 +1,7 @@
 import { insightsArticles } from './insightsArticles';
 import { corporateArticles } from './corporateArticles';
 import { cropGuides } from './cropGuides';
+import { recommendationArticles } from './recommendationArticles';
 
 export type LookupArticle = {
   title: string;
@@ -8,6 +9,8 @@ export type LookupArticle = {
   description?: string;
   date?: string;
   content?: string;
+  htmlContent?: string;
+  sourceUrl?: string;
 };
 
 function slugFromUrl(url?: string): string | undefined {
@@ -20,6 +23,24 @@ function slugFromUrl(url?: string): string | undefined {
 }
 
 export function findArticleBySlug(target: string): LookupArticle | undefined {
+  if (!target) return undefined;
+  const decodedTarget = decodeURIComponent(target);
+  const encodedTarget = encodeURIComponent(target);
+
+  // Haifa recommendation & crop guides details
+  const rec = recommendationArticles[target] || 
+              recommendationArticles[decodedTarget] || 
+              recommendationArticles[encodedTarget];
+  if (rec) {
+    return {
+      title: rec.title,
+      image: rec.image,
+      description: rec.description,
+      htmlContent: rec.htmlContent,
+      sourceUrl: rec.sourceUrl,
+    };
+  }
+
   // Insights cards (podcasts / success stories)
   for (const article of insightsArticles) {
     for (const card of article.cards || []) {
@@ -57,7 +78,7 @@ export function findArticleBySlug(target: string): LookupArticle | undefined {
     }
   }
 
-  // Crop guide resources and sidebar links
+  // Crop guide resources and sidebar links fallback
   for (const guide of cropGuides) {
     const links = [
       ...(guide.resources || []).map((r) => ({ text: r.text, href: r.href })),
@@ -70,6 +91,7 @@ export function findArticleBySlug(target: string): LookupArticle | undefined {
       if (slugFromUrl(link.href) === target) {
         return {
           title: link.text,
+          image: guide.bannerImage,
           description: link.text,
         };
       }

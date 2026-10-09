@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router';
 import { motion } from 'framer-motion';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, ExternalLink } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -81,13 +81,38 @@ export default function ArticleDetail() {
               </motion.div>
             )}
 
-            {(article.description || article.content) && (
+            {article.htmlContent ? (
+              <motion.div
+                variants={fadeUpVariant}
+                className="prose prose-lg max-w-none text-brand-text-primary leading-relaxed article-content"
+                dangerouslySetInnerHTML={{ __html: article.htmlContent }}
+              />
+            ) : (article.description || article.content) ? (
               <motion.div
                 variants={fadeUpVariant}
                 className="prose prose-lg max-w-none text-brand-text-primary leading-relaxed"
               >
                 {article.description && <p>{article.description}</p>}
                 {article.content && <p>{article.content}</p>}
+              </motion.div>
+            ) : null}
+
+            {article.sourceUrl && (
+              <motion.div
+                variants={fadeUpVariant}
+                className="mt-12 pt-6 border-t border-gray-200 flex items-center justify-between flex-wrap gap-4"
+              >
+                <span className="text-sm text-gray-500">
+                  Detailed agronomic recommendations provided by Haifa Group
+                </span>
+                <a
+                  href={article.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+                >
+                  View on Haifa Group <ExternalLink className="w-4 h-4" />
+                </a>
               </motion.div>
             )}
           </motion.div>

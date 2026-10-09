@@ -27,7 +27,7 @@ export default function PromotedSection() {
             </p>
           </div>
           <Link
-            to="#"
+            to="/mike-alpha-videos"
             className="self-start inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm font-semibold px-6 py-3 rounded-md transition-all duration-200 hover:scale-[1.02]"
           >
             Read More
@@ -73,7 +73,7 @@ export default function PromotedSection() {
               Soilless greenhouses represent the edge of horticulture technology. Discover how Mike Alpha precision nutrition supports optimal growth in soilless media.
             </p>
             <Link
-              to="#"
+              to="/greenhouses"
               className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
             >
               Read More <ArrowRight className="w-4 h-4" />
@@ -89,7 +89,7 @@ export default function PromotedSection() {
               From field crops to vegetables and orchards, our open-field programs help farmers improve yield, quality, and resource use efficiency.
             </p>
             <Link
-              to="#"
+              to="/open-field"
               className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
             >
               Read More <ArrowRight className="w-4 h-4" />
