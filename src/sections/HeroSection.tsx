@@ -52,12 +52,12 @@ export default function HeroSection() {
   }, [isPlaying]);
 
   return (
-    <section className="relative w-full h-[500px] md:h-[500px] overflow-hidden">
+    <section className="relative w-full h-[700px] md:h-[700px] overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          src="/images/Hero_new.mp4"
+          src="/images/Hero_v2.mp4"
           autoPlay
           muted
           loop
