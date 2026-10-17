@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ExternalLink } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -10,6 +11,22 @@ import { staggerContainer, fadeUpVariant } from '@/lib/animations';
 export default function ArticleDetail() {
   const { slug } = useParams<{ slug: string }>();
   const article = slug ? findArticleBySlug(slug) : undefined;
+
+  useEffect(() => {
+    const contentEl = document.querySelector('.article-content');
+    if (!contentEl) return;
+    const imgs = contentEl.querySelectorAll('img');
+    imgs.forEach((img) => {
+      img.addEventListener('error', () => {
+        const parentAnchor = img.closest('a');
+        if (parentAnchor && !parentAnchor.textContent?.trim()) {
+          parentAnchor.remove();
+        } else {
+          img.remove();
+        }
+      });
+    });
+  }, [article?.htmlContent]);
 
   if (!article) {
     return (
@@ -97,24 +114,20 @@ export default function ArticleDetail() {
               </motion.div>
             ) : null}
 
-            {article.sourceUrl && (
-              <motion.div
-                variants={fadeUpVariant}
-                className="mt-12 pt-6 border-t border-gray-200 flex items-center justify-between flex-wrap gap-4"
+            <motion.div
+              variants={fadeUpVariant}
+              className="mt-12 pt-6 border-t border-gray-200 flex items-center justify-between flex-wrap gap-4"
+            >
+              <span className="text-sm text-gray-500">
+                Detailed agronomic recommendations provided by Mike Alpha Agronomy Team
+              </span>
+              <Link
+                to="/crop-guides"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
               >
-                <span className="text-sm text-gray-500">
-                  Detailed agronomic recommendations provided by Haifa Group
-                </span>
-                <a
-                  href={article.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
-                >
-                  View on Haifa Group <ExternalLink className="w-4 h-4" />
-                </a>
-              </motion.div>
-            )}
+                Explore Mike Alpha Crop Guides <ChevronRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </main>

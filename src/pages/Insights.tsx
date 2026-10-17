@@ -70,7 +70,7 @@ const faqs = [
   {
     question: 'How do I choose the right fertilizer for my crop?',
     answer:
-      'Use the MultiMatch tool or browse our crop guides to match products to your crop, growth stage, and application method.',
+      'Use our Product Finder or browse our crop guides to match products to your crop, growth stage, and application method.',
   },
   {
     question: 'Can Mike Alpha products be mixed with other inputs?',

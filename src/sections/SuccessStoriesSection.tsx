@@ -16,7 +16,7 @@ const stories = [
     link: '/success-stories',
   },
   {
-    title: 'Multicote™ Agri in Potato: More Yield, Better ROI',
+    title: 'Mike Fuerza Maxima™ in Potato: More Yield, Better ROI',
     excerpt: 'Progressive potato growers in Gujarat adopted a controlled-release nutrition program. Farmers reported significantly improved tuber set, uniform sizing, and a measurable increase in marketable yield compared to their previous fertilizer program.',
     image: '/images/blog-1.jpg',
     link: '/success-stories',

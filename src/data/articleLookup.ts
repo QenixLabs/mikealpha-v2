@@ -27,7 +27,7 @@ export function findArticleBySlug(target: string): LookupArticle | undefined {
   const decodedTarget = decodeURIComponent(target);
   const encodedTarget = encodeURIComponent(target);
 
-  // Haifa recommendation & crop guides details
+  // Mike Alpha recommendation & crop guides details
   const rec = recommendationArticles[target] || 
               recommendationArticles[decodedTarget] || 
               recommendationArticles[encodedTarget];

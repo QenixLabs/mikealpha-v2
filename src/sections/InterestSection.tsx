@@ -88,10 +88,10 @@ const exclusiveImporters: ImporterPartner[] = [
   {
     id: 'sheffa',
     name: 'Sheffa',
-    country: 'Israel',
-    flag: '🇮🇱',
-    location: 'Valley of the Springs, Israel',
-    tagline: 'Pioneering Israeli manufacturer specializing in precision fertilization, dynamic crop protocols and custom fertigation.',
+    country: 'India',
+    flag: '🇮🇳',
+    location: 'Maharashtra & Gujarat, India',
+    tagline: 'Pioneering Indian manufacturer specializing in precision fertilization, dynamic crop protocols and custom fertigation for Indian farmers.',
     specialty: 'Precision Fertilization & Dynamic Nutrition',
     productsUrl: '/products',
     accentColor: '#1e40af',
@@ -106,7 +106,7 @@ const growingMethods: { name: string; icon: LucideIcon }[] = [
   { name: 'Center Pivot', icon: Droplets },
   { name: 'Controlled Release Fertilizers', icon: Timer },
   { name: 'Foliar Feeding', icon: Leaf },
-  { name: 'Nutrigation™', icon: Droplet },
+  { name: 'Precision Fertigation™', icon: Droplet },
   { name: 'Fruit Trees Fertilizers', icon: TreePine },
   { name: 'Greenhouse Agriculture', icon: Warehouse },
 ];
@@ -118,7 +118,7 @@ const methodIconMap: Record<string, string> = {
   'Center Pivot': '/growing-icons/Center-Pivot.png',
   'Controlled Release Fertilizers': '/growing-icons/Controlled-Release-Fertilizers.png',
   'Foliar Feeding': '/growing-icons/Foliar-Feeding.png',
-  'Nutrigation™': '/growing-icons/Nutrigation.png',
+  'Precision Fertigation™': '/growing-icons/Nutrigation.png',
   'Fruit Trees Fertilizers': '/growing-icons/Fruit-Trees-Fertilizers.png',
   'Greenhouse Agriculture': '/growing-icons/Greenhouse-Agriculture.jpg',
 };

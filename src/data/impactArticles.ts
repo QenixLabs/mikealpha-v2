@@ -96,7 +96,7 @@ export const impactArticles: ImpactArticle[] = [
       {
         title: 'Promoting Sustainable Agriculture',
         content:
-          'As the global population grows and the demand for food increases, agricultural production must be conducted in environmentally responsible ways. Mike Alpha aims to provide solutions for an additional 7 million hectares of agricultural land, transitioning them from commodity fertilizers to specialty fertilizers and reducing over 10 million tons of greenhouse gas emissions by 2030. Digital platforms like NutriNet™ and MultiMatch™ help growers match nutrition to their crops’ exact growth needs, improving Nutrient Use Efficiency and minimizing waste.',
+          'As the global population grows and the demand for food increases, agricultural production must be conducted in environmentally responsible ways. Mike Alpha aims to provide solutions for an additional 7 million hectares of agricultural land, transitioning them from commodity fertilizers to specialty fertilizers and reducing over 10 million tons of greenhouse gas emissions by 2030. Digital platforms like Mike Alpha Precision Nutrition and Smart Farming tools help growers match nutrition to their crops’ exact growth needs, improving Nutrient Use Efficiency and minimizing waste.',
       },
       {
         title: 'Conducting Circular Production Methodologies',

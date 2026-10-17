@@ -78,7 +78,7 @@ export const corporateArticles: CorporateArticle[] = [
           'Introduction of high-purity water-soluble potassium nitrate to Indian horticulture and high-value cash crop sectors.',
           'Pioneering drip fertigation protocols across sugarcane, cotton, pomegranate, banana, and potato growing regions.',
           'Establishment of central supply hubs and specialized blending facilities adhering to strict FCO 1985 quality benchmarks.',
-          'Introduction of Multi-K™ and Poly-Feed™ formulations tailored to alkaline, calcareous, and degraded soil profiles common in Indian farming tracts.',
+          'Introduction of Mike Kaliphos™, Mike 19:19:19™, and Vitagea™ formulations tailored to alkaline, calcareous, and degraded soil profiles common in Indian farming tracts.',
           'Expansion of the authorized distributor and dealer network to over 500+ specialized agri-retail centers across key agricultural states.',
           'Introduction of advanced Controlled Release Fertilizers (CRF) and bio-stimulants for climate-resilient farming.',
           'Active collaboration with State Agricultural Universities (SAUs) and ICAR research centers to validate crop nutrition schedules.',

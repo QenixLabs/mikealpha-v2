@@ -109,6 +109,8 @@ export default function App() {
         <Route path="/articles/farming-methods/open-field" element={<PracticeArticleDetail />} />
         <Route path="/open-field" element={<PracticeArticleDetail />} />
 
+        <Route path="/crop-guide" element={<CropGuide />} />
+        <Route path="/crop-guides" element={<CropGuide />} />
         <Route path="/crop-guide/*" element={<CropGuide />} />
         <Route path="/:slug" element={<CropGuide />} />
       </Routes>

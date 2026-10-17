@@ -394,7 +394,7 @@ export default function ConcernFeedback() {
                             type="text"
                             value={formData.productName}
                             onChange={(e) => setFormData({ ...formData, productName: e.target.value })}
-                            placeholder="e.g. Multi-K Potassium Nitrate, Poly-Feed 19-19-19"
+                            placeholder="e.g. Mike Kaliphos, Mike 19:19:19, Mike Specialone"
                             className="w-full h-10 px-3 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:border-primary"
                           />
                         </div>
