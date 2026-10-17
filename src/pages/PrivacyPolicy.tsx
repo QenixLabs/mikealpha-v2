@@ -192,8 +192,8 @@ export default function PrivacyPolicy() {
                       This policy applies to individuals (“Data Principals”) interacting with Mike Alpha through:
                     </p>
                     <ul className="list-disc pl-5 space-y-1.5">
-                      <li>Our official website (<a href="https://mikealpha.in" className="text-primary font-medium">https://mikealpha.in</a>) and web applications (including NutriNet™, MultiMatch™, Deficiency Pro, Nitric Acid Calculator, and Conversion Calculator);</li>
-                      <li>Our mobile applications (including nitrotune, FoliMatch, and agricultural advisory services);</li>
+                      <li>Our official website (<a href="https://mikealpha.in" className="text-primary font-medium">https://mikealpha.in</a>) and web applications (including Mike Alpha Precision Nutrition, Smart Farming tools, Deficiency Pro, Nitric Acid Calculator, and Conversion Calculator);</li>
+                      <li>Our digital services (including precision advisory, fertigation programs, and agricultural advisory services);</li>
                       <li>Commercial engagements as distributors, agro-dealers, commercial growers, or suppliers;</li>
                       <li>In-person agronomic field trials, farmer meetings (Kisan Gosthis), exhibitions, and educational workshops across India.</li>
                     </ul>

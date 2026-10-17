@@ -62,73 +62,73 @@ export const insightsArticles: InsightsArticle[] = [
       {
         title: 'Mike Alpha Insights: Bridging Continents - A Conversation on Leadership and Agribusiness',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/max_1024/public/2026-02/ywtywb_bnr.jpg?itok=uo5w3-Ki',
-        link: 'https://www.haifa-group.com/podcast/mike-alpha-insights-bridging-continents-conversation-leadership-and-agribusiness',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: 2 tanks fertilizer stock solution - the nutritional base for your crop - Episode 2',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-2-tanks-fertilizer-stock-solution-nutritional-base-your-crop-episode-2',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Shifting to water recirculated irrigation systems carries potential benefits - what are the risks and necessities to make the change.',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-shifting-water-recirculated-irrigation-systems-carries-potential-benefits-what',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Lab analysis is often recognized as unnecessary expanse - is it really needed?',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/httpsomnyfmshowsmike-alphatream-greenhouse-plant-nutrition-mike-alpha-grmike-alpha-stream-lab-analysis',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Grafted vines in greenhouses – a growing trend',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-grafted-vines-greenhouses-growing-trend',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Ions Antagonism and Synergism – because shortages do not necessarily mean being short',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-ions-antagonism-and-synergism-because-shortages-do-not-necessarily-mean-being',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Managing Water Contents in your Substrate – How and Why',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-managing-water-contents-your-substrate-how-and-why-mike-alphatream-greenhouse-plant',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: pH Control in soilless cultivation – a crucial factor for nutritional efficiency. Manage it the right way!',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-ph-control-soilless-cultivation-crucial-factor-nutritional-efficiency-manage-it',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Clogged drippers - more common than you think. Yes, there is an easy solution',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-clogged-drippers-more-common-you-think-yes-theres-easy-solution',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: When roots uptake is not enough - Foliar application',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-when-roots-uptake-not-enough-foliar-application',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Calcium nutrition - How small actions can lead to great differences',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-calcium-nutrition-how-small-actions-can-lead-great-differences',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Not just availability - Nutrient ratios and EC are critical for your crop success',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-not-just-availability-nutrient-ratios-and-ec-are-critical-your-crops-success',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Water is the key to life and plant nutrition - What should you consider regarding your water source?',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-water-key-life-and-plant-nutrition-what-should-you-consider-regarding-your-water',
+        image: '/images/logo.png',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStream: Stock solution - the nutritional base for your crop. Simple tips & tricks',
-        image: 'https://www.haifa-group.com/themes/mike-alpha/images/mike-alpha-main-logo.png',
-        link: 'https://www.haifa-group.com/podcast/mike-alphatream-stock-solution-nutritional-base-your-crop-simple-tips-tricks',
+        image: '/images/logo.png',
+        link: '/insights',
       },
     ],
   },
@@ -148,74 +148,74 @@ export const insightsArticles: InsightsArticle[] = [
       {
         title: 'Improving Hass Avocado Performance with Mike AlphaStim™ Vital',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-06/thumbnail_4.jpg?itok=5ZhC447s',
-        link: 'https://www.haifa-group.com/success-stories/avocado-mike-alphatim-vital-chile',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Mike Fuerza maxima Agri in Potato: More Yield, Better ROI',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-06/thumbnail_2.jpg?itok=4ZG8NlIE',
-        link: 'https://www.haifa-group.com/success-stories/Mike Fuerza maxima-agri-potato-colombia-roi',
+          '/crop-guides',
+        link: '/insights Fuerza maxima-agri-potato-colombia-roi',
       },
       {
         title: 'Optimizing Kiwi Cultivation with Mike Alpha 360 Strategy',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-05/thumbnail_3.jpg?itok=XdtPO7lW',
-        link: 'https://www.haifa-group.com/success-stories/mike-alpha-360-kiwi-italy',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Growing Stronger Cucumbers Under Stress',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-05/thumbnail.jpg?itok=DXR_vuYE',
-        link: 'https://www.haifa-group.com/success-stories/wall-up-cucumber-mexico',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Mike AlphaStim™ Powers Banana Performance from the Ground Up',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-04/thumbnail_2.jpg?itok=RhCrUg71',
-        link: 'https://www.haifa-group.com/success-stories/mike-alphatim-banana-mexico',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Taking Citrus Nutrition to the Next Level: Proven Results from South Africa',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-03/thumbnail_1.jpg?itok=TkoZRGrH',
-        link: 'https://www.haifa-group.com/success-stories/mike-alpha-360-citrus-rsa',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Better yield and better NUE in garlic crop',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-03/picture3.jpg?itok=2YGT-9zZ',
-        link: 'https://www.haifa-group.com/success-stories/better-yield-and-better-nue-garlic-crop',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Smarter Nitrogen Decisions in Potatoes with nitrotune™',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-03/thumbnail.jpg?itok=wcjJL9rP',
-        link: 'https://www.haifa-group.com/success-stories/nitrotune-improves-nitrogen-use-in-potato',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'Higher Potato Yields – Adding 25.8% to Grower Profit',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-02/thumbnail.jpg?itok=tOm7Mlle',
-        link: 'https://www.haifa-group.com/success-stories/potato-china-2025',
+          '/crop-guides',
+        link: '/insights',
       },
       {
         title: 'How to increase strawberry yield and profitability using biostimulants',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2026-01/thumbnail.jpg?itok=UQStUT7m',
-        link: 'https://www.haifa-group.com/success-stories/mike-alphatim-protocol-strawberry-usa',
+          '/crop-guides',
+        link: '/insights',
       },
       {
-        title: 'Multicote™ Agri Boosts Potato Yield by 38% Under High Rainfall Conditions in Brazil',
+        title: 'Mike Fuerza Maxima™ (CRF) Boosts Potato Yield by 38% Under High Rainfall Conditions in Brazil',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2025-12/thumbnail_9.jpg?itok=yhuiFbgr',
-        link: 'https://www.haifa-group.com/success-stories/multicote-agri-potato-brazil',
+          '/crop-guides',
+        link: '/insights',
       },
       {
-        title: 'Multicote™ Agri Increased Processing Tomatoes Yield dramatically',
+        title: 'Mike Fuerza Maxima™ (CRF) Increased Processing Tomatoes Yield dramatically',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2025-12/thumbnail_6.jpg?itok=QnVxgZI2',
-        link: 'https://www.haifa-group.com/success-stories/crf-processing-tomato-italy',
+          '/crop-guides',
+        link: '/insights',
       },
     ],
   },
@@ -238,22 +238,22 @@ export const insightsArticles: InsightsArticle[] = [
           {
             question: 'What is the best fertilizer formula for my crop?',
             answer:
-              '<p>In order to plan a suitable fertilizer program, some basic information is required: crop nutritional requirements, soil type, water quality, environment conditions and the type of irrigation system. You can use <a href="https://www.haifa-group.com/nutrinet%E2%84%A2-plant-nutrition-expert-system">Mike Alpha NutriNet</a> web software to plan irrigation schemes and fertilization programs, based on your specific data. For detailed information, please contact us.</p>',
+              '<p>In order to plan a suitable fertilizer program, some basic information is required: crop nutritional requirements, soil type, water quality, environment conditions and the type of irrigation system. You can use <a href="/smart-farming">Mike Alpha Precision Nutrition Program</a> web software to plan irrigation schemes and fertilization programs, based on your specific data. For detailed information, please contact us.</p>',
           },
           {
             question: 'What are the best fertilizers for foliar application?',
             answer:
-              '<p>Successful foliar nutrition requires fully soluble fertilizers with a suitable nutritional composition, and good adhesion to the leaf surface. Fertilizers which can be applied in combination with agrochemicals and allow relatively high spray concentrations are preferred. <a href="https://www.haifa-group.com/products-mike-alpha-bonus">Mike Alpha Bonus</a> products are ideal foliar fertilizers.</p>',
+              '<p>Successful foliar nutrition requires fully soluble fertilizers with a suitable nutritional composition, and good adhesion to the leaf surface. Fertilizers which can be applied in combination with agrochemicals and allow relatively high spray concentrations are preferred. <a href="/crop-guides">Mike Alpha Bonus</a> products are ideal foliar fertilizers.</p>',
           },
           {
             question: 'Where can I find information about foliar application of fertilizers?',
             answer:
-              '<p>Information about foliar nutrition, including useful videos, can be found <a href="https://www.haifa-group.com/articles/foliar-fertilizer">here</a>. With our lookup tool you can find plenty of additional information.</p>',
+              '<p>Information about foliar nutrition, including useful videos, can be found <a href="/crop-guides">here</a>. With our lookup tool you can find plenty of additional information.</p>',
           },
           {
             question: 'Do you offer any tools to facilitate fertilizer dissolution?',
             answer:
-              '<p>Yes. We offer an easy-to-use educator that speeds up dissolution and enhances mixing in the tank. See further <a href="https://www.haifa-group.com/articles/fertilizer-dissolving-tools-preparing-fertilizer-solution-easily" target="_blank">here</a>.</p>',
+              '<p>Yes. We offer an easy-to-use educator that speeds up dissolution and enhances mixing in the tank. See further <a href="/crop-guides">here</a>.</p>',
           },
           {
             question: 'Where can I buy your fertilizers in India?',
@@ -266,9 +266,9 @@ export const insightsArticles: InsightsArticle[] = [
               '<p>Please visit our dedicated <a href="/products/sds-request">SDS Request page</a> to access Safety Data Sheets for all registered Mike Alpha products.</p>',
           },
           {
-            question: 'How can I achieve good Nutrigation?',
+            question: 'How can I achieve good Fertigation?',
             answer:
-              '<p>Good Nutrigation™ needs monitoring. Continuously analyze EC, pH and nutrients in the irrigation water and in soil solution.</p>',
+              '<p>Good Precision Fertigation needs monitoring. Continuously analyze EC, pH and nutrients in the irrigation water and in soil solution.</p>',
           },
           {
             question: 'How can I improve quality parameters in fruits?',
@@ -278,7 +278,7 @@ export const insightsArticles: InsightsArticle[] = [
           {
             question: 'What is the fastest way to correct crop deficiencies?',
             answer:
-              '<p>For prompt correction of deficiencies, apply nutrients by foliar sprays. To identify deficiencies and find the best Mike Alpha solution, feel free to use our <a href="https://www.haifa-group.com/knowledge_center/deficiencies/">crop deficiencies image library</a>.</p>',
+              '<p>For prompt correction of deficiencies, apply nutrients by foliar sprays. To identify deficiencies and find the best Mike Alpha solution, feel free to use our <a href="/crop-guides">crop deficiencies image library</a>.</p>',
           },
         ],
       },
@@ -288,7 +288,7 @@ export const insightsArticles: InsightsArticle[] = [
           {
             question: 'What is the best CRF formula for my crops?',
             answer:
-              '<p>Controlled release fertilizer formulae are characterized by their nutritional composition and release profile. Choosing the right formula, you should consider the nutritional requirements of your crop and the longevity of its growth season. Expected soil temperatures should also be taken into account, as they affect the release rate. Learn more about Mike Alpha <a href="https://www.haifa-group.com/controlled-release-fertilizer">controlled release fertilizers</a>, and feel free to contact us for additional information.</p>',
+              '<p>Controlled release fertilizer formulae are characterized by their nutritional composition and release profile. Choosing the right formula, you should consider the nutritional requirements of your crop and the longevity of its growth season. Expected soil temperatures should also be taken into account, as they affect the release rate. Learn more about Mike Alpha <a href="/crop-guides">controlled release fertilizers</a>, and feel free to contact us for additional information.</p>',
           },
           {
             question: 'Is one application sufficient for the whole growth season?',
@@ -312,17 +312,17 @@ export const insightsArticles: InsightsArticle[] = [
           {
             question: 'What is the best way for fertilization in net houses during the winter?',
             answer:
-              '<p><a href="https://www.haifa-group.com/controlled-release-fertilizer">Controlled release fertilizers</a> offer an ideal fertilization in net houses during the winter.</p>',
+              '<p><a href="/crop-guides">Controlled release fertilizers</a> offer an ideal fertilization in net houses during the winter.</p>',
           },
           {
             question: 'How can I spare technical irrigations?',
             answer:
-              '<p>Apply Multicote before the rainy season to spare the need for technical irrigations.</p>',
+              '<p>Apply Mike Fuerza Maxima before the rainy season to spare the need for technical irrigations.</p>',
           },
           {
             question: 'Is there a way to predict controlled release nutrition throughout the season?',
             answer:
-              '<p>The <a href="https://www.haifa-group.com/lobby/multimatchtm-customize-controlled-release-nutrition-your-crops">FloraMatch<sup>TM</sup> software</a> helps you predict availability of nutrients throughout the season, and to plan Multicote<sup>®</sup> controlled release fertilization accordingly.</p>',
+              '<p>The <a href="/crop-guides">FloraMatch<sup>TM</sup> software</a> helps you predict availability of nutrients throughout the season, and to plan Mike Fuerza Maxima<sup>®</sup> controlled release fertilization accordingly.</p>',
           },
         ],
       },
@@ -332,7 +332,7 @@ export const insightsArticles: InsightsArticle[] = [
           {
             question: 'Do you have potassium nitrate for glass making?',
             answer:
-              '<p>Yes. Mike Alpha produces potassium nitrate technical grade that suit the high standards of the glass industry. Read more about our industrial chemicals <a href="https://www.haifa-group.com/Industrial-Uses">here</a>.</p>',
+              '<p>Yes. Mike Alpha produces potassium nitrate technical grade that suit the high standards of the glass industry. Read more about our industrial chemicals <a href="/crop-guides">here</a>.</p>',
           },
           {
             question: 'Where are your industrial chemicals available?',
@@ -365,7 +365,7 @@ export const insightsArticles: InsightsArticle[] = [
     videoGroups: [
       
       {
-        title: 'Nutrigation™ (fertigation) – The Precise Way to Feed Plants',
+        title: 'Precision Fertigation – The Precise Way to Feed Plants',
         description:
           'The integration of plant nutrition with irrigation has transformed modern agriculture by enabling precise, efficient, and sustainable nutrient management.',
         iframes: [],
@@ -377,7 +377,7 @@ export const insightsArticles: InsightsArticle[] = [
         iframes: [],
       },
       {
-        title: 'Multi-K™ - The Ultimate Source of Potassium',
+        title: 'Mike Potassium Nitrate (13-0-45) - The Ultimate Source of Potassium',
         description:
           'Mike Alpha’s potassium nitrate is a unique source of potassium by its nutritional value, fertilization efficiency, application considerations and environmental impact.',
         iframes: [
@@ -389,13 +389,13 @@ export const insightsArticles: InsightsArticle[] = [
       {
         title: 'Controlled Release Fertilizers - Single Application, Multiple Benefits',
         description:
-          'Multicote™ products are designed to feed plants continuously over months, at maximum nutrient uptake efficiency.',
+          'Mike Fuerza Maxima™ (CRF) products are designed to feed plants continuously over months, at maximum nutrient uptake efficiency.',
         iframes: [],
       },
       {
-        title: 'NutriNet™ - Plant Nutrition Expert System',
+        title: 'Mike Alpha Precision Nutrition Program - Plant Nutrition Expert System',
         description:
-          "Discover Mike Alpha's powerful tool that helps growers to plan irrigation schemes and Nutrigation™ (fertigation) programs, considering the actual growth conditions.",
+          "Discover Mike Alpha's powerful tool that helps growers to plan irrigation schemes and Precision Fertigation programs, considering the actual growth conditions.",
         iframes: [],
       },
       {
@@ -409,22 +409,22 @@ export const insightsArticles: InsightsArticle[] = [
       {
         title: 'Plant Nutrients and Their Functions',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2025-11/plant_nutrient_fuvtions_thumbnail.jpg?itok=HYG-CHIi',
-        link: 'https://www.haifa-group.com/articles/main-functions-plant-nutrients',
+          '/crop-guides',
+        link: '/crop-guides',
       },
       {
         title: 'Mike Alpha Blog',
         description:
           'Dive into the Mike Alpha Blog to learn from the deep expertise of Mike Alpha specialists and explore agronomy insights.',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2025-11/mike-alpha_blog_thumbnail.jpg?itok=ivWtlSmy',
-        link: 'https://www.haifa-group.com/mike-alpha-blog',
+          '/crop-guides',
+        link: '/crop-guides',
       },
       {
-        title: 'NutriNet™ - Plant Nutrition Expert System',
+        title: 'Mike Alpha Precision Nutrition Program - Plant Nutrition Expert System',
         image:
-          'https://www.haifa-group.com/sites/default/files/styles/branch/public/2024-04/NutriNet-MediaC-01_2.jpg?itok=cbQfNiJW',
-        link: 'https://www.haifa-group.com/nutrinet%E2%84%A2-plant-nutrition-expert-system-2',
+          '/crop-guides',
+        link: '/smart-farming',
       },
     ],
   },

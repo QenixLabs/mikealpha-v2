@@ -206,7 +206,7 @@ export default function QualityAssurance() {
                       </span>
                     </div>
                     <div className="grid grid-cols-2 gap-2 pt-1 text-[11px]">
-                      <div><strong>Product:</strong> Multi-K™ 13-0-45</div>
+                      <div><strong>Product:</strong> Mike Potassium Nitrate 13-0-45</div>
                       <div><strong>Total N:</strong> 13.8% (Min 13.0%)</div>
                       <div><strong>Water Soluble K₂O:</strong> 46.4% (Min 45.0%)</div>
                       <div><strong>Moisture:</strong> 0.08% (Max 0.5%)</div>

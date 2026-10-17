@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { useParams, Link, useSearchParams } from 'react-router';
+import { useParams, Link, useSearchParams, useLocation } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   Award,
@@ -260,8 +260,13 @@ function CropGuideCatalog({ missingSlug }: { missingSlug?: string }) {
                 <motion.div
                   key={crop.slug}
                   variants={fadeUpVariant}
-                  className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+                  className="group relative bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col cursor-pointer"
                 >
+                  <Link
+                    to={`/${crop.slug.replace(/^\/+/, '')}`}
+                    className="absolute inset-0 z-20"
+                    aria-label={`View ${crop.cropName} crop guide`}
+                  />
                   {/* Image Thumbnail */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                     <img
@@ -271,7 +276,7 @@ function CropGuideCatalog({ missingSlug }: { missingSlug?: string }) {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-sm text-xs font-semibold text-navy shadow-sm">
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-sm text-xs font-semibold text-navy shadow-sm z-10">
                       {crop.category}
                     </span>
                   </div>
@@ -288,15 +293,10 @@ function CropGuideCatalog({ missingSlug }: { missingSlug?: string }) {
                     </div>
 
                     <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                      <span className="text-xs font-medium text-primary flex items-center gap-1 group-hover:underline">
+                      <span className="text-xs font-semibold text-primary flex items-center gap-1 group-hover:underline">
                         <span>Fertilization Guide</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </span>
-                      <Link
-                        to={`/${crop.slug}`}
-                        className="stretched-link"
-                        aria-label={`View ${crop.cropName} crop guide`}
-                      />
                     </div>
                   </div>
                 </motion.div>
@@ -316,16 +316,18 @@ function CropGuideCatalog({ missingSlug }: { missingSlug?: string }) {
 // Main Crop Guide Router/Component
 // ---------------------------------------------------------------------------
 export default function CropGuide() {
+  const location = useLocation();
   const { slug, '*': splat } = useParams<{ slug?: string; '*': string }>();
-  const rawPathSlug = slug || (splat ? `crop-guide/${splat}` : undefined);
+  const pathFromUrl = location.pathname.replace(/^\/+|\/+$/g, '');
+  const rawPathSlug = pathFromUrl || slug || (splat ? `crop-guide/${splat}` : undefined);
   const pathSlug = rawPathSlug?.replace(/^\/+|\/+$/g, '');
 
-  // If path is specifically /crop-guide with no sub-slug, display catalog
-  if (!pathSlug || pathSlug === 'crop-guide') {
+  // If path is specifically /crop-guide or /crop-guides with no sub-slug, display catalog
+  if (!pathSlug || pathSlug === 'crop-guide' || pathSlug === 'crop-guides') {
     return <CropGuideCatalog />;
   }
 
-  const guide = getCropGuideBySlug(pathSlug);
+  const guide = getCropGuideBySlug(pathSlug) || (slug ? getCropGuideBySlug(slug) : undefined) || (splat ? getCropGuideBySlug(splat) : undefined);
 
   // If slug is not found in cropGuides, display catalog with warning banner
   if (!guide) {
@@ -463,18 +465,18 @@ export default function CropGuide() {
           <aside className="lg:col-span-4">
             <div className="lg:sticky lg:top-24 space-y-6">
               {guide.recommendationsLink && (
-                <div className="bg-primary-light/60 border border-primary/20 rounded-xl p-6 shadow-sm">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    <h4 className="text-xs font-bold text-primary uppercase tracking-wider">
-                      Agronomic Recommendation
-                    </h4>
-                  </div>
-                  {(() => {
-                    const internalUrl = toInternalArticleUrl(guide.recommendationsLink.href);
-                    const content = (
+                (() => {
+                  const internalUrl = toInternalArticleUrl(guide.recommendationsLink.href);
+                  const cardContent = (
+                    <div className="bg-primary-light/60 border border-primary/20 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-primary/40 hover:bg-primary-light/80 transition-all duration-200 cursor-pointer">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Sparkles className="w-4 h-4 text-primary" />
+                        <h4 className="text-xs font-bold text-primary uppercase tracking-wider">
+                          Agronomic Recommendation
+                        </h4>
+                      </div>
                       <div className="flex items-start gap-3">
-                        <div className="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                        <div className="w-9 h-9 rounded-lg bg-primary text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm group-hover:scale-105 transition-transform">
                           <Award className="w-5 h-5" />
                         </div>
                         <div className="flex-1">
@@ -483,27 +485,27 @@ export default function CropGuide() {
                           </span>
                           <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
                             <span>Read Full Protocol</span>
-                            <ChevronRight className="w-3.5 h-3.5" />
+                            <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                           </span>
                         </div>
                       </div>
-                    );
-                    return internalUrl ? (
-                      <Link to={internalUrl} className="group block">
-                        {content}
-                      </Link>
-                    ) : (
-                      <a
-                        href={guide.recommendationsLink.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group block"
-                      >
-                        {content}
-                      </a>
-                    );
-                  })()}
-                </div>
+                    </div>
+                  );
+                  return internalUrl ? (
+                    <Link to={internalUrl} className="group block">
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    <a
+                      href={guide.recommendationsLink.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block"
+                    >
+                      {cardContent}
+                    </a>
+                  );
+                })()
               )}
 
               {/* Quick links & tags */}

@@ -57,14 +57,14 @@ export const cropGuides: CropGuideData[] = [
     "body": [
       "The edible portion of the plant consists of the flower buds before the flowers come into bloom. The budding artichoke flower-head is a cluster of many budding small flowers (an inflorescence), together with many bracts, on an edible base. Once the buds bloom, the structure changes to a coarse, barely edible form. Another variety of the same species is the cardoon, a perennial plant native to the Mediterranean region. Both wild forms and cultivated varieties (cultivars) exist. \nSource: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-25.jpg?itok=v_Igv7JC",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Artichoke plants: a fertilization program | Read More",
-      "href": "https://www.haifa-group.com/artichoke-plants-fertilization-program"
+      "href": "/article/artichoke-plants-fertilization-program"
     },
     "relatedTagsLink": {
       "text": "All related tags for Artichoke",
-      "href": "https://www.haifa-group.com/plants-family/artichoke"
+      "href": "/crop-guides"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -81,9 +81,9 @@ export const cropGuides: CropGuideData[] = [
     "h2": "Lettuce Guide: get the most out of your lettuce fertilizer",
     "h3": "Lettuce Crop Highlights",
     "body": [
-      "Lettuce (Lactuca sativa), the popular leafy vegetable, originates from the Mediterranean region. It has been cultivated for over 4,500 years, with historical records showing its use even in ancient Egypt. Major cultivation areas include California and Arizona in the United States, Europe (notably Spain and Italy), and parts of Asia such as China.",
+      "Lettuce (Lactuca sativa), the popular leafy vegetable, originates from the Mediterranean region. It has been cultivated for over 4,500 years, with historical records showing its use even in ancient Egypt. In India, commercial lettuce cultivation has expanded rapidly across polyhouses, shade nets, and open fields in regions such as Maharashtra (Pune, Nashik), Karnataka (Bengaluru, Ooty outskirts), Himachal Pradesh, and polyhouse clusters around major metropolitan zones.",
       "Successful lettuce yields require careful planning of the crop’s nutrition and attentive monitoring throughout the growth season, with special attention given to the health of the leaves, the edible part of the crop.",
-      "Mike Alpha's pioneering Nutri Haitech™ approach delivers complete nutritional solutions for precision agriculture. Designed to enhance the sustainability and efficiency of your operations, Nutri Haitech™ minimizes waste and pollution while boosting your lettuce yields.",
+      "Mike Alpha's pioneering Mike Alpha Precision Nutrition Program approach delivers complete nutritional solutions for precision agriculture. Designed to enhance the sustainability and efficiency of your operations, Mike Alpha Precision Nutrition Program minimizes waste and pollution while boosting your lettuce yields.",
       "TemperatureLettuce prefers temperate climates, thriving at temperatures between 15-18°C (60-65°F). It is sensitive to high heat, which can cause bolting and bitterness.",
       "Calcium: prevent tip burnThis common disorder, manifested by necrosis of the margins of inner leaves, is caused by calcium deficiency, rapid growth, and inconsistent water supply. It can be prevented by an adequate supply of water and calcium and maintaining proper humidity.",
       "Nitrate: beware of leaf toxicityIn low light conditions, nitrates tend to accumulate in leaves, reaching levels that must not be consumed by humans. To prevent this, nitrogen fertilization should balance nitrate and ammonium while also ensuring proper lighting.",
@@ -91,10 +91,10 @@ export const cropGuides: CropGuideData[] = [
       "Magnesium & Iron for lush leaves While magnesium deficiency causes interveinal yellowing in older leaves, iron deficiency causes the same disorder in young leaves. To keep the entire head in good shape, maintain well-balanced soil fertility and, importantly, proper pH levels to ensure the availability of metallic ions.",
       "Get lettuce crop fertilization recommendations"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-16_10.jpg?itok=stpd7Mji",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Lettuce Fertilizer Recommendations | Read More",
-      "href": "https://www.haifa-group.com/crop-guide/vegetables/lettuce-fertilizers-crop-guide/recommendations"
+      "text": "Lettuce Fertilization Program for Indian Conditions | Read More",
+      "href": "/article/lettuce-fertilizer-recommendations"
     }
   },
   {
@@ -108,12 +108,12 @@ export const cropGuides: CropGuideData[] = [
     "h3": "Broccoli is an edible green plant in the cabbage family whose large flowering head is eaten as a vegetable.",
     "body": [
       "Broccoli (Brassica oleracea var. italica) is a nutrient-demanding cool-season brassica that requires steady soil moisture and continuous nutrient availability to produce dense, high-grade central heads and tender florets.",
-      "Adequate nitrogen and potassium nutrition is essential throughout vegetative development to support robust frame growth before head initiation. Controlled-release fertilizers applied at transplanting or balanced Nutrigation™ programs ensure sustained growth without vegetative excess.",
+      "Adequate nitrogen and potassium nutrition is essential throughout vegetative development to support robust frame growth before head initiation. Controlled-release fertilizers applied at transplanting or balanced Precision Fertigation programs ensure sustained growth without vegetative excess.",
       "Micronutrient balance—particularly boron and molybdenum—is crucial in broccoli production to prevent common physiological disorders like hollow stem, whiptail, and internal browning."
     ],
     "intro": [
       "Broccoli is classified in the Italica cultivar group of the species Brassica oleracea. Broccoli has large flower heads, usually green in color, arranged in a tree-like structure branching out from a thick, edible stalk. The mass of flower heads is surrounded by leaves. Broccoli resembles cauliflower, which is a different cultivar group of the same species.",
-      "Successful broccoli production depends on a well-planned fertilization program that supplies nitrogen, phosphorus, potassium, calcium, and micronutrients at the right times. Mike Alpha's premium fertilizers and Nutrigation™ programs help growers maximize head size, quality, and yield."
+      "Successful broccoli production depends on a well-planned fertilization program that supplies nitrogen, phosphorus, potassium, calcium, and micronutrients at the right times. Mike Alpha's premium fertilizers and Precision Fertigation programs help growers maximize head size, quality, and yield."
     ],
     "highlights": [
       {
@@ -142,22 +142,22 @@ export const cropGuides: CropGuideData[] = [
         "name": "Pre-planting",
         "products": [
           "Mike Alpha MAP™",
-          "Multicote™ Agri"
+          "Mike Fuerza Maxima™ (CRF)"
         ]
       },
       {
         "name": "Establishment",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG",
+          "Mike 19:19:19™",
           "Mike Alpha Micro™ Combi"
         ]
       },
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™",
           "Mike Alpha Micro™ Combi"
         ]
@@ -165,7 +165,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Head development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™",
           "Mike Alpha Bonus™"
@@ -179,7 +179,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "Fertilization of broccoli: Supplying all the needed nutrients for better yield | Read More",
-        "href": "https://www.haifa-group.com/fertilization-broccoli-supplying-all-needed-nutrients-better-yield-0",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -188,15 +188,15 @@ export const cropGuides: CropGuideData[] = [
         "icon": "pdf"
       },
       {
-        "text": "Mike Alpha, Nutrigation™ for vegetable crops | Read More",
-        "href": "https://www.haifa-group.com/nutrigation",
+        "text": "Mike Alpha, Precision Fertigation for vegetable crops | Read More",
+        "href": "/smart-farming",
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-23.jpg?itok=2y8FA0yV",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of broccoli: Supplying all the needed nutrients for better yield | Read More",
-      "href": "https://www.haifa-group.com/fertilization-broccoli-supplying-all-needed-nutrients-better-yield-0"
+      "href": "/article/fertilization-broccoli-supplying-all-needed-nutrients-better-yield-0"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -219,7 +219,7 @@ export const cropGuides: CropGuideData[] = [
     ],
     "intro": [
       "Melons are warm-season crops that demand careful attention to water, nutrients, and environmental conditions. From germination through fruit ripening, each growth stage has specific nutritional needs that directly affect sugar content, fruit size, and shelf life.",
-      "Mike Alpha's complete fertilizer portfolio supports melon growers with proven Nutrigation™ programs, controlled-release fertilizers, and foliar solutions designed to maximize yield and fruit quality."
+      "Mike Alpha's complete fertilizer portfolio supports melon growers with proven Precision Fertigation programs, controlled-release fertilizers, and foliar solutions designed to maximize yield and fruit quality."
     ],
     "highlights": [
       {
@@ -236,7 +236,7 @@ export const cropGuides: CropGuideData[] = [
       },
       {
         "title": "Controlled irrigation",
-        "text": "Drip irrigation with Nutrigation™ delivers water and nutrients precisely while preventing fruit cracking."
+        "text": "Drip irrigation with Precision Fertigation delivers water and nutrients precisely while preventing fruit cracking."
       },
       {
         "title": "Salinity sensitivity",
@@ -247,24 +247,24 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Pre-planting",
         "products": [
-          "Multicote™ Agri",
+          "Mike Fuerza Maxima™ (CRF)",
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG"
+          "Mike 19:19:19™"
         ]
       },
       {
         "name": "Establishment",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG",
+          "Mike 19:19:19™",
           "Mike Alpha Micro™ Combi"
         ]
       },
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™",
           "Mike Alpha Micro™ Combi"
         ]
@@ -272,7 +272,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Flowering & fruit set",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™",
           "Mike Alpha Micro™ Combi"
@@ -281,7 +281,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Fruit development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Bonus™",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™"
@@ -302,7 +302,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "Growing melons with Mike Alpha fertilizers | Read More",
-        "href": "https://www.haifa-group.com/growing-melons-haifa-fertilizers",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -311,15 +311,15 @@ export const cropGuides: CropGuideData[] = [
         "icon": "pdf"
       },
       {
-        "text": "Mike Alpha, Nutrigation™ for vegetable crops | Read More",
-        "href": "https://www.haifa-group.com/nutrigation",
+        "text": "Mike Alpha, Precision Fertigation for vegetable crops | Read More",
+        "href": "/smart-farming",
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-17.jpg?itok=z-t9RNjB",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Growing melons with Mike Alpha fertilizers | Read More",
-      "href": "https://www.haifa-group.com/growing-melons-haifa-fertilizers"
+      "href": "/article/growing-melons-mike-alpha-fertilizers"
     }
   },
   {
@@ -367,7 +367,7 @@ export const cropGuides: CropGuideData[] = [
         "name": "Pre-planting",
         "products": [
           "Mike Alpha MAP™",
-          "Multicote™ Agri",
+          "Mike Fuerza Maxima™ (CRF)",
           "Mike Alpha Micro™ Combi"
         ]
       },
@@ -375,22 +375,22 @@ export const cropGuides: CropGuideData[] = [
         "name": "Establishment",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG",
+          "Mike 19:19:19™",
           "Mike Alpha Micro™ Combi"
         ]
       },
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™"
         ]
       },
       {
         "name": "Head development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™",
           "Mike Alpha Bonus™"
@@ -404,7 +404,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "Fertilization of cabbage and cauliflower in open field | Read More",
-        "href": "https://www.haifa-group.com/fertilization-cabbage-and-cauliflower-open-field-1",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -414,18 +414,18 @@ export const cropGuides: CropGuideData[] = [
       },
       {
         "text": "All related tags for Cabbage | Read More",
-        "href": "https://www.haifa-group.com/plants-family/cabbage",
+        "href": "/crop-guides",
         "icon": "tag"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-22.jpg?itok=-jGvNvjM",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of cabbage and cauliflower in open field | Read More",
-      "href": "https://www.haifa-group.com/fertilization-cabbage-and-cauliflower-open-field-1"
+      "href": "/article/fertilization-cabbage-and-cauliflower-open-field-1"
     },
     "relatedTagsLink": {
       "text": "All related tags for Cabbage",
-      "href": "https://www.haifa-group.com/plants-family/cabbage"
+      "href": "/crop-guides"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -444,7 +444,7 @@ export const cropGuides: CropGuideData[] = [
     "body": [
       "Experienced onion growers seeking premium yields understand that careful planning and management of plant nutrition is essential. Onions have a shallow, sparse root system, making efficient nutrient delivery near the root zone critical.",
       "Early season nutrition requires readily available phosphorus and moderate nitrogen to develop sufficient leaf area before bulbing begins. Excess nitrogen late in the season can delay maturity and impair bulb storage quality.",
-      "High potassium inputs during bulb expansion improve bulb firmness, skin thickness, and resistance to storage rot. Nitrate-based fertilizers (Multi-K™) optimize nutrient uptake and prevent soil acidification."
+      "High potassium inputs during bulb expansion improve bulb firmness, skin thickness, and resistance to storage rot. Nitrate-based fertilizers (Mike Potassium Nitrate (13-0-45)) optimize nutrient uptake and prevent soil acidification."
     ],
     "intro": [
       "Experienced onion growers seeking quality yields know that careful planning and management of fertilization is a must. Mike Alpha, leveraging decades of expertise, empowers onion growers with a comprehensive guide that explores onion nutrition, offering detailed recommendations based on premium onion fertilizer products. With this knowledge, you can maximize the effectiveness of your onion fertilizer program, driving higher yields and a superior cost-to-benefit ratio.",
@@ -480,7 +480,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Pre-planting",
         "products": [
-          "Multicote™ Agri 15-15-15",
+          "Mike Fuerza Maxima™ 15-5-5",
           "Mike Alpha MAP™"
         ]
       },
@@ -488,23 +488,23 @@ export const cropGuides: CropGuideData[] = [
         "name": "Establishment",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG",
-          "Poly-Feed™ Foliar"
+          "Mike 19:19:19™",
+          "Mike 19:19:19 Foliar Booster"
         ]
       },
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Turbo-K™ 15-15-15",
-          "Poly-Feed™ GG",
-          "Poly-Feed™ Foliar"
+          "Mike 19:19:19™",
+          "Mike 19:19:19 Foliar Booster"
         ]
       },
       {
         "name": "Bulb initiation",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Mag™",
           "Mike Alpha Cal™"
         ]
@@ -512,7 +512,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Bulb development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Turbo-K™ 15-15-15",
           "Mike Alpha Bonus™",
           "Mike Alpha Cal™",
@@ -523,7 +523,7 @@ export const cropGuides: CropGuideData[] = [
         "name": "Maturation",
         "products": [
           "Mike Alpha Bonus™",
-          "Poly-Feed™ Foliar"
+          "Mike 19:19:19 Foliar Booster"
         ]
       }
     ],
@@ -534,7 +534,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "Complete fertilization program for onion | Read More",
-        "href": "https://www.haifa-group.com/complete-fertilization-program-onion",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -543,15 +543,15 @@ export const cropGuides: CropGuideData[] = [
         "icon": "pdf"
       },
       {
-        "text": "Mike Alpha, Nutrigation™ for vegetable crops | Read More",
-        "href": "https://www.haifa-group.com/nutrigation",
+        "text": "Mike Alpha, Precision Fertigation for vegetable crops | Read More",
+        "href": "/smart-farming",
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_650x575-300dpi_05.jpg?itok=dAQD91x6",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Complete Fertilization Program for Onion | Read More",
-      "href": "https://www.haifa-group.com/complete-fertilization-program-onion"
+      "href": "/article/complete-fertilization-program-onion"
     }
   },
   {
@@ -599,21 +599,21 @@ export const cropGuides: CropGuideData[] = [
         "name": "Pre-planting",
         "products": [
           "Mike Alpha MAP™",
-          "Multicote™ Agri",
-          "Poly-Feed™ GG"
+          "Mike Fuerza Maxima™ (CRF)",
+          "Mike 19:19:19™"
         ]
       },
       {
         "name": "Germination",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ Foliar"
+          "Mike 19:19:19 Foliar Booster"
         ]
       },
       {
         "name": "Root establishment",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha MAP™",
           "Mike Alpha Micro™ Combi"
         ]
@@ -621,15 +621,15 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™"
         ]
       },
       {
         "name": "Root development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Bonus™",
           "Mike Alpha Mag™"
@@ -639,7 +639,7 @@ export const cropGuides: CropGuideData[] = [
         "name": "Maturation",
         "products": [
           "Mike Alpha Bonus™",
-          "Poly-Feed™ Foliar"
+          "Mike 19:19:19 Foliar Booster"
         ]
       }
     ],
@@ -650,7 +650,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "How to grow carrots with Mike Alpha fertilizers | Read More",
-        "href": "https://www.haifa-group.com/how-grow-carrots-mike-alpha-fertilizers",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -660,18 +660,18 @@ export const cropGuides: CropGuideData[] = [
       },
       {
         "text": "All related tags for Carrot | Read More",
-        "href": "https://www.haifa-group.com/plants-family/carrot",
+        "href": "/crop-guides",
         "icon": "tag"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-15.jpg?itok=W0SCVg7P",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Carrot Fertilization & Crop Guide | Read More",
-      "href": "https://www.haifa-group.com/carrot"
+      "href": "/article/carrot"
     },
     "relatedTagsLink": {
       "text": "All related tags for Carrot",
-      "href": "https://www.haifa-group.com/plants-family/carrot"
+      "href": "/crop-guides"
     }
   },
   {
@@ -711,7 +711,7 @@ export const cropGuides: CropGuideData[] = [
       },
       {
         "title": "Adapt irrigation to root structure",
-        "text": "Use drip irrigation with Nutrigation™ for precise nutrient and water delivery. Avoid both water stress and waterlogging to support healthy root systems and nutrient uptake."
+        "text": "Use drip irrigation with Precision Fertigation for precise nutrient and water delivery. Avoid both water stress and waterlogging to support healthy root systems and nutrient uptake."
       },
       {
         "title": "Manage salinity",
@@ -730,36 +730,36 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Establishment & Vegetative",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha MAP™",
           "Mike Alpha Mag™",
           "Mike Alpha Cal GG™",
           "Mike Alpha Micro Combi™",
-          "Poly-Feed GG™ (*)",
+          "Mike 19:19:19™ (*)",
           "Mike AlphaStim™ Promo"
         ]
       },
       {
         "name": "Flowering & fruit set",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha MAP™",
           "Mike Alpha Mag™",
           "Mike Alpha Cal GG™",
           "Mike Alpha Micro Combi™",
-          "Poly-Feed GG™ (*)",
-          "Poly-Feed™ STIM Armor (*)"
+          "Mike 19:19:19™ (*)",
+          "Mike Specialone Complex™ (*)"
         ]
       },
       {
         "name": "Fruit development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Mag™",
           "Mike Alpha Cal GG™",
           "Mike Alpha Micro Combi™",
-          "Poly-Feed GG™ (*)",
-          "Poly-Feed™ STIM Armor (*)",
+          "Mike 19:19:19™ (*)",
+          "Mike Specialone Complex™ (*)",
           "Mike AlphaStim™ KIR",
           "Mike AlphaStim™ Calmaster"
         ]
@@ -767,11 +767,11 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Ripening & harvest",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Mag™",
           "Mike Alpha Cal GG™",
           "Mike Alpha Micro Combi™",
-          "Poly-Feed GG™ (*)",
+          "Mike 19:19:19™ (*)",
           "Mike AlphaStim™ KIR",
           "Mike AlphaStim™ Calmaster"
         ]
@@ -785,7 +785,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "Pepper Fertilizer & Crop Guide: Growing Pepper Crop | Read More",
-        "href": "https://www.haifa-group.com/articles/crop-guide-growing-peppers",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -794,15 +794,15 @@ export const cropGuides: CropGuideData[] = [
         "icon": "pdf"
       },
       {
-        "text": "Mike Alpha, Nutrigation™ for vegetable crops | Read More",
-        "href": "https://www.haifa-group.com/nutrigation",
+        "text": "Mike Alpha, Precision Fertigation for vegetable crops | Read More",
+        "href": "/smart-farming",
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_650x575-300dpi_06.jpg?itok=JqKGt2gk",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Pepper Fertilizer & Crop Guide: Growing Pepper Crop | Read More",
-      "href": "https://www.haifa-group.com/articles/crop-guide-growing-peppers"
+      "href": "/article/crop-guide-growing-peppers"
     }
   },
   {
@@ -850,7 +850,7 @@ export const cropGuides: CropGuideData[] = [
         "name": "Pre-planting",
         "products": [
           "Mike Alpha MAP™",
-          "Multicote™ Agri",
+          "Mike Fuerza Maxima™ (CRF)",
           "Mike Alpha Micro™ Combi"
         ]
       },
@@ -858,22 +858,22 @@ export const cropGuides: CropGuideData[] = [
         "name": "Establishment",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG",
+          "Mike 19:19:19™",
           "Mike Alpha Micro™ Combi"
         ]
       },
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™"
         ]
       },
       {
         "name": "Curd development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™",
           "Mike Alpha Bonus™"
@@ -887,7 +887,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "Fertilization of cabbage and cauliflower in open field | Read More",
-        "href": "https://www.haifa-group.com/fertilization-cabbage-and-cauliflower-open-field-1",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -901,10 +901,10 @@ export const cropGuides: CropGuideData[] = [
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-20.jpg?itok=qXnjztoS",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of cabbage and cauliflower in open field | Read More",
-      "href": "https://www.haifa-group.com/fertilization-cabbage-and-cauliflower-open-field-1"
+      "href": "/article/fertilization-cabbage-and-cauliflower-open-field-1"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -955,16 +955,16 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Pre-planting",
         "products": [
-          "Multicote™ Agri",
+          "Mike Fuerza Maxima™ (CRF)",
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG"
+          "Mike 19:19:19™"
         ]
       },
       {
         "name": "Vine growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™",
           "Mike Alpha Micro™ Combi"
         ]
@@ -972,7 +972,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Flowering & fruit set",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™"
         ]
@@ -980,7 +980,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Fruit development",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Bonus™",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™"
@@ -995,13 +995,13 @@ export const cropGuides: CropGuideData[] = [
       }
     ],
     "notes": [
-      "Customize the ideal fertilization program for your pumpkin crop with Mike Alpha NutriNet™.",
+      "Customize the ideal fertilization program for your pumpkin crop with Mike Alpha Precision Nutrition Program.",
       "Avoid overhead irrigation late in the day to reduce foliar disease pressure."
     ],
     "resources": [
       {
         "text": "Pumpkin Fertilizer and Crop Guide | Read More",
-        "href": "https://www.haifa-group.com/growing-pumpkins-haifa-fertilizers-0",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -1010,15 +1010,15 @@ export const cropGuides: CropGuideData[] = [
         "icon": "pdf"
       },
       {
-        "text": "Mike Alpha, Nutrigation™ for vegetable crops | Read More",
-        "href": "https://www.haifa-group.com/nutrigation",
+        "text": "Mike Alpha, Precision Fertigation for vegetable crops | Read More",
+        "href": "/smart-farming",
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-19.jpg?itok=W31kEvqY",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Pumpkin Fertilizer and Crop Guide | Read More",
-      "href": "https://www.haifa-group.com/growing-pumpkins-haifa-fertilizers-0"
+      "href": "/article/growing-pumpkins-mike-alpha-fertilizers-0"
     }
   },
   {
@@ -1032,7 +1032,7 @@ export const cropGuides: CropGuideData[] = [
     "h3": "Maximize cucumber yield and quality with precision nutrition at every growth stage.",
     "body": [
       "Cucumbers (Cucumis sativus) grow rapidly and produce heavy yields over a prolonged harvest period, requiring continuous, balanced fertigation.",
-      "Nutrigation™ programs should deliver consistent nitrate nitrogen and high potassium throughout the harvesting period to prevent fruit crookedness and tapering.",
+      "Precision Fertigation programs should deliver consistent nitrate nitrogen and high potassium throughout the harvesting period to prevent fruit crookedness and tapering.",
       "Balanced calcium and magnesium feeding prevents pale leaves and leaf chlorosis, sustaining high photosynthetic rates and crisp fruit quality."
     ],
     "intro": [
@@ -1058,7 +1058,7 @@ export const cropGuides: CropGuideData[] = [
       },
       {
         "title": "Frequent irrigation",
-        "text": "Cucumbers are 95% water. Drip irrigation with Nutrigation™ ensures steady growth and fruit set."
+        "text": "Cucumbers are 95% water. Drip irrigation with Precision Fertigation ensures steady growth and fruit set."
       }
     ],
     "growthStages": [
@@ -1066,30 +1066,30 @@ export const cropGuides: CropGuideData[] = [
         "name": "Pre-planting",
         "products": [
           "Mike Alpha MAP™",
-          "Multicote™ Agri",
-          "Poly-Feed™ GG"
+          "Mike Fuerza Maxima™ (CRF)",
+          "Mike 19:19:19™"
         ]
       },
       {
         "name": "Establishment",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG",
+          "Mike 19:19:19™",
           "Mike Alpha Micro™ Combi"
         ]
       },
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™"
         ]
       },
       {
         "name": "Flowering & fruit set",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™"
         ]
@@ -1097,7 +1097,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Harvest period",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Bonus™",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™"
@@ -1111,7 +1111,7 @@ export const cropGuides: CropGuideData[] = [
     "resources": [
       {
         "text": "Cucumber Fertilizer Schedule – Crop Guide | Read More",
-        "href": "https://www.haifa-group.com/cucumber-fertilizer/crop-guide-cucumber-fertilization-recommendations",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -1120,15 +1120,15 @@ export const cropGuides: CropGuideData[] = [
         "icon": "pdf"
       },
       {
-        "text": "Mike Alpha, Nutrigation™ for vegetable crops | Read More",
-        "href": "https://www.haifa-group.com/nutrigation",
+        "text": "Mike Alpha, Precision Fertigation for vegetable crops | Read More",
+        "href": "/smart-farming",
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-14.jpg?itok=-nFobbOg",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Cucumber Fertilization Recommendations | Read More",
-      "href": "https://www.haifa-group.com/crop-guide-cucumber-fertilization-recommendations"
+      "href": "/article/crop-guide-cucumber-fertilization-recommendations"
     }
   },
   {
@@ -1176,30 +1176,30 @@ export const cropGuides: CropGuideData[] = [
         "name": "Pre-planting",
         "products": [
           "Mike Alpha MAP™",
-          "Multicote™ Agri",
-          "Poly-Feed™ GG"
+          "Mike Fuerza Maxima™ (CRF)",
+          "Mike 19:19:19™"
         ]
       },
       {
         "name": "Establishment",
         "products": [
           "Mike Alpha MAP™",
-          "Poly-Feed™ GG",
+          "Mike 19:19:19™",
           "Mike Alpha Micro™ Combi"
         ]
       },
       {
         "name": "Vegetative growth",
         "products": [
-          "Multi-K™",
-          "Poly-Feed™ GG",
+          "Mike Potassium Nitrate (13-0-45)",
+          "Mike 19:19:19™",
           "Mike Alpha Mag™"
         ]
       },
       {
         "name": "Flowering & fruit set",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™"
         ]
@@ -1207,7 +1207,7 @@ export const cropGuides: CropGuideData[] = [
       {
         "name": "Harvest period",
         "products": [
-          "Multi-K™",
+          "Mike Potassium Nitrate (13-0-45)",
           "Mike Alpha Bonus™",
           "Mike Alpha Cal™",
           "Mike Alpha Mag™"
@@ -1216,12 +1216,12 @@ export const cropGuides: CropGuideData[] = [
     ],
     "notes": [
       "Avoid wetting foliage when irrigating to reduce powdery mildew pressure.",
-      "Courgettes in greenhouses benefit from controlled-release base dressing plus Nutrigation™."
+      "Courgettes in greenhouses benefit from controlled-release base dressing plus Precision Fertigation."
     ],
     "resources": [
       {
         "text": "Fertilization of courgette in greenhouses | Read More",
-        "href": "https://www.haifa-group.com/fertilization-courgette-greenhouses-0",
+        "href": "/crop-guides",
         "icon": "recommendation"
       },
       {
@@ -1230,15 +1230,15 @@ export const cropGuides: CropGuideData[] = [
         "icon": "pdf"
       },
       {
-        "text": "Mike Alpha, Nutrigation™ for vegetable crops | Read More",
-        "href": "https://www.haifa-group.com/nutrigation",
+        "text": "Mike Alpha, Precision Fertigation for vegetable crops | Read More",
+        "href": "/smart-farming",
         "icon": "article"
       }
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-21.jpg?itok=LYfFZ5Xv",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of courgette in greenhouses | Read More",
-      "href": "https://www.haifa-group.com/fertilization-courgette-greenhouses-0"
+      "href": "/article/fertilization-courgette-greenhouses-0"
     }
   },
   {
@@ -1254,10 +1254,10 @@ export const cropGuides: CropGuideData[] = [
       "Botanically classified as a berry, the fruit contains numerous small, soft, edible seeds that taste bitter because they contain or are covered in nicotinoid alkaloids, like the related tobacco.",
       "Source: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-18.jpg?itok=yvUAFvE4",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization and fertigation recommendation for growing eggplants | Read More",
-      "href": "https://www.haifa-group.com/fertilization-and-fertigation-recommendation-growing-eggplants"
+      "href": "/article/fertilization-and-fertigation-recommendation-growing-eggplants"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -1281,28 +1281,28 @@ export const cropGuides: CropGuideData[] = [
       "flowering & fruit set",
       "Fruit development",
       "Ripening & harvest",
-      "Multicote™ Agri 6M*",
-      "Multi-K™ GG",
+      "Mike Fuerza Maxima™ (CRF) 6M*",
+      "Mike Potassium Nitrate (13-0-45)",
       "Mike Alpha MAP™",
       "Mike Alpha Cal™ GG",
-      "Poly-Feed™ GG*",
+      "Mike 19:19:19™*",
       "Mike Alpha Micro™ Combi",
       "Mike Alpha Micro™ Bor-feed",
-      "Poly-Feed™ FoliarVegetative Booster",
+      "Mike 19:19:19 Foliar Booster",
       "Mike Alpha Bonus™",
       "Mike Alpha Mag™",
       "Mike AlphaStim™ Booster",
       "Mike AlphaStim™ Calmaster",
       "* The formula should be determined according to the growth condition and stage"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_650x575-300dpi_04.jpg?itok=_SQeyHmK",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Tomato Fertilizers & Crop Guide: About the Crop | Read More",
-      "href": "https://www.haifa-group.com/tomato-fertilizer/crop-guide-tomato"
+      "href": "/article/crop-guide-tomato"
     },
     "relatedTagsLink": {
       "text": "All related tags for Tomato",
-      "href": "https://www.haifa-group.com/plants-family/tomato"
+      "href": "/crop-guides"
     }
   },
   {
@@ -1328,13 +1328,13 @@ export const cropGuides: CropGuideData[] = [
       "530-1050",
       "300",
       "Nitrogen should be split into 2-4 applications according to soil type.Don’t supply high amount of nitrogen at the end of the growing season.",
-      "Multi-K = Potassium Nitrate (13% N and 46% K2O)SSP = Single Super Phosphate (19% P2O5)SOP = Potassium Sulphate (50% K2O)AN = Ammonium Nitrate (34% N)AS = Ammonium Sulphate (21% N)",
+      "Mike Potassium Nitrate = Potassium Nitrate (13% N and 46% K2O)SSP = Single Super Phosphate (19% P2O5)SOP = Potassium Sulphate (50% K2O)AN = Ammonium Nitrate (34% N)AS = Ammonium Sulphate (21% N)",
       "Fertilization recommendations : Puebla State",
       "At planting: 100 liter/Ha of liquid 8-24-0.",
       "90 days later: 300 Kg/Ha Ammonium nitrate (34% N) + 200 Kg/Ha 0-46-0.",
-      "Days 140-270 after planting: Foliar spraying - 4 Kg/Ha Multi-K, weekly.",
+      "Days 140-270 after planting: Foliar spraying - 4 Kg/Ha Mike Potassium Nitrate, weekly.",
       "Fertilization schedule by side-dressing",
-      "Prill’Or = prills made of Multi-K + ammonium nitrate.",
+      "Prill’Or = prills made of Mike Potassium Nitrate + ammonium nitrate.",
       "Suggested by: Oded Rottenberg.",
       "Country: Mexico.",
       "Growing medium: Soil.Soil type: Light.Plant population: 200,000-220,000 /Ha.Expected yield: 20 T/Ha.",
@@ -1345,7 +1345,7 @@ export const cropGuides: CropGuideData[] = [
       "Multi-npK: 12-2-44.",
       "Learn more about Mike Alpha's garlic fertilizer products & solutions."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-26.jpg?itok=5O9VbHFm"
+    "mobileBannerImage": "/crop-guides"
   },
   {
     "cropName": "Watermelon",
@@ -1359,10 +1359,10 @@ export const cropGuides: CropGuideData[] = [
     "body": [
       "There is evidence from seeds in Pharao tombs of watermelon cultivation in Ancient Egypt. Watermelon is grown in tropical and subtropical areas worldwide for its large edible fruit, also known as a watermelon, which is a special kind of berry with a hard rind and no internal division, botanically called a pepo. The sweet, juicy flesh is usually deep red to pink, with many black seeds, although seedless varieties have been cultivated. The fruit can be eaten raw or pickled and the rind is edible after cooking.\nSource: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/34362_nutri_haitech_headers_more_fruit_650x575_chosen_300dpi-24.jpg?itok=XCSwpGKl",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Nutritional Recommendations for Watermelon in Open Field | Read More",
-      "href": "https://www.haifa-group.com/nutritional-recommendations-watermelon-cultivation"
+      "href": "/article/nutritional-recommendations-watermelon-cultivation"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -1380,13 +1380,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Almond (Prunus dulcis) production requires intensive nutritional management to support both the developing nut crop and the formation of fruit spurs for the following season.",
-      "Potassium is the most heavily extracted nutrient in almonds, directly influencing nut size, kernel weight, and tree vigor. Multi-K™ potassium nitrate applied through fertigation satisfies this heavy demand efficiently.",
+      "Potassium is the most heavily extracted nutrient in almonds, directly influencing nut size, kernel weight, and tree vigor. Mike Potassium Nitrate (13-0-45) potassium nitrate applied through fertigation satisfies this heavy demand efficiently.",
       "Post-harvest foliar nutrition with nitrogen, zinc, and boron builds tree reserves before winter dormancy, ensuring strong bloom and excellent nut set in early spring."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-01/headers_nutri_haitech_almond2.jpg?itok=awud4sUb",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Nutrients rates ideal for growing almonds in Spain | Read More",
-      "href": "https://www.haifa-group.com/nutrients-rates-ideal-growing-almonds-spain"
+      "href": "/article/nutrients-rates-ideal-growing-almonds-spain"
     }
   },
   {
@@ -1403,10 +1403,10 @@ export const cropGuides: CropGuideData[] = [
       "Balanced N-P-K applications after harvest stimulate uniform vegetative flushes. Potassium application during fruit sizing enhances fruit sweetness, pulp thickness, and prevents fruit drop.",
       "Foliar micronutrient sprays containing zinc, magnesium, and boron improve panicle emergence and fruit retention."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Longan%2520Mobile%2520banner.png?itok=_xVhBJ01",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "How to grow healthy and beautiful longan fruits | Read More",
-      "href": "https://www.haifa-group.com/how-grow-healthy-and-beautiful-longan-fruits"
+      "href": "/article/how-grow-healthy-and-beautiful-longan-fruits"
     }
   },
   {
@@ -1423,14 +1423,14 @@ export const cropGuides: CropGuideData[] = [
       "Spring applications of nitrate nitrogen and potassium promote rapid fruit cell division and stone hardening. Adequate potassium enhances fruit firmness and aroma.",
       "Post-harvest fertilization restores nutrient reserves in tree woody tissues, securing bud hardiness through winter and supporting early spring blossom vigor."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-01/headers_nutri_haitech_apricot_mobile.jpg?itok=v2VY9vkr",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of apricots | Read More",
-      "href": "https://www.haifa-group.com/fertilization-apricots"
+      "href": "/article/fertilization-apricots"
     },
     "relatedTagsLink": {
       "text": "All related tags for Apricot",
-      "href": "https://www.haifa-group.com/plants-family/apricot"
+      "href": "/crop-guides"
     }
   },
   {
@@ -1457,22 +1457,22 @@ export const cropGuides: CropGuideData[] = [
       "Flowering to fruit-set",
       "Fruit growth",
       "After harvest",
-      "Poly-Feed™ Drip",
-      "Poly-Feed™ Foliar",
-      "Poly-Feed™ Stim ENDURO",
+      "Mike 19:19:19™ Drip",
+      "Mike 19:19:19 Foliar Booster",
+      "Mike 19:19:19™ Stim ENDURO",
       "Mike Alpha Cal™",
       "Mike Alpha Mag™",
       "Mike Alpha Bonus™",
       "Mike Alpha SOP™",
-      "Nutrigation™",
+      "Precision Fertigation",
       "Foliar application",
       "Precision fertilization is not just about feeding the mango tree—it's about aligning nutrition with the plant’s growth stages and environmental conditions. Managing salinity, optimizing nutrient availability, and inducing flowering through targeted foliar sprays can make the difference between an average harvest and a standout one.",
       "Mike Alpha's pioneering Nutri Haitech™ approach delivers complete nutritional solutions for precision agriculture. Designed to enhance the sustainability and efficiency of your operations, Nutri Haitech™ minimizes waste and pollution while, of course, boosting your Mango yields."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/headers_nutri_haitech_mango2.jpg?itok=ISATj3Ya",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Mango Fertilizer - Recommended Fertilization Program for Bearing Mango Trees | Read More",
-      "href": "https://www.haifa-group.com/croprecommendations/fertilization-program-bearing-mango"
+      "href": "/article/fertilization-program-bearing-mango"
     }
   },
   {
@@ -1499,14 +1499,14 @@ export const cropGuides: CropGuideData[] = [
       "Color Breaking till Harvest",
       "Post Harvest",
       "MO-90",
-      "Multicote™ Agri 8M1",
-      "Multicote™ Agri 3M1",
+      "Mike Fuerza Maxima™ (CRF) 8M1",
+      "Mike Fuerza Maxima™ (CRF) 3M1",
       "Mike Alpha Soluble Duo™ Agri 30-0-9+15CaO",
-      "Poly-Feed™ stim Spark 12-42-12+ME+2HA",
-      "Poly-Feed™ GG 21-21-21+ME",
+      "Mike 19:19:19™ stim Spark 12-42-12+ME+2HA",
+      "Mike 19:19:19™ 21-21-21+ME",
       "Poly Feed™ GG 10-10-43+ME",
-      "Multi-K™ GG",
-      "Poly-Feed Drip 16-8-34+2+HME",
+      "Mike Potassium Nitrate (13-0-45)",
+      "Mike 19:19:19 Drip 16-8-34+2+HME",
       "Mike Alpha Mag™",
       "Mike Alpha MKP™",
       "Mike Alpha Micro™ Fe EDDHA",
@@ -1519,19 +1519,19 @@ export const cropGuides: CropGuideData[] = [
       "Mike AlphaStim™ Vital",
       "Mike AlphaStim™ eNergy",
       "Soil application",
-      "Nutrigation™",
+      "Precision Fertigation",
       "Foliar application",
-      "1 Use the MultiMatch™ tool to suit Multicote™ Agri formula to the specific conditions in your orchard",
+      "1 Use the Mike Alpha Product Matcher tool to suit Mike Fuerza Maxima™ (CRF) formula to the specific conditions in your orchard",
       "Download printable leaflet"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-01/headers_nutri_haitech_apple2.jpg?itok=6gQEukK2",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Get better yield from apple trees | Read More",
-      "href": "https://www.haifa-group.com/get-better-yield-apple-trees"
+      "href": "/article/get-better-yield-apple-trees"
     },
     "relatedTagsLink": {
       "text": "All related tags for Apple Crop",
-      "href": "https://www.haifa-group.com/plants-family/apple-crop"
+      "href": "/crop-guides"
     }
   },
   {
@@ -1558,9 +1558,9 @@ export const cropGuides: CropGuideData[] = [
       "60",
       "60",
       "60",
-      "Multicote™ Agri 19-6-10+ME (12M)1",
-      "Multicote™ Agri 15-3-20+ME (8M)2",
-      "Multi-K™ GG",
+      "Mike Fuerza Maxima™ (CRF) 19-6-10+ME (12M)1",
+      "Mike Fuerza Maxima™ (CRF) 15-3-20+ME (8M)2",
+      "Mike Potassium Nitrate (13-0-45)",
       "Mike Alpha SOP™",
       "Mike Alpha MAP™",
       "Mike Alpha Cal™ GG",
@@ -1571,15 +1571,15 @@ export const cropGuides: CropGuideData[] = [
       "Mike AlphaStim™ Force",
       "Mike AlphaStim™ Promo",
       "Soil application",
-      "Nutrigation™",
+      "Precision Fertigation",
       "Foliar application",
       "1 Non-bearing trees      2 Bearing trees",
       "Download the leaflet"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/headers_avocado_nutri_haitech_0.jpg?itok=7DUyFvKz",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Supplying the avocado tree with the precise amount of fertilizers | Read More",
-      "href": "https://www.haifa-group.com/supplying-avocado-tree-precise-amount-fertilizers"
+      "href": "/article/supplying-avocado-tree-precise-amount-fertilizers"
     }
   },
   {
@@ -1597,14 +1597,14 @@ export const cropGuides: CropGuideData[] = [
       "The palm fruit is reddish, about the size of a large plum, and grows in large bunches. Each fruit is made up of an oily, fleshy outer layer (the pericarp), with a single seed (the palm kernel), also rich in oil.",
       "Source: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/mobile-m_1.jpg?itok=7PNS6qmA",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "How to avoid common nutrient deficiencies in oil palm | Read More",
-      "href": "https://www.haifa-group.com/how-avoid-common-nutrient-deficiencies-oil-palm"
+      "href": "/article/how-avoid-common-nutrient-deficiencies-oil-palm"
     },
     "relatedTagsLink": {
       "text": "All related tags for Oil palm",
-      "href": "https://www.haifa-group.com/plants-family/oil-palm"
+      "href": "/crop-guides"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -1626,10 +1626,10 @@ export const cropGuides: CropGuideData[] = [
       "Being often grown in tropical rainy areas and having a shallow root system, leaching of nutrients is of major concern in banana plantations, and fertilization must be carefully planned to ensure nutrient use efficiency.  The main issue related to the nutrition of banana crops is potassium supply, both in absolute quantities and proportion to other nutrients.",
       "See detailed banana fertilizer recommendations"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/headers_banananutri_haitech2_0.jpg?itok=R66tjojk",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multi-K fertilizer for growing banana trees | Read More",
-      "href": "https://www.haifa-group.com/multi-k-fertilizer-growing-banana-trees"
+      "text": "Mike Potassium Nitrate fertilizer for growing banana trees | Read More",
+      "href": "/article/mike-potassium-nitrate-growing-banana-trees"
     }
   },
   {
@@ -1646,10 +1646,10 @@ export const cropGuides: CropGuideData[] = [
       "Nitrogen and potassium are key: nitrogen promotes shoot elongation and flower bud induction, while potassium is essential for oil synthesis within fruit mesocarp.",
       "Foliar sprays of potassium nitrate and boron during flowering and pit hardening reduce alternate bearing patterns and enhance olive oil quality."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/mobile-m_1.jpg?itok=7PNS6qmA",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "A complete fertilization program for olive trees | Read More",
-      "href": "https://www.haifa-group.com/complete-fertilization-program-olive-trees"
+      "href": "/article/complete-fertilization-program-olive-trees"
     }
   },
   {
@@ -1666,10 +1666,10 @@ export const cropGuides: CropGuideData[] = [
       "Calcium and potassium are crucial: calcium strengthens the fruit cuticle to minimize rain-induced fruit cracking, while potassium drives sugar accumulation and deep ruby color.",
       "Post-harvest nutrition is critical in cherry orchards to nourish flower buds for the subsequent season and prepare the root system for winter."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/cherry%2520tree%2520crop%2520guide%2520mobile%2520%25281%2529_0.png?itok=Sv-nnrZt",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of cherry trees: when and how? | Read More",
-      "href": "https://www.haifa-group.com/fertilization-cherry-trees-when-and-how-0"
+      "href": "/article/fertilization-cherry-trees-when-and-how-0"
     }
   },
   {
@@ -1686,10 +1686,10 @@ export const cropGuides: CropGuideData[] = [
       "Fertigation with balanced nitrogen, phosphorus, and high potassium supports uninterrupted fruit setting, prevents fruit crowding deformities, and enhances sweetness.",
       "Adequate boron and calcium nutrition prevents fruit latex weeping, lumpy fruit disorder, and enhances shelf life for export markets."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Papaya%2520web%2520mobile.png?itok=gsFZrZMW",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Get better yield from papaya trees | Read More",
-      "href": "https://www.haifa-group.com/get-better-yield-papaya-trees"
+      "href": "/article/get-better-yield-papaya-trees"
     }
   },
   {
@@ -1709,22 +1709,22 @@ export const cropGuides: CropGuideData[] = [
       "Micronutrients serve as critical co-factors for hormone synthesis, influencing their quantity and effectiveness. Boron and molybdenum stimulate auxin synthesis and transport, thus increasing gibberellin concentration and boosting fruit growth.Explore Mike Alpha’s range of micronutrients",
       "Foliar application of nutrients allows for tactical nutrient supply required at the different growth stages. Foliar application of urea triggers plant auxin syntheses, thus strongly affecting bud emergence and flower initiation. Learn about Mike Alpha’s foliar solutions",
       "The preferred form of nitrogen for root uptake is nitrate (NO3-), as it is easily absorbed by the plant.",
-      "Single annual application of controlled release fertilizers in the first years after planting encourage tree establishment, regulates growth and speeds fruit bearing.Enhance nutrient use efficiency with Multicote™ Agri",
-      "Multicote™ Agri Junior (12M)",
-      "Multicote™ Agri  (12M)",
-      "Multi-K™ GG",
+      "Single annual application of controlled release fertilizers in the first years after planting encourage tree establishment, regulates growth and speeds fruit bearing.Enhance nutrient use efficiency with Mike Fuerza Maxima™ (CRF)",
+      "Mike Fuerza Maxima™ (CRF) Junior (12M)",
+      "Mike Fuerza Maxima™ (CRF)  (12M)",
+      "Mike Potassium Nitrate (13-0-45)",
       "Mike Alpha SOP™",
       "Mike Alpha MKP™",
       "Mike Alpha Micro™ Combi",
       "Mike Alpha Micro™ Mn 13",
-      "Poly-Feed™ Foliar 20-20-20+ME",
+      "Mike 19:19:19 Foliar Booster 20-20-20+ME",
       "Soil application",
-      "Nutrigation™",
+      "Precision Fertigation",
       "Foliar application",
       "Note: the recommendations brough here should be considered as general guidelines. The actual program should consider the plant status and growth conditions. Consult Mike Alpha agronomist to suit the optimal nutritional program for your crop.",
       "Download printable leaflet"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/citrus_nutri_haitech2.jpg?itok=DqhWq_e6"
+    "mobileBannerImage": "/crop-guides"
   },
   {
     "cropName": "Peach & Nectarine",
@@ -1742,14 +1742,14 @@ export const cropGuides: CropGuideData[] = [
       "Visit our page for more informaztion about peach tree fertilizer",
       "Source: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-01/headers_nutri_haitech_peach2_0.jpg?itok=FhDllQl8",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of peach trees: a comprehensive recommendation | Read More",
-      "href": "https://www.haifa-group.com/fertilization-peach-trees-comprehensive-recommendation"
+      "href": "/article/fertilization-peach-trees-comprehensive-recommendation"
     },
     "relatedTagsLink": {
       "text": "All related tags for Peach",
-      "href": "https://www.haifa-group.com/plants-family/peach"
+      "href": "/crop-guides"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -1770,10 +1770,10 @@ export const cropGuides: CropGuideData[] = [
       "The generic name is derived from the Greek for \"food of the gods\"; from θεός (theos), meaning \"god\", and βρῶμα (broma), meaning \"food\". The specific name cacao is derived from the native name of the plant in indigenous Mesoamerican languages. The cacao was known as kakaw in Tzeltal, K'iche' and Classic Maya; kagaw in Sayula Popoluca; and cacahuatl in Nahuatl.",
       "Cacao flowers.\nCupuaçu, Theobroma grandiflorum, is a closely related species found in Brazil, Colombia, Peru and Bolivia. Like cacao, it is also the source for a kind of chocolate known as cupulate or cupuaçu chocolate.[9] Cupuaçu is considered as having high potential by the food and cosmetics industries.\nSource: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-05/headers_coffee_nutri_haitech2_0.jpg?itok=nXgn-YQY",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Cocoa Fertilizer - Recommended Fertilization Program for Cocoa Trees | Read More",
-      "href": "https://www.haifa-group.com/croprecommendations/cocoa-fertilizer-recommendations"
+      "href": "/article/cocoa-fertilizer-recommendations"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -1794,10 +1794,10 @@ export const cropGuides: CropGuideData[] = [
       "Potassium supports fruit size, crisp flesh texture, and high soluble solids. Calcium nutrition is paramount to prevent internal corking, alfalfa greening, and bitter pit.",
       "Foliar feeding during fruit expansion and post-harvest nutrient loading ensure healthy spur development and winter hardiness."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Pear%2520%2520Mobile%2520banner.png?itok=Zv751MyU",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of pears: Mike Alpha's complete recommendation | Read More",
-      "href": "https://www.haifa-group.com/fertilization-pears-haifa-complete-recommendation"
+      "href": "/smart-farming"
     }
   },
   {
@@ -1822,20 +1822,20 @@ export const cropGuides: CropGuideData[] = [
       "30",
       "150",
       "60",
-      "Multicote™ Agri 4M 19-4-21+0.8B+0.04Cu+0.1Mn+0.45Zn",
+      "Mike Fuerza Maxima™ (CRF) 4M 19-4-21+0.8B+0.04Cu+0.1Mn+0.45Zn",
       "Mike Alpha Bonus™ 13-2-44",
-      "Poly-Feed Stim Enduro 19-19-19+1+ME",
+      "Mike 19:19:19 Stim Enduro 19-19-19+1+ME",
       "Mike Alpha Cal™ GG",
-      "Mike Alpha BitterMag™",
+      "Mike Alpha Mike MAG™ (Magnesium Sulphate)",
       "Mike Alpha Micro™ Mn 13 (EDTA chelate)",
       "Mike Alpha Micro™ Zn 15 (EDTA chelate)",
       "Mike Alpha Micro™ Cu 15  (EDTA chelate)",
       "Note: the recommendations brought here should be considered as general guidelines. The actual program should consider the plant status and growth conditions. Consult Mike Alpha agronomist to suit the optimal nutritional program for your coffee crop.     Download printable leaflet"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-07/headers_nutri_haitech_coffee_mobile.jpg?itok=bUW2T1EJ",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Foliar nutrition for coffee trees: the benefits of spraying with Multi-K | Read More",
-      "href": "https://www.haifa-group.com/foliar-nutrition-coffee-trees-benefits-spraying-multi-k"
+      "text": "Foliar nutrition for coffee trees: the benefits of spraying with Mike Potassium Nitrate | Read More",
+      "href": "/article/foliar-nutrition-coffee-trees-benefits-spraying-mike-potassium-nitrate"
     }
   },
   {
@@ -1851,14 +1851,14 @@ export const cropGuides: CropGuideData[] = [
       "The persimmon is the edible fruit of a number of species of trees in the genus Diospyros. The most widely cultivated of these is the Oriental or Japanese persimmon, Diospyros kaki. Diospyros is in the family Ebenaceae, and a number of non-persimmon species of the genus are grown for ebony timber.",
       "Source: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Persimmon%2520Mobile%2520banner.png?itok=14Wkdsrf",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Growing persimmons without nutrient deficiencies | Read More",
-      "href": "https://www.haifa-group.com/growing-persimmons-without-nutrient-deficiencies"
+      "href": "/article/growing-persimmons-without-nutrient-deficiencies"
     },
     "relatedTagsLink": {
       "text": "All related tags for Persimmon",
-      "href": "https://www.haifa-group.com/plants-family/persimmon"
+      "href": "/crop-guides"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -1896,64 +1896,64 @@ export const cropGuides: CropGuideData[] = [
       "Cl",
       "< 100 mg/L",
       "Note: The hereunder should be regarded as a general guide only. The exact fertilization program should be determined according to the specific crop needs, soil type, water analysis, cultivar, and most important - the grower’s experience.",
-      "Nutrigation™",
+      "Precision Fertigation",
       "Foliar sprays",
       "Post Harvest",
       "(building  reserves)",
       "15",
-      "Multicote™Agri (8) 19-10-13+2MgO+ME",
-      "Poly-Feed™ Drip 19-19-19+1MgO",
+      "Mike Fuerza Maxima™ (CRF) (8) 19-10-13+2MgO+ME",
+      "Mike 19:19:19™ Drip 19-19-19+1MgO",
       "Mike AlphaStim™ HumiK",
-      "Poly-Feed Foliar 21-21-21",
+      "Mike 19:19:19 Foliar 21-21-21",
       "Mike Alpha Micro™ BorFeed",
       "Early vegetative",
       "45",
-      "Poly-Feed™ Drip 19-19-19+1MgO",
+      "Mike 19:19:19™ Drip 19-19-19+1MgO",
       "Mike Alpha Mag™",
       "Mike AlphaStim™ HumiK",
-      "Poly-Feed Foliar 21-21-21",
+      "Mike 19:19:19 Foliar 21-21-21",
       "Mike Alpha Micro™ Combi",
       "Mike Alpha Micro™ Zn 15",
       "Mike Alpha Micro™ BorFeed",
       "Mike AlphaStim™ eNergy",
       "Late vegetative",
       "45",
-      "Multi-K™",
+      "Mike Potassium Nitrate (13-0-45)",
       "Mike Alpha MKP™",
       "Mike Alpha Micro™ Zn 15",
       "Flowering & fruit set",
       "60",
-      "Multicote™Agri (12) 10-5-35 +2MgO+ME",
+      "Mike Fuerza Maxima™ (CRF) (12) 10-5-35 +2MgO+ME",
       "Mike Alpha Cal™",
-      "Poly-Feed™ Drip 12-5-40+2MgO",
+      "Mike 19:19:19™ Drip 12-5-40+2MgO",
       "Mike Alpha Bonus™",
       "Mike AlphaStim™ Vital",
       "Mike AlphaStim™ Promo",
       "Early fruit growth",
       "35",
       "Mike Alpha Cal™",
-      "Poly-Feed™ Drip 12-5-40+2MgO",
-      "Poly-Feed™ Foliar 15-15-30",
+      "Mike 19:19:19™ Drip 12-5-40+2MgO",
+      "Mike 19:19:19 Foliar Booster 15-15-30",
       "Mike AlphaStim™ Force",
       "Fruit sizing",
       "35",
-      "Poly-Feed™ Drip 12-5-40+2MgO",
-      "Mike Alpha BitterMag™",
-      "Poly-Feed™ Foliar 15-15-30",
+      "Mike 19:19:19™ Drip 12-5-40+2MgO",
+      "Mike Alpha Mike MAG™ (Magnesium Sulphate)",
+      "Mike 19:19:19 Foliar Booster 15-15-30",
       "Mike AlphaStim™ Energy",
       "Maturity",
       "30",
-      "Multi-K™",
-      "Mike Alpha BitterMag™",
+      "Mike Potassium Nitrate (13-0-45)",
+      "Mike Alpha Mike MAG™ (Magnesium Sulphate)",
       "Ripening & harvest",
       "20",
       "Mike Alpha Bonus™",
       "Download a printable leaflet"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-10/headers_durian_nutri_haitech_mobile.jpg?itok=11QYy57h",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Durian trees: Fertigation & foliar feeding recommendation | Read More",
-      "href": "https://www.haifa-group.com/durian-trees-fertigation-foliar-feeding-recommendation-0"
+      "href": "/article/durian-trees-fertigation-foliar-feeding-recommendation-0"
     }
   },
   {
@@ -1968,10 +1968,10 @@ export const cropGuides: CropGuideData[] = [
     "body": [
       "Guavas (singular guava /ˈɡwɑːvə/)[1] are common tropical fruits cultivated and enjoyed in many tropical and subtropical regions. Psidium guajava (common guava, lemon guava) is a small tree in the Myrtle family (Myrtaceae), native to Mexico, Central America, and northern South America. Although related species may also be called guavas, they belong to other species or genera, such as the \"pineapple guava\" Acca sellowiana. In 2011, India was the largest producer of guavas.\n\nThe most frequently eaten species, and the one often simply referred to as \"the guava\", is the apple guava (Psidium guajava).[citation needed] Guavas are typical Myrtoideae, with tough dark leaves that are opposite, simple, elliptic to ovate and 5–15 centimetres (2.0–5.9 in) long. The flowers are white, with five petals and numerous stamens. The fruits are many-seeded berries. The genera Accara and Acca (formerly Feijoa, pineapple guava) were formerly included in Psidium.\nSource: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Guava%2520Mobile%2520banner_0.png?itok=CP4p0RZt",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "How to make the guava tree thrive | Read More",
-      "href": "https://www.haifa-group.com/how-make-guava-tree-thrive"
+      "href": "/article/how-make-guava-tree-thrive"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -1994,10 +1994,10 @@ export const cropGuides: CropGuideData[] = [
       "Fruits are typically left on the tree to ripen fully. In warmer climates, it may become soft to the point of being edible, but additional ripening may be required in cooler climates. They are harvested in late autumn, before first frosts.",
       "Source: Wikipedia"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Quince%2520Mobile%2520banner.png?itok=q5RLR1g3",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of quinces in Spain | Read More",
-      "href": "https://www.haifa-group.com/fertilization-quinces-spain-0"
+      "href": "/article/fertilization-quinces-spain-0"
     },
     "sourceLink": {
       "text": "Wikipedia",
@@ -2012,17 +2012,17 @@ export const cropGuides: CropGuideData[] = [
     "h1": "Hazelnut Fertilizers & Crop Guide",
     "bannerImage": "/crops/banners/hazelnut-fertilizer.jpg",
     "h2": "Recommended Fertilization Program for Hazelnut",
-    "h3": "Soil application & Nutrigation",
+    "h3": "Soil application & Fertigation",
     "body": [
       "Suiting plant density of 277 trees/ha",
       "Note: the recommendations brough here should be considered as general guidelines. The actual program should consider the plant status and growth conditions. Consult Mike Alpha agronomist to suit the optimal nutritional program for your crop.",
       "Nutrients provided by this program:",
       "Spray volume: 1500 l/ha"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-03/headers_nutri_haitech_hazelnut2.jpg?itok=js8kRV5q",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "A fertilization program for growing hazelnuts in Spain | Read More",
-      "href": "https://www.haifa-group.com/fertilization-program-growing-hazelnuts-spain"
+      "href": "/article/fertilization-program-growing-hazelnuts-spain"
     }
   },
   {
@@ -2073,10 +2073,10 @@ export const cropGuides: CropGuideData[] = [
       "Mike Alpha Micro Zn+Mn EDTA & Mike AlphaStim Combat - explore the application protocol",
       "Download a printable brochure"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-08/headers_nutri_haitech_grapes2.jpg?itok=yreq3OK9",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization Recommendations | Read More",
-      "href": "https://www.haifa-group.com/grape-vines-fertilizer/recommendations"
+      "href": "/article/recommendations"
     }
   },
   {
@@ -2093,10 +2093,10 @@ export const cropGuides: CropGuideData[] = [
       "Nutritional management centers on rapid nitrogen and potassium availability during the vertical climb stage, supporting thick bine structure and abundant lateral branch formation.",
       "Balanced sulfur and potassium nutrition during burr and cone development boosts essential lupulin gland formation, alpha-acid content, and hop aromatic oils."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/hops%2520mobile_0.jpg?itok=E_urPmKY",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Recommended fertilizers, rates and timing for the fertilization of hops | Read More",
-      "href": "https://www.haifa-group.com/recommended-fertilizers-rates-and-timing-fertilization-hops"
+      "href": "/article/recommended-fertilizers-rates-and-timing-fertilization-hops"
     }
   },
   {
@@ -2131,21 +2131,21 @@ export const cropGuides: CropGuideData[] = [
       "60",
       "45",
       "60",
-      "Multicote™ Agri (8) 13-15-16+1+ME",
+      "Mike Fuerza Maxima™ (CRF) (8) 13-15-16+1+ME",
       "Gypsum",
-      "Poly-Feed™ GG12-5-40+2+ME",
+      "Mike 19:19:19™12-5-40+2+ME",
       "Mike Alpha Cal™ GG",
-      "Mike Alpha BitterMag™",
+      "Mike Alpha Mike MAG™ (Magnesium Sulphate)",
       "Mike Alpha Micro™ Combi",
       "Mike AlphaStim™ Force",
       "mike special one complex™ Calmaster",
       "Mike AlphaStim™ Wall-Up",
       "Download printable leaflet"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/headers_nutri_haitech_blueberry_0.jpg?itok=CfCCS1x5",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Grow Better Blueberries with Mike Alpha products | Read More",
-      "href": "https://www.haifa-group.com/grow-better-blueberries-haifa-products"
+      "href": "/article/grow-better-blueberries-mike-alpha-products"
     }
   },
   {
@@ -2172,13 +2172,13 @@ export const cropGuides: CropGuideData[] = [
       "14",
       "30",
       "30-240",
-      "Multicote™ Agri 6M 22-8-13+2.9MgO SUPER",
-      "Poly-Feed™ Stim SPARK 18-18-18",
+      "Mike Fuerza Maxima™ (CRF) 6M 22-8-13+2.9MgO SUPER",
+      "Mike 19:19:19™ Stim SPARK 18-18-18",
       "Mike AlphaStim™ HumiK",
       "Mike Alpha Cal™ GG",
-      "Poly-Feed™ GG 20-9-20+ME",
-      "Poly-Feed GG™ 17-10-27+ME",
-      "Multi-K™ ME",
+      "Mike 19:19:19™ 20-9-20+ME",
+      "Mike 19:19:19™ 17-10-27+ME",
+      "Mike Potassium Nitrate (13-0-45) ME",
       "Mike AlphaStim™Wall-Up S",
       "Mike AlphaStim™ Force1",
       "Mike AlphaStim™ Booster2",
@@ -2187,10 +2187,10 @@ export const cropGuides: CropGuideData[] = [
       "1 Recommended during cold periods; 2 recommended during hot periods",
       "Download the leaflet"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-12/headers_nutri_haitech_strawberry2.jpg?itok=BW79W2kF",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "A fertilization recommendation for strawberries in various parts of the world | Read More",
-      "href": "https://www.haifa-group.com/fertilization-recommendation-strawberries-various-parts-world"
+      "href": "/article/fertilization-recommendation-strawberries-various-parts-world"
     }
   },
   {
@@ -2207,14 +2207,14 @@ export const cropGuides: CropGuideData[] = [
       "When it comes to raspberry fertilizer, you should provide a complete fertilization with macro and micronutrients while considering cation ratios Ca/K, Ca/Mg, (Mg + K)/Ca. \nBalance NH4/NO3 ratio - The majority of nitrogen should be supplied as nitrate and apply sources of soluble and Chlorine-free Potassium.\nComplete fertilization with macro and micronutrients that should be in raspberry fertilizer.",
       "Using diagnostic tools such as: soil analysis, foliar, suction probes, chlorophyll meters, etc. Also, Split applications according to the plant’s uptake dynamics."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Raspberry%2520Mobile%2520banner.png?itok=FiCeUrfX",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Guide to growing raspberries | Read More",
-      "href": "https://www.haifa-group.com/guide-growing-raspberries"
+      "href": "/article/guide-growing-raspberries"
     },
     "relatedTagsLink": {
       "text": "All related tags for Raspberry Fertilizers & Crop Guide",
-      "href": "https://www.haifa-group.com/plants-family/raspberry"
+      "href": "/crop-guides"
     }
   },
   {
@@ -2231,10 +2231,10 @@ export const cropGuides: CropGuideData[] = [
       "Fertilizer is applied primarily post-spear harvest to support massive summer fern development. Ample nitrogen, potassium, and magnesium fuel prolonged photosynthesis.",
       "Proper crown nutrition ensures thick, vigorous spear emergence during the following spring harvest season."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Untitled%2520design%2520%25283%2529.png?itok=hmFGf6SX",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Growing asparagus: how to supply the asparagus with all its required nutrients | Read More",
-      "href": "https://www.haifa-group.com/growing-asparagus-how-supply-asparagus-all-its-required-nutrients"
+      "href": "/article/growing-asparagus-how-supply-asparagus-all-its-required-nutrients"
     }
   },
   {
@@ -2251,10 +2251,10 @@ export const cropGuides: CropGuideData[] = [
       "High potassium inputs relative to nitrogen are essential to ensure dense, sweet fruit with golden pulp and optimal acidity balance. High nitrogen without sufficient potassium produces watery, low-acid fruit prone to internal browning.",
       "Iron and zinc foliar applications prevent leaf chlorosis in alkaline or high-manganese soils."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Pineapple%2520Mobile%2520banner.png?itok=_tZfdH6q",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilizer recommendation | Read More",
-      "href": "https://www.haifa-group.com/fertilizer-recommendation"
+      "href": "/article/fertilizer-recommendation"
     }
   },
   {
@@ -2271,10 +2271,10 @@ export const cropGuides: CropGuideData[] = [
       "For malting barley, nitrogen application must be precisely timed and moderated to achieve optimal yield while keeping grain protein within strict malt industry thresholds (under 11.5%).",
       "Balanced phosphorus and potassium promote early tillering, strong straw to resist lodging, and plump grain kernels."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Barley%2520Mobile%2520banner.png?itok=yW3SO1YX",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Micronutrient Requirements of Crops | Read More",
-      "href": "https://www.haifa-group.com/micronutrient-requirements-crops"
+      "href": "/article/micronutrient-requirements-crops"
     }
   },
   {
@@ -2299,10 +2299,10 @@ export const cropGuides: CropGuideData[] = [
       "Mike Alpha’s solutions are designed to match the crop's nutritional demands at every growth stage, supporting optimal development from sprouting to harvest. Whether through fertigation or foliar feeding, our advanced products ensure efficient nutrient delivery and improved return on investment.",
       "Empower your potato cultivation with Mike Alpha’s advanced plant nutrition solutions – for better yields, better quality, and better profits."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-07/headers_potato_nutri_haitech2.jpg?itok=rGCBbGrD",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Increasing potato yield with Multi K Mg prill | Read More",
-      "href": "https://www.haifa-group.com/increasing-potato-yield-multi-k-mg-prill"
+      "text": "Increasing potato yield with Mike Potassium Nitrate Mg prill | Read More",
+      "href": "/article/increasing-potato-yield-mike-potassium-nitrate-mg"
     }
   },
   {
@@ -2317,12 +2317,12 @@ export const cropGuides: CropGuideData[] = [
     "body": [
       "Beans (Phaseolus vulgaris) are short-season legumes that benefit from early starter phosphorus and zinc to encourage rapid nodulation and deep root penetration.",
       "Although capable of fixing atmospheric nitrogen, high-yielding commercial dry and snap beans require supplemental nitrogen and potassium during peak flowering and pod filling.",
-      "Foliar feeding with Multi-K™ and micronutrients prevents flower drop and improves pod uniformity and grade."
+      "Foliar feeding with Mike Potassium Nitrate (13-0-45) and micronutrients prevents flower drop and improves pod uniformity and grade."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Beans%2520Mobile%2520banner.png?itok=IJIDZ2hw",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "The complete recommendation for the fertilization of beans | Read More",
-      "href": "https://www.haifa-group.com/complete-recommendation-fertilization-beans"
+      "href": "/article/complete-recommendation-fertilization-beans"
     }
   },
   {
@@ -2351,15 +2351,15 @@ export const cropGuides: CropGuideData[] = [
       "Zinc deficiency is also common in lowland rice, especially in high-pH, silt, and sandy loam soils, leading to stunted growth, leaf bronzing, and reduced tillering.",
       "Mike Alpha’s zinc-enriched products ensure this vital element is available in the right form, at the right time.",
       "Learn more about essential elements for rice nutrition",
-      "Though not considered essential, silicon greatly enhances rice plant performance. It fortifies cell walls, improves structural integrity, and increases tolerance to pests, diseases, and abiotic stresses. Mike Alpha’s Poly-Feed™ Stim Armor and mike special one complex Wall-up provides a highly efficient source of silicon alongside mineral nutrition, promoting stronger, healthier plants.",
-      "Learn how Poly-Feed™ Stim Armor increased rice yield and improved quality.",
+      "Though not considered essential, silicon greatly enhances rice plant performance. It fortifies cell walls, improves structural integrity, and increases tolerance to pests, diseases, and abiotic stresses. Mike Alpha’s Mike Specialone Complex™ and mike special one complex Wall-up provides a highly efficient source of silicon alongside mineral nutrition, promoting stronger, healthier plants.",
+      "Learn how Mike Specialone Complex™ increased rice yield and improved quality.",
       "Flooded rice fields present unique challenges in nutrient management. Nutrient leaching, volatilization, and reduced soil oxygenation can limit nutrient uptake and reduce efficiency. Mike Alpha offers advanced solutions tailored to these conditions:",
       "A carefully managed fertilization approach—integrating nitrogen management, potassium support, zinc supplementation, silicon enrichment, and strategic foliar feeding—is essential to achieve high rice yields and quality. Backed by agronomic expertise and innovative products, Mike Alpha Group’s Nutri Haitech™ solutions provide the tools growers need for efficient, sustainable rice production."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-04/headers_rice_nutri_haitech2.jpg?itok=CcY-FtBw",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Foliar fertilization of rice | Read More",
-      "href": "https://www.haifa-group.com/foliar-fertilization-rice"
+      "href": "/article/foliar-fertilization-rice"
     }
   },
   {
@@ -2376,10 +2376,10 @@ export const cropGuides: CropGuideData[] = [
       "Foliar potassium and zinc sprays during flowering and pod development enhance drought tolerance, reduce pod abortion, and increase seed weight.",
       "Balanced nutrition ensures uniform canopy dry-down and high nutritional protein content in the harvested grain."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Chickpea%2520Mobile%2520banner.png?itok=lQyjhjYw",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Seeding Tips for Chickpeas | Read More",
-      "href": "https://www.haifa-group.com/seeding-tips-chickpeas"
+      "href": "/article/seeding-tips-chickpeas"
     }
   },
   {
@@ -2393,13 +2393,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Soybeans (Glycine max) demand enormous amounts of nitrogen and potassium during rapid pod filling, often outstripping the root nodule fixation capacity.",
-      "Foliar applications of potassium nitrate (Multi-K™) during reproductive stages (R1 to R3) supplement root uptake, boosting seed pod count and oil/protein content.",
+      "Foliar applications of potassium nitrate (Mike Potassium Nitrate (13-0-45)) during reproductive stages (R1 to R3) supplement root uptake, boosting seed pod count and oil/protein content.",
       "Maintaining balanced sulfur and micronutrient availability prevents chlorosis and improves symbiotic nitrogen fixation efficiency."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Soybean%2520Mobile%2520banner.png?itok=7UTBGRcB",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Soybean fertilizer: get healthier and higher soybean yield | Read More",
-      "href": "https://www.haifa-group.com/soybean-fertilizer-get-healthier-and-higher-soybean-yield"
+      "href": "/article/soybean-fertilizer-get-healthier-and-higher-soybean-yield"
     }
   },
   {
@@ -2416,10 +2416,10 @@ export const cropGuides: CropGuideData[] = [
       "Nutrient uptake peaks between V6 and silking. Sidedressing or fertigation with nitrate-rich fertilizers ensures rapid uptake without volatilization losses.",
       "Foliar feeding with zinc and potassium during knee-high to tasseling stages enhances cob length, kernel row count, and test weight."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/CornMaize%2520Mobile%2520banner%2520%25281%2529.png?itok=5Mbv3qkD",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Foliar feeding of corn / maize – the way to achieve better crops | Read More",
-      "href": "https://www.haifa-group.com/foliar-feeding-corn-maize-%E2%80%93-way-achieve-better-crops-1"
+      "href": "/article/foliar-feeding-corn-maize-%E2%80%93-way-achieve-better-crops-1"
     }
   },
   {
@@ -2436,10 +2436,10 @@ export const cropGuides: CropGuideData[] = [
       "High nitrogen early in the season drives fast canopy establishment. Nitrogen must taper off 6 to 8 weeks before harvest to prevent excessive amino-nitrogen impurities that impair sugar extraction.",
       "Abundant potassium and sodium inputs are required for sucrose translocation from leaves into the storage taproot."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Sugar%2520beet%2520Mobile%2520banner.png?itok=Tr8OiVye",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of sugar beet | Read More",
-      "href": "https://www.haifa-group.com/fertilization-sugar-beet"
+      "href": "/article/fertilization-sugar-beet"
     }
   },
   {
@@ -2454,12 +2454,12 @@ export const cropGuides: CropGuideData[] = [
     "body": [
       "Cotton (Gossypium hirsutum) produces indeterminate fruiting structures requiring balanced nutrition to maximize boll retention and fiber quality.",
       "Potassium plays a paramount role in turgor-driven fiber elongation, boll size, and micronaire fineness. Potassium deficiencies lead to premature canopy defoliation and smaller bolls.",
-      "Split applications and foliar feeding with Multi-K™ during peak flowering and boll fill maximize lint yield and harvestable grade."
+      "Split applications and foliar feeding with Mike Potassium Nitrate (13-0-45) during peak flowering and boll fill maximize lint yield and harvestable grade."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Cotton%2520Mobile%2520banner.png?itok=pVrkCACb",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of cotton: how to get better yield, water use efficiency and fibre fineness | Read More",
-      "href": "https://www.haifa-group.com/fertilization-cotton-how-get-better-yield-water-use-efficiency-and-fibre-fineness"
+      "href": "/article/fertilization-cotton-how-get-better-yield-water-use-efficiency-and-fibre-fineness"
     }
   },
   {
@@ -2473,13 +2473,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Sugar cane (Saccharum officinarum) produces massive biomass tonnage per hectare over an extended crop cycle, removing large amounts of nitrogen and potassium.",
-      "Multi-K™ split applications and side-dressing supply nitrate nitrogen and chloride-free potassium, significantly boosting cane stalk weight and juice brix purity compared to standard single dressing.",
+      "Mike Potassium Nitrate (13-0-45) split applications and side-dressing supply nitrate nitrogen and chloride-free potassium, significantly boosting cane stalk weight and juice brix purity compared to standard single dressing.",
       "Adequate silicon and potassium strengthen stalks against lodging and enhance ratoon crop regrowth."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Sugar%2520cane%2520Mobile%2520banner.png?itok=0bN6lE16",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multi-K in Sugar Cane - Side dressing | Read More",
-      "href": "https://www.haifa-group.com/multi-k-sugar-cane-side-dressing"
+      "text": "Mike Potassium Nitrate in Sugar Cane - Side dressing | Read More",
+      "href": "/article/mike-potassium-nitrate-sugar-cane-side-dressing"
     }
   },
   {
@@ -2496,10 +2496,10 @@ export const cropGuides: CropGuideData[] = [
       "Clover stands depend heavily on phosphorus and potassium for crown longevity, root nodulation, and winter cold tolerance.",
       "Regular potassium replenishment after pasture grazing or hay cutting maintains clover dominance over competing grasses."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Clover%2520Mobile%2520banner.png?itok=w32uLA_c",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "White Clover | Read More",
-      "href": "https://www.haifa-group.com/white-clover"
+      "href": "/article/white-clover"
     }
   },
   {
@@ -2516,10 +2516,10 @@ export const cropGuides: CropGuideData[] = [
       "Potassium supports sturdy stalk strength to resist lodging and promotes heavy seed filling with high oil percentages.",
       "Boron is vital during head development: deficiency leads to poor seed set in the head center and brittle head necks."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Sunflower%2520Mobile%2520banner.png?itok=Riugi5qR",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization recommendation for growing sunflower | Read More",
-      "href": "https://www.haifa-group.com/fertilization-recommendation-growing-sunflower"
+      "href": "/article/fertilization-recommendation-growing-sunflower"
     }
   },
   {
@@ -2536,10 +2536,10 @@ export const cropGuides: CropGuideData[] = [
       "Balanced nitrogen and sulfur applications (optimal N:S ratio of 5:1 to 6:1) are essential for protein synthesis and oil formation.",
       "High potassium inputs strengthen stems against lodging and improve pod shatter resistance during mechanical harvesting."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Oil%2520seed%2520Mobile%2520banner.png?itok=TJ8DgJ7_",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Supplying the winter oil seed rape with the right amount of nutrients | Read More",
-      "href": "https://www.haifa-group.com/supplying-winter-oil-seed-rape-right-amount-nutrients"
+      "href": "/article/supplying-winter-oil-seed-rape-right-amount-nutrients"
     }
   },
   {
@@ -2553,13 +2553,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Tobacco (Nicotiana tabacum) leaf quality, aroma, and burn rate are extraordinarily sensitive to fertilizer sources and chlorine content.",
-      "Chloride-free potassium nitrate (Multi-K™) is the global standard for premium tobacco, promoting smooth leaf burn, elastic texture, and rich cured leaf color.",
+      "Chloride-free potassium nitrate (Mike Potassium Nitrate (13-0-45)) is the global standard for premium tobacco, promoting smooth leaf burn, elastic texture, and rich cured leaf color.",
       "Nitrogen rates must be strictly calibrated according to tobacco type (flue-cured vs. burley) to avoid harsh smoke or delayed leaf maturation."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Tobacco%2520Mobile%2520banner.png?itok=LNCn3ETB",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "How to provide the tobacco plant with required nutrients | Read More",
-      "href": "https://www.haifa-group.com/how-provide-tobacco-plant-required-nutrients"
+      "href": "/article/how-provide-tobacco-plant-required-nutrients"
     }
   },
   {
@@ -2576,10 +2576,10 @@ export const cropGuides: CropGuideData[] = [
       "Balanced potassium and micronutrient feeding enhances flowering duration, prevents flower drop, and ensures sweet, tender green peas or uniform field dry peas.",
       "Foliar sprays during pod fill preserve vine health and protect seed viability."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/Peas%2520%2520Mobile%2520banner.png?itok=k95-yYPa",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "How to grow peas with Mike Alpha fertilizers | Read More",
-      "href": "https://www.haifa-group.com/how-grow-peas-haifa-fertilizers"
+      "href": "/article/how-grow-peas-mike-alpha-fertilizers"
     }
   },
   {
@@ -2599,10 +2599,10 @@ export const cropGuides: CropGuideData[] = [
       "Use the innovative nitrotune app to detect the nitrogen status of your wheat crops -  anytime, anywhere.",
       "Together, Mike Alpha’s advanced fertilization practices provide growers with a more efficient, targeted, and sustainable approach to maximizing wheat productivity."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2025-08/headers_wheat_nutri_haitech2.jpg?itok=Fb3-50HB",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Poly-Feed™ Nutrition Program for Wheat | Read More",
-      "href": "https://www.haifa-group.com/poly-feed%E2%84%A2-nutrition-program-wheat"
+      "text": "Mike 19:19:19™ Nutrition Program for Wheat | Read More",
+      "href": "/article/mike-19-19-19-nutrition-program-wheat"
     }
   },
   {
@@ -2616,13 +2616,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Sweet basil (Ocimum basilicum) is an aromatic herb cultivated for fragrant, tender leaves for culinary and essential oil use.",
-      "Immersing transplant plugs in balanced Poly-Feed™ solutions and maintaining steady nitrate nitrogen fertilization produces vigorous leafy growth without woody stem lignification.",
+      "Immersing transplant plugs in balanced Mike 19:19:19™ solutions and maintaining steady nitrate nitrogen fertilization produces vigorous leafy growth without woody stem lignification.",
       "Balanced magnesium and iron nutrition enhances dark green foliage color and concentration of aromatic essential oils (linalool and eugenol)."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/basil%2520mobile.jpg?itok=W1m50-4p",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "From transplanting to growth stage: A fertilization program for basil | Read More",
-      "href": "https://www.haifa-group.com/transplanting-growth-stage-fertilization-program-basil-0"
+      "href": "/article/transplanting-growth-stage-fertilization-program-basil-0"
     }
   },
   {
@@ -2639,10 +2639,10 @@ export const cropGuides: CropGuideData[] = [
       "Well-drained soils supplied with regular balanced fertigation promote rapid stolon expansion and lush leaf biomass regeneration after multiple seasonal cuttings.",
       "Potassium and sulfur feeding maximize essential menthol content and improve disease resistance against rust."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/nana%2520mobile%2520banner_0.jpg?itok=yTn0uAmM",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "What is the best fertilization program for flourishing mint? | Read More",
-      "href": "https://www.haifa-group.com/what-best-fertilization-program-flourishing-mint-0"
+      "href": "/article/what-best-fertilization-program-flourishing-mint-0"
     }
   },
   {
@@ -2656,13 +2656,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Chives (Allium schoenoprasum) require rich, fertile soils with steady moisture to produce tender, hollow green scapes with mild allium flavor.",
-      "Regular post-harvest fertigation with Poly-Feed™ and potassium nitrate drives continuous regrowth and deep green coloration across repeated harvesting cycles.",
+      "Regular post-harvest fertigation with Mike 19:19:19™ and potassium nitrate drives continuous regrowth and deep green coloration across repeated harvesting cycles.",
       "Adequate sulfur enhances the characteristic aroma and flavor profile without causing leaf tip yellowing."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/chives%2520mobile_0.jpg?itok=u1EsNZ-F",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of tarragon & chives | Read More",
-      "href": "https://www.haifa-group.com/fertilization-tarragon-chives-0"
+      "href": "/article/fertilization-tarragon-chives-0"
     }
   },
   {
@@ -2676,13 +2676,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "French tarragon (Artemisia dracunculus) thrives in well-drained soils with balanced nutrition, avoiding excess moisture and salinity.",
-      "Starter fertilization with Poly-Feed™ and moderate nitrogen maintains leafy vegetative vigor while preserving intense aromatic flavor compounds.",
+      "Starter fertilization with Mike 19:19:19™ and moderate nitrogen maintains leafy vegetative vigor while preserving intense aromatic flavor compounds.",
       "Controlled potassium feeding strengthens roots and improves winter hardiness in perennial stands."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/tarragon%2520mobile.jpg?itok=fl8cTeZ3",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of tarragon & chives | Read More",
-      "href": "https://www.haifa-group.com/fertilization-tarragon-chives-0"
+      "href": "/article/fertilization-tarragon-chives-0"
     }
   },
   {
@@ -2699,10 +2699,10 @@ export const cropGuides: CropGuideData[] = [
       "Cultivated in porous, well-aerated media, anthuriums require low EC fertigation with balanced nitrate-nitrogen and high potassium to promote continuous spathe emergence.",
       "Calcium nutrition is critical to prevent spathe necrosis, spadix decay, and ensure extended vase life during commercial shipping."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/1_15.png?itok=fiOj8tJd",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of anthurium (andereanum) on sandy soil or soilless | Read More",
-      "href": "https://www.haifa-group.com/fertilization-anthurium-andereanum-sandy-soil-or-soilless"
+      "href": "/article/fertilization-anthurium-andereanum-sandy-soil-or-soilless"
     }
   },
   {
@@ -2716,13 +2716,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Gypsophila (Baby's breath) is a leading commercial cut flower grown in greenhouses and high tunnels for delicate, prolific white panicles.",
-      "Continuous Nutrigation™ with Multi-K™ and balanced trace elements stimulates uniform branching and dense flower head formation.",
+      "Continuous Precision Fertigation with Mike Potassium Nitrate (13-0-45) and balanced trace elements stimulates uniform branching and dense flower head formation.",
       "Maintaining optimal calcium-to-potassium ratios prevents stem bending and flower bud drying."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/3.png?itok=YHZxOM4A",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of gypsophila in greenhouses | Read More",
-      "href": "https://www.haifa-group.com/fertilization-gypsophila-greenhouses"
+      "href": "/article/fertilization-gypsophila-greenhouses"
     }
   },
   {
@@ -2739,10 +2739,10 @@ export const cropGuides: CropGuideData[] = [
       "Balanced nutrition during early establishment builds sturdy stems capable of holding heavy blooms. Excessive nitrogen should be avoided as it produces weak stems and small flowers.",
       "Potassium enhances vibrant petal coloration, stem stiffness, and robust tuber development for winter storage."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/33_1.png?itok=YGex8Cq9",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Fertilization of dahlias: How to use Mike Alpha's fertilizers | Read More",
-      "href": "https://www.haifa-group.com/fertilization-dahlias-how-use-haifa-fertilizers"
+      "href": "/article/nutrient-recommendations-commercial-cut-flower-production"
     }
   },
   {
@@ -2756,13 +2756,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Lilium (Lilies) grown for greenhouse cut flowers require specialized nutritional programs to ensure tall, sturdy stems, glossy foliage, and large flower buds.",
-      "Fertigation with Poly-Feed™ and calcium nitrate prevents leaf scorch and bud abortion during rapid stem elongation.",
+      "Fertigation with Mike 19:19:19™ and calcium nitrate prevents leaf scorch and bud abortion during rapid stem elongation.",
       "Adequate iron and magnesium maintain deep green leaves, while high potassium ensures crisp petal texture and prolonged post-harvest vase longevity."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/2_19.png?itok=VJvZiAOx",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Lilium: A fertilization program in Holland | Read More",
-      "href": "https://www.haifa-group.com/lilium-fertilization-program-holland"
+      "href": "/article/lilium-fertilization-program-holland"
     }
   },
   {
@@ -2779,10 +2779,10 @@ export const cropGuides: CropGuideData[] = [
       "Balanced nitrate-based fertigation with elevated potassium and calcium hardens stem cell walls, ensuring tall, erect flower spikes with vivid blues, purples, and whites.",
       "Careful nutrient management prevents flower bud blast and improves cut stem vase life."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/22_2.png?itok=iyjAH9Mf",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Nutrient recommendations for commercial cut flower production | Read More",
-      "href": "https://www.haifa-group.com/nutrient-recommendations-commercial-cut-flower-production"
+      "href": "/article/nutrient-recommendations-commercial-cut-flower-production"
     }
   },
   {
@@ -2799,10 +2799,10 @@ export const cropGuides: CropGuideData[] = [
       "Regular supply of potassium and phosphorus encourages multiple flowering flushes with strong, rigid stems and richly pigmented calyces.",
       "Micronutrient supplementation avoids leaf tip chlorosis in greenhouse soils."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/44.png?itok=fMzCGF_s",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "Growing beautiful limoniums in greenhouses | Read More",
-      "href": "https://www.haifa-group.com/growing-beautiful-limoniums-greenhouses"
+      "href": "/article/growing-beautiful-limoniums-greenhouses"
     }
   },
   {
@@ -2816,13 +2816,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Gerbera (Gerbera jamesonii) cut flower production requires exacting rhizosphere management to maintain consistent stem length, straightness, and head diameter.",
-      "Nutrigation™ in soilless substrates must supply high potassium, calcium, and chelated iron. Low pH or iron deficiency quickly causes interveinal chlorosis in young leaves.",
+      "Precision Fertigation in soilless substrates must supply high potassium, calcium, and chelated iron. Low pH or iron deficiency quickly causes interveinal chlorosis in young leaves.",
       "Balanced calcium feeding prevents premature stem bending beneath the capitulum flower head."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/2_13.png?itok=gs2J66XA",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "How to maximize the yield of gerberas grown in greenhouse | Read More",
-      "href": "https://www.haifa-group.com/how-maximize-yield-gerberas-grown-greenhouse-0"
+      "href": "/article/how-maximize-yield-gerberas-grown-greenhouse-0"
     }
   },
   {
@@ -2836,13 +2836,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Tulips (Tulipa gesneriana) grown in greenhouse forcing or open fields rely heavily on bulb nutrient reserves supplemented by timely liquid nutrition.",
-      "Fertigation during root formation and stem emergence with Multi-K™ and calcium nitrate ensures rapid, uniform flower stem elongation and vibrant petal pigmentation.",
+      "Fertigation during root formation and stem emergence with Mike Potassium Nitrate (13-0-45) and calcium nitrate ensures rapid, uniform flower stem elongation and vibrant petal pigmentation.",
       "Calcium prevents stem toppling disorder, ensuring premium cut flower presentation."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/1_21.png?itok=KSQWzYA9",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "What is the best way to grow tulips? | Read More",
-      "href": "https://www.haifa-group.com/what-best-way-grow-tulips"
+      "href": "/article/what-best-way-grow-tulips"
     }
   },
   {
@@ -2859,10 +2859,10 @@ export const cropGuides: CropGuideData[] = [
       "Potassium is the key nutrient for gladioli: agronomic research demonstrates that increased potassium rates from Mike Alpha fertilizers directly increase floret count, stem thickness, and spike length.",
       "Phosphorus and boron support corm multiplication and root vitality."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/11_3.png?itok=zJURnpUN",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
       "text": "How to grow gladiolus with more flowers | Read More",
-      "href": "https://www.haifa-group.com/how-grow-gladiolus-more-flowers"
+      "href": "/article/how-grow-gladiolus-more-flowers"
     }
   },
   {
@@ -2876,13 +2876,13 @@ export const cropGuides: CropGuideData[] = [
     "h3": "",
     "body": [
       "Forest plantations (Eucalyptus, Pine, Teak, and Poplar) require early nutritional intervention to accelerate seedling survival, root anchoring, and rapid canopy closure.",
-      "Controlled-release fertilization (CRF) using Multicote™ Agri supplies nitrogen, phosphorus, and potassium gradually over 8 to 18 months directly at the root zone, preventing nutrient leaching in porous forest soils.",
+      "Controlled-release fertilization (CRF) using Mike Fuerza Maxima™ (CRF) supplies nitrogen, phosphorus, and potassium gradually over 8 to 18 months directly at the root zone, preventing nutrient leaching in porous forest soils.",
       "Healthy seedling nutrition significantly reduces plantation maintenance costs, suppresses competing weed vegetation, and shortens harvest rotation cycles."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/2_0.png?itok=zWnD6kX1",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote™ Agri Ideal Nutrition for Forest Trees | Read More",
-      "href": "https://www.haifa-group.com/multicote%E2%84%A2-agri-ideal-nutrition-forest-trees"
+      "text": "Mike Fuerza Maxima™ (CRF) Ideal Nutrition for Forest Trees | Read More",
+      "href": "/article/mike-fuerza-maxima-ideal-nutrition-forest-trees"
     }
   },
   {
@@ -2900,14 +2900,14 @@ export const cropGuides: CropGuideData[] = [
       "Mike Alpha's turf nutrition concept is based on a deep understanding of turfgrass growth dynamics. Nutritional requirements vary among turf species, change with environmental conditions, and evolve throughout the growing season.Our turf fertilization programs are designed to support the physiological needs of the turf plant at every growth stage. They combine agronomic expertise with practical considerations such as maintenance practices, performance objectives, and budget requirements. The result is balanced nutrition that promotes healthy growth, improves turf quality, and enhances resource efficiency.",
       "Learn from the turf expert: watch a professional lecture"
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-06/tuf_header_mobile_3.jpg?itok=WyC3dG5G",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote Turf™ / Multigreen™ - Turf fertilizer | Read More",
-      "href": "https://www.haifa-group.com/multicote-turf%E2%84%A2-multigreen%E2%84%A2-turf-fertilizer"
+      "text": "Mike Fuerza Maxima Turf™ / Multigreen™ - Turf fertilizer | Read More",
+      "href": "/article/mike-fuerza-maxima-turf-fertilizer"
     },
     "relatedTagsLink": {
       "text": "All related tags for Turf",
-      "href": "https://www.haifa-group.com/plants-family/turf"
+      "href": "/crop-guides"
     }
   },
   {
@@ -2921,17 +2921,17 @@ export const cropGuides: CropGuideData[] = [
     "h3": "Maximizing Growth Rate and Timber Yield",
     "body": [
       "Eucalyptus is a rapidly growing hardwood genus widely planted worldwide for pulp, timber, bioenergy, and essential oils. Fast initial vegetative growth and rapid canopy closure are critical determinants of plantation productivity.",
-      "Controlled-release fertilization (CRF) with Multicote™ Agri applied at planting provides a continuous, balanced supply of nitrogen, phosphorus, and potassium directly in the root zone. This prevents early nutrient leaching in permeable forest soils and stimulates deep taproot establishment.",
+      "Controlled-release fertilization (CRF) with Mike Fuerza Maxima™ (CRF) applied at planting provides a continuous, balanced supply of nitrogen, phosphorus, and potassium directly in the root zone. This prevents early nutrient leaching in permeable forest soils and stimulates deep taproot establishment.",
       "Adequate potassium and boron nutrition enhances drought resistance, cold tolerance, and overall wood density while minimizing trunk cracking and susceptibility to pests."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/2_0.png?itok=zWnD6kX1",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote™ Agri Ideal Nutrition for Forest Trees | Read More",
-      "href": "https://www.haifa-group.com/multicote%E2%84%A2-agri-ideal-nutrition-forest-trees"
+      "text": "Mike Fuerza Maxima™ (CRF) Ideal Nutrition for Forest Trees | Read More",
+      "href": "/article/mike-fuerza-maxima-ideal-nutrition-forest-trees"
     },
     "relatedTagsLink": {
       "text": "All related tags for Forestry",
-      "href": "https://www.haifa-group.com/plants-family/forestry"
+      "href": "/crop-guides"
     }
   },
   {
@@ -2945,17 +2945,17 @@ export const cropGuides: CropGuideData[] = [
     "h3": "Optimizing Forest Stand Establishment and Biomass",
     "body": [
       "Pine species (Pinus spp.) represent a foundational commercial softwood cultivated across diverse climatic zones and acidic, sandy, or nutrient-deficient soils.",
-      "Seedling survival and early root development depend critically on available phosphorus and balanced micronutrients. Application of Multicote™ Agri controlled-release fertilizer at outplanting delivers steady nutrition throughout the first growing seasons, shielding seedlings from leaching losses in high-rainfall forest environments.",
+      "Seedling survival and early root development depend critically on available phosphorus and balanced micronutrients. Application of Mike Fuerza Maxima™ (CRF) controlled-release fertilizer at outplanting delivers steady nutrition throughout the first growing seasons, shielding seedlings from leaching losses in high-rainfall forest environments.",
       "Balanced fertilization improves needle retention, photosynthetic efficiency, and resistance to environmental stress, accelerating stand canopy closure and reducing weed competition."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/2_0.png?itok=zWnD6kX1",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote™ Agri Ideal Nutrition for Forest Trees | Read More",
-      "href": "https://www.haifa-group.com/multicote%E2%84%A2-agri-ideal-nutrition-forest-trees"
+      "text": "Mike Fuerza Maxima™ (CRF) Ideal Nutrition for Forest Trees | Read More",
+      "href": "/article/mike-fuerza-maxima-ideal-nutrition-forest-trees"
     },
     "relatedTagsLink": {
       "text": "All related tags for Forestry",
-      "href": "https://www.haifa-group.com/plants-family/forestry"
+      "href": "/crop-guides"
     }
   },
   {
@@ -2972,14 +2972,14 @@ export const cropGuides: CropGuideData[] = [
       "Teak demands well-drained, fertile soils with substantial calcium, magnesium, and potassium availability. Soil application and controlled-release feeding at planting promote strong central stem elongation and root proliferation.",
       "Targeted potassium and nitrogen feeding during active monsoon and wet season flushes maximizes annual ring growth and enhances the formation of premium heartwood."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/2_0.png?itok=zWnD6kX1",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote™ Agri Ideal Nutrition for Forest Trees | Read More",
-      "href": "https://www.haifa-group.com/multicote%E2%84%A2-agri-ideal-nutrition-forest-trees"
+      "text": "Mike Fuerza Maxima™ (CRF) Ideal Nutrition for Forest Trees | Read More",
+      "href": "/article/mike-fuerza-maxima-ideal-nutrition-forest-trees"
     },
     "relatedTagsLink": {
       "text": "All related tags for Forestry",
-      "href": "https://www.haifa-group.com/plants-family/forestry"
+      "href": "/crop-guides"
     }
   },
   {
@@ -2996,14 +2996,14 @@ export const cropGuides: CropGuideData[] = [
       "Due to its aggressive growth cycle and massive leaf surface area, poplar has exceptionally high requirements for nitrogen and potassium, especially during peak spring and early summer flushes.",
       "Integrated fertigation and controlled-release base fertilization sustain rapid stem diameter expansion, prevent early senescence, and optimize wood yield per hectare."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2024-03/2_0.png?itok=zWnD6kX1",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote™ Agri Ideal Nutrition for Forest Trees | Read More",
-      "href": "https://www.haifa-group.com/multicote%E2%84%A2-agri-ideal-nutrition-forest-trees"
+      "text": "Mike Fuerza Maxima™ (CRF) Ideal Nutrition for Forest Trees | Read More",
+      "href": "/article/mike-fuerza-maxima-ideal-nutrition-forest-trees"
     },
     "relatedTagsLink": {
       "text": "All related tags for Forestry",
-      "href": "https://www.haifa-group.com/plants-family/forestry"
+      "href": "/crop-guides"
     }
   },
   {
@@ -3017,17 +3017,17 @@ export const cropGuides: CropGuideData[] = [
     "h3": "Year-Round Vibrancy, Uniform Density, and Stress Tolerance",
     "body": [
       "A healthy, lush lawn provides beauty, environmental cooling, and soil stabilization. Achieving consistent color and turfgrass density requires steady, controlled nutrient delivery without provoking surges in vegetative growth that demand frequent mowing.",
-      "Multicote Turf™ controlled-release fertilizers supply polymer-coated nitrogen, potassium, and magnesium continuously for up to 3 to 6 months depending on temperature and moisture.",
+      "Mike Fuerza Maxima Turf™ controlled-release fertilizers supply polymer-coated nitrogen, potassium, and magnesium continuously for up to 3 to 6 months depending on temperature and moisture.",
       "Proper potassium-to-nitrogen ratios strengthen grass cell walls, enhancing resistance to summer drought, foot traffic, and fungal pathogen pressure."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-06/tuf_header_mobile_3.jpg?itok=WyC3dG5G",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote Turf™ / Multigreen™ - Turf fertilizer | Read More",
-      "href": "https://www.haifa-group.com/multicote-turf%E2%84%A2-multigreen%E2%84%A2-turf-fertilizer"
+      "text": "Mike Fuerza Maxima Turf™ / Multigreen™ - Turf fertilizer | Read More",
+      "href": "/article/mike-fuerza-maxima-turf-fertilizer"
     },
     "relatedTagsLink": {
       "text": "All related tags for Turf",
-      "href": "https://www.haifa-group.com/plants-family/turf"
+      "href": "/crop-guides"
     }
   },
   {
@@ -3041,17 +3041,17 @@ export const cropGuides: CropGuideData[] = [
     "h3": "Elite Ball Roll, Density, and Rapid Recovery Under Extreme Mowing Regimes",
     "body": [
       "Golf course turf management demands the highest level of agronomic precision across diverse playing zones: greens mowed at millimeter heights, tee boxes with high divot trauma, and expansive fairways and roughs.",
-      "Greens and tee areas require homogenous micro-prill controlled-release fertilizers and soluble foliar sprays (such as Poly-Feed™ and HaifaStim™) to ensure uniform putting green speeds without burning or mower pick-up.",
+      "Greens and tee areas require homogenous micro-prill controlled-release fertilizers and soluble foliar sprays (such as Mike 19:19:19™ and Mike Biamic™ Biostimulant) to ensure uniform putting green speeds without burning or mower pick-up.",
       "High potassium and balanced iron applications ensure vibrant green color, strong root depth in sand-based rootzones (USGA specification), and excellent tolerance to heat and drought stress."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-06/tuf_header_mobile_3.jpg?itok=WyC3dG5G",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote Turf™ / Multigreen™ - Turf fertilizer | Read More",
-      "href": "https://www.haifa-group.com/multicote-turf%E2%84%A2-multigreen%E2%84%A2-turf-fertilizer"
+      "text": "Mike Fuerza Maxima Turf™ / Multigreen™ - Turf fertilizer | Read More",
+      "href": "/article/mike-fuerza-maxima-turf-fertilizer"
     },
     "relatedTagsLink": {
       "text": "All related tags for Turf",
-      "href": "https://www.haifa-group.com/plants-family/turf"
+      "href": "/crop-guides"
     }
   },
   {
@@ -3065,17 +3065,17 @@ export const cropGuides: CropGuideData[] = [
     "h3": "Resilience to Heavy Cleat Traffic, Rapid Divot Recovery, and Deep Rooting",
     "body": [
       "Athletic fields and stadiums host intensive sports activity that subjects turfgrass to mechanical shearing, compaction, and wear. Maintenance protocols must prioritize continuous recuperative capacity and deep rooting.",
-      "Mike Alpha's Multicote Turf™ programs ensure a balanced release of nitrogen and potassium tailored to seasonal usage schedules. Controlled nitrogen release drives steady tiller formation without producing soft, easily-damaged leaf tissue.",
+      "Mike Alpha's Mike Fuerza Maxima Turf™ programs ensure a balanced release of nitrogen and potassium tailored to seasonal usage schedules. Controlled nitrogen release drives steady tiller formation without producing soft, easily-damaged leaf tissue.",
       "Foliar bio-stimulants and chelated micronutrients stimulate lateral rhizome and stolon development, rapidly repairing divots and preserving a safe, resilient, high-traction playing surface."
     ],
-    "mobileBannerImage": "https://www.haifa-group.com/sites/default/files/styles/small_banner_1920/public/2026-06/tuf_header_mobile_3.jpg?itok=WyC3dG5G",
+    "mobileBannerImage": "/crop-guides",
     "recommendationsLink": {
-      "text": "Multicote Turf™ / Multigreen™ - Turf fertilizer | Read More",
-      "href": "https://www.haifa-group.com/multicote-turf%E2%84%A2-multigreen%E2%84%A2-turf-fertilizer"
+      "text": "Mike Fuerza Maxima Turf™ / Multigreen™ - Turf fertilizer | Read More",
+      "href": "/article/mike-fuerza-maxima-turf-fertilizer"
     },
     "relatedTagsLink": {
       "text": "All related tags for Turf",
-      "href": "https://www.haifa-group.com/plants-family/turf"
+      "href": "/crop-guides"
     }
   }
 ];
