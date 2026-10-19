@@ -45,6 +45,7 @@ interface ImporterPartner {
   specialty: string;
   productsUrl: string;
   accentColor: string;
+  logo: string;
   productName: string;
   productImage: string;
 }
@@ -60,6 +61,7 @@ const exclusiveImporters: ImporterPartner[] = [
     specialty: 'Technological & Sustainable Nutrition',
     productsUrl: '/products?category=7.+Controlled+Release+Fertilizer',
     accentColor: '#059669',
+    logo: '/images/Fertinagro.jpeg',
     productName: 'Mike Fuerza Maxima',
     productImage: '/products/All Products_Maxima.png',
   },
@@ -73,6 +75,7 @@ const exclusiveImporters: ImporterPartner[] = [
     specialty: 'Certified Organic Vegan Biosolutions',
     productsUrl: '/products?q=Microgea',
     accentColor: '#16a34a',
+    logo: '/images/Veganic.jpeg',
     productName: 'Mike RootX',
     productImage: '/products/All Products_RootX.png',
   },
@@ -86,6 +89,7 @@ const exclusiveImporters: ImporterPartner[] = [
     specialty: 'Agrobiotechnology & Biostimulants',
     productsUrl: '/products?category=2.+Biostimulant',
     accentColor: '#2563eb',
+    logo: '/images/Futureco.jpeg',
     productName: 'Mike Biamic',
     productImage: '/products/All Products_Biamic.png',
   },
@@ -99,6 +103,7 @@ const exclusiveImporters: ImporterPartner[] = [
     specialty: 'Precision Fertilization & Dynamic Nutrition',
     productsUrl: '/products?category=1.+Water+Soluble+Fertilizer',
     accentColor: '#1e40af',
+    logo: '/images/Sheffa.jpeg',
     productName: 'Mike 19:19:19',
     productImage: '/products/All Products_19-19-19.png',
   },
@@ -289,20 +294,17 @@ export default function InterestSection() {
                         </span>
                       </div>
 
-                      {/* Product Showcase */}
+                      {/* Partner Logo */}
                       <Link
                         to={partner.productsUrl}
-                        className="h-28 w-full rounded-xl bg-gradient-to-b from-gray-50/80 to-gray-100/40 border border-gray-100 flex items-center justify-center p-3 mb-4 group-hover:border-primary/30 group-hover:bg-primary/5 transition-all duration-300 relative overflow-hidden block"
+                        className="h-24 w-full rounded-xl bg-white border border-gray-200/80 flex items-center justify-center p-3 mb-4 group-hover:border-primary/40 group-hover:shadow-card transition-all duration-300 relative overflow-hidden block"
                       >
                         <img
-                          src={partner.productImage}
-                          alt={partner.productName}
-                          className="h-full w-auto max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm mx-auto"
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="h-full w-auto max-w-[85%] object-contain rounded-md group-hover:scale-105 transition-transform duration-300 mx-auto"
                           loading="lazy"
                         />
-                        <span className="absolute bottom-1.5 right-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-white/95 text-gray-700 backdrop-blur-xs border border-gray-200/80 shadow-2xs">
-                          {partner.productName}
-                        </span>
                       </Link>
 
                       <h3 className="text-lg font-bold text-navy group-hover:text-primary transition-colors mb-1 leading-snug">
