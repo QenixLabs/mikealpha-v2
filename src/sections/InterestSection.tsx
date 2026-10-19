@@ -45,7 +45,8 @@ interface ImporterPartner {
   specialty: string;
   productsUrl: string;
   accentColor: string;
-  icon: LucideIcon;
+  productName: string;
+  productImage: string;
 }
 
 const exclusiveImporters: ImporterPartner[] = [
@@ -57,9 +58,10 @@ const exclusiveImporters: ImporterPartner[] = [
     location: 'Teruel, Spain',
     tagline: 'Global pioneer in technological, organo-mineral & sustainable plant nutrition with over 800 certified formulations.',
     specialty: 'Technological & Sustainable Nutrition',
-    productsUrl: '/products',
+    productsUrl: '/products?category=7.+Controlled+Release+Fertilizer',
     accentColor: '#059669',
-    icon: Sprout,
+    productName: 'Mike Fuerza Maxima',
+    productImage: '/products/All Products_Maxima.png',
   },
   {
     id: 'veganic',
@@ -71,7 +73,8 @@ const exclusiveImporters: ImporterPartner[] = [
     specialty: 'Certified Organic Vegan Biosolutions',
     productsUrl: '/products?q=Microgea',
     accentColor: '#16a34a',
-    icon: Leaf,
+    productName: 'Mike RootX',
+    productImage: '/products/All Products_RootX.png',
   },
   {
     id: 'futureco',
@@ -83,7 +86,8 @@ const exclusiveImporters: ImporterPartner[] = [
     specialty: 'Agrobiotechnology & Biostimulants',
     productsUrl: '/products?category=2.+Biostimulant',
     accentColor: '#2563eb',
-    icon: FlaskConical,
+    productName: 'Mike Biamic',
+    productImage: '/products/All Products_Biamic.png',
   },
   {
     id: 'sheffa',
@@ -93,9 +97,10 @@ const exclusiveImporters: ImporterPartner[] = [
     location: 'Maharashtra & Gujarat, India',
     tagline: 'Pioneering Indian manufacturer specializing in precision fertilization, dynamic crop protocols and custom fertigation for Indian farmers.',
     specialty: 'Precision Fertilization & Dynamic Nutrition',
-    productsUrl: '/products',
+    productsUrl: '/products?category=1.+Water+Soluble+Fertilizer',
     accentColor: '#1e40af',
-    icon: Droplets,
+    productName: 'Mike 19:19:19',
+    productImage: '/products/All Products_19-19-19.png',
   },
 ];
 
@@ -261,7 +266,6 @@ export default function InterestSection() {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
             >
               {exclusiveImporters.map((partner) => {
-                const IconComponent = partner.icon;
                 return (
                   <motion.div
                     key={partner.id}
@@ -285,13 +289,21 @@ export default function InterestSection() {
                         </span>
                       </div>
 
-                      {/* Icon & Title */}
-                      <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-white shadow-xs"
-                        style={{ backgroundColor: partner.accentColor }}
+                      {/* Product Showcase */}
+                      <Link
+                        to={partner.productsUrl}
+                        className="h-28 w-full rounded-xl bg-gradient-to-b from-gray-50/80 to-gray-100/40 border border-gray-100 flex items-center justify-center p-3 mb-4 group-hover:border-primary/30 group-hover:bg-primary/5 transition-all duration-300 relative overflow-hidden block"
                       >
-                        <IconComponent className="w-6 h-6" />
-                      </div>
+                        <img
+                          src={partner.productImage}
+                          alt={partner.productName}
+                          className="h-full w-auto max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm mx-auto"
+                          loading="lazy"
+                        />
+                        <span className="absolute bottom-1.5 right-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-white/95 text-gray-700 backdrop-blur-xs border border-gray-200/80 shadow-2xs">
+                          {partner.productName}
+                        </span>
+                      </Link>
 
                       <h3 className="text-lg font-bold text-navy group-hover:text-primary transition-colors mb-1 leading-snug">
                         {partner.name}
