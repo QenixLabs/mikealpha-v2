@@ -1,16 +1,22 @@
 import { motion } from 'framer-motion';
 import { Mail, Store } from 'lucide-react';
+import { useLocation } from 'react-router';
+import { getWhatsAppUrl } from '@/lib/whatsapp';
 
 const coral = '#EE4034';
 const navy = '#19204A';
-const whatsappUrl = 'https://wa.me/918799290971';
 
 export default function FloatingActions() {
+  const location = useLocation();
+
+  const contactWhatsAppUrl = getWhatsAppUrl({ pathname: location.pathname, type: 'contact' });
+  const distributorWhatsAppUrl = getWhatsAppUrl({ pathname: location.pathname, type: 'distributor' });
+
   return (
     <aside className="fixed right-0 top-[55%] -translate-y-1/2 z-40 hidden md:flex flex-col gap-3 p-4 items-end">
       {/* Contact us */}
       <motion.a
-        href={whatsappUrl}
+        href={contactWhatsAppUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contact us on WhatsApp"
@@ -24,7 +30,7 @@ export default function FloatingActions() {
 
       {/* Distributor */}
       <motion.a
-        href={whatsappUrl}
+        href={distributorWhatsAppUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Distributor on WhatsApp"

@@ -96,10 +96,10 @@ const exclusiveImporters: ImporterPartner[] = [
   {
     id: 'sheffa',
     name: 'Sheffa',
-    country: 'India',
-    flag: '🇮🇳',
-    location: 'Maharashtra & Gujarat, India',
-    tagline: 'Pioneering Indian manufacturer specializing in precision fertilization, dynamic crop protocols and custom fertigation for Indian farmers.',
+    country: 'Israel',
+    flag: '🇮🇱',
+    location: 'Galilee, Israel',
+    tagline: 'Pioneering Israeli manufacturer specializing in advanced plant nutrition, ecological fertilization protocols and precision fertigation technologies.',
     specialty: 'Precision Fertilization & Dynamic Nutrition',
     productsUrl: '/products?category=1.+Water+Soluble+Fertilizer',
     accentColor: '#1e40af',
@@ -297,12 +297,24 @@ export default function InterestSection() {
                       {/* Partner Logo */}
                       <Link
                         to={partner.productsUrl}
-                        className="h-24 w-full rounded-xl bg-white border border-gray-200/80 flex items-center justify-center p-3 mb-4 group-hover:border-primary/40 group-hover:shadow-card transition-all duration-300 relative overflow-hidden block"
+                        className={`h-24 w-full rounded-xl border border-gray-200/80 flex items-center justify-center mb-4 group-hover:border-primary/40 group-hover:shadow-card transition-all duration-300 relative overflow-hidden block ${
+                          partner.id === 'veganic'
+                            ? 'p-0 bg-[#2d4839]'
+                            : partner.id === 'sheffa'
+                            ? 'p-1.5 bg-white'
+                            : 'p-3 bg-white'
+                        }`}
                       >
                         <img
                           src={partner.logo}
                           alt={`${partner.name} logo`}
-                          className="h-full w-auto max-w-[85%] object-contain rounded-md group-hover:scale-105 transition-transform duration-300 mx-auto"
+                          className={`group-hover:scale-105 transition-transform duration-300 mx-auto ${
+                            partner.id === 'veganic'
+                              ? 'w-full h-full object-cover'
+                              : partner.id === 'sheffa'
+                              ? 'h-full w-auto max-w-[95%] object-contain rounded-md'
+                              : 'h-full w-auto max-w-[85%] object-contain rounded-md'
+                          }`}
                           loading="lazy"
                         />
                       </Link>

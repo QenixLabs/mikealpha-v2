@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router";
-import { ArrowLeft, Download, Mail, Check, ArrowRight } from "lucide-react";
+import { ArrowLeft, Download, Mail, Check, ArrowRight, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/sections/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import { products, getProductBySlug } from "@/data/products";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 type Tab = "description" | "specs" | "application" | "related";
 
@@ -202,15 +203,23 @@ export default function ProductDetail() {
               )}
 
               <div className="flex flex-wrap gap-3">
+                <a
+                  href={getWhatsAppUrl({ productName: product?.name, category: product?.category })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white text-sm font-semibold hover:bg-[#20ba59] transition-colors rounded shadow-xs"
+                >
+                  <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
+                </a>
+                <Link
+                  to={`/contact?product=${encodeURIComponent(product?.name || '')}&subject=Product%20Inquiry`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-coral text-white text-sm font-medium hover:bg-coral-dark transition-colors rounded"
+                >
+                  <Mail className="w-4 h-4" /> Enquire via Form
+                </Link>
                 <button className="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded">
                   <Download className="w-4 h-4" /> Datasheet
                 </button>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-coral text-white text-sm font-medium hover:bg-coral-dark transition-colors rounded"
-                >
-                  <Mail className="w-4 h-4" /> Enquire Now
-                </a>
               </div>
             </div>
           </div>
