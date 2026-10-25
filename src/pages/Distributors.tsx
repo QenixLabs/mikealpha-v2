@@ -1,10 +1,11 @@
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, ChevronRight, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, ChevronRight, ArrowRight, MessageCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
+import { getWhatsAppUrl } from '@/lib/whatsapp';
 
 const distributorsByState: { state: string; locations: string[] }[] = [
   {
@@ -264,12 +265,20 @@ export default function Distributors() {
                   to farmers in your region.
                 </p>
               </motion.div>
-              <motion.div variants={fadeUpVariant} className="shrink-0">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-4 bg-coral text-white font-semibold hover:bg-coral-dark transition-colors rounded text-sm"
+              <motion.div variants={fadeUpVariant} className="shrink-0 flex flex-wrap items-center gap-3">
+                <a
+                  href={getWhatsAppUrl({ pathname: '/distributors', type: 'distributor' })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#25D366] text-white font-semibold hover:bg-[#20ba59] transition-colors rounded text-sm shadow-xs"
                 >
-                  Contact Us <ArrowRight className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
+                </a>
+                <Link
+                  to="/contact?subject=Dealer%20Inquiry"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-coral text-white font-semibold hover:bg-coral-dark transition-colors rounded text-sm"
+                >
+                  Contact Form <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             </motion.div>

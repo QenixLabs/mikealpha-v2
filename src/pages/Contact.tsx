@@ -1,45 +1,24 @@
-import { useState } from 'react';
-import { Link } from 'react-router';
+import { useState, useMemo } from 'react';
+import { Link, useSearchParams } from 'react-router';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import {
   Phone,
   Mail,
   MapPin,
-  Clock,
   Send,
   ChevronRight,
   Factory,
+  Loader2,
+  AlertCircle,
+  CheckCircle2,
+  MessageCircle,
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/sections/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { staggerContainer, fadeUpVariant } from '@/lib/animations';
-
-const contactDetails = [
-  {
-    icon: Phone,
-    title: 'Call Us',
-    value: '+91 87992 90971',
-    href: 'tel:+918799290971',
-  },
-  {
-    icon: Mail,
-    title: 'Mail Us',
-    value: 'mikealphaagro@gmail.com',
-    href: 'mailto:mikealphaagro@gmail.com',
-  },
-  {
-    icon: MapPin,
-    title: 'Office',
-    value: 'C-304, Vivaan Elementos, SP Ring Road, Gandhinagar, Gujarat 382421',
-    href: 'https://maps.google.com/?q=C-304,+Vivaan+Elementos,+SP+Ring+Road,+Gandhinagar,+Gujarat+382421',
-  },
-  {
-    icon: Clock,
-    title: 'Hours',
-    value: 'Mon–Fri: 9AM–6PM',
-  },
-];
+import { getWhatsAppUrl } from '@/lib/whatsapp';
 
 const subjectOptions = [
   'Product Inquiry',
@@ -49,26 +28,109 @@ const subjectOptions = [
 ];
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const initialProduct = searchParams.get('product') || '';
+  const initialSubject = searchParams.get('subject') || subjectOptions[0];
+
+  const contactDetails = useMemo(() => [
+    {
+      icon: Phone,
+      title: 'Call Us',
+      value: '+91 87992 90971',
+      href: 'tel:+918799290971',
+    },
+    {
+      icon: MessageCircle,
+      title: 'WhatsApp Us',
+      value: 'Instant Chat (+91 87992 90971)',
+      href: getWhatsAppUrl({
+        pathname: '/contact',
+        productName: initialProduct || undefined,
+      }),
+      isWhatsApp: true,
+    },
+    {
+      icon: Mail,
+      title: 'Mail Us',
+      value: 'mikealphaagro@gmail.com',
+      href: 'mailto:mikealphaagro@gmail.com',
+    },
+    {
+      icon: MapPin,
+      title: 'Office',
+      value: 'C-304, Vivaan Elementos, Gandhinagar, Gujarat 382421',
+      href: 'https://maps.google.com/?q=C-304,+Vivaan+Elementos,+SP+Ring+Road,+Gandhinagar,+Gujarat+382421',
+    },
+  ], [initialProduct]);
+
   const [form, setForm] = useState({
     name: '',
     email: '',
     phone: '',
-    subject: subjectOptions[0],
-    message: '',
+    subject: subjectOptions.includes(initialSubject) ? initialSubject : subjectOptions[0],
+    message: initialProduct
+      ? `Hello Mike Alpha Agro, I am interested in ${initialProduct}. Could you please share more information regarding product details, pricing, and availability?`
+      : '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
+    if (errorMessage) setErrorMessage(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setForm({ name: '', email: '', phone: '', subject: subjectOptions[0], message: '' });
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setErrorMessage(
+        'EmailJS is not fully configured yet. Please add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY to your .env file.'
+      );
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: form.name,
+          from_name: form.name,
+          email: form.email,
+          from_email: form.email,
+          reply_to: form.email,
+          phone: form.phone || 'Not provided',
+          subject: form.subject,
+          message: form.message,
+          to_name: 'Mike Alpha Agro',
+        },
+        publicKey
+      );
+
+      setSubmitted(true);
+      setForm({ name: '', email: '', phone: '', subject: subjectOptions[0], message: '' });
+    } catch (err: unknown) {
+      console.error('EmailJS error:', err);
+      const errText =
+        err && typeof err === 'object' && 'text' in err
+          ? String((err as { text: unknown }).text)
+          : 'Failed to send message. Please verify your EmailJS keys or email us directly at mikealphaagro@gmail.com.';
+      setErrorMessage(errText);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -134,10 +196,25 @@ export default function Contact() {
                   href={item.href || '#'}
                   target={item.href?.startsWith('http') ? '_blank' : undefined}
                   rel={item.href?.startsWith('http') ? 'noreferrer' : undefined}
-                  className="bg-white border border-brand-border p-6 rounded-lg hover:shadow-card transition-shadow"
+                  className={`bg-white border p-6 rounded-lg transition-all ${
+                    item.isWhatsApp
+                      ? 'border-[#25D366]/40 hover:border-[#25D366] hover:shadow-md ring-1 ring-[#25D366]/20'
+                      : 'border-brand-border hover:shadow-card'
+                  }`}
                 >
-                  <div className="w-10 h-10 bg-coral-subtle text-coral rounded-lg flex items-center justify-center mb-4">
-                    <item.icon className="w-5 h-5" />
+                  <div className="flex items-center justify-between mb-4">
+                    <div
+                      className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                        item.isWhatsApp ? 'bg-[#25D366]/10 text-[#25D366]' : 'bg-coral-subtle text-coral'
+                      }`}
+                    >
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    {item.isWhatsApp && (
+                      <span className="text-[10px] font-semibold text-[#25D366] bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100 uppercase tracking-wider">
+                        Quick Reply
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-brand-text-muted mb-2">
                     {item.title}
@@ -183,26 +260,55 @@ export default function Contact() {
               <motion.div variants={fadeUpVariant}>
                 {submitted ? (
                   <div className="bg-brand-background border border-brand-border p-8 rounded-lg text-center">
-                    <div className="w-12 h-12 bg-coral-subtle text-coral rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Send className="w-6 h-6" />
+                    <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-200">
+                      <CheckCircle2 className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-navy mb-2">Message sent</h3>
-                    <p className="text-brand-text-secondary mb-6">We will get back to you soon.</p>
-                    <button
-                      onClick={() => setSubmitted(false)}
-                      className="px-5 py-2.5 bg-coral text-white text-sm font-medium hover:bg-coral-dark transition-colors rounded"
-                    >
-                      Send another
-                    </button>
+                    <h3 className="text-xl font-bold text-navy mb-2">Message Sent Successfully!</h3>
+                    <p className="text-brand-text-secondary mb-6 text-sm max-w-sm mx-auto">
+                      Thank you for contacting Mike Alpha Agro. Our agronomy and customer support team will get back to you shortly.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-3">
+                      <button
+                        onClick={() => {
+                          setSubmitted(false);
+                          setErrorMessage(null);
+                        }}
+                        className="px-5 py-2.5 bg-coral text-white text-sm font-medium hover:bg-coral-dark transition-colors rounded shadow-xs"
+                      >
+                        Send another message
+                      </button>
+                      <a
+                        href={getWhatsAppUrl({
+                          pathname: '/contact',
+                          productName: initialProduct || undefined,
+                        })}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white text-sm font-medium transition-colors rounded shadow-xs"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        Chat on WhatsApp
+                      </a>
+                    </div>
                   </div>
                 ) : (
                   <form
                     onSubmit={handleSubmit}
                     className="bg-brand-background border border-brand-border p-6 md:p-8 rounded-lg space-y-5"
                   >
+                    {errorMessage && (
+                      <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-700 flex items-start gap-3 text-sm">
+                        <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-red-500" />
+                        <div>
+                          <p className="font-semibold text-red-800">Unable to send message</p>
+                          <p className="mt-0.5 text-xs text-red-600 leading-relaxed">{errorMessage}</p>
+                        </div>
+                      </div>
+                    )}
+
                     <div>
                       <label className="block text-sm font-medium text-brand-text-primary mb-1">
-                        Full Name
+                        Full Name <span className="text-coral">*</span>
                       </label>
                       <input
                         type="text"
@@ -210,14 +316,16 @@ export default function Contact() {
                         value={form.name}
                         onChange={handleChange}
                         required
-                        className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded"
+                        disabled={isSubmitting}
+                        placeholder="Your full name"
+                        className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded disabled:bg-gray-100 disabled:cursor-not-allowed"
                       />
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-sm font-medium text-brand-text-primary mb-1">
-                          Email
+                          Email <span className="text-coral">*</span>
                         </label>
                         <input
                           type="email"
@@ -225,32 +333,38 @@ export default function Contact() {
                           value={form.email}
                           onChange={handleChange}
                           required
-                          className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded"
+                          disabled={isSubmitting}
+                          placeholder="your.email@example.com"
+                          className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded disabled:bg-gray-100 disabled:cursor-not-allowed"
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-brand-text-primary mb-1">
-                          Phone
+                          Phone <span className="text-coral">*</span>
                         </label>
                         <input
                           type="tel"
                           name="phone"
                           value={form.phone}
                           onChange={handleChange}
-                          className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded"
+                          required
+                          disabled={isSubmitting}
+                          placeholder="+91 98765 43210"
+                          className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded disabled:bg-gray-100 disabled:cursor-not-allowed"
                         />
                       </div>
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-brand-text-primary mb-1">
-                        Subject
+                        Subject 
                       </label>
                       <select
                         name="subject"
                         value={form.subject}
                         onChange={handleChange}
-                        className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded"
+                        disabled={isSubmitting}
+                        className="w-full h-10 px-3 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded disabled:bg-gray-100 disabled:cursor-not-allowed"
                       >
                         {subjectOptions.map((option) => (
                           <option key={option} value={option}>{option}</option>
@@ -260,7 +374,7 @@ export default function Contact() {
 
                     <div>
                       <label className="block text-sm font-medium text-brand-text-primary mb-1">
-                        Message
+                        Message <span className="text-coral">*</span>
                       </label>
                       <textarea
                         name="message"
@@ -268,16 +382,44 @@ export default function Contact() {
                         onChange={handleChange}
                         rows={4}
                         required
-                        className="w-full px-3 py-2 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded resize-none"
+                        disabled={isSubmitting}
+                        placeholder="Tell us about your crops, requirements, or inquiry..."
+                        className="w-full px-3 py-2 bg-white border border-brand-border text-brand-text-primary focus:outline-none focus:border-navy rounded resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                       />
                     </div>
 
-                    <button
-                      type="submit"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-coral text-white text-sm font-medium hover:bg-coral-dark transition-colors rounded"
-                    >
-                      <Send className="w-4 h-4" /> Send Message
-                    </button>
+                    <div className="flex flex-wrap items-center gap-3 pt-2">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-coral text-white text-sm font-medium hover:bg-coral-dark transition-colors rounded disabled:opacity-60 disabled:cursor-not-allowed shadow-xs"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span>Sending Message...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-4 h-4" />
+                            <span>Send Message</span>
+                          </>
+                        )}
+                      </button>
+
+                      <a
+                        href={getWhatsAppUrl({
+                          pathname: '/contact',
+                          productName: initialProduct || undefined,
+                        })}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-3 bg-[#25D366] hover:bg-[#20ba59] text-white text-sm font-medium transition-colors rounded shadow-xs"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        <span>Chat on WhatsApp</span>
+                      </a>
+                    </div>
                   </form>
                 )}
               </motion.div>
