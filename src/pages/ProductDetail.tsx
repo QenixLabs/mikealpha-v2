@@ -217,9 +217,15 @@ export default function ProductDetail() {
                 >
                   <Mail className="w-4 h-4" /> Enquire via Form
                 </Link>
-                <button className="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded">
+                <a
+                  href={product?.datasheet || "/Datasheet/Mike_Agro_Catalogue_Clean_Text.docx"}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded"
+                >
                   <Download className="w-4 h-4" /> Datasheet
-                </button>
+                </a>
               </div>
             </div>
           </div>
