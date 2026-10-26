@@ -21,6 +21,7 @@ export interface Product {
   groupName?: string
   groupDescription?: string
   grade?: string
+  datasheet?: string
 }
 
 export const categories = [
