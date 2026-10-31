@@ -217,15 +217,16 @@ export default function ProductDetail() {
                 >
                   <Mail className="w-4 h-4" /> Enquire via Form
                 </Link>
-                <a
-                  href={product?.datasheet || "/Datasheet/Mike_Agro_Catalogue.pdf"}
-                  download={product?.datasheet ? undefined : "Mike_Agro_Product_Catalogue.pdf"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded"
-                >
-                  <Download className="w-4 h-4" /> Datasheet
-                </a>
+                {product?.datasheet && (
+                  <a
+                    href={product.datasheet}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded"
+                  >
+                    <Download className="w-4 h-4" /> Datasheet
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -272,7 +273,19 @@ export default function ProductDetail() {
 
             {activeTab === "specs" && (
               <div className="animate-in fade-in duration-200">
-                <h3 className="text-xl font-bold text-navy mb-4">Technical Specifications</h3>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-3 border-b border-brand-border">
+                  <h3 className="text-xl font-bold text-navy">Technical Specifications</h3>
+                  {product.datasheet && (
+                    <a
+                      href={product.datasheet}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-brand-background hover:bg-white border border-brand-border text-xs font-semibold text-coral hover:text-coral-dark rounded transition-colors"
+                    >
+                      <Download className="w-3.5 h-3.5" /> View Official Datasheet (PDF)
+                    </a>
+                  )}
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {specEntries.map(([key, value]) => (
                     <div
