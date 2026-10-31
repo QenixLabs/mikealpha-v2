@@ -217,16 +217,15 @@ export default function ProductDetail() {
                 >
                   <Mail className="w-4 h-4" /> Enquire via Form
                 </Link>
-                {product?.datasheet && (
-                  <a
-                    href={product.datasheet}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded"
-                  >
-                    <Download className="w-4 h-4" /> Datasheet
-                  </a>
-                )}
+                <a
+                  href={product?.datasheet || "/Datasheet/Mike_Agro_Products.xlsx"}
+                  download={product?.datasheet ? undefined : "Mike_Agro_Product_Catalogue.xlsx"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-border text-sm font-medium text-brand-text-primary hover:border-navy hover:text-navy transition-colors rounded"
+                >
+                  <Download className="w-4 h-4" /> Datasheet
+                </a>
               </div>
             </div>
           </div>
@@ -367,4 +366,4 @@ function InfoCard({ label, value }: { label: string; value: string }) {
       <p className="text-sm font-semibold text-brand-text-primary">{value}</p>
     </div>
   );
-}
+  }
